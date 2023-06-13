@@ -1,0 +1,33 @@
+{
+  "name": "hr-folio",
+  "author": "HugoRCD",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . --fix"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxthq/ui": "^2.4.0",
+    "@types/node": "^18",
+    "nuxt": "^3.5.2",
+    "@vercel/analytics": "^1.0.1",
+    "@linear/sdk": "^2.6.0",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.13.0",
+    "nuxt-mailer": "^0.11.0",
+    "prettier": "^2.8.8",
+    "openai": "^3.2.1",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/i18n": "8.0.0-beta.9",
+    "@pinia/nuxt": "^0.4.11"
+  }
+}
