@@ -3,6 +3,7 @@
   "author": "HugoRCD",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT License",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -13,21 +14,26 @@
     "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . --fix"
   },
   "devDependencies": {
+    "@heroicons/vue": "^2.0.18",
+    "@linear/sdk": "^2.6.0",
     "@nuxt/devtools": "latest",
     "@nuxthq/ui": "^2.4.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/i18n": "8.0.0-beta.9",
+    "@pinia/nuxt": "^0.4.11",
     "@types/node": "^18",
-    "nuxt": "^3.5.2",
     "@vercel/analytics": "^1.0.1",
-    "@linear/sdk": "^2.6.0",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.13.0",
+    "nuxt": "^3.5.2",
+    "nuxt-headlessui": "^1.1.4",
     "nuxt-mailer": "^0.11.0",
-    "prettier": "^2.8.8",
     "openai": "^3.2.1",
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@nuxtjs/i18n": "8.0.0-beta.9",
-    "@pinia/nuxt": "^0.4.11"
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "sass": "^1.63.3"
   }
 }
