@@ -21,11 +21,19 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    "nuxt-headlessui",
+    "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
-    "nuxt-headlessui",
     "nuxt-mailer",
+    "@nuxthq/ui",
   ],
+
+  colorMode: {
+    preference: 'system',
+    fallback: 'dark',
+    storageKey: 'hr-folio-color-mode',
+  },
 
   i18n: {
     vueI18n: {
