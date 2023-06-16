@@ -36,6 +36,23 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    detectBrowserLanguage: {
+      alwaysRedirect: true,
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: 'root',
+    },
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US'
+      },
+      {
+        code: 'fr',
+        iso: 'fr-FR'
+      }
+    ],
+    baseUrl: 'https://hrcd.fr',
     vueI18n: {
       legacy: false,
       locale: "en",
