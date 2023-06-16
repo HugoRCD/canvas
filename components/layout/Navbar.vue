@@ -1,23 +1,8 @@
 <script lang="ts" setup>
-import LanguageToggle from "~/components/LanguageToggle.vue";
-
 const { t } = useI18n();
 const route = useRoute();
 
-const navigation = [
-  {
-    name: "Home",
-    to: "/",
-  },
-  {
-    name: "About",
-    to: "/about",
-  },
-  {
-    name: "Contact",
-    to: "/contact",
-  },
-];
+const navigation = getNavigation("home");
 </script>
 
 <template>

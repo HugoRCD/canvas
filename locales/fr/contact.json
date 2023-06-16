@@ -1,0 +1,11 @@
+{
+  "title": "Contactez-moi",
+  "description": "Un bug ? Une question ? Une suggestion ? N'hésitez pas à nous contacter",
+  "fullname": "Nom complet",
+  "email": "Email",
+  "phone": "Téléphone",
+  "message": "Message",
+  "submit": "Envoyer",
+  "success": "Votre message a été envoyé avec succès",
+  "error": "Oups, une erreur s'est produite lors de l'envoi de votre message :("
+}

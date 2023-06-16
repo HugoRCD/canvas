@@ -15,6 +15,14 @@ module.exports = {
         "accent-color-hover": "var(--accent-color-hover)",
         "accent-color-faded": "var(--accent-color-faded)",
       },
+      gradientColorStops: {
+        "accent-main": "var(--accent-main)",
+        "accent-secondary": "var(--accent-secondary)",
+      },
+      borderWidth: {
+        sm: "1px",
+        md: "2px",
+      },
     },
   },
   plugins: [],
