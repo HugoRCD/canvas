@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import LanguageToggle from "~/components/LanguageToggle.vue";
+
 const { t } = useI18n();
 const route = useRoute();
 
@@ -36,8 +38,8 @@ const navigation = [
       </div>
       <Logo :isText="true" :size="6" />
       <div class="flex flex-1 justify-end items-center gap-x-4">
-        <LanguageSelector />
-        <ThemeSelector />
+        <LanguageToggle />
+        <ThemeToggle />
       </div>
     </nav>
   </header>
