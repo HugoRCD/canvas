@@ -63,23 +63,4 @@ export default defineNuxtConfig({
   },
 
   plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],
-
-  tailwindcss: {
-    cssPath: "~/assets/style/main.scss",
-    config: {
-      content: [
-        "./components/**/*.{js,vue,ts}",
-        "./layouts/**/*.vue",
-        "./pages/**/*.vue",
-        "./plugins/**/*.{js,ts}",
-        "./nuxt.config.{js,ts}",
-        "./app.vue",
-        "./error.vue",
-      ],
-      theme: {
-        extend: {},
-      },
-      plugins: [],
-    },
-  },
 });
