@@ -5,7 +5,7 @@
       color="gray"
       variant="ghost"
       aria-label="Theme"
-      @click="$colorMode.value === 'light' ? $colorMode.preference = 'dark' : $colorMode.preference = 'light'"
+      @click="$colorMode.value === 'light' ? ($colorMode.preference = 'dark') : ($colorMode.preference = 'light')"
     />
     <template #fallback>
       <div class="w-8 h-8" />

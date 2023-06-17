@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
-const { t } = useI18n();
 
 definePageMeta({
   name: "Contact",
@@ -13,8 +12,6 @@ const email = ref("");
 const message = ref("");
 const phone = ref("");
 const fullname = ref("");
-
-const loading = ref(false);
 </script>
 
 <template>
@@ -57,45 +54,36 @@ const loading = ref(false);
               <label for="fullname" class="sr-only">
                 {{ $t("contact.fullname") }}
               </label>
-              <input
-                v-model="fullname"
-                type="text"
-                required
-                name="fullname"
-                id="full-name"
-                autocomplete="name"
-                class="input w-full"
-                :placeholder="t('contact.fullname')"
-              />
+              <UInput required v-model="fullname" type="text" name="fullname" id="fullname" autocomplete="name" :placeholder="$t('contact.fullname')" />
             </div>
             <div>
               <label for="email" class="sr-only">
                 {{ $t("contact.email") }}
               </label>
-              <input
+              <UInput
                 required
                 v-model="email"
-                id="email"
-                name="email"
                 type="email"
+                name="email"
+                id="email"
                 autocomplete="email"
                 class="input w-full"
-                :placeholder="t('contact.email')"
+                :placeholder="$t('contact.email')"
               />
             </div>
             <div>
               <label for="phone" class="sr-only">
                 {{ $t("contact.phone") }}
               </label>
-              <input v-model="phone" type="text" name="phone" id="phone" autocomplete="tel" class="input w-full" :placeholder="t('contact.phone')" />
+              <UInput v-model="phone" type="text" name="phone" id="phone" autocomplete="tel" class="input w-full" :placeholder="$t('contact.phone')" />
             </div>
             <div>
               <label for="message" class="sr-only">
                 {{ $t("contact.message") }}
               </label>
-              <textarea required v-model="message" id="message" name="message" rows="4" class="input w-full" :placeholder="t('contact.message')" />
+              <UTextarea resize required v-model="message" id="message" name="message" :placeholder="$t('contact.message')" />
             </div>
-            <UButton class="gradient">
+            <UButton color="white" class="gradient" block>
               {{ $t("contact.submit") }}
             </UButton>
           </form>

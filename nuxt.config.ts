@@ -20,20 +20,12 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: [
-    "nuxt-headlessui",
-    "@vueuse/nuxt",
-    "@nuxtjs/i18n",
-    "@pinia/nuxt",
-    "nuxt-mailer",
-    "@nuxthq/ui",
-    "@nuxtjs/robots"
-  ],
+  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@pinia/nuxt", "nuxt-mailer", "@nuxthq/ui", "@nuxtjs/robots"],
 
   colorMode: {
-    preference: 'system',
-    fallback: 'dark',
-    storageKey: 'hr-folio-color-mode',
+    preference: "system",
+    fallback: "dark",
+    storageKey: "hr-folio-color-mode",
   },
 
   i18n: {
@@ -41,19 +33,19 @@ export default defineNuxtConfig({
       alwaysRedirect: true,
       useCookie: true,
       cookieKey: "i18n_redirected",
-      redirectOn: 'root',
+      redirectOn: "root",
     },
     locales: [
       {
-        code: 'en',
-        iso: 'en-US'
+        code: "en",
+        iso: "en-US",
       },
       {
-        code: 'fr',
-        iso: 'fr-FR'
-      }
+        code: "fr",
+        iso: "fr-FR",
+      },
     ],
-    baseUrl: 'https://hrcd.fr',
+    baseUrl: "https://hrcd.fr",
     vueI18n: {
       legacy: false,
       locale: "en",
@@ -64,8 +56,8 @@ export default defineNuxtConfig({
   },
 
   robots: {
-    UserAgent: '*',
-    Disallow: ''
+    UserAgent: "*",
+    Disallow: "",
   },
 
   plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],

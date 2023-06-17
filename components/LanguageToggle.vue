@@ -28,12 +28,8 @@ watch(locale, (newLocale) => {
 
 <template>
   <ClientOnly>
-    <UButton
-      color="gray"
-      variant="ghost"
-      aria-label="language"
-      @click="() => $i18n.locale = $i18n.locale === 'en' ? 'fr' : 'en'">
-      <span class="text-xs font-semibold">{{ locales.find(l => l.iso === $i18n.locale).flag }}</span>
+    <UButton color="gray" variant="ghost" aria-label="language" @click="() => ($i18n.locale = $i18n.locale === 'en' ? 'fr' : 'en')">
+      <span class="text-xs font-semibold">{{ locales.find((l) => l.iso === $i18n.locale).flag }}</span>
     </UButton>
     <template #fallback>
       <div class="w-8 h-8" />
