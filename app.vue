@@ -1,9 +1,10 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 useHead({
   title: "HR Folio",
   meta: [
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { name: "keywords", content: "Home" },
+    { name: "description", content: "French developer" }
   ],
   link: [
     {
@@ -38,7 +39,9 @@ useHead({
 
 <template>
   <div>
-    <LayoutNavbar />
-    <NuxtPage />
+    <Html :lang="$i18n.locale">
+      <LayoutNavbar />
+      <NuxtPage />
+    </Html>
   </div>
 </template>

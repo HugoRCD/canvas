@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "nuxt-mailer",
     "@nuxthq/ui",
+    "@nuxtjs/robots"
   ],
 
   colorMode: {
@@ -60,6 +61,11 @@ export default defineNuxtConfig({
       availableLocales: ["en", "fr"],
       messages: messages,
     },
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: ''
   },
 
   plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],
