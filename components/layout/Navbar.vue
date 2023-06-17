@@ -21,7 +21,7 @@ const navigation = getNavigation("home");
           </NuxtLink>
         </div>
       </div>
-      <Logo :isText="true" :size="6" />
+      <Logo :size="6" />
       <div class="flex flex-1 justify-end items-center gap-x-4">
         <LanguageToggle />
         <ThemeToggle />
