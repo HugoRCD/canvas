@@ -1,9 +1,7 @@
-<script lang="ts" setup>
-const navigation = getNavigation("home");
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <header class="max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 py-4 flex justify-between">
+  <header class="p-6 flex justify-between">
     <div class="flex items-center gap-4">
       <Logo :size="12" />
       <div>

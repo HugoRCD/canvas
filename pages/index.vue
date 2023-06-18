@@ -9,7 +9,5 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 flex items-center justify-center h-full">
-    <div class="gradient h-80 w-80 rounded-full blur-3xl"></div>
-  </div>
+  <div class="flex-1 bg-gray-900"></div>
 </template>

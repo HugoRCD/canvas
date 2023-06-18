@@ -6,6 +6,11 @@
 @import "themes/dark";
 @import "themes/light";
 
+#__nuxt, #__layout {
+  height:100%!important;
+  width: 100%!important;
+}
+
 @layer components {
   .input {
     @apply border-sm rounded-md;

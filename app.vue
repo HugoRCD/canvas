@@ -39,9 +39,10 @@ useHead({
 
 <template>
   <Html :lang="$i18n.locale">
-    <Body class="h-screen bg-main">
-      <LayoutNavbar />
-      <NuxtPage />
+    <Body>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </Body>
   </Html>
 </template>

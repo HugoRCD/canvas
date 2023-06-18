@@ -6,4 +6,9 @@ export default defineAppConfig({
     primary: "emerald",
     gray: "zinc",
   },
+  socials: {
+    github: "https://github.com/HugoRCD",
+    linkedin: "https://www.linkedin.com/in/hugo-richard-0801",
+    instagram: "https://www.instagram.com/hugo.rcd_",
+  },
 });
