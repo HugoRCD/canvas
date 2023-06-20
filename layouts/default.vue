@@ -6,6 +6,7 @@
       </div>
     </div>
     <slot />
+    <div class="linebreak"></div>
     <LayoutFooter />
   </div>
 </template>

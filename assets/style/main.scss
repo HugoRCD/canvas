@@ -41,11 +41,11 @@ html {
   }
 
   .main-heading {
-    @apply text-5xl font-medium tracking-tighter;
+    @apply text-4xl sm:text-5xl font-medium tracking-tighter;
   }
 
   .subheading {
-    @apply text-subheading text-xl text-center;
+    @apply text-subheading text-lg sm:text-xl text-center;
   }
 
   .linebreak {

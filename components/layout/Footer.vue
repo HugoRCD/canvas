@@ -1,5 +1,5 @@
 <template>
-  <footer class="mx-auto max-w-7xl p-4 flex flex-col items-center gap-4">
+  <footer class="mx-auto max-w-7xl px-4 py-10 flex flex-col items-center gap-4">
     <Logo :size="6" />
     <span class="text-muted text-sm"
       >© 2023

@@ -9,7 +9,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="h-screen flex flex-col bg-main">
+  <div class="h-screen flex flex-col mb-10">
     <div class="flex justify-center items-center p-6 relative h-[500px]">
       <div class="flex flex-col items-center gap-2">
         <Logo :size="20" />
@@ -21,7 +21,7 @@ definePageMeta({
       <img src="/assets/aurora.png" alt="aurora" class="object-cover blur-3xl w-full h-full absolute top-0 left-0" />
     </div>
     <div class="linebreak"></div>
-    <div class="spotlight flex flex-col items-center justify-center z-10 bg-main">
+    <div class="spotlight flex flex-col items-center justify-center z-10">
       <div class="max-w-6xl flex flex-col items-center gap-4">
         <h1 class="main-heading mt-16 text-center">
           <span class="white-gradient-tb">Turning ideas into real life products </span>
