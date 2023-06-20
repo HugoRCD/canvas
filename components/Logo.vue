@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const applicationName = useAppConfig().appName;
+const { appName } = useAppConfig();
 defineProps({
   isText: {
     type: Boolean,
@@ -27,7 +27,7 @@ defineProps({
         :src="'assets/hochard-logo-' + ($colorMode.value === 'light' ? 'dark' : 'light') + '.svg'"
         alt=""
       />
-      <span class="text-xs font-semibold ml-1" v-if="isText">{{ applicationName }}</span>
+      <span class="text-xs font-semibold ml-1" v-if="isText">{{ appName }}</span>
     </NuxtLink>
   </div>
 </template>

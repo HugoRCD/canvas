@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 const { locale, setLocaleCookie } = useI18n();
 
 defineProps({
@@ -27,18 +28,33 @@ watch(locale, (newLocale) => {
 </script>
 
 <template>
-  <USelectMenu v-model="$i18n.locale" :options="$i18n.availableLocales" class="cursor-pointer">
-    <template #label>
-      <div class="flex items-center gap-2">
-        <span class="text-xs font-semibold">{{ locales.find((l) => l.iso === $i18n.locale).flag }}</span>
-        <span class="text-xs font-semibold" v-if="isText">{{ locales.find((l) => l.iso === $i18n.locale).name }}</span>
-      </div>
-    </template>
-    <template #option="{ option }">
-      <div class="flex items-center gap-2 cursor-pointer">
-        <span class="text-xs font-semibold">{{ locales.find((l) => l.iso === option).flag }}</span>
-        <span class="text-xs font-semibold" v-if="isText">{{ locales.find((l) => l.iso === option).name }}</span>
-      </div>
-    </template>
-  </USelectMenu>
+  <Menu as="div" class="relative inline-block text-left">
+    <MenuButton as="button" class="inline-flex gap-2 justify-center w-full px-4 py-2 text-sm font-medium text-inverted border border-transparent rounded-md">
+      <span class="text-xs font-semibold">{{ locales.find((l) => l.iso === $i18n.locale).flag }}</span>
+      <span class="text-xs font-semibold" v-if="isText">{{ locales.find((l) => l.iso === $i18n.locale).name }}</span>
+    </MenuButton>
+    <transition
+      enter-active-class="transition ease-out duration-100"
+      enter-from-class="transform opacity-0 scale-95"
+      enter-to-class="transform opacity-100 scale-100"
+      leave-active-class="transition ease-in duration-75"
+      leave-from-class="transform opacity-100 scale-100"
+      leave-to-class="transform opacity-0 scale-95"
+    >
+      <MenuItems as="div" class="absolute mt-2 origin-center bg-primary border border-muted divide-y divide-muted rounded-md shadow-lg outline-none">
+        <MenuItem
+          v-for="locale in $i18n.availableLocales"
+          :key="locale"
+          as="button"
+          @click="() => ($i18n.locale = $i18n.locale === 'en' ? 'fr' : 'en')"
+          class="flex justify-between w-full px-4 py-2 text-sm"
+        >
+          <div class="flex items-center gap-2 text-inverted">
+            <span class="text-xs font-semibold">{{ locales.find((l) => l.iso === locale).flag }}</span>
+            <span class="text-xs font-semibold" v-if="isText">{{ locales.find((l) => l.iso === locale).name }}</span>
+          </div>
+        </MenuItem>
+      </MenuItems>
+    </transition>
+  </Menu>
 </template>

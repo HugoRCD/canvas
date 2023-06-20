@@ -14,6 +14,7 @@ module.exports = {
         main: "var(--main-color)",
         muted: "var(--muted)",
         inverted: "var(--inverted)",
+        subheading: "var(--subheading)",
         "text-color": "var(--text-color)",
         accent: "var(--accent)",
         "accent-hover": "var(--accent-hover)",

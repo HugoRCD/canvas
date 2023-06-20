@@ -23,8 +23,8 @@ export default defineNuxtConfig({
   modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@pinia/nuxt", "nuxt-mailer", "@nuxthq/ui", "@nuxtjs/robots"],
 
   colorMode: {
-    preference: "system",
-    fallback: "dark",
+    preference: "cosmos",
+    fallback: "cosmos",
     storageKey: "hr-folio-color-mode",
   },
 

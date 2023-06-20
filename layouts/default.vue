@@ -1,7 +1,11 @@
 <template>
-  <div class="h-screen flex flex-col">
-    <LayoutNavbar class="h-[100px]" />
+  <div class="h-full flex flex-col relative">
+    <div class="absolute top-0 left-0 right-0 z-50 w-50">
+      <div class="flex items-center p-6">
+        <LanguageSelector is-text />
+      </div>
+    </div>
     <slot />
-    <LayoutFooter class="h-[100px]" />
+    <LayoutFooter />
   </div>
 </template>

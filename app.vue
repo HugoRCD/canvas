@@ -1,6 +1,7 @@
 <script lang="ts" setup>
+const { appName } = useAppConfig();
 useHead({
-  title: "HR Folio",
+  title: appName,
   meta: [
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { name: "keywords", content: "Home" },
@@ -38,7 +39,7 @@ useHead({
 </script>
 
 <template>
-  <Html :lang="$i18n.locale">
+  <Html :lang="$i18n.locale" class="bg-main">
     <Body>
       <NuxtLayout>
         <NuxtPage />

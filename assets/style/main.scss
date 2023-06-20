@@ -4,11 +4,19 @@
 
 @import "animation";
 @import "themes/dark";
-@import "themes/light";
 
-#__nuxt, #__layout {
+html, body, #__nuxt, #__layout {
   height:100%!important;
   width: 100%!important;
+}
+
+html {
+  --text-color: #FDFDFD;
+  --inverted: #FFFFFF;
+  --muted: #656567;
+  --subheading: #b5abcb;
+
+  font-family: "Inter V", sans-serif;
 }
 
 @layer components {
@@ -25,5 +33,51 @@
   .text-gradient {
     @apply bg-clip-text text-transparent;
     @apply bg-gradient-to-bl from-accent-main to-accent-secondary;
+  }
+
+  .white-gradient-tb {
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-b from-white to-gray-400;
+  }
+
+  .main-heading {
+    @apply text-5xl font-medium tracking-tighter;
+  }
+
+  .subheading {
+    @apply text-subheading text-xl text-center;
+  }
+
+  .linebreak {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: 1px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: linear-gradient(96.18deg,rgba(215,196,255,0) 25%,rgba(215,196,255,.24) 50%,rgba(215,196,255,0) 75%);
+  }
+
+  .spotlight {
+    background: radial-gradient(33.82% 46.83% at 50% 0%, rgba(126, 61, 255, 0.08) 0%, rgba(126, 61, 255, 0) 100%), #0B011D;
+  }
+
+  .btn-primary {
+    width: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: radial-gradient(57.38% 100% at 50% 0%, rgba(168, 128, 255, 0.12) 0%, rgba(168, 128, 255, 0) 100%), rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 0 4px 2px rgba(168, 128, 255, 0.1);
+    position: relative;
+    z-index: 50;
+    padding: 6px 30px;
+    border-radius: 999px;
+    -webkit-transition: 222ms;
+    transition: 222ms;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
   }
 }

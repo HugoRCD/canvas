@@ -1,12 +1,20 @@
-html.dark {
-  --main-color: #16161D;
-  --text-color: #FDFDFD;
-  --inverted: #FFFFFF;
-  --muted: #656567;
+html.cosmos {
+  --main-color: #0b011d;
 
-  --accent: #10b981;
-  --accent-hover: #059669;
-  --accent-faded: #059669;
+  --accent: #EE49FD;
+  --accent-hover: #C72BFF;
+  --accent-faded: #C72BFF;
+
+  --accent-main: #EE49FD;
+  --accent-secondary: #5A069B;
+}
+
+html.ardent {
+  --main-color: #100100;
+
+  --accent: #FF4066;
+  --accent-hover: #FF4066;
+  --accent-faded: #FF4066;
 
   --accent-main: #FFF16A;
   --accent-secondary: #FF4066;
