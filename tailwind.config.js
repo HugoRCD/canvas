@@ -19,6 +19,7 @@ module.exports = {
         accent: "var(--accent)",
         "accent-hover": "var(--accent-hover)",
         "accent-faded": "var(--accent-faded)",
+        "accent-inverted": "var(--accent-inverted)",
       },
       gradientColorStops: {
         "accent-main": "var(--accent-main)",
