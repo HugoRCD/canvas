@@ -51,6 +51,18 @@ html {
   .blur-full {
     filter: blur(150px);
     opacity: 0.7;
+
+    @media (max-width: 768px) {
+      filter: blur(120px);
+    }
+
+    @media (max-width: 640px) {
+      filter: blur(100px);
+    }
+
+    @media (max-width: 480px) {
+      filter: blur(70px);
+    }
   }
 
   .linebreak {

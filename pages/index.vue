@@ -18,8 +18,8 @@ definePageMeta({
           <h3 class="text-xl font-bold text-gradient">Creative Developer</h3>
         </div>
       </div>
-      <div class="aurora absolute w-32 h-32 sm:w-52 sm:h-52 blur-full bg-accent translate-x-1/2 -translate-y-2/3" />
-      <div class="aurora absolute w-32 h-32 sm:w-52 sm:h-52 blur-full bg-accent-inverted -translate-x-2/3 translate-y-1/2" />
+      <div class="aurora absolute w-24 h-24 sm:w-52 sm:h-52 blur-full bg-accent translate-x-1/2 -translate-y-2/3" />
+      <div class="aurora absolute w-24 h-24 sm:w-52 sm:h-52 blur-full bg-accent-inverted -translate-x-2/3 translate-y-1/2" />
     </div>
     <div class="linebreak"></div>
     <div class="spotlight flex flex-col items-center justify-center z-10">
