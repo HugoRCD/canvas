@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import appConfig from "~/app.config";
+
 definePageMeta({
   title: "Home",
   name: "Home",
@@ -9,21 +11,11 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="h-screen flex flex-col mb-10">
-    <div class="flex justify-center items-center p-6 relative h-[600px]">
-      <div class="flex flex-col items-center gap-2 z-10">
-        <Logo :size="20" />
-        <div class="flex flex-col items-center">
-          <h2 class="text-3xl font-bold text-text-color">Hugo Richard</h2>
-          <h3 class="text-xl font-bold text-gradient">Creative Developer</h3>
-        </div>
-      </div>
-      <div class="aurora absolute w-24 h-24 sm:w-52 sm:h-52 blur-full bg-accent translate-x-1/2 -translate-y-2/3" />
-      <div class="aurora absolute w-24 h-24 sm:w-52 sm:h-52 blur-full bg-accent-inverted -translate-x-2/3 translate-y-1/2" />
-    </div>
+  <div class="flex flex-col mb-10">
+    <Hero />
     <div class="linebreak"></div>
-    <div class="spotlight flex flex-col items-center justify-center z-10">
-      <div class="max-w-6xl flex flex-col items-center gap-4">
+    <div class="spotlight-section">
+      <div class="max-w-4xl flex flex-col items-center gap-4">
         <h1 class="main-heading mt-16 text-center">
           <span class="white-gradient-tb">
             {{ $t("home.hero.part1") }}
@@ -38,6 +30,36 @@ definePageMeta({
         </p>
         <NuxtLink to="/contact" class="btn-primary mt-4">Contact</NuxtLink>
       </div>
+    </div>
+    <div class="flex flex-col justify-center max-w-xl mx-auto mt-20 gap-10">
+      <Card class="md:translate-x-[-50%]">
+        <h2 class="text-2xl font-bold white-gradient-tb">
+          {{ $t("home.about.title") }}
+        </h2>
+        <p class="subheading">
+          {{ $t("home.about.description") }}
+        </p>
+      </Card>
+      <Card class="md:translate-x-[50%]">
+        <h2 class="text-2xl font-bold white-gradient-tb">
+          {{ $t("home.projects.title") }}
+        </h2>
+        <p class="subheading">
+          {{ $t("home.projects.description") }}
+        </p>
+      </Card>
+      <Card class="md:translate-x-[-50%]">
+        <h2 class="text-2xl font-bold white-gradient-tb">
+          {{ $t("home.contact.title") }}
+        </h2>
+        <p class="subheading">
+          {{ $t("home.contact.description") }}
+        </p>
+      </Card>
+    </div>
+    <div class="linebreak mt-40"></div>
+    <div class="spotlight-section low-bg">
+      <Letter />
     </div>
   </div>
 </template>

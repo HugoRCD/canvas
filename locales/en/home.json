@@ -4,5 +4,11 @@
     "part1": "Turning ideas into real life products",
     "part2": "is my calling",
     "subtitle": "I craft premium websites for creators, entrepreneurs and startups who want to convert clients, drive serious revenue and stand out in an ever-crowding market."
+  },
+  "letter": {
+    "part1": "Front-end engineer with over 5+ years of experience in building creative websites, interactive experiences, and custom web software.",
+    "part2": "Hey I'm Hugo, a creative front-end engineer based in Nice, France. I'm passionate about creating incredible user experiences with web technology.",
+    "part3": "I specialize in programming with Nuxt, although I have a wide range of full-stack development experience. I love writing code, but I also have experience in UX consulting, with a keen eye for detail and an understanding of interaction design and best practices.",
+    "part4": "I've worked on many projects where I got in early in the discovery process, guiding and designing the UX from the ground up, then I got to work to build it."
   }
 }
