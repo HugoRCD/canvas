@@ -38,6 +38,8 @@
     "openai": "^3.2.1",
     "prettier": "^2.8.8",
     "sass": "^1.63.3",
-    "three": "^0.153.0"
+    "three": "^0.153.0",
+    "tsparticles": "^2.10.1",
+    "vue3-particles": "^2.10.1"
   }
 }

@@ -11,7 +11,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="flex flex-col mb-10">
+  <div class="flex flex-col mb-10 bg-main z-10">
     <Hero />
     <div class="linebreak"></div>
     <div class="spotlight-section">
