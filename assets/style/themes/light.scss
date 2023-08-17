@@ -1,13 +1,13 @@
-html.dark {
-  --bg-primary: #0A0B0B;
-  --bg-primary-opacity: 12, 12, 13;
-  --bg-secondary: #121212;
-  --bg-card: #343434;
+html.light {
+  --bg-primary: #F7F2F2;
+  --bg-primary-opacity: 255, 255, 255;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #F7F2F2;
 
-  --font-primary: #FFFFFF;
-  --font-muted: #66646A;
+  --font-primary: #0C0C0D;
+  --font-muted: #5d5b61;
 
-  --border-primary: #2c282e;
+  --border-primary: rgba(101, 98, 104, 0);
   --border-primary-hover: #66646A;
   --border-muted: #1C1822;
   --font-placeholder: #403D46;

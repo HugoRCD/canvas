@@ -6,6 +6,10 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  size: {
+    type: String,
+    default: "30",
+  },
 });
 
 const locales = [
@@ -28,9 +32,11 @@ watch(locale, (newLocale) => {
 
 <template>
   <ClientOnly>
-    <UButton color="gray" variant="ghost" aria-label="language" @click="() => ($i18n.locale = $i18n.locale === 'en' ? 'fr' : 'en')">
-      <span class="text-xs font-semibold">{{ locales.find((l) => l.iso === $i18n.locale).flag }}</span>
-    </UButton>
+    <div class="cursor-pointer select-none" @click="() => ($i18n.locale = $i18n.locale === 'en' ? 'fr' : 'en')">
+      <span class="font-semibold" :style="{ fontSize: `${size}px` }">
+        {{ locales.find((l) => l.iso === $i18n.locale).flag }}
+      </span>
+    </div>
     <template #fallback>
       <div class="w-8 h-8" />
     </template>

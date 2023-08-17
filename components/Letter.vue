@@ -3,10 +3,9 @@ import appConfig from "~/app.config";
 </script>
 
 <template>
-  <div class="letter flex flex-col items-center justify-center max-w-xl mx-auto mt-20 gap-10">
-    <img src="/assets/hugo-richard.jpeg" class="rounded-full h-24 w-24 object-cover border-[2px] border-white/20" alt="Hugo Richard Profile Picture" />
-    <div class="mt-6 mx-8">
-      <p class="text-white/60 text-left mb-4">
+  <div class="letter flex flex-col items-center justify-center max-w-xl mx-auto gap-10">
+    <div>
+      <p class="text-primary text-left">
         {{ $t("home.letter.part1") }}
         <br />
         <br />
@@ -18,9 +17,11 @@ import appConfig from "~/app.config";
         <br />
         {{ $t("home.letter.part4") }}
       </p>
-      <NuxtLink :to="appConfig.socials.instagram" target="_blank" class="text-white/60 text-left">@HugoRCD</NuxtLink>
+      <div class="mt-2">
+        <NuxtLink :to="appConfig.socials.instagram" target="_blank" class="text-primary text-left">@HugoRCD</NuxtLink>
+      </div>
     </div>
-    <img src="/assets/hr-signature-white.png" class="w-28 mt-4" alt="Hugo Richard Signature" />
+    <img src="/assets/hr-signature-white.png" class="w-28" alt="Hugo Richard Signature" />
   </div>
 </template>
 

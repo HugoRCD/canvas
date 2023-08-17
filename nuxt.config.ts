@@ -18,13 +18,30 @@ export default defineNuxtConfig({
     dirs: ["store"],
   },
 
+  runtimeConfig: {
+    public: {
+      available: process.env.AVAILABLE,
+    },
+  },
+
   devtools: { enabled: true },
 
-  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@pinia/nuxt", "nuxt-mailer", "@nuxthq/ui", "@nuxtjs/robots", "@tresjs/nuxt"],
+  modules: [
+    "nuxt-headlessui",
+    "@vueuse/nuxt",
+    "@nuxtjs/i18n",
+    "@pinia/nuxt",
+    "nuxt-mailer",
+    "@nuxtjs/robots",
+    "@tresjs/nuxt",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/tailwindcss",
+  ],
 
   colorMode: {
-    preference: "cosmos",
-    fallback: "cosmos",
+    preference: "dark",
+    fallback: "dark",
+    classSuffix: "",
     storageKey: "hr-folio-color-mode",
   },
 

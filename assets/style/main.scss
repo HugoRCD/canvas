@@ -4,17 +4,19 @@
 
 @import "animation";
 @import "themes/dark";
+@import "themes/light";
 
 html, body, #__nuxt, #__layout {
-  height:100%!important;
-  width: 100%!important;
+  height:100% !important;
+  width: 100% !important;
 }
 
 html {
-  --text-color: #FDFDFD;
-  --inverted: #FFFFFF;
-  --muted: #656567;
-  --subheading: #b5abcb;
+  --app-primary: 22, 22, 22;
+  --app-secondary: 28, 28, 28;
+  --app-text-primary: #F2F2F2;
+  --app-text-muted: #7c7f82;
+  --app-border: 40, 40, 40;
 
   font-family: "Inter V", sans-serif;
 }
@@ -27,12 +29,12 @@ html {
   }
 
   .gradient {
-    @apply bg-gradient-to-bl from-accent-main to-accent-secondary;
+    @apply bg-gradient-to-bl from-accent-primary to-accent-secondary;
   }
 
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    @apply bg-gradient-to-bl from-accent-main to-accent-secondary;
+    @apply bg-gradient-to-bl from-accent-primary to-accent-secondary;
   }
 
   .white-gradient-tb {
@@ -42,10 +44,6 @@ html {
 
   .main-heading {
     @apply text-4xl sm:text-5xl font-medium tracking-tighter;
-  }
-
-  .subheading {
-    @apply text-subheading text-lg sm:text-xl text-center;
   }
 
   .blur-full {
@@ -77,23 +75,6 @@ html {
     background-image: linear-gradient(96.18deg,rgba(215,196,255,0) 25%,rgba(215,196,255,.24) 50%,rgba(215,196,255,0) 75%);
   }
 
-  .spotlight {
-    width: 100%;
-    background: radial-gradient(33.82% 90% at 50% 0%, rgba(126, 61, 255, 0.17) 0%, rgba(126, 61, 255, 0) 100%), #0B011D;
-  }
-
-  .spotlight-section {
-    @apply spotlight mx-auto flex flex-col items-center justify-center z-10;
-  }
-
-  .low-bg {
-    background: radial-gradient(33.82% 46.83% at 50% 0%, rgba(126, 61, 255, 0.08) 0%, rgba(126, 61, 255, 0) 100%), #0B011D;
-  }
-
-  .spotlight-bigger {
-    background: radial-gradient(33.82% 90% at 50% 0%, rgba(126, 61, 255, 0.17) 0%, rgba(126, 61, 255, 0) 100%), #0B011D;
-  }
-
   .btn-primary {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: radial-gradient(57.38% 100% at 50% 0%, rgba(168, 128, 255, 0.12) 0%, rgba(168, 128, 255, 0) 100%), rgba(255, 255, 255, 0.05);
@@ -114,8 +95,11 @@ html {
   }
 
   .card {
-    @apply sm:w-[600px] sm:h-[400px] w-[400px] h-[300px];
-    @apply p-6 rounded-lg backdrop-blur-3xl border border-gray-800/30 justify-center items-center flex flex-col;
-    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.16) 0%, rgba(126, 61, 255, 0) 100%), rgba(11, 1, 29, 0.8);
+    @apply bg-secondary rounded-lg border-2 border-primary w-full;
   }
+
+  /*.card {
+    @apply rounded-lg backdrop-blur-3xl border-2 border-gray-800/30 flex flex-col w-full;
+    background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.16) 0%, rgba(126, 61, 255, 0) 100%), rgba(11, 1, 29, 0.8);
+  }*/
 }
