@@ -44,7 +44,12 @@ const socials = computed(() => [
     <ThemeSelector class="fixed bottom-3 right-3 sm:bottom-4" />
     <div class="flex flex-col items-center gap-2">
       <div class="flex items-center justify-between">
-        <img src="/assets/hugo-richard.jpeg" class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30" alt="Hugo Richard Profile Picture" />
+        <img
+          src="/assets/hugo-richard.jpeg"
+          class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
+          alt="Hugo Richard Profile Picture"
+          aria-label="Hugo Richard Profile Picture"
+        />
       </div>
       <h2 class="text-2xl text-primary">
         <span>Hugo Richard</span>
@@ -52,8 +57,15 @@ const socials = computed(() => [
       <Availability />
       <div class="social">
         <div class="flex items-center justify-center gap-6 sm:gap-10 mt-3">
-          <NuxtLink v-for="social in socials" :key="social.name" :to="social.link" target="_blank" class="flex items-center justify-center">
-            <img :src="social.logo" class="w-5 h-5" :alt="social.name" />
+          <NuxtLink
+            v-for="social in socials"
+            :key="social.name"
+            :to="social.link"
+            target="_blank"
+            class="flex items-center justify-center"
+            :aria-label="'Go to ' + social.name + ' profile'"
+          >
+            <img :src="social.logo" class="w-5 h-5" :alt="social.name + ' logo'" :aria-label="social.name + ' logo'" />
           </NuxtLink>
         </div>
       </div>
