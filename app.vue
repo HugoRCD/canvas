@@ -39,7 +39,7 @@ useHead({
 </script>
 
 <template>
-  <Html :lang="$i18n.locale" class="bg-primary text-primary">
+  <Html :lang="$i18n.locale" class="bg-primary text-primary transition-colors duration-300">
     <Body>
       <NuxtPage />
     </Body>

@@ -95,7 +95,7 @@ html {
   }
 
   .card {
-    @apply bg-secondary rounded-lg border-2 border-primary w-full;
+    @apply bg-secondary rounded-lg border-2 border-primary w-full shadow-md;
   }
 
   /*.card {

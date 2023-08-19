@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import appConfig from "~/app.config";
+const colorMode = useColorMode();
+
+const theme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"));
 </script>
 
 <template>
@@ -21,7 +24,7 @@ import appConfig from "~/app.config";
         <NuxtLink :to="appConfig.socials.instagram" target="_blank" class="text-primary text-left">@HugoRCD</NuxtLink>
       </div>
     </div>
-    <img src="/assets/hr-signature-white.png" class="w-28" alt="Hugo Richard Signature" />
+    <img :src="'/assets/hr-signature-' + theme + '.png'" class="w-28" alt="Hugo Richard Signature" />
   </div>
 </template>
 

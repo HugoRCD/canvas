@@ -9,14 +9,14 @@ defineProps({
   },
 });
 
-const themes = ["system", "light", "dark"];
+const themes = ["light", "dark"];
 </script>
 
 <template>
   <div>
-    <div class="flex text-primary items-center justify-center gap-4 bg-secondary rounded-xl p-2">
+    <div class="card bg-transparent backdrop-blur-xl flex text-primary items-center justify-between gap-4 rounded-xl px-4">
       <div
-        class="flex items-center gap-2 cursor-pointer rounded-xl p-2"
+        class="flex items-center gap-2 cursor-pointer rounded-md p-1"
         :class="{ 'bg-card': $colorMode.preference === option }"
         v-for="option in themes"
         :key="option"
@@ -24,6 +24,9 @@ const themes = ["system", "light", "dark"];
       >
         <component :is="option === 'light' ? SunIcon : option === 'dark' ? MoonIcon : ComputerDesktopIcon" class="w-5 h-5" />
         <span class="text-xs font-semibold" v-if="isText">{{ capitalize(option) }}</span>
+      </div>
+      <div class="flex items-center gap-2 cursor-pointer rounded-xl p-1">
+        <LanguageToggle size="25" />
       </div>
     </div>
   </div>
