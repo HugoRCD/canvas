@@ -31,11 +31,11 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
-    "nuxt-mailer",
     "@nuxtjs/robots",
     "@tresjs/nuxt",
     "@nuxtjs/color-mode",
     "@nuxtjs/tailwindcss",
+    "nuxt-svgo",
   ],
 
   colorMode: {
@@ -75,6 +75,10 @@ export default defineNuxtConfig({
   robots: {
     UserAgent: "*",
     Disallow: "",
+  },
+
+  svgo: {
+    autoImportPath: "./assets/socials/",
   },
 
   plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],

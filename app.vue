@@ -1,11 +1,25 @@
 <script lang="ts" setup>
 const { appName } = useAppConfig();
+const { t } = useI18n();
+
 useHead({
   title: appName,
   meta: [
     { name: "viewport", content: "width=device-width, initial-scale=1" },
-    { name: "keywords", content: "Home" },
-    { name: "description", content: "French developer" },
+    { name: "author", content: "Hugo Richard" },
+    { charset: "utf-8" },
+    {
+      name: "description",
+      content: t("seo.description"),
+    },
+    {
+      property: "og:title",
+      content: appName,
+    },
+    {
+      property: "og:description",
+      content: t("seo.description"),
+    },
   ],
   link: [
     {
@@ -42,6 +56,7 @@ useHead({
   <Html :lang="$i18n.locale" class="bg-primary text-primary transition-colors duration-300">
     <Body>
       <NuxtPage />
+      <LayoutFooter />
     </Body>
   </Html>
 </template>

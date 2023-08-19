@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import MaisonHochardLight from "~/assets/logo/maison-hochard-light.svg";
+
 const { appName } = useAppConfig();
 defineProps({
   isText: {
@@ -13,21 +15,8 @@ defineProps({
 </script>
 
 <template>
-  <div id="main-logo">
-    <NuxtLink to="/" class="flex flex-shrink-0 items-center" aria-label="Go back to home page">
-      <img
-        class="block w-auto lg:hidden"
-        :class="size ? 'h-' + size : 'h-6'"
-        :src="'assets/hochard-logo-' + ($colorMode.value === 'light' ? 'dark' : 'light') + '.svg'"
-        alt=""
-      />
-      <img
-        class="hidden w-auto lg:block"
-        :class="size ? 'h-' + size : 'h-6'"
-        :src="'assets/hochard-logo-' + ($colorMode.value === 'light' ? 'dark' : 'light') + '.svg'"
-        alt=""
-      />
-      <span class="text-xs font-semibold ml-1" v-if="isText">{{ appName }}</span>
-    </NuxtLink>
-  </div>
+  <NuxtLink to="/" class="flex flex-shrink-0 items-center" aria-label="Go back to home page">
+    <MaisonHochardLight class="block w-auto lg:hidden" :class="size ? 'h-' + size : 'h-6'" :fontControlled="false" />
+    <span class="text-xs font-semibold ml-1" v-if="isText">{{ appName }}</span>
+  </NuxtLink>
 </template>

@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import SvgoInstagramLight from "~/assets/socials/instagram-light.svg";
+import SvgoXDark from "~/assets/socials/x-dark.svg";
+import SvgoGithubLight from "~/assets/socials/github-light.svg";
+import SvgoLinkedinLight from "~/assets/socials/linkedin-light.svg";
+import SvgoSpotifyLight from "~/assets/socials/spotify-light.svg";
+
 definePageMeta({
   title: "Home",
   name: "Home",
@@ -8,33 +14,42 @@ definePageMeta({
 });
 
 const colorMode = useColorMode();
-const invertTheme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"));
 const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"));
 
 const socials = computed(() => [
   {
     name: "Instagram",
-    logo: `/assets/logo/socials/instagram-${invertTheme.value}.svg`,
+    logo: SvgoInstagramLight,
+    color: "#E1306C",
+    class: "hover:text-[#E1306C]",
     link: "https://www.instagram.com/hugo.rcd_",
   },
   {
     name: "GitHub",
-    logo: `/assets/logo/socials/github-${invertTheme.value}.svg`,
+    logo: SvgoGithubLight,
+    color: "#4a4a4a",
+    class: "hover:text-[#383838]",
     link: "https://github.com/HugoRCD",
   },
   {
     name: "X / Twitter",
-    logo: `/assets/logo/socials/x-${invertTheme.value}.svg`,
+    logo: SvgoXDark,
+    color: "#1DA1F2",
+    class: "hover:text-[#1DA1F2]",
     link: "https://twitter.com/HugoRCD__",
   },
   {
     name: "LinkedIn",
-    logo: `/assets/logo/socials/linkedin-${invertTheme.value}.svg`,
+    logo: SvgoLinkedinLight,
+    color: "#0077B5",
+    class: "hover:text-[#0077B5]",
     link: "https://www.linkedin.com/in/hugo-richard-0801/",
   },
   {
     name: "Spotify",
-    logo: `/assets/logo/socials/spotify-${invertTheme.value}.svg`,
+    logo: SvgoSpotifyLight,
+    color: "#1DB954",
+    class: "hover:text-[#1DB954]",
     link: "https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4",
   },
 ]);
@@ -42,7 +57,7 @@ const socials = computed(() => [
 
 <template>
   <div class="flex flex-col gap-4 items-center justify-center p-6">
-    <ThemeSelector class="fixed bottom-3 right-3 sm:bottom-4" />
+    <Tools class="fixed bottom-3 right-3 sm:bottom-4" />
     <div class="flex flex-col items-center gap-2">
       <div class="flex items-center justify-between">
         <ClientOnly>
@@ -71,7 +86,14 @@ const socials = computed(() => [
             class="flex items-center justify-center"
             :aria-label="'Go to ' + social.name + ' profile'"
           >
-            <img :src="social.logo" class="w-5 h-5" :alt="social.name + ' logo'" :aria-label="social.name + ' logo'" />
+            <component
+              :is="social.logo"
+              class="w-5 h-5 text-primary transition-colors duration-300"
+              :fontControlled="false"
+              :class="social.class"
+              :alt="social.name + ' logo'"
+              :aria-label="social.name + ' logo'"
+            />
           </NuxtLink>
         </div>
       </div>

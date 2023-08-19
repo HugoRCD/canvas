@@ -24,7 +24,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"
         <NuxtLink :to="appConfig.socials.instagram" target="_blank" class="text-primary text-left">@HugoRCD</NuxtLink>
       </div>
     </div>
-    <img :src="'/assets/hr-signature-' + theme + '.png'" class="w-28" alt="Hugo Richard Signature" />
+    <img :src="'/assets/hr-sign-' + theme + '.svg'" class="w-28" alt="Hugo Richard Signature" />
   </div>
 </template>
 
