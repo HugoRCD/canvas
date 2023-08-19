@@ -7,28 +7,36 @@ definePageMeta({
   keywords: "Home",
 });
 
-const socials = [
+const colorMode = useColorMode();
+const theme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"));
+
+const socials = computed(() => [
   {
     name: "Instagram",
-    icon: "fab fa-instagram",
-    link: "https://www.instagram.com/hugorcd/",
-  },
-  {
-    name: "LinkedIn",
-    icon: "fab fa-linkedin",
-    link: "https://www.linkedin.com/in/hugorcd/",
+    logo: `/assets/logo/socials/instagram-${theme.value}.svg`,
+    link: "https://www.instagram.com/hugo.rcd_",
   },
   {
     name: "GitHub",
-    icon: "fab fa-github",
-    link: "",
+    logo: `/assets/logo/socials/github-${theme.value}.svg`,
+    link: "https://github.com/HugoRCD",
   },
   {
-    name: "Twitter",
-    icon: "fab fa-twitter",
-    link: "",
+    name: "X / Twitter",
+    logo: `/assets/logo/socials/x-${theme.value}.svg`,
+    link: "https://twitter.com/HugoRCD__",
   },
-];
+  {
+    name: "LinkedIn",
+    logo: `/assets/logo/socials/linkedin-${theme.value}.svg`,
+    link: "https://www.linkedin.com/in/hugo-richard-0801/",
+  },
+  {
+    name: "Spotify",
+    logo: `/assets/logo/socials/spotify-${theme.value}.svg`,
+    link: "https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4",
+  },
+]);
 </script>
 
 <template>
@@ -43,14 +51,9 @@ const socials = [
       </h2>
       <Availability />
       <div class="social">
-        <div class="flex items-center justify-center gap-4">
-          <NuxtLink
-            v-for="social in socials"
-            :key="social.name"
-            :to="social.link"
-            class="flex items-center justify-center rounded-full w-10 h-10 bg-primary text-primary hover:bg-primary/80"
-          >
-            <div class="h-5 w-5 bg-secondary rounded-full"></div>
+        <div class="flex items-center justify-center gap-6 sm:gap-10 mt-3">
+          <NuxtLink v-for="social in socials" :key="social.name" :to="social.link" target="_blank" class="flex items-center justify-center">
+            <img :src="social.logo" class="w-5 h-5" :alt="social.name" />
           </NuxtLink>
         </div>
       </div>
