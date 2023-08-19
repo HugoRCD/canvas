@@ -59,6 +59,15 @@ module.exports = {
         sm: "1px",
         md: "2px",
       },
+      animation: {
+        loop: "loop 10s linear infinite",
+      },
+      keyframes: {
+        loop: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-50% - var(--gap)/2))" },
+        },
+      },
     },
   },
   plugins: [],

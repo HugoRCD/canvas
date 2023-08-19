@@ -8,32 +8,33 @@ definePageMeta({
 });
 
 const colorMode = useColorMode();
-const theme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"));
+const invertTheme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"));
+const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"));
 
 const socials = computed(() => [
   {
     name: "Instagram",
-    logo: `/assets/logo/socials/instagram-${theme.value}.svg`,
+    logo: `/assets/logo/socials/instagram-${invertTheme.value}.svg`,
     link: "https://www.instagram.com/hugo.rcd_",
   },
   {
     name: "GitHub",
-    logo: `/assets/logo/socials/github-${theme.value}.svg`,
+    logo: `/assets/logo/socials/github-${invertTheme.value}.svg`,
     link: "https://github.com/HugoRCD",
   },
   {
     name: "X / Twitter",
-    logo: `/assets/logo/socials/x-${theme.value}.svg`,
+    logo: `/assets/logo/socials/x-${invertTheme.value}.svg`,
     link: "https://twitter.com/HugoRCD__",
   },
   {
     name: "LinkedIn",
-    logo: `/assets/logo/socials/linkedin-${theme.value}.svg`,
+    logo: `/assets/logo/socials/linkedin-${invertTheme.value}.svg`,
     link: "https://www.linkedin.com/in/hugo-richard-0801/",
   },
   {
     name: "Spotify",
-    logo: `/assets/logo/socials/spotify-${theme.value}.svg`,
+    logo: `/assets/logo/socials/spotify-${invertTheme.value}.svg`,
     link: "https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4",
   },
 ]);
@@ -44,12 +45,17 @@ const socials = computed(() => [
     <ThemeSelector class="fixed bottom-3 right-3 sm:bottom-4" />
     <div class="flex flex-col items-center gap-2">
       <div class="flex items-center justify-between">
-        <img
-          src="/assets/hugo-richard.jpeg"
-          class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
-          alt="Hugo Richard Profile Picture"
-          aria-label="Hugo Richard Profile Picture"
-        />
+        <ClientOnly>
+          <img
+            :src="'/assets/hugo-richard-' + theme + '.webp'"
+            class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
+            alt="Hugo Richard Profile Picture"
+            aria-label="Hugo Richard Profile Picture"
+          />
+          <template #fallback>
+            <div class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"></div>
+          </template>
+        </ClientOnly>
       </div>
       <h2 class="text-2xl text-primary">
         <span>Hugo Richard</span>
@@ -70,6 +76,7 @@ const socials = computed(() => [
         </div>
       </div>
     </div>
+    <!--    <Testimonial />-->
     <div class="flex gap-4 w-full">
       <Card>
         <Letter />
