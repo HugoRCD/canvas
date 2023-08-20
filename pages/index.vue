@@ -13,12 +13,12 @@ definePageMeta({
     <Hero />
     <div class="linebreak my-6"></div>
     <!--    <Testimonial />-->
-    <div class="flex gap-4 w-full">
+    <!--    <div class="flex gap-4 w-full">
       <Card>
         <Letter />
       </Card>
       <Card> </Card>
-    </div>
+    </div>-->
   </div>
 </template>
 
