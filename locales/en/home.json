@@ -1,9 +1,16 @@
 {
   "hello_world": "Hello World",
   "hero": {
+    "job": {
+      "part1": "Art director",
+      "part2": "Front-end developer"
+    },
     "part1": "Turning ideas into real life products",
     "part2": "is my calling",
-    "subtitle": "I craft premium websites for creators, entrepreneurs and startups who want to convert clients, drive serious revenue and stand out in an ever-crowding market."
+    "subtitle": "I craft premium websites for creators, entrepreneurs and startups who want to convert clients, drive serious revenue and stand out in an ever-crowding market.",
+    "contact": "Contact me",
+    "email": "Copy email",
+    "cv": "Download resume"
   },
   "letter": {
     "part1": "Front-end engineer with over 5+ years of experience in building creative websites, interactive experiences, and custom web software.",

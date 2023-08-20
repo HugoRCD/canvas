@@ -13,6 +13,9 @@ import fr_availability from "./fr/availability.json";
 import en_seo from "./en/seo.json";
 import fr_seo from "./fr/seo.json";
 
+import en_global from "./en/global.json";
+import fr_global from "./fr/global.json";
+
 const messages = {
   en: {
     home: en_home,
@@ -20,6 +23,7 @@ const messages = {
     contact: en_contact,
     availability: en_availability,
     seo: en_seo,
+    global: en_global,
   },
   fr: {
     home: fr_home,
@@ -27,6 +31,7 @@ const messages = {
     contact: fr_contact,
     availability: fr_availability,
     seo: fr_seo,
+    global: fr_global,
   },
 };
 

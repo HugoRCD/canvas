@@ -26,7 +26,7 @@ const themes = ["light", "dark"];
         <span class="text-xs font-semibold" v-if="isText">{{ capitalize(option) }}</span>
       </div>
       <div class="flex items-center gap-2 cursor-pointer rounded-xl p-1">
-        <LanguageToggle size="25" />
+        <SettingsLanguageToggle size="25" />
       </div>
     </div>
   </div>

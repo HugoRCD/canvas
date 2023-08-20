@@ -16,7 +16,7 @@ defineProps({
 
 <template>
   <NuxtLink to="/" class="flex flex-shrink-0 items-center" aria-label="Go back to home page">
-    <MaisonHochardLight class="block w-auto lg:hidden" :class="size ? 'h-' + size : 'h-6'" :fontControlled="false" />
+    <MaisonHochardLight class="block w-auto" :class="size ? 'h-' + size : 'h-6'" :fontControlled="false" />
     <span class="text-xs font-semibold ml-1" v-if="isText">{{ appName }}</span>
   </NuxtLink>
 </template>

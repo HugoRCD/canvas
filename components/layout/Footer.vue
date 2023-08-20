@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-6">
+  <div class="mt-6 pb-10">
     <div class="linebreak"></div>
     <footer class="mx-auto max-w-7xl px-4 py-6 flex flex-col items-center gap-4">
       <Logo :size="8" />
