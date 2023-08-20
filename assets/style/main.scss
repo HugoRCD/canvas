@@ -12,7 +12,17 @@ html, body, #__nuxt, #__layout {
   font-family: "Inter V", sans-serif;
 }
 
+@font-face {
+  font-family: "Testimonial";
+  src: local("Testimonial"), url("/public/PPEditorialNew-UltralightItalic.otf") format("opentype");
+}
+
 @layer components {
+  .font-testimonial {
+    font-family: "Testimonial", sans-serif;
+    @apply tracking-wider
+  }
+
   .input {
     @apply border-sm rounded-md;
     @apply focus:outline-none;

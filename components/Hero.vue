@@ -67,7 +67,9 @@ const socials = computed(() => [
       <span>Hugo Richard</span>
     </h2>
     <h3>
-      <span class="text-lg text-muted">{{ $t("home.hero.job.part1") }} / {{ $t("home.hero.job.part2") }} </span>
+      <span class="text-xl text-muted"
+        ><span class="font-testimonial">{{ $t("home.hero.job.part1") }}</span> / {{ $t("home.hero.job.part2") }}
+      </span>
     </h3>
     <SettingsAvailability />
     <div class="social flex items-center justify-center gap-6 sm:gap-10 mt-3">
