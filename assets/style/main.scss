@@ -10,6 +10,20 @@ html, body, #__nuxt, #__layout {
   height: 100% !important;
   width: 100% !important;
   font-family: "Inter V", sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    padding: 0.5rem;
+  }
+
+    ::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--bg-card);
+        border-radius: 0.5rem;
+    }
 }
 
 @font-face {
@@ -57,5 +71,9 @@ html, body, #__nuxt, #__layout {
 
   .card {
     @apply bg-secondary rounded-lg border-2 border-primary w-full shadow-md;
+  }
+
+  .card-nf {
+    @apply bg-secondary rounded-lg border-2 border-primary shadow-md;
   }
 }

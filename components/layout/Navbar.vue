@@ -1,16 +1,28 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+defineProps({
+  isText: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const navigation = getNavigation("home");
+</script>
 
 <template>
-  <header class="p-6 flex justify-between">
-    <div class="flex items-center gap-4">
-      <Logo :size="12" />
-      <div>
-        <h1 class="text-3xl font-bold text-text-color">Hugo Richard</h1>
-        <h2 class="text-xl font-bold text-main-gradient">Creative Developer</h2>
-      </div>
-    </div>
-    <div class="flex flex-col items-center sm:flex-row sm:gap-4">
-      <LanguageToggle />
-    </div>
-  </header>
+  <div class="flex flex-col gap-4 items-center justify-center p-2">
+    <header class="card-nf group flex justify-between px-6 py-2 gap-4 rounded-full">
+      <NuxtLink
+        v-for="item in navigation"
+        :key="item.name"
+        :to="item.to"
+        :id="item.name.toLowerCase()"
+        class="font-semibold hover:text-primary hover:scale-110 transition-all duration-300 ease-in-out flex items-center gap-2"
+        :class="[item.name === $route.name ? 'text-primary' : 'text-muted']"
+      >
+        <component :is="item.icon" class="w-5 h-5" />
+        <span v-if="isText">{{ $t("navigation." + item.name.toLowerCase()) }}</span>
+      </NuxtLink>
+    </header>
+  </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { EnvelopeIcon, ClipboardIcon } from "@heroicons/vue/24/outline";
+import { EnvelopeIcon, Square2StackIcon } from "@heroicons/vue/24/outline";
 import SvgoInstagramLight from "~/assets/socials/instagram-light.svg";
 import SvgoXDark from "~/assets/socials/x-dark.svg";
 import SvgoGithubLight from "~/assets/socials/github-light.svg";
@@ -101,7 +101,7 @@ const socials = computed(() => [
         @click="copyToClipboard('hrichard206@gmail.com')"
       >
         {{ $t("home.hero.email") }}
-        <ClipboardIcon class="w-5 h-5" />
+        <Square2StackIcon class="w-5 h-5" />
       </button>
     </div>
   </div>
