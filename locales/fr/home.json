@@ -13,9 +13,7 @@
     "cv": "Télécharger mon CV"
   },
   "letter": {
-    "part1": "Ingénieur front-end avec plus de 5 ans d'expérience dans la construction de sites web créatifs, d'expériences interactives et de logiciels web personnalisés.",
-    "part2": "Hey Je suis Hugo, un ingénieur front-end créatif basé à Nice, en France. Je suis passionné par la création d'expériences utilisateur incroyables avec la technologie web.",
-    "part3": "Je me spécialise dans la programmation avec Nuxt, bien que j'aie une vaste expérience de développement full-stack. J'aime écrire du code, mais j'ai aussi de l'expérience en UX consulting, avec un sens aigu du détail et une compréhension du design d'interaction et des meilleures pratiques.",
-    "part4": "J'ai travaillé sur de nombreux projets où j'ai commencé tôt dans le processus de découverte, guidant et concevant l'UX à partir de la base, puis je me suis mis au travail pour le construire."
+    "part1": "Ingénieur front-end basé à Nice, en France. Avec plus de 5 ans d'expérience dans la construction de sites web créatifs, d'expériences interactives et de logiciels web personnalisés.",
+    "part2": "Je me spécialise dans la programmation avec Nuxt, bien que j'aie une vaste expérience de développement full-stack. J'aime écrire du code, mais j'ai aussi de l'expérience en UX consulting, avec un sens aigu du détail et une compréhension du design d'interaction et des meilleures pratiques.",
   }
 }

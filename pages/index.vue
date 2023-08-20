@@ -12,6 +12,7 @@ definePageMeta({
   <div class="flex flex-col gap-4 items-center justify-center p-6">
     <Hero />
     <div class="linebreak my-6"></div>
+    <Letter />
     <!--    <Testimonial />-->
     <!--    <div class="flex gap-4 w-full">
       <Card>

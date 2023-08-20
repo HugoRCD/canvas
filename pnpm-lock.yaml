@@ -28,6 +28,9 @@ devDependencies:
   '@nuxtjs/tailwindcss':
     specifier: ^6.7.0
     version: 6.8.0(webpack@5.88.2)
+  '@nuxtjs/web-vitals':
+    specifier: ^0.2.6
+    version: 0.2.6
   '@pinia/nuxt':
     specifier: ^0.4.11
     version: 0.4.11(typescript@5.1.6)(vue@3.3.4)
@@ -64,9 +67,6 @@ devDependencies:
   nuxt-headlessui:
     specifier: ^1.1.4
     version: 1.1.4(vue@3.3.4)
-  nuxt-mailer:
-    specifier: ^0.11.0
-    version: 0.11.0
   nuxt-svgo:
     specifier: ^3.4.0
     version: 3.4.0
@@ -1687,6 +1687,19 @@ packages:
       - supports-color
       - ts-node
       - webpack
+    dev: true
+
+  /@nuxtjs/web-vitals@0.2.6:
+    resolution: {integrity: sha512-hoLo/Lcl63rDEm1gR/VN3sSG7mO4UKzJF69lyKjm+cSWtnSinSQo4n/8V0qmDqVgC3GPfvC1X/IqZx5FaRSS/g==}
+    dependencies:
+      '@nuxt/kit': 3.6.5
+      defu: 6.1.2
+      pathe: 1.1.1
+      ufo: 1.2.0
+      web-vitals: 3.4.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /@one-ini/wasm@0.1.1:
@@ -6725,11 +6738,6 @@ packages:
     resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
     dev: true
 
-  /nodemailer@6.9.4:
-    resolution: {integrity: sha512-CXjQvrQZV4+6X5wP6ZIgdehJamI63MFoYFGGPtHudWym9qaEHDNdPzaj5bfMCvxG1vhAileSWW90q7nL0N36mA==}
-    engines: {node: '>=6.0.0'}
-    dev: true
-
   /nopt@5.0.0:
     resolution: {integrity: sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==}
     engines: {node: '>=6'}
@@ -6893,17 +6901,6 @@ packages:
       - rollup
       - supports-color
       - vue
-    dev: true
-
-  /nuxt-mailer@0.11.0:
-    resolution: {integrity: sha512-qTYwmknmlKBafJMNpCVY7ulfRHZ1qJGxudF7lY8H2FagR3MrUaUcZRi27GNN+7ShtACHsK/ICVEnmy8lHBEoNw==}
-    dependencies:
-      '@nuxt/kit': 3.6.5
-      defu: 6.1.2
-      nodemailer: 6.9.4
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: true
 
   /nuxt-svgo@3.4.0:
@@ -10095,6 +10092,10 @@ packages:
   /web-streams-polyfill@3.2.1:
     resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
     engines: {node: '>= 8'}
+    dev: true
+
+  /web-vitals@3.4.0:
+    resolution: {integrity: sha512-n9fZ5/bG1oeDkyxLWyep0eahrNcPDF6bFqoyispt7xkW0xhDzpUBTgyDKqWDi1twT0MgH4HvvqzpUyh0ZxZV4A==}
     dev: true
 
   /webidl-conversions@3.0.1:
