@@ -3,8 +3,6 @@ definePageMeta({
   title: "Home",
   name: "Home",
   path: "/",
-  description: "Home page",
-  keywords: "Home",
 });
 </script>
 
@@ -34,9 +32,21 @@ definePageMeta({
           {{ $t("navigation.projects") }}
         </h3>
         <div class="flex flex-col gap-4 w-full">
-          <div class="project-card">Helpr</div>
-          <div class="project-card">Sekoia</div>
-          <div class="project-card">Maison Hochard</div>
+          <div class="project-card">
+            <div class="flex items-center gap-2">
+              <SvgoHelprLight class="w-8 h-8 text-primary" :fontControlled="false" />
+              <span>Helpr</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="flex items-center gap-2">
+              <SvgoMaisonHochardLight class="w-8 h-8 text-primary" :fontControlled="false" />
+              <span>Maison Hochard</span>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <button class="btn-primary mt-4" @click="useRouter().push('/projects')">{{ $t("global.see_more") }}</button>
+          </div>
         </div>
       </div>
     </div>

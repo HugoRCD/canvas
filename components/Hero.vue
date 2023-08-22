@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { EnvelopeIcon, Square2StackIcon } from "@heroicons/vue/24/outline";
-import SvgoInstagramLight from "~/assets/socials/instagram-light.svg";
-import SvgoXDark from "~/assets/socials/x-dark.svg";
-import SvgoGithubLight from "~/assets/socials/github-light.svg";
-import SvgoLinkedinLight from "~/assets/socials/linkedin-light.svg";
-import SvgoSpotifyLight from "~/assets/socials/spotify-light.svg";
+import SvgoInstagramLight from "assets/logo/socials/instagram-light.svg";
+import SvgoXDark from "assets/logo/socials/x-dark.svg";
+import SvgoGithubLight from "assets/logo/socials/github-light.svg";
+import SvgoLinkedinLight from "assets/logo/socials/linkedin-light.svg";
+import SvgoSpotifyLight from "assets/logo/socials/spotify-light.svg";
 
 const colorMode = useColorMode();
 const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"));

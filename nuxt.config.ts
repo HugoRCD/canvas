@@ -83,7 +83,7 @@ export default defineNuxtConfig({
   },
 
   svgo: {
-    autoImportPath: "./assets/socials/",
+    autoImportPath: "./assets/logo/",
   },
 
   plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],
