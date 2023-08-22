@@ -3,7 +3,16 @@ definePageMeta({
   name: "Contact",
   title: "Contact",
   path: "/contact",
-  description: "Contact us",
+});
+
+useHead({
+  title: "HR Folio - Contact",
+  meta: [
+    {
+      name: "description",
+      content: "Profile",
+    },
+  ],
 });
 
 const email = ref("");

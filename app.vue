@@ -74,6 +74,7 @@ const toast = computed(() => {
         :infos="toast.infos"
         @close="toastStore.closeToast()"
       />
+      <LayoutCommandConsole />
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
