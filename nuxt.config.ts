@@ -12,6 +12,10 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    "/**": { isr: 60, prerender: true },
+  },
+
   css: ["~/assets/style/main.scss"],
 
   imports: {
