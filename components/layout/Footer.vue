@@ -7,7 +7,7 @@
         >© 2023,
         <NuxtLink
           target="_blank"
-          to="https://www.mh.hrcd.fr"
+          to="https://mh.hrcd.fr/"
           class="text-muted hover:text-primary transition-colors duration-300 ease-in-out"
           aria-label="Go to Maison Hochard website"
         >

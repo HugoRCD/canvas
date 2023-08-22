@@ -32,18 +32,18 @@ definePageMeta({
           {{ $t("navigation.projects") }}
         </h3>
         <div class="flex flex-col gap-4 w-full">
-          <div class="project-card">
+          <NuxtLink class="project-card" to="https://helpr.tech/" target="_blank">
             <div class="flex items-center gap-2">
               <SvgoHelprLight class="w-8 h-8 text-primary" :fontControlled="false" />
               <span>Helpr</span>
             </div>
-          </div>
-          <div class="project-card">
+          </NuxtLink>
+          <NuxtLink class="project-card" to="https://mh.hrcd.fr/" target="_blank">
             <div class="flex items-center gap-2">
               <SvgoMaisonHochardLight class="w-8 h-8 text-primary" :fontControlled="false" />
               <span>Maison Hochard</span>
             </div>
-          </div>
+          </NuxtLink>
           <div class="flex justify-center">
             <button class="btn-primary mt-4" @click="useRouter().push('/projects')">{{ $t("global.see_more") }}</button>
           </div>
