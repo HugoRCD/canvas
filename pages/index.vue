@@ -12,7 +12,34 @@ definePageMeta({
   <div class="flex flex-col gap-4 items-center justify-center p-6">
     <Hero />
     <div class="linebreak my-6"></div>
-    <Letter />
+    <div class="flex flex-col max-w-3xl gap-8">
+      <div class="flex flex-col sm:flex-row gap-4">
+        <h3 class="text-muted whitespace-nowrap">
+          {{ $t("navigation.about") }}
+        </h3>
+        <div class="flex flex-col gap-4 text-primary font-light">
+          <p>
+            {{ $t("home.about.part1") }}
+          </p>
+          <p>
+            {{ $t("home.about.part2") }}
+          </p>
+          <p>
+            {{ $t("home.about.part3") }}
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <h3 class="text-muted whitespace-nowrap">
+          {{ $t("navigation.projects") }}
+        </h3>
+        <div class="flex flex-col gap-4 w-full">
+          <div class="project-card">Helpr</div>
+          <div class="project-card">Sekoia</div>
+          <div class="project-card">Maison Hochard</div>
+        </div>
+      </div>
+    </div>
     <!--    <Testimonial />-->
     <!--    <div class="flex gap-4 w-full">
       <Card>

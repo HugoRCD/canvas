@@ -69,11 +69,21 @@ html, body, #__nuxt, #__layout {
     background-image: linear-gradient(96.18deg, rgba(215, 196, 255, 0) 10%, rgba(91, 91, 91, 0.24) 50%, rgba(215, 196, 255, 0) 90%);
   }
 
-  .card {
-    @apply bg-secondary rounded-lg border-2 border-primary w-full shadow-md;
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 px-8 py-1;
+    @apply bg-card hover:bg-card-hover rounded-md text-muted shadow-sm;
+    @apply border-[1px] border-primary hover:border-primary-hover;
+    @apply transition-colors duration-200;
   }
 
-  .card-nf {
-    @apply bg-secondary rounded-lg border-2 border-primary shadow-md;
+  .card {
+    @apply bg-secondary rounded-lg border-[1px] border-primary w-full shadow-md;
+  }
+
+  .project-card {
+    @apply flex p-2 gap-4 rounded-lg text-primary w-full;
+    @apply bg-card hover:bg-card-hover shadow-sm;
+    @apply border-[1px] border-primary hover:border-primary-hover;
+    @apply transition-colors duration-200 ease-in-out cursor-pointer;
   }
 }

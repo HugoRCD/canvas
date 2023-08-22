@@ -92,14 +92,11 @@ const socials = computed(() => [
       </NuxtLink>
     </div>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-2 mt-4">
-      <button class="flex items-center justify-center gap-2 text-muted bg-white rounded-lg px-8 py-1 hover:bg-white/80 transition-colors duration-200">
+      <NuxtLink class="btn-primary" to="/contact">
         {{ $t("home.hero.contact") }}
         <EnvelopeIcon class="w-5 h-5" />
-      </button>
-      <button
-        class="flex items-center justify-center gap-2 text-muted bg-secondary rounded-lg px-8 py-1 transition-colors duration-200"
-        @click="copyToClipboard('hrichard206@gmail.com')"
-      >
+      </NuxtLink>
+      <button class="btn-primary" @click="copyToClipboard('hrichard206@gmail.com')">
         {{ $t("home.hero.email") }}
         <Square2StackIcon class="w-5 h-5" />
       </button>

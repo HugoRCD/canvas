@@ -12,6 +12,11 @@
     "email": "Copy email",
     "cv": "Download resume"
   },
+  "about": {
+    "part1": "I'm Hugo, a multidisciplinary developer and artistic director based in Nice, France.",
+    "part2": "With over 6 years of experience in the field, I take pride in delivering visually stunning, user-friendly and high-performance websites and applications that exceed expectations.",
+    "part3": "Whether it's collaborating with cross-functional teams or leading design projects, my attention to detail and dedication to excellence has earned me a reputation for delivering exceptional results."
+  },
   "letter": {
     "part1": "Front-end engineer based in Nice, France. With over 5 years of experience building creative websites, interactive experiences and custom web software.",
     "part2": "I specialize in programming with Nuxt, although I have extensive full-stack development experience. I love writing code, but I also have experience in UX consulting, with a keen eye for detail and an understanding of interaction design and best practices."
