@@ -38,8 +38,10 @@ html, body, #__nuxt, #__layout {
   }
 
   .input {
-    @apply border-sm rounded-md;
-    @apply focus:outline-none;
+    @apply bg-secondary;
+    @apply text-primary placeholder:text-placeholder;
+    @apply rounded-md border-[1px] border-primary hover:border-primary-hover;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent;
     @apply px-4 py-2;
   }
 

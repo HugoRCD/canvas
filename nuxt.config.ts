@@ -26,6 +26,11 @@ export default defineNuxtConfig({
     public: {
       available: process.env.AVAILABLE,
     },
+    private: {
+      resendApiKey: process.env.RESEND_API_KEY,
+      openAiKey: process.env.OPENAI_API_KEY,
+      apiKey: process.env.LINEAR_API_KEY,
+    },
   },
 
   devtools: { enabled: true },
