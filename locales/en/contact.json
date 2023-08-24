@@ -1,9 +1,10 @@
 {
   "title": "Contact me",
-  "description": "A bug? A question? A suggestion? We are here to help you.",
+  "description": "Let's talk about working together",
   "fullname": "Fullname",
   "email": "Email",
   "phone": "Phone",
+  "subject": "Subject of your message",
   "message": "Message",
   "submit": "Send",
   "success": "Your message has been sent successfully",

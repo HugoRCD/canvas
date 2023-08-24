@@ -1,9 +1,10 @@
 {
   "title": "Contactez moi",
-  "description": "Un bug ? Une question ? Une suggestion ? N'hésitez pas à nous contacter",
+  "description" : "Discutons ensemble de votre projet",
   "fullname": "Nom complet",
   "email": "Email",
   "phone": "Téléphone",
+  "subject": "Sujet de votre message",
   "message": "Message",
   "submit": "Envoyer",
   "success": "Votre message a été envoyé avec succès",

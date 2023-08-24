@@ -23,7 +23,7 @@ const currentAvailability = computed(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center rounded-xl">
+  <div class="flex items-center rounded-xl">
     <span class="relative flex h-3 w-3">
       <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" :class="currentAvailability.color"></span>
       <span class="relative inline-flex rounded-full h-3 w-3 scale-90" :class="currentAvailability.bgColor"></span>
