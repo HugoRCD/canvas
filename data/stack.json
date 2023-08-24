@@ -3,12 +3,72 @@
     {
       "name": "Nuxt",
       "link": "https://nuxt.com/",
-      "tag": "development"
+      "tag": "development",
+      "type": "language",
+      "logo": "SvgoNuxtColor"
+    },
+    {
+      "name": "Vue",
+      "link": "https://vuejs.org/",
+      "tag": "development",
+      "type": "language",
+      "logo": "SvgoVueColor"
     },
     {
       "name": "Nest",
       "link": "https://nestjs.com/",
-      "tag": "development"
+      "tag": "development",
+      "type": "language",
+      "logo": "SvgoNestColor"
+    },
+    {
+      "name": "TailwindCSS",
+      "link": "https://tailwindcss.com/",
+      "tag": "development",
+      "type": "language",
+      "logo": "SvgoTailwindColor"
+    },
+    {
+      "name": "Linear",
+      "link": "https://linear.app/",
+      "tag": "development",
+      "type": "software",
+      "logo": "SvgoLinearColor"
+    },
+    {
+      "name": "Figma",
+      "link": "https://www.figma.com/",
+      "tag": "design",
+      "type": "software",
+      "logo": "SvgoFigmaColor"
+    },
+    {
+      "name": "Arc",
+      "link": "https://arc.net/",
+      "tag": "development",
+      "type": "software",
+      "logo": "SvgoArcColor"
+    },
+    {
+      "name": "Raycast",
+      "link": "https://raycast.com/",
+      "tag": "development",
+      "type": "software",
+      "logo": "SvgoRaycastColor"
+    },
+    {
+      "name": "Notion",
+      "link": "https://www.notion.so/",
+      "tag": "development",
+      "type": "software",
+      "logo": "SvgoNotionColor"
+    },
+    {
+      "name": "OpenAI",
+      "link": "https://openai.com/",
+      "tag": "development",
+      "type": "software",
+      "logo": "SvgoOpenai"
     }
   ]
 }

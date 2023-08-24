@@ -1,5 +1,6 @@
 export type Project = {
   name: string;
+  logo: string;
   description: {
     short: {
       en: string;

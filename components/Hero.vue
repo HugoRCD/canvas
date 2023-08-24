@@ -1,51 +1,12 @@
 <script setup lang="ts">
 import { EnvelopeIcon, Square2StackIcon } from "@heroicons/vue/24/outline";
-import SvgoInstagramLight from "assets/logo/socials/instagram-light.svg";
-import SvgoXDark from "assets/logo/socials/x-dark.svg";
-import SvgoGithubLight from "assets/logo/socials/github-light.svg";
-import SvgoLinkedinLight from "assets/logo/socials/linkedin-light.svg";
-import SvgoSpotifyLight from "assets/logo/socials/spotify-light.svg";
+import { Social } from "~/types/Social";
+import data from "~/data/socials.json";
+
+const socials = ref<Social[]>(data.socials);
 
 const colorMode = useColorMode();
 const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"));
-
-const socials = computed(() => [
-  {
-    name: "Instagram",
-    logo: SvgoInstagramLight,
-    color: "#E1306C",
-    class: "hover:text-[#E1306C]",
-    link: "https://www.instagram.com/hugo.rcd_",
-  },
-  {
-    name: "GitHub",
-    logo: SvgoGithubLight,
-    color: "#4a4a4a",
-    class: "hover:text-[#383838]",
-    link: "https://github.com/HugoRCD",
-  },
-  {
-    name: "X / Twitter",
-    logo: SvgoXDark,
-    color: "#1DA1F2",
-    class: "hover:text-[#1DA1F2]",
-    link: "https://twitter.com/HugoRCD__",
-  },
-  {
-    name: "LinkedIn",
-    logo: SvgoLinkedinLight,
-    color: "#0077B5",
-    class: "hover:text-[#0077B5]",
-    link: "https://www.linkedin.com/in/hugo-richard-0801/",
-  },
-  {
-    name: "Spotify",
-    logo: SvgoSpotifyLight,
-    color: "#1DB954",
-    class: "hover:text-[#1DB954]",
-    link: "https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4",
-  },
-]);
 </script>
 
 <template>
@@ -84,8 +45,8 @@ const socials = computed(() => [
         <component
           :is="social.logo"
           class="w-5 h-5 text-muted transition-colors duration-300"
-          :fontControlled="false"
           :class="social.class"
+          :fontControlled="false"
           :alt="social.name + ' logo'"
           :aria-label="social.name + ' logo'"
         />

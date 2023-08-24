@@ -1,0 +1,39 @@
+{
+  "socials": [
+    {
+      "name": "Instagram",
+      "logo": "SvgoInstagram",
+      "color": "#E1306C",
+      "class": "hover:text-[#E1306C]",
+      "link": "https://www.instagram.com/hugo.rcd_"
+    },
+    {
+      "name": "GitHub",
+      "logo": "SvgoGithub",
+      "color": "#4a4a4a",
+      "class": "hover:text-[#383838]",
+      "link": "https://github.com/HugoRCD"
+    },
+    {
+      "name": "X / Twitter",
+      "logo": "SvgoX",
+      "color": "#1DA1F2",
+      "class": "hover:text-[#1DA1F2]",
+      "link": "https://twitter.com/HugoRCD__"
+    },
+    {
+      "name": "LinkedIn",
+      "logo": "SvgoLinkedin",
+      "color": "#0077B5",
+      "class": "hover:text-[#0077B5]",
+      "link": "https://www.linkedin.com/in/hugo-richard-0801/"
+    },
+    {
+      "name": "Spotify",
+      "logo": "SvgoSpotify",
+      "color": "#1DB954",
+      "class": "hover:text-[#1DB954]",
+      "link": "https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4"
+    }
+  ]
+}

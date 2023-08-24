@@ -40,7 +40,7 @@ definePageMeta({
           <NuxtLink
             v-for="project in projects"
             :key="project.name"
-            class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 ease-in-out"
+            class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
             :to="project.release === 'soon' ? '' : project.link"
             :aria-label="project.name + ' project link'"
             target="_blank"

@@ -2,6 +2,7 @@
   "projects": [
     {
       "name": "Sekoïa",
+      "logo": "SvgoSekoia",
       "description": {
         "short": {
           "fr": "Plateforme de gestion de la formation professionnelle",
@@ -14,6 +15,7 @@
     },
     {
       "name": "Helpr",
+      "logo": "SvgoHelpr",
       "description": {
         "short": {
           "fr": "Outils d'automatisation qui permet de connecter diverses applications et d'automatiser des workflows",
@@ -28,6 +30,7 @@
     },
     {
       "name": "Maison Hochard",
+      "logo": "SvgoMaisonHochard",
       "description": {
         "short": {
           "fr": "Agence de design graphique et de communication visuelle",

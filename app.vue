@@ -76,7 +76,7 @@ const toast = computed(() => {
       />
       <LayoutCommandConsole />
       <NuxtLayout>
-        <NuxtPage class="sm:mt-[40px]" />
+        <NuxtPage />
       </NuxtLayout>
     </Body>
   </Html>

@@ -78,14 +78,20 @@ html, body, #__nuxt, #__layout {
     @apply transition-colors duration-200;
   }
 
-  .card {
+  .t-card {
     @apply bg-secondary rounded-lg border-[1px] border-primary w-full shadow-md;
   }
 
-  .project-card {
+  .card {
     @apply flex p-2 gap-4 rounded-lg text-primary w-full;
     @apply bg-card hover:bg-card-hover shadow-sm;
     @apply border-[1px] border-primary hover:border-primary-hover;
     @apply transition-colors duration-200 ease-in-out cursor-pointer;
+  }
+
+  .kbd {
+    @apply bg-primary-opacity/30 hover:bg-card-hover rounded-md text-muted shadow-sm px-2;
+    @apply border-[1px] border-primary hover:border-primary-hover;
+    @apply transition-colors duration-200;
   }
 }
