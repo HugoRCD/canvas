@@ -7,6 +7,7 @@
   "subject": "Sujet de votre message",
   "message": "Message",
   "submit": "Envoyer",
+  "average_response_time" : "Délai de réponse d'environ 3 à 5 heures",
   "success": "Votre message a été envoyé avec succès",
   "error": "Oups, une erreur s'est produite lors de l'envoi de votre message :("
 }

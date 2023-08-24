@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { projects } from "~/data/projects.json";
+
 definePageMeta({
   title: "Home",
   name: "Home",
@@ -31,18 +33,25 @@ definePageMeta({
         <h3 class="text-muted whitespace-nowrap">
           {{ $t("navigation.projects") }}
         </h3>
-        <div class="flex flex-col gap-4 w-full">
-          <NuxtLink class="project-card" to="https://helpr.tech/" target="_blank">
-            <div class="flex items-center gap-2">
-              <SvgoHelprLight class="w-8 h-8 text-primary" :fontControlled="false" />
-              <span>Helpr</span>
-            </div>
-          </NuxtLink>
-          <NuxtLink class="project-card" to="https://mh.hrcd.fr/" target="_blank">
-            <div class="flex items-center gap-2">
-              <SvgoMaisonHochardLight class="w-8 h-8 text-primary" :fontControlled="false" />
-              <span>Maison Hochard</span>
-            </div>
+        <div class="flex flex-col gap-2 w-full">
+          <NuxtLink
+            v-for="project in projects"
+            :key="project.name"
+            class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 ease-in-out"
+            :to="project.release === 'soon' ? '' : project.link"
+            :aria-label="project.name + ' project link'"
+            target="_blank"
+          >
+            <span class="whitespace-nowrap">
+              {{ project.name }}
+            </span>
+            <!--            <span class="text-muted">
+              {{ project.description.short[$i18n.locale] }}
+            </span>-->
+            <div class="w-full h-[0.1px] mx-2 bg-muted"></div>
+            <span class="text-muted whitespace-nowrap">
+              {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
+            </span>
           </NuxtLink>
           <div class="flex justify-center">
             <button class="btn-primary mt-4" @click="useRouter().push('/projects')">{{ $t("global.see_more") }}</button>

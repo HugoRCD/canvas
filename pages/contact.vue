@@ -150,6 +150,7 @@ async function submitForm() {
             <div class="flex justify-center">
               <ButtonPrimary type="submit" :pending="loading" :text="$t('contact.submit')" />
             </div>
+            <p class="text-center text-muted">{{ $t("contact.average_response_time") }}</p>
           </form>
         </div>
       </div>

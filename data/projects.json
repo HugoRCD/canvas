@@ -1,0 +1,37 @@
+{
+  "projects": [
+    {
+      "name": "Sekoïa",
+      "description": {
+        "short": {
+          "fr": "Plateforme de gestion de la formation professionnelle",
+          "en": "Professional training management platform"
+        }
+      },
+      "link": "https://sekoia.studio/",
+      "release": "soon"
+    },
+    {
+      "name": "Helpr",
+      "description": {
+        "short": {
+          "fr": "Outils d'automatisation qui permet de connecter diverses applications et d'automatiser des workflows",
+          "en": "Automation tools that allow you to connect various applications and automate workflows"
+        }
+      },
+      "link": "https://helpr.tech/",
+      "release": "2023"
+    },
+    {
+      "name": "Maison Hochard",
+      "description": {
+        "short": {
+          "fr": "Agence de design graphique et de communication visuelle",
+          "en": "Graphic design and visual communication agency"
+        }
+      },
+      "link": "https://mh.hrcd.fr/",
+      "release": "2022"
+    }
+  ]
+}
