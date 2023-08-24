@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Project } from "~/types/Project";
 import data from "~/data/projects.json";
 
 const projects = ref<Project[]>(data.projects);
@@ -61,13 +62,6 @@ definePageMeta({
         </div>
       </div>
     </div>
-    <!--    <Testimonial />-->
-    <!--    <div class="flex gap-4 w-full">
-      <Card>
-        <Letter />
-      </Card>
-      <Card> </Card>
-    </div>-->
   </div>
 </template>
 
