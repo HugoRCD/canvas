@@ -1,0 +1,14 @@
+{
+  "stack": [
+    {
+      "name": "Nuxt",
+      "link": "https://nuxt.com/",
+      "tag": "development"
+    },
+    {
+      "name": "Nest",
+      "link": "https://nestjs.com/",
+      "tag": "development"
+    }
+  ]
+}

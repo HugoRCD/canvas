@@ -9,7 +9,8 @@
         }
       },
       "link": "https://sekoia.studio/",
-      "release": "soon"
+      "release": "soon",
+      "tags": []
     },
     {
       "name": "Helpr",
@@ -20,7 +21,10 @@
         }
       },
       "link": "https://helpr.tech/",
-      "release": "2023"
+      "release": "2023",
+      "tags": [
+        "Nuxt"
+      ]
     },
     {
       "name": "Maison Hochard",
@@ -31,7 +35,11 @@
         }
       },
       "link": "https://mh.hrcd.fr/",
-      "release": "2022"
+      "release": "2022",
+      "tags": [
+        "Design",
+        "Graphic Design"
+      ]
     }
   ]
 }

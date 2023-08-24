@@ -1,9 +1,16 @@
 export type Project = {
   name: string;
-  description: string;
-  image: string;
-  link?: string;
-  github?: string;
+  description: {
+    short: {
+      en: string;
+      fr: string;
+    };
+    long?: {
+      en: string;
+      fr: string;
+    };
+  };
+  link: string | "soon";
   tags: string[];
-  date: string;
+  release: string;
 };

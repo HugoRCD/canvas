@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { projects } from "~/data/projects.json";
+import data from "~/data/projects.json";
+
+const projects = ref<Project[]>(data.projects);
 
 definePageMeta({
   title: "Home",
@@ -13,8 +15,8 @@ definePageMeta({
     <Hero />
     <div class="linebreak my-6"></div>
     <div class="flex flex-col max-w-3xl gap-8">
-      <div class="flex flex-col sm:flex-row gap-4">
-        <h3 class="text-muted whitespace-nowrap">
+      <div class="flex flex-col gap-4">
+        <h3 class="text-muted">
           {{ $t("navigation.about") }}
         </h3>
         <div class="flex flex-col gap-4 text-primary font-light">
@@ -29,8 +31,8 @@ definePageMeta({
           </p>
         </div>
       </div>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <h3 class="text-muted whitespace-nowrap">
+      <div class="flex flex-col gap-4">
+        <h3 class="text-muted">
           {{ $t("navigation.projects") }}
         </h3>
         <div class="flex flex-col gap-2 w-full">
