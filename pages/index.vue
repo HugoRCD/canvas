@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { Project } from "~/types/Project";
-import data from "~/data/projects.json";
-
-const projects = ref<Project[]>(data.projects);
-
 definePageMeta({
   title: "Home",
   name: "Home",
@@ -36,30 +31,7 @@ definePageMeta({
         <h3 class="text-muted">
           {{ $t("navigation.projects") }}
         </h3>
-        <div class="flex flex-col gap-2 w-full">
-          <NuxtLink
-            v-for="project in projects"
-            :key="project.name"
-            class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
-            :to="project.release === 'soon' ? '' : project.link"
-            :aria-label="project.name + ' project link'"
-            target="_blank"
-          >
-            <span class="whitespace-nowrap">
-              {{ project.name }}
-            </span>
-            <!--            <span class="text-muted">
-              {{ project.description.short[$i18n.locale] }}
-            </span>-->
-            <div class="w-full h-[0.1px] mx-2 bg-muted"></div>
-            <span class="text-muted whitespace-nowrap">
-              {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
-            </span>
-          </NuxtLink>
-          <div class="flex justify-center">
-            <button class="btn-primary mt-4" @click="useRouter().push('/projects')">{{ $t("global.see_more") }}</button>
-          </div>
-        </div>
+        <ProjectList featured />
       </div>
     </div>
   </div>

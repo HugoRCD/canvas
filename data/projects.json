@@ -5,12 +5,13 @@
       "logo": "SvgoSekoia",
       "description": {
         "short": {
-          "fr": "Plateforme de gestion de la formation professionnelle",
-          "en": "Professional training management platform"
+          "fr": "Marque d'ameublement et de décoration haut de gamme",
+          "en": "High-end furniture and decoration brand"
         }
       },
       "link": "https://sekoia.studio/",
       "release": "soon",
+      "featured": true,
       "tags": []
     },
     {
@@ -18,12 +19,13 @@
       "logo": "SvgoHelpr",
       "description": {
         "short": {
-          "fr": "Outils d'automatisation qui permet de connecter diverses applications et d'automatiser des workflows",
-          "en": "Automation tools that allow you to connect various applications and automate workflows"
+          "fr": "Outils d'automatisation connectant diverses applications afin de créer de puissants workflows",
+          "en": "Automation tools connecting various applications to create powerful workflows"
         }
       },
       "link": "https://helpr.tech/",
       "release": "2023",
+      "featured": true,
       "tags": [
         "Nuxt"
       ]
@@ -39,6 +41,7 @@
       },
       "link": "https://mh.hrcd.fr/",
       "release": "2022",
+      "featured": true,
       "tags": [
         "Design",
         "Graphic Design"

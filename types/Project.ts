@@ -14,4 +14,5 @@ export type Project = {
   link: string | "soon";
   tags: string[];
   release: string;
+  featured: boolean;
 };
