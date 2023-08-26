@@ -22,6 +22,9 @@ import fr_stack from "./fr/stack.json";
 import en_projects from "./en/projects.json";
 import fr_projects from "./fr/projects.json";
 
+import en_about from "./en/about.json";
+import fr_about from "./fr/about.json";
+
 const messages = {
   en: {
     home: en_home,
@@ -32,6 +35,7 @@ const messages = {
     global: en_global,
     stack: en_stack,
     projects: en_projects,
+    about: en_about,
   },
   fr: {
     home: fr_home,
@@ -42,6 +46,7 @@ const messages = {
     global: fr_global,
     stack: fr_stack,
     projects: fr_projects,
+    about: fr_about,
   },
 };
 
