@@ -2,6 +2,6 @@ export type Stack = {
   name: string;
   link: string;
   tag: string;
-  type: "software" | "language";
+  type: "software" | "languages";
   logo: string;
 };

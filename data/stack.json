@@ -4,28 +4,28 @@
       "name": "Nuxt",
       "link": "https://nuxt.com/",
       "tag": "development",
-      "type": "language",
+      "type": "languages",
       "logo": "SvgoNuxtColor"
     },
     {
       "name": "Vue",
       "link": "https://vuejs.org/",
       "tag": "development",
-      "type": "language",
+      "type": "languages",
       "logo": "SvgoVueColor"
     },
     {
       "name": "Nest",
       "link": "https://nestjs.com/",
       "tag": "development",
-      "type": "language",
+      "type": "languages",
       "logo": "SvgoNestColor"
     },
     {
       "name": "TailwindCSS",
       "link": "https://tailwindcss.com/",
       "tag": "development",
-      "type": "language",
+      "type": "languages",
       "logo": "SvgoTailwindColor"
     },
     {
