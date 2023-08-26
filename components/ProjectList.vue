@@ -31,9 +31,6 @@ const filteredProjects = computed<Project[]>(() => {
         <span class="whitespace-nowrap">
           {{ project.name }}
         </span>
-        <!--            <span class="text-muted">
-          {{ project.description.short[$i18n.locale] }}
-        </span>-->
         <div class="w-full h-[0.1px] mx-2 bg-muted"></div>
         <span class="text-muted whitespace-nowrap">
           {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
@@ -52,10 +49,11 @@ const filteredProjects = computed<Project[]>(() => {
         :aria-label="project.name + ' project link'"
         target="_blank"
       >
-        <div class="flex items-center gap-3 cursor-pointer">
+        <div class="flex items-center gap-2 cursor-pointer">
           <component
             :is="project.logo"
-            class="w-10 h-10 text-muted"
+            class="text-muted"
+            :class="project.name === 'Helpr' ? 'w-7 h-7' : 'w-10 h-10'"
             :fontControlled="false"
             :alt="project.name + ' logo'"
             :aria-label="project.name + ' logo'"

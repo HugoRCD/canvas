@@ -38,9 +38,11 @@ definePageMeta({
             >
               <component
                 :is="language.logo"
-                class="w-10 h-10 text-muted"
+                class="w-10 h-10 text-primary"
+                :class="language.logo.includes('Color') ? '' : 'text-primary'"
                 :fontControlled="false"
                 :alt="language.name + ' logo'"
+                :filled="language.logo.includes('Color')"
                 :aria-label="language.name + ' logo'"
               />
               <span class="text-primary font-semibold">
@@ -67,9 +69,10 @@ definePageMeta({
             >
               <component
                 :is="software.logo"
-                class="w-10 h-10 text-muted"
+                class="w-10 h-10 text-primary"
                 :fontControlled="false"
                 :alt="software.name + ' logo'"
+                :filled="software.logo.includes('Color')"
                 :aria-label="software.name + ' logo'"
               />
               <span class="text-primary font-semibold">
