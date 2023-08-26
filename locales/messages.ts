@@ -25,6 +25,9 @@ import fr_projects from "./fr/projects.json";
 import en_about from "./en/about.json";
 import fr_about from "./fr/about.json";
 
+import en_writing from "./en/writing.json";
+import fr_writing from "./fr/writing.json";
+
 const messages = {
   en: {
     home: en_home,
@@ -36,6 +39,7 @@ const messages = {
     stack: en_stack,
     projects: en_projects,
     about: en_about,
+    writing: en_writing,
   },
   fr: {
     home: fr_home,
@@ -47,6 +51,7 @@ const messages = {
     stack: fr_stack,
     projects: fr_projects,
     about: fr_about,
+    writing: fr_writing,
   },
 };
 
