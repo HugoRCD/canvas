@@ -44,8 +44,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
       >
         <component
           :is="social.logo"
-          class="w-5 h-5 text-muted transition-colors duration-300"
-          :class="social.class"
+          class="w-5 h-5 text-muted hover:text-primary transition-colors duration-300"
           :fontControlled="false"
           :alt="social.name + ' logo'"
           :aria-label="social.name + ' logo'"

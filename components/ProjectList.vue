@@ -44,7 +44,7 @@ const filteredProjects = computed<Project[]>(() => {
       <NuxtLink
         v-for="project in filteredProjects"
         :key="project.name"
-        class="group flex flex-col gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300"
+        class="group flex flex-col gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
         :to="project.release === 'soon' ? '' : project.link"
         :aria-label="project.name + ' project link'"
         target="_blank"
