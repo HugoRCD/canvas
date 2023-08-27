@@ -43,6 +43,7 @@
     "prettier": "^2.8.8",
     "resend": "^0.16.0",
     "sass": "^1.63.3",
+    "sitemap": "^7.1.1",
     "three": "^0.153.0",
     "tsparticles": "^2.10.1",
     "vue3-particles": "^2.10.1"

@@ -89,6 +89,12 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    prerender: {
+      routes: ["/sitemap.xml"],
+    },
+  },
+
   robots: {
     UserAgent: "*",
     Disallow: "",
