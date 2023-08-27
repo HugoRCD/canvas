@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import AppLayout from "~/components/layout/AppLayout.vue";
+
 definePageMeta({
   name: "Writing",
   title: "Writing",
@@ -7,11 +9,28 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="flex flex-col max-w-3xl mx-auto gap-4 p-6">
-    <div class="max-w-3xl">
-      <h1 class="text-primary text-2xl font-testimonial">{{ $t("writing.title") }}</h1>
-      <p class="text-muted">{{ $t("writing.description") }}</p>
-      <div class="linebreak my-6"></div>
-    </div>
-  </div>
+  <AppLayout page="writing">
+    <ContentDoc>
+      <template #not-found>
+        {{ $t("writing.empty") }}
+      </template>
+    </ContentDoc>
+    <!--    <main>
+      <NuxtLink class="text-2xl font-bold text-center text-primary" to="/articles/first"> Articles </NuxtLink>
+      <ContentNavigation v-slot="{ navigation }">
+        {{ navigation }}
+        <div v-for="link in navigation" :key="link._path" class="mx-auto max-w-5xl">
+          <NuxtLink class="text-2xl font-bold text-center text-primary" :to="link._path">
+            {{ link.title }}
+          </NuxtLink>
+        </div>
+      </ContentNavigation>
+
+      &lt;!&ndash;        <ContentDoc>
+      <template #not-found>
+        <p>{{ $t("writing.empty") }}</p>
+      </template>
+    </ContentDoc>&ndash;&gt;
+    </main>-->
+  </AppLayout>
 </template>

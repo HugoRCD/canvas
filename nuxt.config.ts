@@ -46,7 +46,14 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/web-vitals",
     "nuxt-svgo",
+    "@nuxt/content",
+    "@nuxthq/studio",
   ],
+
+  alias: {
+    "micromark/lib/preprocess.js": "micromark",
+    "micromark/lib/postprocess.js": "micromark",
+  },
 
   colorMode: {
     preference: "dark",
