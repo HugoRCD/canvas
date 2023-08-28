@@ -13,7 +13,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
   <div class="flex flex-col items-center gap-2">
     <div class="flex items-center justify-between">
       <ClientOnly>
-        <img
+        <NuxtImg
           :src="'/assets/hugo-richard-' + theme + '.webp'"
           class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
           alt="Hugo Richard Profile Picture"

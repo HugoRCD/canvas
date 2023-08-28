@@ -47,5 +47,8 @@
     "three": "^0.153.0",
     "tsparticles": "^2.10.1",
     "vue3-particles": "^2.10.1"
+  },
+  "dependencies": {
+    "@nuxt/image": "1.0.0-rc.1"
   }
 }

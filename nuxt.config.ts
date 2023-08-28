@@ -48,7 +48,12 @@ export default defineNuxtConfig({
     "nuxt-svgo",
     "@nuxt/content",
     "@nuxthq/studio",
+    "@nuxt/image",
   ],
+
+  image: {
+    format: ["webp"],
+  },
 
   colorMode: {
     preference: "dark",
