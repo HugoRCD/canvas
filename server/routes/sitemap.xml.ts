@@ -14,6 +14,31 @@ export default defineEventHandler(async (event) => {
       changefreq: "daily",
     });
   }
+  // add other pages like /about, /contact etc
+  sitemap.write({
+    url: "/",
+    changefreq: "daily",
+  });
+  sitemap.write({
+    url: "/about",
+    changefreq: "daily",
+  });
+  sitemap.write({
+    url: "/contact",
+    changefreq: "daily",
+  });
+  sitemap.write({
+    url: "/projects",
+    changefreq: "daily",
+  });
+  sitemap.write({
+    url: "/writing",
+    changefreq: "daily",
+  });
+  sitemap.write({
+    url: "/stack",
+    changefreq: "daily",
+  });
   sitemap.end();
 
   return streamToPromise(sitemap);

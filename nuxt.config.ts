@@ -50,11 +50,6 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
   ],
 
-  alias: {
-    "micromark/lib/preprocess.js": "micromark",
-    "micromark/lib/postprocess.js": "micromark",
-  },
-
   colorMode: {
     preference: "dark",
     fallback: "dark",
@@ -63,6 +58,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    strategy: "no_prefix",
     detectBrowserLanguage: {
       alwaysRedirect: true,
       useCookie: true,
@@ -92,6 +88,14 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ["/sitemap.xml"],
+    },
+  },
+
+  content: {
+    watch: {
+      ws: {
+        showURL: false,
+      },
     },
   },
 

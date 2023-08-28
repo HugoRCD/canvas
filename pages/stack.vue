@@ -8,8 +8,6 @@ const stack = ref<Stack[]>(data.stack as Stack[]);
 definePageMeta({
   name: "Stack",
   title: "Stack",
-  path: "/stack",
-  description: "Stack",
 });
 </script>
 

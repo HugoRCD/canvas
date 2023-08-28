@@ -2,7 +2,6 @@
 definePageMeta({
   title: "Home",
   name: "Home",
-  path: "/",
 });
 </script>
 

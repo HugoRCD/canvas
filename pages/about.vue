@@ -6,8 +6,6 @@ import AppLayout from "~/components/layout/AppLayout.vue";
 definePageMeta({
   name: "About",
   title: "About",
-  path: "/about",
-  description: "About",
 });
 
 const experiences = ref<About>(data.experience);

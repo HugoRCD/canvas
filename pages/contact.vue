@@ -5,7 +5,6 @@ import Availability from "~/components/settings/Availability.vue";
 definePageMeta({
   name: "Contact",
   title: "Contact",
-  path: "/contact",
 });
 
 useHead({

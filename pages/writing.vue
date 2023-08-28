@@ -1,36 +1,28 @@
 <script setup lang="ts">
 import AppLayout from "~/components/layout/AppLayout.vue";
+import { Article } from "~/types/Article";
 
 definePageMeta({
   name: "Writing",
   title: "Writing",
-  path: "/writing",
+});
+
+const articles = ref<Article[]>([]);
+
+await useAsyncData("articles", () => queryContent("/articles").find()).then((data) => {
+  articles.value = data.data.value as unknown as Article[];
 });
 </script>
 
 <template>
   <AppLayout page="writing">
-    <ContentDoc>
-      <template #not-found>
-        {{ $t("writing.empty") }}
-      </template>
-    </ContentDoc>
-    <!--    <main>
-      <NuxtLink class="text-2xl font-bold text-center text-primary" to="/articles/first"> Articles </NuxtLink>
-      <ContentNavigation v-slot="{ navigation }">
-        {{ navigation }}
-        <div v-for="link in navigation" :key="link._path" class="mx-auto max-w-5xl">
-          <NuxtLink class="text-2xl font-bold text-center text-primary" :to="link._path">
-            {{ link.title }}
-          </NuxtLink>
-        </div>
-      </ContentNavigation>
-
-      &lt;!&ndash;        <ContentDoc>
-      <template #not-found>
-        <p>{{ $t("writing.empty") }}</p>
-      </template>
-    </ContentDoc>&ndash;&gt;
-    </main>-->
+    <NuxtLink
+      v-for="article of articles"
+      :key="article._path"
+      :to="article._path"
+      class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
+    >
+      {{ article.title }}
+    </NuxtLink>
   </AppLayout>
 </template>
