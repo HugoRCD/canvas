@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import data from "~/data/about.json";
 import { About } from "~/types/About";
-import AppLayout from "~/components/layout/AppLayout.vue";
 
 definePageMeta({
   name: "About",
@@ -16,7 +15,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
 </script>
 
 <template>
-  <AppLayout page="about">
+  <LayoutInfoWrapper page="about">
     <NuxtImg
       :src="'/assets/hugo-richard-' + theme + '.webp'"
       class="rounded-lg h-64 w-64 object-cover mt-4"
@@ -84,5 +83,5 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
         </div>
       </div>
     </div>
-  </AppLayout>
+  </LayoutInfoWrapper>
 </template>

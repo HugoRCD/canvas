@@ -29,6 +29,7 @@ html, body, #__nuxt, #__layout {
 @font-face {
   font-family: "Testimonial";
   src: local("Testimonial"), url("/assets/font/PPEditorialNew-UltralightItalic.otf") format("opentype");
+  font-display: swap;
 }
 
 @layer components {

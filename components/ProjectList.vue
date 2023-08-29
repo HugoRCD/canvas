@@ -24,9 +24,9 @@ const filteredProjects = computed<Project[]>(() => {
         v-for="project in filteredProjects"
         :key="project.name"
         class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
-        :to="project.release === 'soon' ? '' : project.link"
+        :to="project.release === 'soon' ? '/' : project.link"
         :aria-label="project.name + ' project link'"
-        target="_blank"
+        :target="project.release === 'soon' ? '_self' : '_blank'"
       >
         <span class="whitespace-nowrap">
           {{ project.name }}
@@ -45,9 +45,9 @@ const filteredProjects = computed<Project[]>(() => {
         v-for="project in filteredProjects"
         :key="project.name"
         class="group flex flex-col gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
-        :to="project.release === 'soon' ? '' : project.link"
+        :to="project.release === 'soon' ? '/' : project.link"
         :aria-label="project.name + ' project link'"
-        target="_blank"
+        :target="project.release === 'soon' ? '_self' : '_blank'"
       >
         <div class="flex items-center gap-2 cursor-pointer">
           <component

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import AppLayout from "~/components/layout/AppLayout.vue";
 import { Article } from "~/types/Article";
 
 definePageMeta({
@@ -15,7 +14,7 @@ await useAsyncData("articles", () => queryContent("/articles").find()).then((dat
 </script>
 
 <template>
-  <AppLayout page="writing">
+  <LayoutInfoWrapper page="writing">
     <NuxtLink
       v-for="article of articles"
       :key="article._path"
@@ -24,5 +23,5 @@ await useAsyncData("articles", () => queryContent("/articles").find()).then((dat
     >
       {{ article.title }}
     </NuxtLink>
-  </AppLayout>
+  </LayoutInfoWrapper>
 </template>

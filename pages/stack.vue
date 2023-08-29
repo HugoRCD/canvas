@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { Stack } from "~/types/Stack";
 import data from "~/data/stack.json";
-import AppLayout from "~/components/layout/AppLayout.vue";
 
 const stack = ref<Stack[]>(data.stack as Stack[]);
 
@@ -12,7 +11,7 @@ definePageMeta({
 </script>
 
 <template>
-  <AppLayout page="stack">
+  <LayoutInfoWrapper page="stack">
     <div class="flex flex-col gap-10">
       <div v-for="section in ['languages', 'software']" :key="section">
         <h3 class="text-muted mb-2">{{ $t(`stack.${section}`) }}</h3>
@@ -39,5 +38,5 @@ definePageMeta({
         </div>
       </div>
     </div>
-  </AppLayout>
+  </LayoutInfoWrapper>
 </template>
