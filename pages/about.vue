@@ -45,7 +45,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
         {{ $t("about.experience") }}
       </h3>
       <div class="flex flex-col gap-4 text-primary">
-        <div v-for="experience in experiences[$i18n.locale]" :key="experience.title">
+        <div v-for="experience in experiences[$i18n.locale as 'en' | 'fr']" :key="experience.title">
           <h4 class="text-primary font-semibold">
             {{ experience.title }}
           </h4>
@@ -67,7 +67,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
         {{ $t("about.education") }}
       </h3>
       <div class="flex flex-col gap-4 text-primary">
-        <div v-for="education in education[$i18n.locale]" :key="education.title">
+        <div v-for="education in education[$i18n.locale as 'en' | 'fr']" :key="education.title">
           <h4 class="text-primary font-semibold">
             {{ education.title }}
           </h4>
