@@ -17,6 +17,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
 <template>
   <LayoutInfoWrapper page="about">
     <NuxtImg
+      width="256"
       :src="'/assets/hugo-richard-' + theme + '.webp'"
       class="rounded-lg h-64 w-64 object-cover mt-4"
       alt="Hugo Richard Profile Picture"

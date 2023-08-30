@@ -54,6 +54,10 @@ export default defineNuxtConfig({
 
   image: {
     format: ["webp"],
+    screens: {
+      avatar: 96,
+      cover: 256,
+    },
   },
 
   colorMode: {
@@ -104,6 +108,8 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  buildModules: ["@nuxt/image"],
 
   robots: {
     UserAgent: "*",
