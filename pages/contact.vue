@@ -57,7 +57,7 @@ async function submitForm() {
 </script>
 
 <template>
-  <div class="relative mx-auto max-w-6xl lg:grid lg:grid-cols-5">
+  <div class="mx-auto max-w-6xl lg:grid lg:grid-cols-5 -z-1">
     <div class="py-16 px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
       <div class="mx-auto max-w-2xl">
         <Availability class="mb-6" />
