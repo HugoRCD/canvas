@@ -10,13 +10,13 @@ definePageMeta({
     <nav>
       <ContentNavigation v-slot="{ navigation }">
         <ul>
-          <li v-for="link of navigation.filter((link) => link._path === '/articles')[0].children" :key="link._path">
+          <li v-for="article of navigation.filter((link) => link._path === '/articles')[0].children" :key="article._path">
             <NuxtLink
-              :to="link._path"
+              :to="article._path"
               class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
-              :aria-label="link.title"
+              :aria-label="article.title"
             >
-              {{ link.title }}
+              {{ article.title }}
             </NuxtLink>
           </li>
         </ul>

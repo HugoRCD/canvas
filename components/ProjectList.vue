@@ -51,6 +51,7 @@ const filteredProjects = computed<Project[]>(() => {
       >
         <div class="flex items-center gap-2 cursor-pointer">
           <component
+            v-if="project.release !== 'soon'"
             :is="project.logo"
             class="text-muted"
             :class="project.name === 'Helpr' ? 'w-7 h-7' : 'w-10 h-10'"
