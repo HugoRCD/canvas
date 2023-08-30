@@ -2,6 +2,7 @@
 import { EnvelopeIcon, Square2StackIcon } from "@heroicons/vue/24/outline";
 import { Social } from "~/types/Social";
 import data from "~/data/socials.json";
+import MeetingButton from "~/components/MeetingButton.vue";
 
 const socials = ref<Social[]>(data.socials);
 
@@ -62,6 +63,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
         <Square2StackIcon class="w-5 h-5" />
       </button>
     </div>
+    <MeetingButton class="flex items-center justify-center" />
   </div>
 </template>
 

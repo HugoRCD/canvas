@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
 import Availability from "~/components/settings/Availability.vue";
+import MeetingButton from "~/components/MeetingButton.vue";
 
 definePageMeta({
   name: "Contact",
@@ -79,6 +80,7 @@ async function submitForm() {
               <span class="ml-3">contact@hrcd.fr</span>
             </dd>
           </div>
+          <MeetingButton />
         </dl>
       </div>
     </div>

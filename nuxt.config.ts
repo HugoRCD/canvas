@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       available: process.env.AVAILABLE,
+      meetingLink: process.env.MEETING_LINK,
     },
     private: {
       resendApiKey: process.env.RESEND_API_KEY,
