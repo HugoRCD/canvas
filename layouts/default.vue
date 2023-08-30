@@ -1,12 +1,9 @@
-<script setup lang="ts">
-const width = useWindowSize().width;
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
     <SettingsTools class="fixed bottom-14 right-3 sm:bottom-4" />
-    <LayoutNavbar class="fixed z-20 top-0 flex" v-if="width > 640" />
-    <LayoutNavbar class="fixed z-20 bottom-0 flex" v-else />
+    <LayoutNavbar class="fixed z-20 bottom-0 sm:top-0 sm:bottom-auto flex" />
     <div class="sm:mt-[50px]">
       <slot />
     </div>
