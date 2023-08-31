@@ -30,8 +30,8 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
       <span>Hugo Richard</span>
     </h2>
     <h3>
-      <span class="text-xl text-muted"
-        ><span class="font-testimonial">{{ $t("home.hero.job.part1") }}</span> / {{ $t("home.hero.job.part2") }}
+      <span class="text-xl text-muted">
+        <span class="font-testimonial">{{ $t("home.hero.job.part1") }}</span> / {{ $t("home.hero.job.part2") }}
       </span>
     </h3>
     <SettingsAvailability />
