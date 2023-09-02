@@ -52,16 +52,23 @@
     {
       "name": "Raycast",
       "link": "https://raycast.com/",
-      "tag": "development",
+      "tag": "productivity",
       "type": "software",
       "logo": "SvgoRaycastColor"
     },
     {
       "name": "Notion",
       "link": "https://www.notion.so/",
-      "tag": "development",
+      "tag": "productivity",
       "type": "software",
       "logo": "SvgoNotionColor"
+    },
+    {
+      "name": "Cron",
+      "link": "https://calendar.cron.com/",
+      "tag": "productivity",
+      "type": "software",
+      "logo": "SvgoCronColor"
     },
     {
       "name": "OpenAI",

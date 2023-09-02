@@ -7,6 +7,7 @@ type Navigation = {
   name: string;
   to: string;
   icon: FunctionalComponent;
+  devOnly?: boolean;
 };
 
 export function getNavigation(where: Where): Navigation[] {
@@ -15,7 +16,7 @@ export function getNavigation(where: Where): Navigation[] {
       return [
         { name: "Home", to: "/", icon: HomeIcon },
         { name: "Projects", to: "/projects", icon: BriefcaseIcon },
-        { name: "Writing", to: "/writing", icon: PencilIcon },
+        { name: "Writing", to: "/writing", icon: PencilIcon, devOnly: true },
         { name: "Stack", to: "/stack", icon: RectangleStackIcon },
         { name: "About", to: "/about", icon: UserIcon },
         { name: "Contact", to: "/contact", icon: EnvelopeIcon },
