@@ -40,7 +40,7 @@ const filteredProjects = computed<Project[]>(() => {
         <button class="btn-primary" @click="useRouter().push('/projects')">{{ $t("global.see_more") }}</button>
       </div>
     </div>
-    <div class="grid auto-rows-fr grid-cols-2 gap-4 w-full" v-else>
+    <div class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 gap-4 w-full" v-else>
       <NuxtLink
         v-for="project in filteredProjects"
         :key="project.name"
