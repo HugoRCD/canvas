@@ -15,4 +15,5 @@ export type Project = {
   tags: string[];
   release: string;
   featured: boolean;
+  color: string;
 };

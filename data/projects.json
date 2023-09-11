@@ -12,7 +12,8 @@
       "link": "https://sekoia.studio/",
       "release": "soon",
       "featured": true,
-      "tags": []
+      "tags": [],
+      "color": "#3f3f3f"
     },
     {
       "name": "Helpr",
@@ -28,7 +29,8 @@
       "featured": true,
       "tags": [
         "Nuxt"
-      ]
+      ],
+      "color": "#FFFFFF"
     },
     {
       "name": "Maison Hochard",
@@ -45,7 +47,8 @@
       "tags": [
         "Design",
         "Graphic Design"
-      ]
+      ],
+      "color": "#000"
     }
   ]
 }
