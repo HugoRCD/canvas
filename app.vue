@@ -47,6 +47,10 @@ useHead({
       content: appName,
     },
     {
+      property: "og:url",
+      content: "https://hrcd.fr/",
+    },
+    {
       property: "og:description",
       content: t("seo.description"),
     },
@@ -69,6 +73,10 @@ useHead({
     {
       property: "twitter:image",
       content: "/preview.webp",
+    },
+    {
+      property: "twitter:url",
+      content: "https://hrcd.fr/",
     },
   ],
   link: [
