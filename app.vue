@@ -20,6 +20,10 @@ useHead({
       property: "og:description",
       content: t("seo.description"),
     },
+    {
+      property: "og:image",
+      content: "/preview.webp",
+    },
   ],
   link: [
     {

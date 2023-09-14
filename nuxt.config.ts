@@ -46,7 +46,6 @@ export default defineNuxtConfig({
     "@tresjs/nuxt",
     "@nuxtjs/color-mode",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/web-vitals",
     "nuxt-svgo",
     "@nuxt/content",
     "@nuxthq/studio",
