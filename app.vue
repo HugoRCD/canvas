@@ -2,6 +2,32 @@
 const { appName } = useAppConfig();
 const { t } = useI18n();
 
+const tags = [
+  "web",
+  "developer",
+  "portfolio",
+  "hugo",
+  "richard",
+  "hugo richard",
+  "hrfolio",
+  "hr",
+  "folio",
+  "hr folio",
+  "Nice",
+  "France",
+  "Nice France",
+  "Côte d'Azur",
+  "Cote d'Azur",
+  "Côte d'Azur France",
+  "Cote d'Azur France",
+  "art",
+  "design",
+  "designer",
+  "art director",
+  "directeur artistique",
+  "Développeur",
+];
+
 useHead({
   title: appName,
   meta: [
@@ -13,6 +39,10 @@ useHead({
       content: t("seo.description"),
     },
     {
+      name: "keywords",
+      content: tags.join(", "),
+    },
+    {
       property: "og:title",
       content: appName,
     },
@@ -22,6 +52,22 @@ useHead({
     },
     {
       property: "og:image",
+      content: "/preview.webp",
+    },
+    {
+      property: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      property: "twitter:title",
+      content: appName,
+    },
+    {
+      property: "twitter:description",
+      content: t("seo.description"),
+    },
+    {
+      property: "twitter:image",
       content: "/preview.webp",
     },
   ],
