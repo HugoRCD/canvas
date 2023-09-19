@@ -55,16 +55,18 @@ const devNavigation = getNavigation("home").filter((link) => link.devOnly === tr
                     <component :is="item.icon" class="w-6 h-6 sm:w-6 sm:h-6 font-medium" />
                   </NuxtLink>
                 </NavItem>
-                <NavItem v-for="(item, index) in devNavigation" :key="index" v-slot="{ setActive, isActive }" as="li">
-                  <NuxtLink
-                    :to="item.to"
-                    :class="[isActive ? 'text-white/75 text-shadow-sm' : 'text-white/60 hover:text-white/75']"
-                    class="flex px-4 py-1.5 text-sm font-light transition-[text-shadow,color] duration-300"
-                    @click.prevent="setActive"
-                  >
-                    <component :is="item.icon" class="w-6 h-6 sm:w-6 sm:h-6 font-medium" />
-                  </NuxtLink>
-                </NavItem>
+                <DevOnly>
+                  <NavItem v-for="(item, index) in devNavigation" :key="index" v-slot="{ setActive, isActive }" as="li">
+                    <NuxtLink
+                      :to="item.to"
+                      :class="[isActive ? 'text-white/75 text-shadow-sm' : 'text-white/60 hover:text-white/75']"
+                      class="flex px-4 py-1.5 text-sm font-light transition-[text-shadow,color] duration-300"
+                      @click.prevent="setActive"
+                    >
+                      <component :is="item.icon" class="w-6 h-6 sm:w-6 sm:h-6 font-medium" />
+                    </NuxtLink>
+                  </NavItem>
+                </DevOnly>
               </NavList>
             </div>
           </div>
