@@ -14,7 +14,7 @@ const props = defineProps({
 
 <template>
   <div class="text-center">
-    <ArrowPathIcon class="animate-spin text-primary" :class="size" />
+    <ArrowPathIcon class="animate-spin text-main" :class="size" />
     <p class="text" v-if="props.isText">
       {{ $t("loading") }}
     </p>

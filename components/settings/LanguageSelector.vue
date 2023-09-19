@@ -43,7 +43,7 @@ watch(locale, (newLocale) => {
     >
       <MenuItems
         as="div"
-        class="absolute mt-2 origin-center bg-primary border-[1px] border-white/20 divide-y-[1px] divide-white/20 rounded-md shadow-lg outline-none"
+        class="absolute mt-2 origin-center bg-main border-[1px] border-white/20 divide-y-[1px] divide-white/20 rounded-md shadow-lg outline-none"
       >
         <MenuItem
           v-for="locale in $i18n.availableLocales"

@@ -26,14 +26,14 @@ definePageMeta({
           >
             <component
               :is="item.logo"
-              class="w-10 h-10 text-primary"
-              :class="item.logo.includes('Color') ? '' : 'text-primary'"
+              class="w-10 h-10 text-main"
+              :class="item.logo.includes('Color') ? '' : 'text-main'"
               :fontControlled="false"
               :alt="item.name + ' logo'"
               :filled="item.logo.includes('Color')"
               :aria-label="item.name + ' logo'"
             />
-            <span class="text-primary font-semibold">{{ item.name }}</span>
+            <span class="text-main font-semibold">{{ item.name }}</span>
           </NuxtLink>
         </div>
       </div>

@@ -20,8 +20,8 @@ const devNavigation = getNavigation("home").filter((link) => link.devOnly === tr
         :key="item.name"
         :to="item.to"
         :id="item.name.toLowerCase()"
-        class="hover:text-primary transition-all duration-300 ease-in-out flex items-center gap-2"
-        :class="[item.name === $route.name ? 'text-primary' : 'text-muted']"
+        class="hover:text-main transition-all duration-300 ease-in-out flex items-center gap-2"
+        :class="[item.name === $route.name ? 'text-main' : 'text-muted']"
         :aria-label="item.name + ' navigation link'"
       >
         <component :is="item.icon" class="w-7 h-7 sm:w-6 sm:h-6 font-medium" />
@@ -32,8 +32,8 @@ const devNavigation = getNavigation("home").filter((link) => link.devOnly === tr
           :key="item.name"
           :to="item.to"
           :id="item.name.toLowerCase()"
-          class="hover:text-primary transition-all duration-300 ease-in-out flex items-center gap-2"
-          :class="[item.name === $route.name ? 'text-primary' : 'text-muted']"
+          class="hover:text-main transition-all duration-300 ease-in-out flex items-center gap-2"
+          :class="[item.name === $route.name ? 'text-main' : 'text-muted']"
           :aria-label="item.name + ' navigation link'"
         >
           <component :is="item.icon" class="w-7 h-7 sm:w-6 sm:h-6 font-medium" />

@@ -21,8 +21,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--bg-primary)",
-        "primary-opacity": withOpacity("--bg-primary-opacity"),
+        main: "var(--bg-main)",
+        "main-opacity": withOpacity("--bg-main-opacity"),
         secondary: "var(--bg-secondary)",
         card: "var(--bg-card)",
         "card-hover": "var(--bg-card-hover)",
@@ -33,7 +33,7 @@ module.exports = {
         placeholder: "var(--font-placeholder)",
       },
       textColor: {
-        primary: "var(--font-primary)",
+        main: "var(--font-primary)",
         muted: "var(--font-muted)",
         placeholder: "var(--font-placeholder)",
         inverted: "var(--font-inverted)",

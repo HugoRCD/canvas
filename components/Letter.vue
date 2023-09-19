@@ -15,7 +15,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"
         {{ $t("home.letter.part2") }}
       </p>
       <div class="mt-2">
-        <NuxtLink :to="appConfig.socials.instagram" target="_blank" class="text-primary text-left">@HugoRCD</NuxtLink>
+        <NuxtLink :to="appConfig.socials.instagram" target="_blank" class="text-main text-left">@HugoRCD</NuxtLink>
       </div>
     </div>
     <img :src="'/assets/hr-sign-' + theme + '.svg'" class="w-28" alt="Hugo Richard Signature" />

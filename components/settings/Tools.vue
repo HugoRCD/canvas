@@ -14,7 +14,7 @@ const themes = ["light", "dark"];
 
 <template>
   <div>
-    <div class="t-card bg-transparent backdrop-blur-xl flex text-primary items-center justify-between gap-4 rounded-xl px-1 sm:px-4">
+    <div class="t-card bg-transparent backdrop-blur-xl flex text-main items-center justify-between gap-4 rounded-xl px-1 sm:px-4">
       <div
         class="flex items-center gap-2 cursor-pointer rounded-md p-1"
         :class="{ 'bg-card': $colorMode.preference === option }"

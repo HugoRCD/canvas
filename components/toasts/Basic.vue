@@ -65,10 +65,10 @@ watch(
                 </div>
                 <div class="flex flex-col gap-1">
                   <div class="flex items-center gap-1">
-                    <p class="text-base font-medium text-primary">
+                    <p class="text-base font-medium text-main">
                       {{ $t(title) }}
                     </p>
-                    <p class="text-base font-medium text-primary" v-if="infos">
+                    <p class="text-base font-medium text-main" v-if="infos">
                       {{ infos }}
                     </p>
                   </div>

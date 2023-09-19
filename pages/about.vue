@@ -25,7 +25,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
     />
     <div class="flex flex-col gap-3 mt-4">
       <h3 class="text-muted text-lg">Intro</h3>
-      <div class="flex flex-col gap-4 text-primary">
+      <div class="flex flex-col gap-4 text-main">
         <p>
           {{ $t("about.intro.part1") }}
         </p>
@@ -45,9 +45,9 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
       <h3 class="text-muted text-lg">
         {{ $t("about.experience") }}
       </h3>
-      <div class="flex flex-col gap-4 text-primary">
+      <div class="flex flex-col gap-4 text-main">
         <div v-for="experience in experiences[$i18n.locale as 'en' | 'fr']" :key="experience.title">
-          <h4 class="text-primary font-semibold">
+          <h4 class="text-main font-semibold">
             {{ experience.title }}
           </h4>
           <div class="flex gap-1 text-muted">
@@ -67,9 +67,9 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
       <h3 class="text-muted text-lg">
         {{ $t("about.education") }}
       </h3>
-      <div class="flex flex-col gap-4 text-primary">
+      <div class="flex flex-col gap-4 text-main">
         <div v-for="education in education[$i18n.locale as 'en' | 'fr']" :key="education.title">
-          <h4 class="text-primary font-semibold">
+          <h4 class="text-main font-semibold">
             {{ education.title }}
           </h4>
           <div class="flex gap-1 text-muted">

@@ -94,7 +94,7 @@ onMounted(() => {
               <div class="relative">
                 <MagnifyingGlassIcon class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-muted" aria-hidden="true" />
                 <ComboboxInput
-                  class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-primary placeholder-gray-400 focus:ring-0 sm:text-sm focus:outline-none"
+                  class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-main placeholder-gray-400 focus:ring-0 sm:text-sm focus:outline-none"
                   :placeholder="$t('global.search')"
                   @change="query = $event.target.value"
                 />
@@ -103,7 +103,7 @@ onMounted(() => {
               <ComboboxOptions v-if="query === '' || filteredActions.length > 0" static class="max-h-80 scroll-py-2 divide-y divide-gray-800 overflow-y-auto">
                 <li class="p-2">
                   <h2 class="mt-4 mb-2 px-3 text-xs font-semibold text-muted">{{ $t("global.command") }}</h2>
-                  <ul class="text-sm text-primary">
+                  <ul class="text-sm text-main">
                     <ComboboxOption
                       v-for="action in query === '' ? filteredActions : filteredActions"
                       :key="action.id"
@@ -111,9 +111,9 @@ onMounted(() => {
                       as="template"
                       v-slot="{ active }"
                     >
-                      <li :class="['flex cursor-default text-muted select-none items-center rounded-md px-3 py-2', active && 'bg-accent text-primary']">
+                      <li :class="['flex cursor-default text-muted select-none items-center rounded-md px-3 py-2', active && 'bg-accent text-main']">
                         <component :is="action.icon" :class="['h-6 w-6 flex-none', active ? 'text-white' : 'text-gray-400']" aria-hidden="true" />
-                        <span class="ml-3 flex-auto truncate" :class="[active ? 'text-primary' : 'text-muted']">
+                        <span class="ml-3 flex-auto truncate" :class="[active ? 'text-main' : 'text-muted']">
                           {{ action.name }}
                         </span>
                       </li>
@@ -124,7 +124,7 @@ onMounted(() => {
 
               <div v-if="query !== '' && filteredActions.length === 0" class="p-2">
                 <h2 class="mt-4 mb-2 px-3 text-xs font-semibold text-muted">{{ $t("global.command") }}</h2>
-                <ul class="text-sm text-primary">
+                <ul class="text-sm text-main">
                   <li class="flex cursor-default text-muted select-none items-center rounded-md px-3 py-2">
                     <InformationCircleIcon class="h-6 w-6 flex-none text-gray-400" aria-hidden="true" />
                     <span class="ml-3 flex-auto truncate text-muted">

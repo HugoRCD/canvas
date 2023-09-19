@@ -55,6 +55,15 @@ async function submitForm() {
   }
   loading.value = false;
 }
+
+defineShortcuts({
+  meta_o: {
+    usingInput: true,
+    handler: () => {
+      copyToClipboard("hrichard206@gmail.com");
+    },
+  },
+});
 </script>
 
 <template>
@@ -62,22 +71,26 @@ async function submitForm() {
     <div class="py-16 px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
       <div class="mx-auto max-w-2xl">
         <Availability class="mb-6" />
-        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl text-primary">{{ $t("contact.title") }}<span class="text-primary ml-2">.</span></h2>
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl text-main">{{ $t("contact.title") }}<span class="text-main ml-2">.</span></h2>
         <p class="mt-3 text-lg leading-6 text-muted">
           {{ $t("contact.description") }}
         </p>
-        <dl class="mt-8 text-base text-muted">
-          <div class="mt-6">
+        <dl class="mt-8 text-base text-muted flex flex-col gap-4">
+          <div>
             <dd class="flex">
               <PhoneIcon class="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
               <span class="ml-3">(+33) 6 21 56 22 18</span>
             </dd>
           </div>
-          <div class="mt-3">
+          <div>
             <dt class="sr-only">Email</dt>
             <dd class="flex">
               <EnvelopeIcon class="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-              <span class="ml-3">contact@hrcd.fr</span>
+              <UTooltip :text="$t('home.hero.email')" :shortcuts="['⌘', 'O']">
+                <span class="ml-3 cursor-pointer hover:text-main transition-colors duration-300" @click="copyToClipboard('contact@hrcd.fr')">
+                  contact@hrcd.fr
+                </span>
+              </UTooltip>
             </dd>
           </div>
           <MeetingButton />

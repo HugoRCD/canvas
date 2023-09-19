@@ -8,7 +8,7 @@
         <NuxtLink
           target="_blank"
           to="https://mh.hrcd.fr/"
-          class="text-muted hover:text-primary transition-colors duration-300 ease-in-out"
+          class="text-muted hover:text-main transition-colors duration-300 ease-in-out"
           aria-label="Go to Maison Hochard website"
         >
           HugoRCD x Maison Hochard </NuxtLink

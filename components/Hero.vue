@@ -8,6 +8,15 @@ const socials = ref<Social[]>(data.socials);
 
 const colorMode = useColorMode();
 const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"));
+
+defineShortcuts({
+  meta_o: {
+    usingInput: true,
+    handler: () => {
+      copyToClipboard("hrichard206@gmail.com");
+    },
+  },
+});
 </script>
 
 <template>
@@ -26,7 +35,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
         </template>
       </ClientOnly>
     </div>
-    <h2 class="text-2xl text-primary">
+    <h2 class="text-2xl text-main">
       <span>Hugo Richard</span>
     </h2>
     <h3>
@@ -46,7 +55,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
       >
         <component
           :is="social.logo"
-          class="w-5 h-5 text-muted hover:text-primary transition-colors duration-300"
+          class="w-5 h-5 text-muted hover:text-main transition-colors duration-300"
           :fontControlled="false"
           :alt="social.name + ' logo'"
           :aria-label="social.name + ' logo'"
@@ -54,16 +63,14 @@ const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"
       </NuxtLink>
     </div>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-2 mt-4">
-      <NuxtLink class="btn-primary" to="/contact">
-        {{ $t("home.hero.contact") }}
-        <EnvelopeIcon class="w-5 h-5" />
-      </NuxtLink>
-      <button class="btn-primary" @click="copyToClipboard('hrichard206@gmail.com')">
-        {{ $t("home.hero.email") }}
-        <Square2StackIcon class="w-5 h-5" />
-      </button>
+      <UTooltip :text="$t('home.hero.email')" :shortcuts="['⌘', 'O']">
+        <NuxtLink class="btn-primary" to="/contact">
+          {{ $t("home.hero.contact") }}
+          <EnvelopeIcon class="w-5 h-5" />
+        </NuxtLink>
+      </UTooltip>
+      <MeetingButton />
     </div>
-    <MeetingButton class="flex items-center justify-center" />
   </div>
 </template>
 

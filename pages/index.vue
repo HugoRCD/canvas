@@ -14,7 +14,7 @@ definePageMeta({
         <h3 class="text-muted">
           {{ $t("navigation.about") }}
         </h3>
-        <div class="flex flex-col gap-4 text-primary font-light">
+        <div class="flex flex-col gap-4 text-main font-light">
           <p>
             {{ $t("home.about.part1") }}
           </p>

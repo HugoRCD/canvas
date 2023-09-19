@@ -23,7 +23,7 @@ const filteredProjects = computed<Project[]>(() => {
       <NuxtLink
         v-for="project in filteredProjects"
         :key="project.name"
-        class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
+        class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-main"
         :to="project.release === 'soon' ? '/' : project.link"
         :aria-label="project.name + ' project link'"
         :target="project.release === 'soon' ? '_self' : '_blank'"
@@ -44,13 +44,13 @@ const filteredProjects = computed<Project[]>(() => {
       <NuxtLink
         v-for="project in filteredProjects"
         :key="project.name"
-        class="card group flex flex-col gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-primary"
+        class="card group flex flex-col gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-main"
         :to="project.release === 'soon' ? '/' : project.link"
         :aria-label="project.name + ' project link'"
         :target="project.release === 'soon' ? '_self' : '_blank'"
       >
         <div class="flex flex-col gap-2">
-          <div class="w-full bg-primary rounded-lg flex items-center justify-center h-24">
+          <div class="w-full bg-main rounded-lg flex items-center justify-center h-24">
             <component
               v-if="project.release !== 'soon'"
               :is="project.logo"

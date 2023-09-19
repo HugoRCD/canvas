@@ -40,7 +40,7 @@ html, body, #__nuxt, #__layout {
 
   .input {
     @apply bg-secondary;
-    @apply text-primary placeholder:text-placeholder;
+    @apply text-main placeholder:text-placeholder;
     @apply rounded-md border-[1px] border-primary hover:border-primary-hover;
     @apply focus:outline-none focus:ring-2 focus:ring-accent;
     @apply px-4 py-2;
@@ -84,14 +84,14 @@ html, body, #__nuxt, #__layout {
   }
 
   .card {
-    @apply flex p-2 gap-4 rounded-lg text-primary w-full;
+    @apply flex p-2 gap-4 rounded-lg text-main w-full;
     @apply bg-card hover:bg-card-hover shadow-sm;
     @apply border-[1px] border-primary hover:border-primary-hover;
     @apply transition-colors duration-200 ease-in-out cursor-pointer;
   }
 
   .kbd {
-    @apply bg-primary-opacity/30 hover:bg-card-hover rounded-md text-muted shadow-sm px-2;
+    @apply bg-main-opacity/30 hover:bg-card-hover rounded-md text-muted shadow-sm px-2;
     @apply border-[1px] border-primary hover:border-primary-hover;
     @apply transition-colors duration-200;
   }

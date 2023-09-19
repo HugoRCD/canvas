@@ -4,7 +4,7 @@ const meetingLink = useRuntimeConfig().public.meetingLink;
 </script>
 
 <template>
-  <div class="flex gap-4 sm:gap-2 mt-4">
+  <div class="flex gap-4 sm:gap-2">
     <NuxtLink class="btn-primary" :to="meetingLink">
       {{ $t("home.hero.meeting") }}
       <CalendarDaysIcon class="w-5 h-5" />
