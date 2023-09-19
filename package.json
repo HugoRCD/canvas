@@ -23,6 +23,7 @@
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/i18n": "8.0.0-beta.9",
+    "@nuxt/image": "1.0.0-rc.1",
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@pinia/nuxt": "^0.4.11",
@@ -43,11 +44,6 @@
     "resend": "^0.16.0",
     "sass": "^1.63.3",
     "sitemap": "^7.1.1",
-    "three": "^0.153.0",
-    "tsparticles": "^2.10.1",
-    "vue3-particles": "^2.10.1"
-  },
-  "dependencies": {
-    "@nuxt/image": "1.0.0-rc.1"
+    "three": "^0.153.0"
   }
 }

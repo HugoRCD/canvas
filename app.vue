@@ -146,10 +146,10 @@ console.log("I see you're curious, just like me. If you want to have more inform
         :infos="toast.infos"
         @close="toastStore.closeToast()"
       />
-      <LayoutCommandConsole />
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
+      <DotPattern class="absolute -z-10 inset-0 h-full w-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
     </Body>
   </Html>
 </template>
