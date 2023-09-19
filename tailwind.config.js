@@ -65,7 +65,21 @@ module.exports = {
           to: { transform: "translateX(calc(-50% - var(--gap)/2))" },
         },
       },
+      textShadow: {
+        sm: "rgba(255, 255, 255, 0.35) 1px 1px 12px",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") },
+      );
+    },
+  ],
 };
