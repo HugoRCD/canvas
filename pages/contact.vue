@@ -71,7 +71,9 @@ defineShortcuts({
     <div class="py-16 px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
       <div class="mx-auto max-w-2xl">
         <Availability class="mb-6" />
-        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl text-main">{{ $t("contact.title") }}<span class="text-main ml-2">.</span></h2>
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl text-main text-white-shadow">
+          {{ $t("contact.title") }}<span class="text-main text-white-shadow ml-2">.</span>
+        </h2>
         <p class="mt-3 text-lg leading-6 text-muted">
           {{ $t("contact.description") }}
         </p>

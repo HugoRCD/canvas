@@ -16,14 +16,14 @@ html, body, #__nuxt, #__layout {
     padding: 0.5rem;
   }
 
-    ::-webkit-scrollbar-track {
-        background: var(--bg-secondary);
-    }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
 
-    ::-webkit-scrollbar-thumb {
-        background: var(--bg-card);
-        border-radius: 0.5rem;
-    }
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-card);
+    border-radius: 0.5rem;
+  }
 }
 
 @font-face {
@@ -94,5 +94,16 @@ html, body, #__nuxt, #__layout {
     @apply bg-main-opacity/30 hover:bg-card-hover rounded-md text-muted shadow-sm px-2;
     @apply border-[1px] border-primary hover:border-primary-hover;
     @apply transition-colors duration-200;
+  }
+
+  .text-white-shadow {
+    text-shadow: 0 4px 10px rgba(0, 87, 255, .2), 0 -4px 10px rgba(255, 90, 0, .15), 0 0 30px rgba(255, 255, 255, .2);
+  }
+
+  .text-white-gradient {
+    background-image: linear-gradient(#f2f2f2 50%, rgba(242, 242, 242, .2));
+    background-clip: text;
+    font-style: italic;
+    @apply tracking-wider;
   }
 }
