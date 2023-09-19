@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { EnvelopeIcon, Square2StackIcon } from "@heroicons/vue/24/outline";
+import { EnvelopeIcon } from "@heroicons/vue/24/outline";
 import { Social } from "~/types/Social";
 import data from "~/data/socials.json";
 import MeetingButton from "~/components/MeetingButton.vue";
 
 const socials = ref<Social[]>(data.socials);
-
-const colorMode = useColorMode();
-const theme = computed(() => (colorMode.preference === "dark" ? "dark" : "light"));
 
 defineShortcuts({
   meta_o: {
@@ -25,7 +22,7 @@ defineShortcuts({
       <ClientOnly>
         <NuxtImg
           width="96"
-          :src="'/assets/hugo-richard-' + theme + '.webp'"
+          src="/assets/hugo-richard-dark.webp"
           class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
           alt="Hugo Richard Profile Picture"
           aria-label="Hugo Richard Profile Picture"
