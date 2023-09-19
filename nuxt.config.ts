@@ -43,7 +43,6 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@pinia/nuxt",
     "@nuxtjs/robots",
-    "@tresjs/nuxt",
     "@nuxtjs/color-mode",
     "@nuxtjs/tailwindcss",
     "nuxt-svgo",
