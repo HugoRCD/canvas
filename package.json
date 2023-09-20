@@ -23,6 +23,7 @@
     "@nuxt/ui": "^2.8.1",
     "@nuxthq/studio": "^0.13.4",
     "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxtjs/mdc": "^0.1.6",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/i18n": "8.0.0-beta.9",
     "@nuxtjs/robots": "^3.0.0",
