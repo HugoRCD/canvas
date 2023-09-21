@@ -12,7 +12,12 @@ definePageMeta({
   <LayoutInfoWrapper page="about">
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
       <div class="flex justify-center">
-        <SpotlightCard mode="after" from="rgba(255,255,255,0.1)" :size="400" class="group w-64 rounded-2xl border border-white/10 bg-white/5 p-2 pb-4">
+        <SpotlightCard
+          mode="after"
+          from="rgba(255,255,255,0.1)"
+          :size="400"
+          class="hidden sm:flex group w-64 rounded-2xl border border-white/10 bg-white/5 p-2 pb-4"
+        >
           <div class="relative">
             <NuxtImg
               width="256"
@@ -29,6 +34,20 @@ definePageMeta({
               aria-label="Hugo Richard Profile Picture"
             />
           </div>
+        </SpotlightCard>
+        <SpotlightCard
+          mode="after"
+          from="rgba(255,255,255,0.1)"
+          :size="400"
+          class="sm:hidden group w-64 rounded-2xl border border-white/10 bg-white/5 p-2 pb-4"
+        >
+          <NuxtImg
+            width="256"
+            src="/assets/hugo-richard-dark.webp"
+            class="h-64 w-64 rounded-xl object-cover transition-all duration-300"
+            alt="Hugo Richard Profile Picture"
+            aria-label="Hugo Richard Profile Picture"
+          />
         </SpotlightCard>
       </div>
       <div class="flex flex-col gap-3 sm:ml-4">
