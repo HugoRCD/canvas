@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import projects from "~/data/projects";
-import { Project } from "~/types/Project";
+import projects, { Project } from "~/data/projects";
 
 const props = defineProps({
   featured: {

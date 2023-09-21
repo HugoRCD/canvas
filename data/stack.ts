@@ -1,4 +1,10 @@
-import { Stack } from "~/types/Stack";
+type Stack = {
+  name: string;
+  link: string;
+  tag: string;
+  type: "software" | "languages";
+  logo: string;
+};
 
 const stack: Stack[] = [
   {

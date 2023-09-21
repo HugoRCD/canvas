@@ -1,4 +1,8 @@
-import { Social } from "~/types/Social";
+type Social = {
+  name: string;
+  link: string;
+  logo: string;
+};
 
 const socials: Social[] = [
   {

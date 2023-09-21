@@ -1,4 +1,13 @@
-import { About } from "~/types/About";
+type Item = {
+  title: string;
+  company: string;
+  date: string;
+};
+
+type About = {
+  en: Item[];
+  fr: Item[];
+};
 
 const experience: About = {
   en: [
