@@ -1,6 +1,7 @@
 export type Project = {
   name: string;
   logo: string;
+  image?: string;
   description: {
     short: {
       en: string;
@@ -37,6 +38,7 @@ const projects: Project[] = [
   {
     name: "Helpr",
     logo: "SvgoHelpr",
+    image: "/projects/helpr.webp",
     description: {
       short: {
         fr: "Outils d'automatisation connectant diverses applications afin de créer de puissants workflows",
@@ -52,6 +54,7 @@ const projects: Project[] = [
   {
     name: "Maison Hochard",
     logo: "SvgoMaisonHochard",
+    image: "/projects/maison-hochard.webp",
     description: {
       short: {
         fr: "Agence de design graphique et de communication visuelle",
