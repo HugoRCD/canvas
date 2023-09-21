@@ -16,9 +16,6 @@ import fr_seo from "./fr/seo.json";
 import en_global from "./en/global.json";
 import fr_global from "./fr/global.json";
 
-import en_stack from "./en/stack.json";
-import fr_stack from "./fr/stack.json";
-
 import en_projects from "./en/projects.json";
 import fr_projects from "./fr/projects.json";
 
@@ -36,7 +33,6 @@ const messages = {
     availability: en_availability,
     seo: en_seo,
     global: en_global,
-    stack: en_stack,
     projects: en_projects,
     about: en_about,
     writing: en_writing,
@@ -48,7 +44,6 @@ const messages = {
     availability: fr_availability,
     seo: fr_seo,
     global: fr_global,
-    stack: fr_stack,
     projects: fr_projects,
     about: fr_about,
     writing: fr_writing,

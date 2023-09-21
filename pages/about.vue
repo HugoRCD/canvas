@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import data from "~/data/about.json";
-import { About } from "~/types/About";
+import experiences from "~/data/about";
+import stack from "~/data/stack";
 
 definePageMeta({
   name: "About",
   title: "About",
 });
-
-const experiences = ref<About>(data.experience);
-const education = ref<About>(data.education);
 </script>
 
 <template>
@@ -77,22 +74,23 @@ const education = ref<About>(data.education);
     <div class="linebreak my-6"></div>
     <div class="flex flex-col gap-3">
       <h3 class="text-muted text-lg">
-        {{ $t("about.education") }}
+        {{ $t("about.stack") }}
       </h3>
-      <div class="flex flex-col gap-4 text-main">
-        <div v-for="education in education[$i18n.locale as 'en' | 'fr']" :key="education.title">
-          <h4 class="text-main font-semibold">
-            {{ education.title }}
-          </h4>
-          <div class="flex gap-1 text-muted">
-            <p>
-              {{ education.date }}
-            </p>
-            <span class="mx-1"> / </span>
-            <p>
-              {{ education.company }}
-            </p>
-          </div>
+      <div class="flex flex-wrap gap-10">
+        <div v-for="item in stack" :key="item.name">
+          <UTooltip :text="item.name">
+            <NuxtLink :to="item.link" target="_blank" :aria-label="item.name + ' link'">
+              <component
+                :is="item.logo"
+                class="w-10 h-10 text-main hover:scale-110 transition-transform duration-300"
+                :class="item.logo.includes('Color') ? '' : 'text-main'"
+                :fontControlled="false"
+                :alt="item.name + ' logo'"
+                :filled="item.logo.includes('Color')"
+                :aria-label="item.name + ' logo'"
+              />
+            </NuxtLink>
+          </UTooltip>
         </div>
       </div>
     </div>

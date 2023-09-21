@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { EnvelopeIcon } from "@heroicons/vue/24/outline";
-import { Social } from "~/types/Social";
-import data from "~/data/socials.json";
+import socials from "~/data/socials";
 import MeetingButton from "~/components/MeetingButton.vue";
-
-const socials = ref<Social[]>(data.socials);
 
 defineShortcuts({
   meta_o: {

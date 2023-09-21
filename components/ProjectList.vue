@@ -1,8 +1,6 @@
 <script setup lang="ts">
+import projects from "~/data/projects";
 import { Project } from "~/types/Project";
-import data from "~/data/projects.json";
-
-const projects = ref<Project[]>(data.projects);
 
 const props = defineProps({
   featured: {
@@ -12,8 +10,8 @@ const props = defineProps({
 });
 
 const filteredProjects = computed<Project[]>(() => {
-  if (props.featured) return projects.value.filter((project) => project.featured);
-  return projects.value;
+  if (props.featured) return projects.filter((project) => project.featured);
+  return projects;
 });
 </script>
 
