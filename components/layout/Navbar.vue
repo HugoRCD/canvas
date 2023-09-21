@@ -51,6 +51,7 @@ const devNavigation = getNavigation("home").filter((link) => link.devOnly === tr
                     :class="[isActive ? 'text-white/75 text-shadow-sm' : 'text-white/60 hover:text-white/75']"
                     class="flex px-4 py-1.5 text-sm font-light transition-[text-shadow,color] duration-300"
                     @click.prevent="setActive"
+                    :aria-label="item.name + ' link'"
                   >
                     <component :is="item.icon" class="w-6 h-6 sm:w-6 sm:h-6 font-medium" />
                   </NuxtLink>
@@ -62,6 +63,7 @@ const devNavigation = getNavigation("home").filter((link) => link.devOnly === tr
                       :class="[isActive ? 'text-white/75 text-shadow-sm' : 'text-white/60 hover:text-white/75']"
                       class="flex px-4 py-1.5 text-sm font-light transition-[text-shadow,color] duration-300"
                       @click.prevent="setActive"
+                      :aria-label="item.name + ' link'"
                     >
                       <component :is="item.icon" class="w-6 h-6 sm:w-6 sm:h-6 font-medium" />
                     </NuxtLink>

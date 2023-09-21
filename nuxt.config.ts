@@ -37,18 +37,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: [
-    "nuxt-headlessui",
-    "@vueuse/nuxt",
-    "@nuxtjs/i18n",
-    "@pinia/nuxt",
-    "@nuxtjs/robots",
-    "@nuxt/ui",
-    "nuxt-svgo",
-    "@nuxt/content",
-    "@nuxthq/studio",
-    "@nuxt/image",
-  ],
+  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@pinia/nuxt", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image"],
 
   image: {
     format: ["webp"],
@@ -108,11 +97,6 @@ export default defineNuxtConfig({
   },
 
   buildModules: ["@nuxt/image"],
-
-  robots: {
-    UserAgent: "*",
-    Disallow: "",
-  },
 
   svgo: {
     autoImportPath: "./assets/logo/",
