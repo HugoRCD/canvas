@@ -71,11 +71,18 @@
       "logo": "SvgoCronColor"
     },
     {
-      "name": "OpenAI",
-      "link": "https://openai.com/",
+      "name": "IntelliJ IDEA",
+      "link": "https://www.jetbrains.com/idea/",
       "tag": "development",
       "type": "software",
-      "logo": "SvgoOpenai"
+      "logo": "SvgoIntellijColor"
+    },
+    {
+      "name": "Prisma",
+      "link": "https://www.prisma.io/",
+      "tag": "development",
+      "type": "software",
+      "logo": "SvgoPrismaColor"
     }
   ]
 }
