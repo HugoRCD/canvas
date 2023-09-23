@@ -1,6 +1,4 @@
 <script setup>
-import { watchOnce } from "@vueuse/core";
-
 const props = defineProps({
   as: {
     type: String,
@@ -27,7 +25,7 @@ const isActive = computed(() => {
   return context.activeItem.index === index.value;
 });
 
-watchOnce(index, () => {
+watch(index, () => {
   // set default element as active
   if (props.active) {
     setActive();

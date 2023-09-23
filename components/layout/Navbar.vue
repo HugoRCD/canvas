@@ -45,7 +45,7 @@ const devNavigation = getNavigation("home").filter((link) => link.devOnly === tr
               ></div>
 
               <NavList as="ul" class="relative flex items-center gap-1 sm:gap-3">
-                <NavItem v-for="(item, index) in navigation" :key="index" v-slot="{ setActive, isActive }" as="li">
+                <NavItem v-for="(item, index) in navigation" :key="index" v-slot="{ setActive, isActive }" as="li" :active="route === item.to">
                   <NuxtLink
                     :to="item.to"
                     :class="[isActive ? 'text-white/75 text-shadow-sm' : 'text-white/60 hover:text-white/75']"
