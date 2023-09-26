@@ -95,22 +95,33 @@ definePageMeta({
       <h3 class="text-muted text-lg">
         {{ $t("about.stack") }}
       </h3>
-      <div class="flex flex-wrap gap-10">
-        <div v-for="item in stack" :key="item.name">
-          <UTooltip :text="item.name">
-            <NuxtLink :to="item.link" target="_blank" :aria-label="item.name + ' link'">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <SpotlightCard white class="p-6" padding="p-6" v-for="item in stack" :key="item.name">
+          <NuxtLink :to="item.link" target="_blank" :aria-label="item.name + ' link'" class="flex gap-4">
+            <div class="h-14 w-14">
               <component
                 :is="item.logo"
-                class="w-10 h-10 text-main hover:scale-110 transition-transform duration-300"
+                class="w-8 h-8 text-main"
                 :class="item.logo.includes('Color') ? '' : 'text-main'"
                 :fontControlled="false"
                 :alt="item.name + ' logo'"
                 :filled="item.logo.includes('Color')"
                 :aria-label="item.name + ' logo'"
               />
-            </NuxtLink>
-          </UTooltip>
-        </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="text-lg text-white-shadow font-testimonial font-bold">
+                {{ item.name }}
+              </div>
+              <p class="text-sm font-light leading-relaxed text-muted">
+                {{ item.description[$i18n.locale as "en" | "fr"] }}
+              </p>
+              <div>
+                <UKbd size="sm" :value="item.tag" />
+              </div>
+            </div>
+          </NuxtLink>
+        </SpotlightCard>
       </div>
     </div>
   </LayoutInfoWrapper>
