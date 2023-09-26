@@ -62,8 +62,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoLinearColor",
     description: {
-      en: "Linear is a project management tool for high-performance teams.",
-      fr: "Linear est un outil de gestion de projet pour les équipes à haute performance.",
+      en: "Currently using Linear as a project management tool. It's a beautiful and practical tool.",
+      fr: "J'utilise Linear, un outil de gestion de projet magnifique et pratique.",
     },
   },
   {
@@ -84,8 +84,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoArcColor",
     description: {
-      en: "Arc is a tool to build and deploy serverless applications.",
-      fr: "Arc est un outil pour construire et déployer des applications serverless.",
+      en: "Arc is the new kid in the block. If you enjoy an innovative frameless browser experience you definitely should give it a try!",
+      fr: "Arc est le petit nouveau du quartier. Si vous aimez une expérience de navigation innovante sans cadre, vous devriez certainement l'essayer !",
     },
   },
   {
@@ -117,8 +117,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoCronColor",
     description: {
-      en: "Cron is a calendar app for your meetings.",
-      fr: "Cron est une application de calendrier pour vos réunions.",
+      en: "It's a calendar application based on Gmail. Wonderful UI and a handful of very useful additional features. Highly recommend trying it!",
+      fr: "Calendrier basée sur Gmail. Une interface utilisateur magnifique et une poignée de fonctionnalités supplémentaires très utiles. Je recommande vivement de l'essayer !",
     },
   },
   {
@@ -128,8 +128,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoIntellijColor",
     description: {
-      en: "IntelliJ IDEA is a Java integrated development environment.",
-      fr: "IntelliJ IDEA est un environnement de développement intégré Java.",
+      en: "IntelliJ IDEA is simply the most complete IDE.",
+      fr: "IntelliJ IDEA est tout simplement l'IDE le plus complet.",
     },
   },
   {
@@ -139,8 +139,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoPrismaColor",
     description: {
-      en: "Prisma is a database toolkit.",
-      fr: "Prisma est une boîte à outils de base de données.",
+      en: "Prisma is a wonderful and blazing fast database ORM, it's a must-have for any project.",
+      fr: "Prisma est un ORM de base de données merveilleux et ultra-rapide, c'est un must-have pour tout projet.",
     },
   },
 ];
