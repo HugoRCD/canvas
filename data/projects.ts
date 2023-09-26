@@ -1,7 +1,7 @@
 export type Project = {
   name: string;
   logo: string;
-  image?: string;
+  image: string;
   description: {
     short: {
       en: string;
@@ -23,6 +23,7 @@ const projects: Project[] = [
   {
     name: "Sekoïa",
     logo: "SvgoSekoia",
+    image: "/projects/sekoia.webp",
     description: {
       short: {
         fr: "Marque d'ameublement et de décoration haut de gamme",

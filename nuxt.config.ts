@@ -44,6 +44,7 @@ export default defineNuxtConfig({
     screens: {
       avatar: 96,
       cover: 256,
+      project: 1536,
     },
   },
 
