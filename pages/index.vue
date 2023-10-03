@@ -75,26 +75,7 @@ const clients = [
         <ProjectList featured />
       </div>
     </div>
-    <!--    <div class="relative flex max-w-[100vw] overflow-hidden py-5">
-      <div class="flex w-max animate-marquee [&#45;&#45;duration:30s] hover:[animation-play-state:paused]">
-        <component v-for="client in clients" :key="client" :is="client" class="relative h-full w-[16rem] px-8 py-6" :fontControlled="false" />
-        &lt;!&ndash;        <div v-for="item in [...items, ...items]" :key="item.name" class="h-full px-2.5">
-          <div class="relative h-full w-[28rem] rounded-2xl border border-white/5 bg-white/5 px-8 py-6">
-            <div class="pb-4 font-light text-white/75">{{ item.body }}</div>
-
-            <div class="mt-auto flex items-center gap-4">
-              <img :src="item.image" class="h-9 w-9 rounded-full" alt="" />
-
-              <div class="flex flex-col text-sm">
-                <div class="text-white">{{ item.name }}</div>
-
-                <div class="text-white/75">{{ item.title }}</div>
-              </div>
-            </div>
-          </div>
-        </div>&ndash;&gt;
-      </div>
-    </div>-->
+    <!--    <Testimonials />-->
   </div>
 </template>
 
