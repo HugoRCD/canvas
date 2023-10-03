@@ -18,8 +18,8 @@ const stack: Stack[] = [
     type: "languages",
     logo: "SvgoNuxtColor",
     description: {
-      en: "Nuxt is a Vue.js framework to create modern web applications.",
-      fr: "Nuxt est un framework Vue.js pour créer des applications web modernes.",
+      fr: "Nuxt est un framework Vue.js, mon framework préféré qui m'a fait redécouvrir le développement et l'apprècier encore plus !",
+      en: "Nuxt is a Vue.js framework, my favorite framework that made me rediscover development and appreciate it even more!",
     },
   },
   {
@@ -29,8 +29,8 @@ const stack: Stack[] = [
     type: "languages",
     logo: "SvgoVueColor",
     description: {
-      en: "Vue is a progressive framework for building user interfaces.",
-      fr: "Vue est un framework progressif pour construire des interfaces utilisateurs.",
+      fr: "Vue est mon language de coeur qui m'a permis de découvrir le développement web, terriblement efficace et simple à utiliser.",
+      en: "Vue is my heart language that allowed me to discover web development, terribly efficient and simple to use.",
     },
   },
   {
@@ -40,8 +40,8 @@ const stack: Stack[] = [
     type: "languages",
     logo: "SvgoNestColor",
     description: {
-      en: "Nest is a framework for building efficient, scalable Node.js server-side applications.",
-      fr: "Nest est un framework pour construire des applications Node.js côté serveur efficaces et évolutives.",
+      fr: "Nest est un framework pour construire des API avec une architecture solide et modulaire.",
+      en: "Nest is a framework for building APIs with a solid and modular architecture.",
     },
   },
   {
@@ -51,8 +51,8 @@ const stack: Stack[] = [
     type: "languages",
     logo: "SvgoTailwindColor",
     description: {
-      en: "TailwindCSS is a utility-first CSS framework for rapidly building custom designs.",
-      fr: "TailwindCSS est un framework CSS de première utilité pour construire rapidement des designs personnalisés.",
+      fr: "TailwindCSS est un framework CSS qui me permet de gagner un temps fou dans le développement en simplifiant le CSS.",
+      en: "TailwindCSS is a CSS framework that allows me to save a lot of time in development by simplifying CSS.",
     },
   },
   {
@@ -62,8 +62,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoLinearColor",
     description: {
-      en: "Currently using Linear as a project management tool. It's a beautiful and practical tool.",
-      fr: "J'utilise Linear, un outil de gestion de projet magnifique et pratique.",
+      fr: "Linear est probablement le meilleur outil de gestion de projet que j'ai jamais utilisé. Il est simple, incroyablement rapide et très puissant.",
+      en: "Linear is probably the best project management tool I've ever used. It's simple, incredibly fast and very powerful.",
     },
   },
   {
@@ -73,8 +73,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoFigmaColor",
     description: {
-      en: "Figma is a collaborative interface design tool.",
-      fr: "Figma est un outil de conception d'interface collaboratif.",
+      fr: "Figma me permet de prototyper et de designer toutes mes idées et projets.",
+      en: "Figma allows me to prototype and design all my ideas and projects.",
     },
   },
   {
@@ -84,8 +84,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoArcColor",
     description: {
-      en: "Arc is the new kid in the block. If you enjoy an innovative frameless browser experience you definitely should give it a try!",
-      fr: "Arc est le petit nouveau du quartier. Si vous aimez une expérience de navigation innovante sans cadre, vous devriez certainement l'essayer !",
+      fr: "Arc est le nouveau navigateur web, rapide, incroyablement bien conçu et avec des fonctionnalités incroyables.",
+      en: "Arc is the new web browser, fast, incredibly well designed and with incredible features.",
     },
   },
   {
@@ -95,8 +95,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoRaycastColor",
     description: {
-      en: "Raycast is an app for macOS to control your tools with a few keystrokes.",
-      fr: "Raycast est une application pour macOS pour contrôler vos outils avec quelques frappes.",
+      fr: "Raycast est ma révélation de l'année 2022. C'est un outil de productivité qui vous permet d'en remplacer des dizaines d'autres !",
+      en: "Raycast is my revelation of the year 2022. It's a productivity tool that allows you to replace dozens of others!",
     },
   },
   {
@@ -106,8 +106,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoNotionColor",
     description: {
-      en: "Notion is an all-in-one workspace for your notes, tasks, wikis, and databases.",
-      fr: "Notion est un espace de travail tout-en-un pour vos notes, tâches, wikis et bases de données.",
+      fr: "Notion est le meilleur outil que j'ai jamais utilisé, prise de notes, gestion de projet, gestion de tâches, etc. Il est tout simplement incroyable.",
+      en: "Notion is the best tool I've ever used, note taking, project management, task management, etc. It's just amazing.",
     },
   },
   {
@@ -128,8 +128,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoIntellijColor",
     description: {
-      en: "IntelliJ IDEA is simply the most complete IDE.",
-      fr: "IntelliJ IDEA est tout simplement l'IDE le plus complet.",
+      fr: "IntelliJ IDEA est tout simplement l'IDE le plus complet et le plus puissant pour le développement dans n'importe quel langage.",
+      en: "IntelliJ IDEA is simply the most complete and powerful IDE for development in any language.",
     },
   },
   {
@@ -139,8 +139,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoPrismaColor",
     description: {
-      en: "Prisma is a wonderful and blazing fast database ORM, it's a must-have for any project.",
-      fr: "Prisma est un ORM de base de données merveilleux et ultra-rapide, c'est un must-have pour tout projet.",
+      fr: "Prisma est un ORM très simple à utiliser et très puissant, avec un super support typescript et de migrations.",
+      en: "Prisma is a very simple to use and very powerful ORM, with great typescript and migrations support.",
     },
   },
   {
@@ -150,8 +150,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoSparkColor",
     description: {
-      en: "Spark is a beautiful and intelligent email client.",
-      fr: "Spark est un client de messagerie électronique beau et intelligent.",
+      fr: "Spark est une application de messagerie, super pratique pour gérer plusieurs boîtes mail, des templates de réponses, réponse avec IA, etc.",
+      en: "Spark is a messaging application, super convenient to manage multiple mailboxes, response templates, AI response, etc.",
     },
   },
   {
@@ -161,8 +161,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoOnepasswordColor",
     description: {
-      en: "1Password is a password manager that keeps you safe online.",
-      fr: "1Password est un gestionnaire de mots de passe qui vous protège en ligne.",
+      fr: "1Password est un incroyable gestionnaire de mots de passe, il m'a permis de me débarrasser de tous mes mots de passe et de les remplacer par des mots de passe forts et uniques.",
+      en: "1Password is an incredible password manager, it allowed me to get rid of all my passwords and replace them with strong and unique passwords.",
     },
   },
   {
@@ -172,8 +172,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoFigColor",
     description: {
-      en: "Fig is a terminal assistant that helps you rediscover CLI tools.",
-      fr: "Fig est un assistant de terminal qui vous aide à redécouvrir les outils CLI.",
+      fr: "Fig est un assistant de terminal intelligent qui vous aide à réduire le temps passé à taper des commandes dans votre terminal.",
+      en: "Fig is an intelligent terminal assistant that helps you reduce time spent typing commands in your terminal.",
     },
   },
   {
@@ -183,8 +183,8 @@ const stack: Stack[] = [
     type: "software",
     logo: "SvgoVercel",
     description: {
-      en: "Vercel is a cloud platform for static sites and Serverless Functions.",
-      fr: "Vercel est une plateforme cloud pour les sites statiques et les fonctions sans serveur.",
+      fr: "Vercel permet de déployer des sites/applications gratuitement et très rapidement.",
+      en: "Vercel allows you to deploy sites/applications for free and very quickly.",
     },
   },
 ];
