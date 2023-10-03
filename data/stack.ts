@@ -143,6 +143,50 @@ const stack: Stack[] = [
       fr: "Prisma est un ORM de base de données merveilleux et ultra-rapide, c'est un must-have pour tout projet.",
     },
   },
+  {
+    name: "Spark",
+    link: "https://sparkmailapp.com/",
+    tag: "productivity",
+    type: "software",
+    logo: "SvgoSparkColor",
+    description: {
+      en: "Spark is a beautiful and intelligent email client.",
+      fr: "Spark est un client de messagerie électronique beau et intelligent.",
+    },
+  },
+  {
+    name: "1Password",
+    link: "https://1password.com/",
+    tag: "productivity",
+    type: "software",
+    logo: "SvgoOnepasswordColor",
+    description: {
+      en: "1Password is a password manager that keeps you safe online.",
+      fr: "1Password est un gestionnaire de mots de passe qui vous protège en ligne.",
+    },
+  },
+  {
+    name: "Fig",
+    link: "https://fig.io/",
+    tag: "productivity",
+    type: "software",
+    logo: "SvgoFigColor",
+    description: {
+      en: "Fig is a terminal assistant that helps you rediscover CLI tools.",
+      fr: "Fig est un assistant de terminal qui vous aide à redécouvrir les outils CLI.",
+    },
+  },
+  {
+    name: "Vercel",
+    link: "https://vercel.com/",
+    tag: "development",
+    type: "software",
+    logo: "SvgoVercel",
+    description: {
+      en: "Vercel is a cloud platform for static sites and Serverless Functions.",
+      fr: "Vercel est une plateforme cloud pour les sites statiques et les fonctions sans serveur.",
+    },
+  },
 ];
 
 export default stack;
