@@ -22,13 +22,5 @@ definePageMeta({
         </ul>
       </ContentNavigation>
     </nav>
-    <!--    <NuxtLink
-      v-for="article of articles"
-      :key="article._path"
-      :to="article._path"
-      class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-main"
-    >
-      {{ article.title }}
-    </NuxtLink>-->
   </LayoutInfoWrapper>
 </template>

@@ -96,6 +96,9 @@ export default defineNuxtConfig({
         showURL: false,
       },
     },
+    navigation: {
+      fields: ["image", "_id"],
+    },
   },
 
   buildModules: ["@nuxt/image"],
