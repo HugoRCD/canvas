@@ -102,6 +102,8 @@ export default defineNuxtConfig({
     markdown: {
       anchorLinks: false,
     },
+    locales: ["en", "fr"],
+    defaultLocale: "en",
   },
 
   buildModules: ["@nuxt/image"],

@@ -1,11 +1,9 @@
 ---
-title: "Fini ton portfolio !"
+title: "Finally launch your portfolio"
 date: "27/08/2023"
-description: "Fini ton portfolio !"
+description: "Finally launch your portfolio"
 tags: ["Portfolio", "Développement", "Design"]
 ---
-
-
 
 ## Introduction
 

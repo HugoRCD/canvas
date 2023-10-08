@@ -6,7 +6,7 @@ tags: ["Miracle Morning", "Routine", "Productivité"]
 ---
 
 ::quote
-"Efficiency is doing the right thing, effectiveness is doing the right thing"
+"L'efficacité consiste à faire les choses correctement, l'efficience consiste à faire les bonnes choses"
 ::
 
 ## Introduction

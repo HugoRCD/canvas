@@ -3,7 +3,23 @@ definePageMeta({
   name: "Writing",
   title: "Writing",
 });
-const articles = await queryContent("articles").find();
+const { locale } = useI18n();
+
+const loading = ref(false);
+const articles = ref({});
+
+async function fetchArticles() {
+  loading.value = true;
+  articles.value = await queryContent("articles").locale(locale.value).find();
+  loading.value = false;
+}
+await fetchArticles();
+
+watch(locale, async (oldLocale, newLocale) => {
+  if (oldLocale !== newLocale) {
+    await fetchArticles();
+  }
+});
 </script>
 
 <template>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ArrowUpIcon, ArrowLeftIcon } from "@heroicons/vue/24/outline";
+const { locale } = useI18n();
+
 definePageMeta({
   layout: "article",
 });
@@ -29,7 +31,7 @@ function scrollToTop() {
     >
       <ArrowUpIcon class="w-6 h-6" />
     </div>
-    <ContentDoc v-slot="{ doc }">
+    <ContentQuery v-slot="{ data }" :locale="locale" :path="$route.path" find="one">
       <div
         class="lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4 mx-auto flex items-center gap-2 my-8 text-muted cursor-pointer hover:text-main transition-colors duration-200"
         @click="$router.push('/writing')"
@@ -40,10 +42,10 @@ function scrollToTop() {
         </NuxtLink>
       </div>
       <article class="prose mx-auto lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4">
-        <h1 class="text-main">{{ doc.title }}</h1>
-        <ContentRenderer :value="doc" />
+        <h1 class="text-main">{{ data.title }}</h1>
+        <ContentRenderer :value="data" />
       </article>
-    </ContentDoc>
+    </ContentQuery>
     <LayoutFooter class="pt-6" />
   </main>
 </template>
@@ -65,6 +67,11 @@ h1 {
   font-weight: 600;
   color: #f2f2f2;
   text-decoration: none;
+  text-align: left;
+  @media (max-width: 640px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }
 
 article :deep(h2),

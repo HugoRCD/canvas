@@ -9,7 +9,7 @@ head.image: "/articles/first.jpeg"
 ---
 
 ::quote
-"The day you plant the seed is not the day you eat the fruit"
+"Le jour où tu plantes la graine n'est pas le jour où tu manges le fruit"
 ::
 
 ## Introduction
