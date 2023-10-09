@@ -3,6 +3,10 @@ title: "Finally launch your portfolio"
 date: "27/08/2023"
 description: "Finally launch your portfolio"
 tags: ["Portfolio", "Développement", "Design"]
+image: "/articles/first.jpeg"
+image.src: "/articles/first.jpeg"
+head.image: "/articles/first.jpeg"
+readingTime: "3"
 ---
 
 ## Introduction

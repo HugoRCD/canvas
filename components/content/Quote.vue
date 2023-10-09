@@ -8,6 +8,7 @@
 
 <style scoped lang="scss">
 .quotes {
+  margin-top: 2rem;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.75rem;

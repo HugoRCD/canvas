@@ -10,7 +10,12 @@ const articles = ref({});
 
 async function fetchArticles() {
   loading.value = true;
-  articles.value = await queryContent("articles").locale(locale.value).find();
+  articles.value = await queryContent("articles")
+    .locale(locale.value)
+    .sort({
+      date: "desc",
+    })
+    .find();
   loading.value = false;
 }
 await fetchArticles();
@@ -32,7 +37,13 @@ watch(locale, async (oldLocale, newLocale) => {
             class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-main"
             :aria-label="article.title"
           >
-            {{ article.title }}
+            <NuxtImg :src="article.image" :alt="article.title" width="50" height="50" layout="fixed" class="rounded-lg" />
+            <div class="flex flex-col">
+              <span>
+                {{ article.title }}
+              </span>
+              <span class="text-sm text-muted">{{ article.date }}</span>
+            </div>
           </NuxtLink>
         </li>
       </ul>

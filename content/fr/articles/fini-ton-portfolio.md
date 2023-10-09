@@ -3,6 +3,10 @@ title: "Fini ton portfolio !"
 date: "27/08/2023"
 description: "Fini ton portfolio !"
 tags: ["Portfolio", "Développement", "Design"]
+image: "/articles/first.jpeg"
+image.src: "/articles/first.jpeg"
+head.image: "/articles/first.jpeg"
+readingTime: "3"
 ---
 
 ## Introduction

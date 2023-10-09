@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ArrowUpIcon, ArrowLeftIcon } from "@heroicons/vue/24/outline";
+import { formatDate } from "@vueuse/core";
 const { locale } = useI18n();
 
 definePageMeta({
@@ -42,7 +43,12 @@ function scrollToTop() {
         </NuxtLink>
       </div>
       <article class="prose mx-auto lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4">
-        <h1 class="text-main">{{ data.title }}</h1>
+        <h1>{{ data.title }}</h1>
+        <div class="flex gap-6 info-section mt-1">
+          <p>{{ data.date }}</p>
+          <p>|</p>
+          <p>{{ data.readingTime }} {{ $t("writing.readingTime") }}</p>
+        </div>
         <ContentRenderer :value="data" />
       </article>
     </ContentQuery>
@@ -72,6 +78,21 @@ h1 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
+}
+
+article :deep(h1),
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.info-section {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  color: #7d8084;
+  text-decoration: none;
+  text-align: left;
 }
 
 article :deep(h2),

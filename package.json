@@ -40,6 +40,7 @@
     "nuxt": "^3.7.4",
     "nuxt-headlessui": "^1.1.4",
     "nuxt-svgo": "^3.4.0",
+    "nuxt-time": "^0.1.1",
     "openai": "^3.2.1",
     "prettier": "^2.8.8",
     "resend": "^0.16.0",

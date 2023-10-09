@@ -1,5 +1,9 @@
 {
   "title" : "Blog",
   "description" : "Quelques écrits sur des sujets qui me tiennent à coeur",
-  "empty" : "Aucun article pour le moment, mais ça ne saurait tarder !"
+  "empty" : "Aucun article pour le moment, mais ça ne saurait tarder !",
+  "not_found" : "Aucun article ne correspond à votre recherche",
+  "not_found_description" : "Nous n'avons pas trouvé d'article correspondant à votre recherche. Essayez de rechercher avec d'autres mots-clés.",
+  "back_link" : "Retour à la liste des articles",
+  "readingTime" : "min de lecture"
 }

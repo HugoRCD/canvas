@@ -6,6 +6,7 @@ tags: ["habitudes", "productivité"]
 image: "/articles/first.jpeg"
 image.src: "/articles/first.jpeg"
 head.image: "/articles/first.jpeg"
+readingTime: "3"
 ---
 
 ::quote
