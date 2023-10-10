@@ -70,7 +70,7 @@ const clients = [
       </div>
       <div class="flex flex-col gap-4">
         <h3 class="text-muted">
-          {{ $t("navigation.projects") }}
+          {{ $t("navigation.works") }}
         </h3>
         <ProjectList featured />
       </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowUpIcon, ArrowLeftIcon } from "@heroicons/vue/24/outline";
+import { ArrowUpIcon, ArrowLeftIcon, LinkIcon } from "@heroicons/vue/24/outline";
 const { locale } = useI18n();
 
 definePageMeta({
@@ -20,12 +20,26 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+const articleLink = computed(() => {
+  console.log(window.location.href);
+  return window.location.href;
+});
+
+defineShortcuts({
+  meta_o: {
+    usingInput: true,
+    handler: () => {
+      copyToClipboard(articleLink.value);
+    },
+  },
+});
 </script>
 
 <template>
   <main relative="relative">
     <div
-      class="flex items-center justify-center bg-secondary text-main rounded-full w-10 h-10 p-1 cursor-pointer border border-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200 fixed bottom-4 transform translate-x-1/2"
+      class="flex items-center justify-center bg-secondary text-main rounded-full w-10 h-10 p-1 cursor-pointer border border-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200 fixed bottom-20 right-4"
       @click="scrollToTop"
       :class="{ 'opacity-100': isScrolling, 'opacity-0': !isScrolling }"
     >
@@ -43,10 +57,17 @@ function scrollToTop() {
       </div>
       <article class="prose mx-auto lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4">
         <h1>{{ data.title }}</h1>
-        <div class="flex gap-6 info-section mt-1">
+        <div class="flex gap-2 sm:gap-6 info-section mt-1 flex-col sm:flex-row">
           <p>{{ data.date }}</p>
-          <p>|</p>
+          <p class="hidden sm:block">|</p>
           <p>{{ data.readingTime }} {{ $t("writing.readingTime") }}</p>
+          <p class="hidden sm:block">|</p>
+          <UTooltip :text="$t('writing.copy_link')" :shortcuts="['⌘', 'O']">
+            <p class="flex items-center gap-1 cursor-pointer hover:text-main transition-colors duration-200" @click="copyToClipboard(articleLink)">
+              <LinkIcon class="w-4 h-4 inline-block mr-1" />
+              {{ $t("writing.share") }}
+            </p>
+          </UTooltip>
         </div>
         <ContentRenderer :value="data" />
       </article>

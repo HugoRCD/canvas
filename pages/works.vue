@@ -2,8 +2,8 @@
 import projects from "~/data/projects";
 
 definePageMeta({
-  name: "Projects",
-  title: "Projects",
+  name: "Works",
+  title: "Works",
 });
 </script>
 

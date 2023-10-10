@@ -5,5 +5,7 @@
   "not_found" : "No writing found",
   "not_found_description" : "We couldn't find the writing you were looking for.",
   "back_link" : "Back to writing",
-  "readingTime" : "mins to read"
+  "readingTime" : "mins to read",
+  "share" : "Share article",
+  "copy_link" : "Copy link"
 }

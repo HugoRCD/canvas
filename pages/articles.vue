@@ -16,7 +16,7 @@ const resetError = (error: { value: null }) => {
     <NuxtErrorBoundary>
       <NuxtPage />
       <template #error="{ error }">
-        <div class="p-8 bg-secondary rounded-md">
+        <div class="h-screen flex flex-col justify-center">
           <h2 class="text-4xl font-bold text-center">
             {{ $t("writing.not_found") }}
           </h2>
