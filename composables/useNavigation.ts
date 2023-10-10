@@ -16,7 +16,7 @@ export function getNavigation(where: Where): Navigation[] {
       return [
         { name: "Home", to: "/", icon: HomeIcon },
         { name: "Projects", to: "/projects", icon: BriefcaseIcon },
-        { name: "Writing", to: "/writing", icon: PencilIcon, devOnly: true },
+        { name: "Writing", to: "/writing", icon: PencilIcon },
         { name: "About", to: "/about", icon: UserIcon },
         { name: "Contact", to: "/contact", icon: EnvelopeIcon },
       ];

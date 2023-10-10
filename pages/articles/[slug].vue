@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ArrowUpIcon, ArrowLeftIcon } from "@heroicons/vue/24/outline";
-import { formatDate } from "@vueuse/core";
 const { locale } = useI18n();
 
 definePageMeta({

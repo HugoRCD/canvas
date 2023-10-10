@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ArticleCard from "~/components/ArticleCard.vue";
+
 definePageMeta({
   name: "Writing",
   title: "Writing",
@@ -30,21 +32,9 @@ watch(locale, async (oldLocale, newLocale) => {
 <template>
   <LayoutInfoWrapper page="writing">
     <nav>
-      <ul>
+      <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <li v-for="article of articles" :key="article._path">
-          <NuxtLink
-            :to="article._path"
-            class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-main"
-            :aria-label="article.title"
-          >
-            <NuxtImg :src="article.image" :alt="article.title" width="50" height="50" layout="fixed" class="rounded-lg" />
-            <div class="flex flex-col">
-              <span>
-                {{ article.title }}
-              </span>
-              <span class="text-sm text-muted">{{ article.date }}</span>
-            </div>
-          </NuxtLink>
+          <ArticleCard :title="article.title" :date="article.date" :image="article.image" :path="article._path" />
         </li>
       </ul>
     </nav>
