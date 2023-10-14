@@ -22,7 +22,6 @@ function scrollToTop() {
 }
 
 const articleLink = computed(() => {
-  console.log(window.location.href);
   return window.location.href;
 });
 
