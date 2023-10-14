@@ -7,7 +7,7 @@ defineShortcuts({
   meta_o: {
     usingInput: true,
     handler: () => {
-      copyToClipboard("hrichard206@gmail.com");
+      copyToClipboard("contact@hrcd.fr");
     },
   },
 });
