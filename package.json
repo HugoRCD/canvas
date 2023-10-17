@@ -21,7 +21,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "1.0.0-rc.1",
     "@nuxt/ui": "^2.8.1",
-    "@nuxthq/studio": "^1.0.0",
+    "@nuxthq/studio": "^1.0.2",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/i18n": "8.0.0-beta.9",
