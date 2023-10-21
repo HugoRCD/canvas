@@ -64,8 +64,10 @@ module.exports = {
           to: { transform: "translateX(-50%)" },
         },
       },
+      // make a sm, md and lg version of the text shadow (increase the size and blur)
       textShadow: {
         sm: "rgba(255, 255, 255, 0.35) 1px 1px 12px",
+        md: "rgba(255, 255, 255, 0.35) 1px 1px 12px",
       },
     },
   },

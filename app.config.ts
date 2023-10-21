@@ -5,6 +5,9 @@ export default defineAppConfig({
   ui: {
     primary: "emerald",
     gray: "zinc",
+    input: {
+      variant: { none: "border-1 border-gray-700 hover:border-gray-400 focus:border-gray-400 transition-colors duration-300 ease-in-out" },
+    },
   },
   socials: {
     github: "https://github.com/HugoRCD",

@@ -7,5 +7,9 @@
   "back_link" : "Retour à la liste des articles",
   "readingTime" : "min de lecture",
   "share" : "Partager l'article",
-  "copy_link" : "Copier le lien"
+  "copy_link" : "Copier le lien",
+  "search_article" : "Rechercher un article",
+  "blog" : "Blog",
+  "quotes" : "Citations",
+  "empty_quotes" : "Aucune citation pour le moment, mais ça ne saurait tarder !"
 }

@@ -69,6 +69,13 @@ defineShortcuts({
           </UTooltip>
         </div>
         <ContentRenderer :value="data" />
+        <div>
+          <div v-for="tag of data.tags" :key="tag" class="inline-block mr-2">
+            <UKbd size="sm">
+              {{ tag }}
+            </UKbd>
+          </div>
+        </div>
       </article>
     </ContentQuery>
     <LayoutFooter class="pt-6" />
