@@ -7,5 +7,8 @@
   "back_link" : "Back to writing",
   "readingTime" : "mins to read",
   "share" : "Share article",
-  "copy_link" : "Copy link"
+  "copy_link" : "Copy link",
+  "search_article" : "Search article",
+  "blog" : "Blog",
+  "quotes" : "Quotes"
 }

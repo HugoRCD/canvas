@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { CheckCircleIcon, XCircleIcon, InformationCircleIcon, ShieldExclamationIcon } from "@heroicons/vue/24/outline";
 import { XMarkIcon } from "@heroicons/vue/20/solid";
-import { PropType } from "vue";
+import type { PropType } from "vue";
 
 const props = defineProps({
   show: {
