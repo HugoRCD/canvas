@@ -10,5 +10,6 @@
   "copy_link" : "Copier le lien",
   "search_article" : "Rechercher un article",
   "blog" : "Blog",
-  "quotes" : "Citations"
+  "quotes" : "Citations",
+  "empty_quotes" : "Aucune citation pour le moment, mais ça ne saurait tarder !"
 }
