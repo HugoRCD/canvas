@@ -74,7 +74,7 @@ html, body, #__nuxt, #__layout {
 
   .btn-primary {
     @apply flex items-center justify-center gap-2 px-8 py-1;
-    @apply bg-card hover:bg-card-hover rounded-md text-muted shadow-sm;
+    @apply bg-zinc-900 hover:bg-card-hover rounded-md text-muted shadow-sm;
     @apply border-[1px] border-primary hover:border-primary-hover;
     @apply transition-colors duration-200;
   }
