@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ArrowUpIcon, ArrowLeftIcon, LinkIcon } from "@heroicons/vue/24/outline";
+import type { Article } from "~/types/Article";
 const { locale } = useI18n();
 
 definePageMeta({
@@ -32,6 +33,34 @@ defineShortcuts({
       copyToClipboard(articleLink.value);
     },
   },
+});
+
+const route = useRoute();
+
+const article = ref<Article>();
+
+async function fetchArticle() {
+  article.value = (await queryContent("articles")
+    .where({
+      _path: {
+        $eq: route.path as string,
+      },
+    })
+    .locale(locale.value)
+    .findOne()) as Article;
+  useContentHead(article.value as Article);
+}
+
+onMounted(() => {
+  fetchArticle();
+});
+
+useContentHead(article.value as Article);
+
+watch(locale, async (oldLocale, newLocale) => {
+  if (oldLocale !== newLocale) {
+    await fetchArticle();
+  }
 });
 </script>
 

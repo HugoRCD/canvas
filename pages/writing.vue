@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
+import type { Article } from "~/types/Article";
 
 definePageMeta({
   name: "Writing",
   title: "Writing",
 });
 const { locale } = useI18n();
-
-type Article = ParsedContent & { _path: string; image: string; tags: string[]; date: string };
 
 const loading = ref(false);
 const articles = ref<Article[]>([]);
@@ -146,8 +144,6 @@ const items = computed(() => [
   transform: translateY(30px);
 }
 
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
 }

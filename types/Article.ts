@@ -1,8 +1,3 @@
-export type Article = {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  tags: string[];
-  _path: string;
-};
+import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
+
+export type Article = ParsedContent & { _path: string; image: string; tags: string[]; date: string };
