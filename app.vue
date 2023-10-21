@@ -56,7 +56,7 @@ useHead({
     },
     {
       property: "og:image",
-      content: "/preview.webp",
+      content: "https://hrcd.fr/preview.webp",
     },
     {
       property: "twitter:card",
@@ -72,7 +72,7 @@ useHead({
     },
     {
       property: "twitter:image",
-      content: "/preview.webp",
+      content: "https://hrcd.fr/preview.webp",
     },
     {
       property: "twitter:url",
