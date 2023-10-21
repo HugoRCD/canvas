@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n();
+import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
 
 definePageMeta({
   name: "Writing",
@@ -7,34 +7,46 @@ definePageMeta({
 });
 const { locale } = useI18n();
 
-const loading = ref(false);
-const articles = ref({});
-const tags = ref([]);
-const searchedTags = ref([]);
-const searchTitle = ref("");
+type Article = ParsedContent & { _path: string; image: string; tags: string[]; date: string };
 
-const filterArticles = computed(() => {
-  if (searchedTags.value.length === 0) {
-    return articles.value;
-  }
-  return articles.value.filter((article) => {
-    return article.tags.some((tag) => searchedTags.value.includes(tag));
-  });
+const loading = ref(false);
+const articles = ref<Article[]>([]);
+const tags = ref<string[]>([]);
+const searchedTags = ref<string[]>([]);
+const searchedTitle = ref("");
+
+const filteredArticles = computed(() => {
+  return articles.value
+    .filter((article) => {
+      if (searchedTags.value.length === 0) {
+        return true;
+      }
+      return searchedTags.value.some((tag) => article.tags.includes(tag));
+    })
+    .filter((article) => {
+      if (searchedTitle.value === "") {
+        return true;
+      }
+      return article.title!.toLowerCase().includes(searchedTitle.value.toLowerCase());
+    });
 });
 
 async function fetchArticles() {
   loading.value = true;
-  articles.value = await queryContent("articles")
+  const findArticles = await queryContent("articles")
     .locale(locale.value)
     .sort({
-      date: "desc",
+      date: -1,
     })
     .find();
+  articles.value = findArticles.map((article) => {
+    return article as Article;
+  });
   tags.value = articles.value.map((article) => article.tags).flat();
   loading.value = false;
 }
 
-function toggleTag(tag) {
+function toggleTag(tag: string) {
   if (searchedTags.value.includes(tag)) {
     searchedTags.value = searchedTags.value.filter((t) => t !== tag);
   } else {
@@ -75,9 +87,9 @@ const items = computed(() => [
       <template #blog>
         <div class="flex flex-col justify-center gap-2 mb-4">
           <div class="my-4">
-            <UInput v-model="searchTitle" variant="none" :placeholder="$t('writing.search_article')" />
+            <UInput v-model="searchedTitle" variant="none" :placeholder="$t('writing.search_article')" />
           </div>
-          <div class="flex justify-center gap-2 mb-4">
+          <div class="flex justify-center gap-2 mb-4" v-if="tags.length > 0">
             <div
               v-for="tag of tags"
               :key="tag"
@@ -90,11 +102,19 @@ const items = computed(() => [
           </div>
         </div>
         <nav v-if="!loading">
-          <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <li v-for="article of filterArticles" :key="article._path">
-              <ArticleCard :title="article.title" :date="article.date" :image="article.image" :path="article._path" />
+          <TransitionGroup name="list" tag="ul" class="grid grid-cols-1 gap-4 sm:grid-cols-2" v-if="filteredArticles.length">
+            <li v-for="article of filteredArticles" :key="article._path">
+              <ArticleCard :title="article.title!" :date="article.date" :image="article.image" :path="article._path!" />
             </li>
-          </ul>
+          </TransitionGroup>
+          <div v-else class="h-64 flex flex-col items-center justify-center gap-2">
+            <span class="text-2xl">
+              {{ $t("writing.not_found") }}
+            </span>
+            <span class="text-sm">
+              {{ $t("writing.not_found_description") }}
+            </span>
+          </div>
         </nav>
         <div v-else class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div v-for="n of 4" :key="n" class="flex flex-col gap-1 p-4 rounded-lg shadow-lg">
@@ -112,3 +132,23 @@ const items = computed(() => [
     </UTabs>
   </LayoutInfoWrapper>
 </template>
+
+<style>
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
+}
+</style>
