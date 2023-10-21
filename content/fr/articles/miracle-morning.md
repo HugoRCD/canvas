@@ -1,7 +1,8 @@
 ---
-title: "Miracle Morning, really a miracle ?"
+title: "Miracle Morning, vraiment un miracle ?"
 date: "28/08/2023"
-description: "Miracle Morning, really a miracle ?"
+draft: true
+description: "Miracle Morning, vraiment un miracle ?"
 tags: ["Miracle Morning", "Routine", "Productivité"]
 image: "/articles/first.jpeg"
 image.src: "/articles/first.jpeg"
@@ -10,7 +11,7 @@ readingTime: "3"
 ---
 
 ::quote
-"Efficiency is doing the right thing, effectiveness is doing the right thing"
+"L'efficacité consiste à faire les choses correctement, l'efficience consiste à faire les bonnes choses"
 ::
 
 ## Introduction
