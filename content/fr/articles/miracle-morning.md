@@ -1,8 +1,10 @@
 ---
 title: "Miracle Morning, vraiment un miracle ?"
+head.title: "Miracle Morning, vraiment un miracle ?"
 date: "28/08/2023"
 draft: true
 description: "Miracle Morning, vraiment un miracle ?"
+head.description: "Miracle Morning, really a miracle ?"
 tags: ["Miracle Morning", "Routine", "Productivité"]
 image: "/articles/first.jpeg"
 image.src: "/articles/first.jpeg"

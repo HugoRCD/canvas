@@ -1,8 +1,10 @@
 ---
 title: "Finally launch your portfolio"
+head.title: "Finally launch your portfolio"
 date: "27/08/2023"
 draft: false
 description: "Finally launch your portfolio"
+head.description: "Fini ton portfolio !"
 tags: ["Portfolio", "Developpement", "Design"]
 image: "/articles/first.jpeg"
 image.src: "/articles/first.jpeg"
