@@ -29,9 +29,9 @@ defineShortcuts({
         </template>
       </ClientOnly>
     </div>
-    <h2 class="text-2xl text-white-shadow text-white-gradient">
+    <h1 class="text-2xl text-white-shadow text-white-gradient">
       <span>Hugo Richard</span>
-    </h2>
+    </h1>
     <h3 class="text-center">
       <span class="text-xl text-muted">
         <span class="font-testimonial">{{ $t("home.hero.job.part1") }}</span> / {{ $t("home.hero.job.part2") }}
