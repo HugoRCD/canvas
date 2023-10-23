@@ -68,7 +68,7 @@ definePageMeta({
         </div>
       </div>
     </div>
-    <div class="linebreak my-6"></div>
+    <Divider class="my-6" />
     <div class="flex flex-col gap-3">
       <h3 class="text-muted text-lg">
         {{ $t("about.experience") }}
@@ -90,7 +90,7 @@ definePageMeta({
         </div>
       </div>
     </div>
-    <div class="linebreak my-6"></div>
+    <Divider class="my-6" />
     <div class="flex flex-col gap-3">
       <h3 class="text-muted text-lg">
         {{ $t("about.stack") }}

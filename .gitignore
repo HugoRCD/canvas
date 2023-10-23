@@ -22,3 +22,5 @@ logs
 .env.*
 !.env.example
 .vercel
+
+rt_base
