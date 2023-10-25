@@ -21,14 +21,14 @@ definePageMeta({
           <div class="relative">
             <NuxtImg
               width="256"
-              src="/assets/hugo-richard-dark.webp"
+              src="/assets/hugo-richard-light-sm.webp"
               class="absolute inset-0 h-64 w-64 scale-110 rounded-xl object-cover blur-xl grayscale saturate-200 transition-all duration-300 group-hover:blur-[32px] group-hover:grayscale-0"
               alt="Hugo Richard Profile Picture"
               aria-label="Hugo Richard Profile Picture"
             />
             <NuxtImg
               width="256"
-              src="/assets/hugo-richard-dark.webp"
+              src="/assets/hugo-richard-light-sm.webp"
               class="relative h-64 w-64 rounded-xl object-cover grayscale transition-all duration-300 group-hover:grayscale-0"
               alt="Hugo Richard Profile Picture"
               aria-label="Hugo Richard Profile Picture"

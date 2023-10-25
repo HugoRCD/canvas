@@ -77,36 +77,32 @@ const clients = [
           <div
             class="relative bg-gradient-to-b from-white/25 to-white bg-clip-text font-mona text-lg font-medium text-transparent transition-all duration-200 flex items-center justify-center gap-2"
           >
-            <ClientOnly>
-              <NuxtImg
-                width="96"
-                src="/assets/hugo-richard-dark.webp"
-                class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
-                alt="Hugo Richard Profile Picture"
-                aria-label="Hugo Richard Profile Picture"
-              />
-              <template #fallback>
-                <div class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"></div>
-              </template>
-            </ClientOnly>
+            <NuxtImg
+              width="96"
+              src="/assets/hugo-richard-light-sm.webp"
+              class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
+              alt="Hugo Richard Profile Picture"
+              aria-label="Hugo Richard Profile Picture"
+            />
           </div>
         </SpotlightButton>
       </div>
 
-      <div class="flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center z-20">
         <!-- title -->
         <h1 class="text-center font-display text-3xl font-light leading-tight lg:text-5xl">
-          Yet another ChatGPT
+          {{ $t("home.hero.part1") }}
 
           <br />
 
-          wrapper
-          <span class="bg-gradient-to-br from-white/90 to-white/30 bg-clip-text text-transparent">built different</span>
+          <span class="bg-gradient-to-br from-white/90 to-white/30 bg-clip-text text-transparent">
+            {{ $t("home.hero.part2") }}
+          </span>
         </h1>
 
         <!-- subtitle -->
-        <h2 class="mt-4 max-w-xl text-center text-lg text-white/60 lg:text-xl">
-          Recharger is not like all those chat-with-pdf apps. It certainly has a slightly different UI, so it worths your money.
+        <h2 class="mt-4 max-w-xl text-center text-lg font-light text-white/60">
+          {{ $t("home.hero.subtitle") }}
         </h2>
 
         <!-- social -->
@@ -121,7 +117,7 @@ const clients = [
           >
             <component
               :is="social.logo"
-              class="w-5 h-5 text-muted hover:text-main transition-colors duration-300"
+              class="social-item w-5 h-5 text-muted hover:text-main transition-all duration-300"
               :fontControlled="false"
               :alt="social.name + ' logo'"
               :aria-label="social.name + ' logo'"
@@ -152,7 +148,7 @@ const clients = [
             </h3>
             <div class="flex flex-col gap-4 w-full">
               <NuxtLink
-                v-for="project in projects.filter((project) => project.featured)"
+                v-for="project in projects.filter((work) => work.featured)"
                 :key="project.name"
                 class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-main"
                 :to="project.release === 'soon' ? '/' : project.link"
