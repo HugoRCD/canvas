@@ -1,3 +1,7 @@
+const plugin = require("tailwindcss/plugin");
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+const svgToDataUri = require("mini-svg-data-uri");
+
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -57,22 +61,22 @@ module.exports = {
         md: "2px",
       },
       animation: {
-        marquee: "marquee var(--duration, 30s) linear infinite",
+        marquee: "marquee 30s linear infinite",
       },
+
       keyframes: {
         marquee: {
           to: { transform: "translateX(-50%)" },
         },
       },
-      // make a sm, md and lg version of the text shadow (increase the size and blur)
+
       textShadow: {
         sm: "rgba(255, 255, 255, 0.35) 1px 1px 12px",
-        md: "rgba(255, 255, 255, 0.35) 1px 1px 12px",
       },
     },
   },
   plugins: [
-    function ({ matchUtilities, theme }) {
+    plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
           "text-shadow": (value) => ({
@@ -81,6 +85,30 @@ module.exports = {
         },
         { values: theme("textShadow") },
       );
-    },
+      matchUtilities(
+        {
+          "bg-grid": (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke="${value}" fill="none"><path d="M64 0H0V64"/></svg>`,
+            )}")`,
+          }),
+        },
+        {
+          values: flattenColorPalette(theme("backgroundColor")),
+          type: ["color"],
+        },
+      );
+      matchUtilities(
+        {
+          "bg-grid": (value) => ({
+            backgroundSize: value,
+          }),
+        },
+        {
+          values: theme("spacing"),
+          type: ["number", "length", "any"],
+        },
+      );
+    }),
   ],
 };

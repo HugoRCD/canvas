@@ -12,7 +12,7 @@ defineProps({
     <div>
       <h1 class="text-4xl font-bold font-testimonial text-white-shadow">{{ $t(`${page}.title`) }}</h1>
       <h2 class="text-lg text-muted">{{ $t(`${page}.description`) }}</h2>
-      <div class="linebreak my-6"></div>
+      <Divider class="my-6" />
       <slot />
     </div>
   </div>
