@@ -1,26 +1,11 @@
 <script setup lang="ts">
-import { ArrowUpIcon, ArrowLeftIcon, LinkIcon } from "@heroicons/vue/24/outline";
+import { ArrowLeftIcon, LinkIcon } from "@heroicons/vue/24/outline";
 import type { Article } from "~/types/Article";
 const { locale } = useI18n();
 
 definePageMeta({
   layout: "article",
 });
-
-const isScrolling = ref(false);
-
-onMounted(() => {
-  window.addEventListener("scroll", () => {
-    isScrolling.value = window.scrollY > 0;
-  });
-});
-
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
 
 const articleLink = computed(() => {
   return window.location.href;
@@ -66,13 +51,6 @@ watch(locale, async (oldLocale, newLocale) => {
 
 <template>
   <main relative="relative">
-    <div
-      class="flex items-center justify-center bg-secondary text-main rounded-full w-10 h-10 p-1 cursor-pointer border border-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200 fixed bottom-20 right-4"
-      @click="scrollToTop"
-      :class="{ 'opacity-100': isScrolling, 'opacity-0': !isScrolling }"
-    >
-      <ArrowUpIcon class="w-6 h-6" />
-    </div>
     <ContentQuery v-slot="{ data }" :locale="locale" :path="$route.path" find="one">
       <div
         class="lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4 mx-auto flex items-center gap-2 my-8 text-muted cursor-pointer hover:text-main transition-colors duration-200"
