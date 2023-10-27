@@ -1,8 +1,7 @@
-type Stack = {
+export type Stack = {
   name: string;
   link: string;
   tag: string;
-  type: "software" | "languages";
   logo: string;
   description: {
     en: string;
@@ -10,12 +9,11 @@ type Stack = {
   };
 };
 
-const stack: Stack[] = [
+export const techStack: Stack[] = [
   {
     name: "Nuxt",
     link: "https://nuxt.com/",
     tag: "development",
-    type: "languages",
     logo: "SvgoNuxtColor",
     description: {
       fr: "Nuxt est un framework Vue.js, mon framework préféré qui m'a fait redécouvrir le développement et l'apprècier encore plus !",
@@ -26,7 +24,6 @@ const stack: Stack[] = [
     name: "Vue",
     link: "https://vuejs.org/",
     tag: "development",
-    type: "languages",
     logo: "SvgoVueColor",
     description: {
       fr: "Vue est mon language de coeur qui m'a permis de découvrir le développement web, terriblement efficace et simple à utiliser.",
@@ -37,7 +34,6 @@ const stack: Stack[] = [
     name: "Nest",
     link: "https://nestjs.com/",
     tag: "development",
-    type: "languages",
     logo: "SvgoNestColor",
     description: {
       fr: "Nest est un framework pour construire des API avec une architecture solide et modulaire.",
@@ -48,7 +44,6 @@ const stack: Stack[] = [
     name: "TailwindCSS",
     link: "https://tailwindcss.com/",
     tag: "development",
-    type: "languages",
     logo: "SvgoTailwindColor",
     description: {
       fr: "TailwindCSS est un framework CSS qui me permet de gagner un temps fou dans le développement en simplifiant le CSS.",
@@ -56,10 +51,32 @@ const stack: Stack[] = [
     },
   },
   {
+    name: "Prisma",
+    link: "https://www.prisma.io/",
+    tag: "development",
+    logo: "SvgoPrismaColor",
+    description: {
+      fr: "Prisma est un ORM très simple à utiliser et très puissant, avec un super support typescript et de migrations.",
+      en: "Prisma is a very simple to use and very powerful ORM, with great typescript and migrations support.",
+    },
+  },
+  {
+    name: "Vercel",
+    link: "https://vercel.com/",
+    tag: "development",
+    logo: "SvgoVercel",
+    description: {
+      fr: "Vercel permet de déployer des sites/applications gratuitement et très rapidement.",
+      en: "Vercel allows you to deploy sites/applications for free and very quickly.",
+    },
+  },
+];
+
+export const productivityStack: Stack[] = [
+  {
     name: "Linear",
     link: "https://linear.app/",
     tag: "development",
-    type: "software",
     logo: "SvgoLinearColor",
     description: {
       fr: "Linear est probablement le meilleur outil de gestion de projet que j'ai jamais utilisé. Il est simple, incroyablement rapide et très puissant.",
@@ -67,21 +84,9 @@ const stack: Stack[] = [
     },
   },
   {
-    name: "Figma",
-    link: "https://www.figma.com/",
-    tag: "design",
-    type: "software",
-    logo: "SvgoFigmaColor",
-    description: {
-      fr: "Figma me permet de prototyper et de designer toutes mes idées et projets.",
-      en: "Figma allows me to prototype and design all my ideas and projects.",
-    },
-  },
-  {
     name: "Arc",
     link: "https://arc.net/",
     tag: "productivity",
-    type: "software",
     logo: "SvgoArcColor",
     description: {
       fr: "Arc est le nouveau navigateur web, rapide, incroyablement bien conçu et avec des fonctionnalités incroyables.",
@@ -92,7 +97,6 @@ const stack: Stack[] = [
     name: "Raycast",
     link: "https://raycast.com/",
     tag: "productivity",
-    type: "software",
     logo: "SvgoRaycastColor",
     description: {
       fr: "Raycast est ma révélation de l'année 2022. C'est un outil de productivité qui vous permet d'en remplacer des dizaines d'autres !",
@@ -103,7 +107,6 @@ const stack: Stack[] = [
     name: "Notion",
     link: "https://www.notion.so/",
     tag: "productivity",
-    type: "software",
     logo: "SvgoNotionColor",
     description: {
       fr: "Notion est le meilleur outil que j'ai jamais utilisé, prise de notes, gestion de projet, gestion de tâches, etc. Il est tout simplement incroyable.",
@@ -114,7 +117,6 @@ const stack: Stack[] = [
     name: "Cron",
     link: "https://calendar.cron.com/",
     tag: "productivity",
-    type: "software",
     logo: "SvgoCronColor",
     description: {
       en: "It's a calendar application based on Gmail. Wonderful UI and a handful of very useful additional features. Highly recommend trying it!",
@@ -122,32 +124,9 @@ const stack: Stack[] = [
     },
   },
   {
-    name: "IntelliJ IDEA",
-    link: "https://www.jetbrains.com/idea/",
-    tag: "development",
-    type: "software",
-    logo: "SvgoIntellijColor",
-    description: {
-      fr: "IntelliJ IDEA est tout simplement l'IDE le plus complet et le plus puissant pour le développement dans n'importe quel langage.",
-      en: "IntelliJ IDEA is simply the most complete and powerful IDE for development in any language.",
-    },
-  },
-  {
-    name: "Prisma",
-    link: "https://www.prisma.io/",
-    tag: "development",
-    type: "software",
-    logo: "SvgoPrismaColor",
-    description: {
-      fr: "Prisma est un ORM très simple à utiliser et très puissant, avec un super support typescript et de migrations.",
-      en: "Prisma is a very simple to use and very powerful ORM, with great typescript and migrations support.",
-    },
-  },
-  {
     name: "Spark",
     link: "https://sparkmailapp.com/",
     tag: "productivity",
-    type: "software",
     logo: "SvgoSparkColor",
     description: {
       fr: "Spark est une application de messagerie, super pratique pour gérer plusieurs boîtes mail, des templates de réponses, réponse avec IA, etc.",
@@ -158,7 +137,6 @@ const stack: Stack[] = [
     name: "1Password",
     link: "https://1password.com/",
     tag: "productivity",
-    type: "software",
     logo: "SvgoOnepasswordColor",
     description: {
       fr: "1Password est un incroyable gestionnaire de mots de passe, il m'a permis de me débarrasser de tous mes mots de passe et de les remplacer par des mots de passe forts et uniques.",
@@ -169,29 +147,29 @@ const stack: Stack[] = [
     name: "Fig",
     link: "https://fig.io/",
     tag: "productivity",
-    type: "software",
     logo: "SvgoFigColor",
     description: {
       fr: "Fig est un assistant de terminal intelligent qui vous aide à réduire le temps passé à taper des commandes dans votre terminal.",
       en: "Fig is an intelligent terminal assistant that helps you reduce time spent typing commands in your terminal.",
     },
   },
+];
+
+export const designStack: Stack[] = [
   {
-    name: "Vercel",
-    link: "https://vercel.com/",
-    tag: "development",
-    type: "software",
-    logo: "SvgoVercel",
+    name: "Figma",
+    link: "https://www.figma.com/",
+    tag: "design",
+    logo: "SvgoFigmaColor",
     description: {
-      fr: "Vercel permet de déployer des sites/applications gratuitement et très rapidement.",
-      en: "Vercel allows you to deploy sites/applications for free and very quickly.",
+      fr: "Figma me permet de prototyper et de designer toutes mes idées et projets.",
+      en: "Figma allows me to prototype and design all my ideas and projects.",
     },
   },
   {
     name: "Photoshop",
     link: "https://www.adobe.com/products/photoshop.html",
     tag: "design",
-    type: "software",
     logo: "SvgoPhotoshopColor",
     description: {
       fr: "Photoshop est un logiciel de retouche d'image, il me permet de créer des visuels pour mes projets.",
@@ -202,7 +180,6 @@ const stack: Stack[] = [
     name: "Illustrator",
     link: "https://www.adobe.com/products/illustrator.html",
     tag: "design",
-    type: "software",
     logo: "SvgoIllustratorColor",
     description: {
       fr: "Illustrator est un logiciel de création vectorielle, il me permet de créer des visuels pour mes projets.",
@@ -213,7 +190,6 @@ const stack: Stack[] = [
     name: "Lightroom",
     link: "https://www.adobe.com/products/photoshop-lightroom.html",
     tag: "design",
-    type: "software",
     logo: "SvgoLightroomColor",
     description: {
       fr: "Lightroom est un logiciel de retouche photo, il me permet de retoucher mes photos.",
@@ -221,5 +197,3 @@ const stack: Stack[] = [
     },
   },
 ];
-
-export default stack;
