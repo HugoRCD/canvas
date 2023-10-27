@@ -1,6 +1,6 @@
-import plugin from "tailwindcss/plugin";
-import { flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
-import svgToDataUri from "mini-svg-data-uri";
+const plugin = require("tailwindcss/plugin");
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+const svgToDataUri = require("mini-svg-data-uri");
 
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
