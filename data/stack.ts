@@ -118,7 +118,7 @@ export const productivityStack: Stack[] = [
   {
     name: "Cron",
     link: "https://calendar.cron.com/",
-    tags: ["productivity", "calendar"],
+    tags: ["productivity"],
     logo: "SvgoCronColor",
     description: {
       en: "It's a calendar application based on Gmail. Wonderful UI and a handful of very useful additional features. Highly recommend trying it!",

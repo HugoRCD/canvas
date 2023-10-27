@@ -18,12 +18,15 @@ function scrollToTop() {
 </script>
 
 <template>
-  <div
-    class="flex items-center justify-center bg-secondary text-main rounded-full w-10 h-10 p-1 cursor-pointer border border-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200 fixed bottom-20 right-4"
-    @click="scrollToTop"
-    :class="{ 'opacity-100': isScrolling, 'opacity-0': !isScrolling }"
-  >
-    <ArrowUpIcon class="w-6 h-6" />
+  <div class="fixed bottom-20 right-4">
+    <SpotlightButton
+      class="flex z-10 items-center justify-center w-10 h-10 p-1 text-muted hover:text-main transition-all duration-200"
+      @click="scrollToTop"
+      rounded
+      :class="{ 'opacity-100': isScrolling, 'opacity-0': !isScrolling }"
+    >
+      <ArrowUpIcon class="z-20 w-6 h-6" />
+    </SpotlightButton>
   </div>
 </template>
 
