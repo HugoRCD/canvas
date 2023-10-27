@@ -79,7 +79,7 @@ const clients = [
           >
             <NuxtImg
               width="96"
-              src="/assets/hugo-richard-light-sm.webp"
+              src="/assets/hugo-richard-light.webp"
               class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
               alt="Hugo Richard Profile Picture"
               aria-label="Hugo Richard Profile Picture"
