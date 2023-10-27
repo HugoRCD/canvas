@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import experiences from "~/data/about";
 import { techStack, productivityStack, designStack } from "~/data/stack";
-import StackItem from "~/components/about/StackItem.vue";
 
 definePageMeta({
   name: "About",
@@ -19,12 +17,19 @@ definePageMeta({
     <AboutExperience />
     <Divider class="my-6" />
     <div class="flex flex-col gap-3">
-      <h3 class="text-muted text-lg">
-        {{ $t("about.stack") }}
-      </h3>
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        <AboutStackItem v-for="item in techStack" :key="item.name" :item="item" />
+      <div class="flex flex-col gap-1 mb-6">
+        <h3 class="text-3xl text-white-shadow font-testimonial font-bold">
+          {{ $t("about.stack") }}
+        </h3>
+        <p class="text-sm text-muted">
+          {{ $t("about.stack_description") }}
+        </p>
       </div>
+      <AboutStackSection stack="development" :items="techStack" />
+      <Divider class="my-4" />
+      <AboutStackSection stack="productivity" :items="productivityStack" />
+      <Divider class="my-4" />
+      <AboutStackSection stack="design" :items="designStack" />
     </div>
   </LayoutInfoWrapper>
 </template>

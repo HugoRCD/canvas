@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { PropType } from "vue";
-import { useI18n } from "vue-i18n";
 import type { Stack } from "~/data/stack";
 
 defineProps({
@@ -12,7 +11,7 @@ defineProps({
 </script>
 
 <template>
-  <SpotlightCard white class="p-6" padding="p-6">
+  <SpotlightCard white class="p-6">
     <NuxtLink :to="item.link" target="_blank" :aria-label="item.name + ' link'" class="flex gap-4">
       <div class="h-14 w-14">
         <component
@@ -32,8 +31,8 @@ defineProps({
         <p class="text-sm font-light leading-relaxed text-muted">
           {{ item.description[$i18n.locale as "en" | "fr"] }}
         </p>
-        <div>
-          <UKbd size="sm" :value="item.tag" />
+        <div class="flex gap-2">
+          <UKbd size="sm" v-for="item in item.tags" :key="item" :aria-label="item" :value="$t(`tags.${item}`)" />
         </div>
       </div>
     </NuxtLink>

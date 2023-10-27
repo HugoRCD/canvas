@@ -31,6 +31,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  radius: {
+    type: String,
+    default: "2xl",
+  },
 });
 
 const card = ref();
@@ -63,7 +67,7 @@ const spotlightColorStops = [props.from, props.via, props.to].filter((value) => 
   <BaseSpotlightCard
     v-else
     from="rgba(255,255,255,0.2)"
-    class="relative rounded-[--radius] [--radius:theme(borderRadius.2xl)] lg:[--radius:theme(borderRadius.3xl)]"
+    class="relative rounded-[--radius] [--radius:theme(borderRadius.xl)] lg:[--radius:theme(borderRadius.2xl)]"
   >
     <!-- border gradient -->
     <div class="absolute inset-x-0 bottom-[--radius] top-0 rounded-t-[--radius] bg-gradient-to-b from-white/20 to-transparent"></div>
