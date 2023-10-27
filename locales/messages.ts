@@ -25,6 +25,21 @@ import fr_about from "./fr/about.json";
 import en_writing from "./en/writing.json";
 import fr_writing from "./fr/writing.json";
 
+const tags = {
+  fr: {
+    design: "Design",
+    productivity: "Productivité",
+    development: "Développement",
+    writing: "Écriture",
+  },
+  en: {
+    design: "Design",
+    productivity: "Productivity",
+    development: "Development",
+    writing: "Writing",
+  },
+};
+
 const messages = {
   en: {
     home: en_home,
@@ -36,6 +51,7 @@ const messages = {
     projects: en_projects,
     about: en_about,
     writing: en_writing,
+    tags: tags.en,
   },
   fr: {
     home: fr_home,
@@ -47,6 +63,7 @@ const messages = {
     projects: fr_projects,
     about: fr_about,
     writing: fr_writing,
+    tags: tags.fr,
   },
 };
 

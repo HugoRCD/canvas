@@ -147,6 +147,7 @@ __/\\\\\\________/\\\\\\_        ____/\\\\\\\\\\\\\\\\\\_____        ________/\\
         :infos="toast.infos"
         @close="toastStore.closeToast()"
       />
+      <ScrollToTop />
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
