@@ -95,7 +95,7 @@ definePageMeta({
       <h3 class="text-muted text-lg">
         {{ $t("about.stack") }}
       </h3>
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <SpotlightCard white class="p-6" padding="p-6" v-for="item in stack" :key="item.name">
           <NuxtLink :to="item.link" target="_blank" :aria-label="item.name + ' link'" class="flex gap-4">
             <div class="h-14 w-14">

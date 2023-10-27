@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from "vue";
 import { useMouseInElement } from "@vueuse/core";
 
 const props = defineProps({
@@ -22,7 +21,7 @@ const props = defineProps({
   },
   size: {
     type: Number,
-    default: 350,
+    default: 400,
   },
   mode: {
     type: String,
