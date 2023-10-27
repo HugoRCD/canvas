@@ -187,6 +187,39 @@ const stack: Stack[] = [
       en: "Vercel allows you to deploy sites/applications for free and very quickly.",
     },
   },
+  {
+    name: "Photoshop",
+    link: "https://www.adobe.com/products/photoshop.html",
+    tag: "design",
+    type: "software",
+    logo: "SvgoPhotoshopColor",
+    description: {
+      fr: "Photoshop est un logiciel de retouche d'image, il me permet de créer des visuels pour mes projets.",
+      en: "Photoshop is an image editing software, it allows me to create visuals for my projects.",
+    },
+  },
+  {
+    name: "Illustrator",
+    link: "https://www.adobe.com/products/illustrator.html",
+    tag: "design",
+    type: "software",
+    logo: "SvgoIllustratorColor",
+    description: {
+      fr: "Illustrator est un logiciel de création vectorielle, il me permet de créer des visuels pour mes projets.",
+      en: "Illustrator is a vector creation software, it allows me to create visuals for my projects.",
+    },
+  },
+  {
+    name: "Lightroom",
+    link: "https://www.adobe.com/products/photoshop-lightroom.html",
+    tag: "design",
+    type: "software",
+    logo: "SvgoLightroomColor",
+    description: {
+      fr: "Lightroom est un logiciel de retouche photo, il me permet de retoucher mes photos.",
+      en: "Lightroom is a photo editing software, it allows me to edit my photos.",
+    },
+  },
 ];
 
 export default stack;
