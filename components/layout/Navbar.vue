@@ -75,8 +75,8 @@ const navigation = getNavigation("home").filter((link) => link.devOnly !== true)
 
 <template>
   <div class="flex items-center justify-center mx-auto w-full mb-2 sm:mt-2">
-    <div>
-      <header
+    <header>
+      <nav
         class="z-10 h-[50px] sm:h-[45px] bg-secondary border-[1px] border-primary shadow-md group flex justify-around px-6 py-3 sm:py-2 gap-8 rounded-full w-full sm:w-auto"
       >
         <NuxtLink
@@ -90,7 +90,7 @@ const navigation = getNavigation("home").filter((link) => link.devOnly !== true)
         >
           <component :is="item.icon" class="w-7 h-7 sm:w-6 sm:h-6 font-medium" />
         </NuxtLink>
-      </header>
-    </div>
+      </nav>
+    </header>
   </div>
 </template>
