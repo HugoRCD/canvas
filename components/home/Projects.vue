@@ -25,7 +25,9 @@ import projects from "~/data/projects";
         </span>
       </NuxtLink>
       <div class="flex justify-center mt-4">
-        <button class="btn-primary" @click="useRouter().push('/works')">{{ $t("global.see_more") }}</button>
+        <button class="btn-primary" @click="useRouter().push('/works')">
+          <span class="white-gradient">{{ $t("global.see_more") }}</span>
+        </button>
       </div>
     </div>
   </div>
