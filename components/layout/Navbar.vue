@@ -74,23 +74,23 @@ const navigation = getNavigation("home").filter((link) => link.devOnly !== true)
 </script>
 
 <template>
-  <div class="flex items-center justify-center mx-auto w-full mb-2 sm:mt-2">
-    <header>
-      <nav
-        class="z-10 h-[50px] sm:h-[45px] bg-secondary border-[1px] border-primary shadow-md group flex justify-around px-6 py-3 sm:py-2 gap-8 rounded-full w-full sm:w-auto"
-      >
-        <NuxtLink
-          v-for="item in navigation"
-          :id="item.name.toLowerCase()"
-          :key="item.name"
-          :aria-label="item.name + ' navigation link'"
-          :class="[item.name === $route.name ? 'text-white/75 text-shadow-sm' : 'text-muted']"
-          :to="item.to"
-          class="hover:text-main transition-[text-shadow,color] duration-300 ease-in-out flex items-center gap-2"
-        >
-          <component :is="item.icon" class="w-7 h-7 sm:w-6 sm:h-6 font-medium" />
-        </NuxtLink>
-      </nav>
+  <div class="flex items-center justify-center mx-auto w-full my-2">
+    <header class="rounded-full">
+      <SpotlightButton rounded :animate="false" class="">
+        <nav class="z-10 h-[50px] sm:h-[45px] flex justify-around gap-2 p-1">
+          <NuxtLink
+            v-for="item in navigation"
+            :id="item.name.toLowerCase()"
+            :key="item.name"
+            :aria-label="item.name + ' navigation link'"
+            :class="[item.name === $route.name ? 'text-white/75 text-shadow-sm border border-white/5 backdrop-blur-3xl bg-zinc-900/50' : 'text-muted']"
+            :to="item.to"
+            class="flex items-center rounded-full px-4 sm:px-6 py-1 border border-transparent hover:bg-zinc-900/50 hover:backdrop-blur-3xl hover:border-white/5 hover:text-main duration-300 ease-in-out transition-all"
+          >
+            <component :is="item.icon" class="w-7 h-7 sm:w-6 sm:h-6 font-medium" />
+          </NuxtLink>
+        </nav>
+      </SpotlightButton>
     </header>
   </div>
 </template>

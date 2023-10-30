@@ -8,6 +8,10 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  animate: {
+    type: Boolean,
+    default: true,
+  },
 });
 </script>
 
@@ -16,7 +20,7 @@ defineProps({
     :is="as"
     :class="`group relative inline-flex items-center overflow-hidden transition ${rounded ? 'rounded-full' : 'rounded-md px-8 py-1'} bg-zinc-800 `"
   >
-    <div class="absolute inset-0 flex items-center [container-type:inline-size]">
+    <div v-if="animate" class="absolute inset-0 flex items-center [container-type:inline-size]">
       <div
         class="absolute h-[100cqw] w-[100cqw] animate-spin bg-[conic-gradient(from_0_at_50%_50%,rgba(255,255,255,0.5)_0deg,transparent_60deg,transparent_300deg,rgba(255,255,255,0.5)_360deg)] opacity-0 transition duration-300 group-hover:opacity-100"
       ></div>

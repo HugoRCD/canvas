@@ -1,5 +1,5 @@
 import { HomeIcon, BriefcaseIcon, UserIcon, EnvelopeIcon, PencilIcon } from "@heroicons/vue/24/outline";
-import { FunctionalComponent } from "vue";
+import { type FunctionalComponent } from "vue";
 
 type Where = "home" | "app";
 
