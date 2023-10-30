@@ -74,7 +74,7 @@ html, body, #__nuxt, #__layout {
 
   .btn-primary {
     @apply flex items-center justify-center gap-2 px-8 py-1;
-    @apply bg-zinc-800 hover:bg-card-hover rounded-md text-muted shadow-sm;
+    @apply bg-zinc-900 hover:bg-zinc-800 rounded-md text-muted shadow-sm;
     @apply border-[1px] border-primary hover:border-primary-hover;
     @apply transition-colors duration-200;
   }
@@ -98,6 +98,10 @@ html, body, #__nuxt, #__layout {
 
   .text-white-shadow {
     text-shadow: 0 4px 10px rgba(0, 87, 255, .2), 0 -4px 10px rgba(255, 90, 0, .15), 0 0 30px rgba(255, 255, 255, .2);
+  }
+
+  .white-gradient {
+    @apply bg-gradient-to-b from-white/25 to-white bg-clip-text text-lg font-medium text-transparent
   }
 
   .text-white-gradient {
