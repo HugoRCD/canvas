@@ -137,7 +137,7 @@ __/\\\\\\________/\\\\\\_        ____/\\\\\\\\\\\\\\\\\\_____        ________/\\
 </script>
 
 <template>
-  <Html :lang="$i18n.locale" class="bg-zinc-950 text-main selection:bg-white selection:text-zinc-950 transition-colors duration-300">
+  <Html :lang="$i18n.locale" class="bg-zinc-950 text-main selection:bg-white/60 selection:text-zinc-800 transition-colors duration-300">
     <Body>
       <ToastsBasic
         :show="toast.show"
