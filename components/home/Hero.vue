@@ -13,7 +13,7 @@
     </h1>
 
     <!-- subtitle -->
-    <h2 class="mt-4 max-w-xl text-center text-lg font-light text-white/60">
+    <h2 class="mt-4 max-w-xl mx-auto text-center text-lg font-light text-white/60">
       {{ $t("home.hero.subtitle") }}
     </h2>
   </div>
