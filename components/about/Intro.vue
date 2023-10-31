@@ -18,6 +18,7 @@
       </p>
     </div>
     <Signature class="absolute w-40 hidden sm:block -bottom-1/4 right-0" />
+    <Signature class="absolute black sm:hidden -right-2 w-32 -bottom-[6rem]" />
   </div>
 </template>
 

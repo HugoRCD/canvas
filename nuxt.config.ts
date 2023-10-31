@@ -14,7 +14,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/": { isr: true, prerender: true },
-    "/articles": { ssr: false },
   },
 
   css: ["~/assets/style/main.scss"],
