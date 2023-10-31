@@ -6,3 +6,15 @@
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+
+#signature {
+  stroke-dasharray: 2036;
+  stroke-dashoffset: 2036;
+  animation: sign 6s ease-in forwards;
+}
+
+@keyframes sign{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
