@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <SettingsTools class="fixed bottom-4 right-4 sm:bottom-4" />
+    <SettingsLanguageToggle class="fixed bottom-4 right-4 sm:bottom-4" />
     <slot />
   </div>
 </template>
