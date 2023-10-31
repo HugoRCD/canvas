@@ -7,10 +7,10 @@
   opacity: 0;
 }
 
-#signature {
+.signature {
   stroke-dasharray: 2036;
   stroke-dashoffset: 2036;
-  animation: sign 6s ease-in forwards;
+  animation: sign 5s ease-in forwards;
 }
 
 @keyframes sign{
