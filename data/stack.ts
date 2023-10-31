@@ -1,9 +1,7 @@
-type Tag = "development" | "productivity" | "design" | "writing";
-
 export type Stack = {
   name: string;
   link: string;
-  tags: Tag[];
+  tags: string[];
   logo: string;
   description: {
     en: string;
@@ -15,7 +13,7 @@ export const techStack: Stack[] = [
   {
     name: "Nuxt",
     link: "https://nuxt.com/",
-    tags: ["development"],
+    tags: ["framework"],
     logo: "SvgoNuxtColor",
     description: {
       fr: "Nuxt est un framework Vue.js, mon framework préféré qui m'a fait redécouvrir le développement et l'apprècier encore plus !",
@@ -25,7 +23,7 @@ export const techStack: Stack[] = [
   {
     name: "Vue",
     link: "https://vuejs.org/",
-    tags: ["development"],
+    tags: ["framework"],
     logo: "SvgoVueColor",
     description: {
       fr: "Vue est mon language de coeur qui m'a permis de découvrir le développement web, terriblement efficace et simple à utiliser.",
@@ -35,7 +33,7 @@ export const techStack: Stack[] = [
   {
     name: "Nest",
     link: "https://nestjs.com/",
-    tags: ["development"],
+    tags: ["framework"],
     logo: "SvgoNestColor",
     description: {
       fr: "Nest est un framework pour construire des API avec une architecture solide et modulaire.",
@@ -45,7 +43,7 @@ export const techStack: Stack[] = [
   {
     name: "TailwindCSS",
     link: "https://tailwindcss.com/",
-    tags: ["development"],
+    tags: ["css"],
     logo: "SvgoTailwindColor",
     description: {
       fr: "TailwindCSS est un framework CSS qui me permet de gagner un temps fou dans le développement en simplifiant le CSS.",
@@ -55,7 +53,7 @@ export const techStack: Stack[] = [
   {
     name: "Prisma",
     link: "https://www.prisma.io/",
-    tags: ["development"],
+    tags: ["database", "orm"],
     logo: "SvgoPrismaColor",
     description: {
       fr: "Prisma est un ORM très simple à utiliser et très puissant, avec un super support typescript et de migrations.",
@@ -65,7 +63,7 @@ export const techStack: Stack[] = [
   {
     name: "Vercel",
     link: "https://vercel.com/",
-    tags: ["development"],
+    tags: ["deployment"],
     logo: "SvgoVercel",
     description: {
       fr: "Vercel permet de déployer des sites/applications gratuitement et très rapidement.",
@@ -78,7 +76,7 @@ export const productivityStack: Stack[] = [
   {
     name: "Linear",
     link: "https://linear.app/",
-    tags: ["productivity"],
+    tags: ["task_manager"],
     logo: "SvgoLinearColor",
     description: {
       fr: "Linear est probablement le meilleur outil de gestion de projet que j'ai jamais utilisé. Il est simple, incroyablement rapide et très puissant.",
@@ -88,7 +86,7 @@ export const productivityStack: Stack[] = [
   {
     name: "Arc",
     link: "https://arc.net/",
-    tags: ["productivity"],
+    tags: ["browser"],
     logo: "SvgoArcColor",
     description: {
       fr: "Arc est le nouveau navigateur web, rapide, incroyablement bien conçu et avec des fonctionnalités incroyables.",
@@ -108,7 +106,7 @@ export const productivityStack: Stack[] = [
   {
     name: "Notion",
     link: "https://www.notion.so/",
-    tags: ["productivity"],
+    tags: ["notes"],
     logo: "SvgoNotionColor",
     description: {
       fr: "Notion est le meilleur outil que j'ai jamais utilisé, prise de notes, gestion de projet, gestion de tâches, etc. Il est tout simplement incroyable.",
@@ -118,7 +116,7 @@ export const productivityStack: Stack[] = [
   {
     name: "Cron",
     link: "https://calendar.cron.com/",
-    tags: ["productivity"],
+    tags: ["calendar"],
     logo: "SvgoCronColor",
     description: {
       en: "It's a calendar application based on Gmail. Wonderful UI and a handful of very useful additional features. Highly recommend trying it!",
@@ -128,7 +126,7 @@ export const productivityStack: Stack[] = [
   {
     name: "Spark",
     link: "https://sparkmailapp.com/",
-    tags: ["productivity"],
+    tags: ["mail"],
     logo: "SvgoSparkColor",
     description: {
       fr: "Spark est une application de messagerie, super pratique pour gérer plusieurs boîtes mail, des templates de réponses, réponse avec IA, etc.",
@@ -138,7 +136,7 @@ export const productivityStack: Stack[] = [
   {
     name: "1Password",
     link: "https://1password.com/",
-    tags: ["productivity"],
+    tags: ["password_manager"],
     logo: "SvgoOnepasswordColor",
     description: {
       fr: "1Password est un incroyable gestionnaire de mots de passe, il m'a permis de me débarrasser de tous mes mots de passe et de les remplacer par des mots de passe forts et uniques.",
@@ -148,7 +146,7 @@ export const productivityStack: Stack[] = [
   {
     name: "Fig",
     link: "https://fig.io/",
-    tags: ["productivity"],
+    tags: ["terminal"],
     logo: "SvgoFigColor",
     description: {
       fr: "Fig est un assistant de terminal intelligent qui vous aide à réduire le temps passé à taper des commandes dans votre terminal.",
@@ -161,7 +159,7 @@ export const designStack: Stack[] = [
   {
     name: "Figma",
     link: "https://www.figma.com/",
-    tags: ["design"],
+    tags: ["prototyping"],
     logo: "SvgoFigmaColor",
     description: {
       fr: "Figma me permet de prototyper et de designer toutes mes idées et projets.",
@@ -171,31 +169,31 @@ export const designStack: Stack[] = [
   {
     name: "Photoshop",
     link: "https://www.adobe.com/products/photoshop.html",
-    tags: ["design"],
+    tags: ["illustration"],
     logo: "SvgoPhotoshopColor",
     description: {
-      fr: "Photoshop est un logiciel de retouche d'image, il me permet de créer des visuels pour mes projets.",
-      en: "Photoshop is an image editing software, it allows me to create visuals for my projects.",
+      fr: "Le meilleur logiciel pour créer de sublimes mockups, designs, etc...",
+      en: "The best software to create beautiful mockups, designs, etc...",
     },
   },
   {
     name: "Illustrator",
     link: "https://www.adobe.com/products/illustrator.html",
-    tags: ["design"],
+    tags: ["illustration", "logo", "graphic_design"],
     logo: "SvgoIllustratorColor",
     description: {
-      fr: "Illustrator est un logiciel de création vectorielle, il me permet de créer des visuels pour mes projets.",
-      en: "Illustrator is a vector creation software, it allows me to create visuals for my projects.",
+      fr: "Illustrator me permet de créer tous les logos et illustrations de mes projets.",
+      en: "Illustrator allows me to create all the logos and illustrations of my projects.",
     },
   },
   {
     name: "Lightroom",
     link: "https://www.adobe.com/products/photoshop-lightroom.html",
-    tags: ["design"],
+    tags: ["retouching", "photography"],
     logo: "SvgoLightroomColor",
     description: {
-      fr: "Lightroom est un logiciel de retouche photo, il me permet de retoucher mes photos.",
-      en: "Lightroom is a photo editing software, it allows me to edit my photos.",
+      fr: "Si vous aimez la photographie, Lightroom est le meilleur logiciel pour retoucher, organiser et partager vos photos.",
+      en: "If you like photography, Lightroom is the best software to edit, organize and share your photos.",
     },
   },
 ];
