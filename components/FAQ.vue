@@ -18,7 +18,7 @@ defineProps({
       v-for="(item, index) in questions"
       :key="index"
       v-slot="{ isActive, toggle }"
-      class="group rounded-2xl border border-white/10 bg-white/5 transition duration-500 hover:bg-white/[0.075]"
+      class="group rounded-xl border border-white/10 bg-white/5 transition duration-500 hover:bg-white/[0.075]"
     >
       <div class="flex cursor-pointer items-center p-4" @click="toggle">
         <div class="text-white/75 transition group-hover:text-white">

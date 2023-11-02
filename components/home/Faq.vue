@@ -1,19 +1,50 @@
 <script setup lang="ts">
-import { servicesAndToolstack, pricing } from "~/data/faq";
+import { services, pricing, personnal } from "~/data/faq";
 const { locale } = useI18n();
 
 const items = computed(() => {
   return [
     {
-      label: servicesAndToolstack.title[locale.value as "en" | "fr"],
-      slot: "services-and-toolstack",
+      label: services.title[locale.value as "en" | "fr"],
+      slot: "services",
     },
     {
       label: pricing.title[locale.value as "en" | "fr"],
       slot: "pricing",
     },
+    {
+      label: personnal.title[locale.value as "en" | "fr"],
+      slot: "personnal",
+    },
   ];
 });
+
+const ui = {
+  list: {
+    base: "gap-4",
+    background: "bg-transparent dark:bg-transparent",
+    rounded: "rounded-full",
+    marker: {
+      wrapper: "absolute top-[4px] left-[4px] duration-200 ease-out focus:outline-none",
+      base: "w-full h-full",
+      background: "bg-transparent",
+      rounded: "rounded-full",
+      shadow: "no-shadow",
+    },
+    tab: {
+      base: "relative inline-flex items-center justify-center flex-shrink-0 w-full focus:outline-none transition-colors duration-200 ease-out border-white/10 border-2",
+      background: "hover:bg-zinc-900/80",
+      active: "text-gray-900 dark:text-white",
+      inactive: "text-gray-500 dark:text-gray-400",
+      height: "",
+      padding: "px-3 py-2",
+      size: "",
+      font: "font-medium",
+      rounded: "rounded-full",
+      shadow: "",
+    },
+  },
+};
 </script>
 
 <template>
@@ -27,12 +58,15 @@ const items = computed(() => {
       </p>
     </div>
     <div>
-      <UTabs :items="items" orientation="horizontal" :ui="{ list: { marker: { rounded: 'rounded-full' }, rounded: 'rounded-full' } }">
-        <template #services-and-toolstack>
-          <FAQ :questions="servicesAndToolstack.faq" class="max-w-lg mt-6" />
+      <UTabs :items="items" orientation="horizontal" :ui="ui">
+        <template #services>
+          <FAQ :questions="services.faq" class="max-w-lg mt-8" />
         </template>
         <template #pricing>
-          <FAQ :questions="pricing.faq" class="max-w-lg mt-6" />
+          <FAQ :questions="pricing.faq" class="max-w-lg mt-8" />
+        </template>
+        <template #personnal>
+          <FAQ :questions="personnal.faq" class="max-w-lg mt-8" />
         </template>
       </UTabs>
     </div>
