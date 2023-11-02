@@ -28,15 +28,11 @@ const items = computed(() => {
     </div>
     <div>
       <UTabs :items="items" orientation="horizontal" :ui="{ list: { marker: { rounded: 'rounded-full' }, rounded: 'rounded-full' } }">
-        <template #services-and-toolstack="{ item }">
-          <div class="flex items-center gap-2 text-shadow-sm" style="font-size: 1rem">
-            {{ $t(`faq.services-and-toolstack`) }}
-          </div>
+        <template #services-and-toolstack>
+          <FAQ :questions="servicesAndToolstack.faq" class="max-w-lg mt-6" />
         </template>
-        <template #pricing="{ item }">
-          <div class="flex items-center gap-2 text-shadow-sm" style="font-size: 1rem">
-            {{ $t(`faq.pricing`) }}
-          </div>
+        <template #pricing>
+          <FAQ :questions="pricing.faq" class="max-w-lg mt-6" />
         </template>
       </UTabs>
     </div>
