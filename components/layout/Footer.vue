@@ -6,6 +6,7 @@
       <span class="text-muted text-sm text-center"
         >© 2023,
         <NuxtLink
+          role="link"
           target="_blank"
           to="https://mh.hrcd.fr/"
           class="text-muted hover:text-main transition-colors duration-300 ease-in-out"

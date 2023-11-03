@@ -20,6 +20,7 @@ function scrollToTop() {
 <template>
   <div class="fixed z-50 bottom-36 sm:bottom-20 right-3">
     <SpotlightButton
+      aria-label="scroll to top button"
       class="flex items-center justify-center w-10 h-10 p-1 text-muted hover:text-main transition-all duration-200"
       @click="scrollToTop"
       rounded

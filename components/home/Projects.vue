@@ -9,6 +9,7 @@ import projects from "~/data/projects";
     </h3>
     <div class="flex flex-col gap-4 w-full">
       <NuxtLink
+        role="link"
         v-for="project in projects.filter((work) => work.featured)"
         :key="project.name"
         class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-main"
