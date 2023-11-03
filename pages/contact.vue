@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
-import Availability from "~/components/settings/Availability.vue";
-import MeetingButton from "~/components/MeetingButton.vue";
+import type { ContactEmail } from "~/types/ContactEmail";
 
 definePageMeta({
   name: "Contact",
@@ -14,36 +13,30 @@ useHead({
 
 const toastStore = useToastStore();
 
-type ContactForm = {
-  email: string;
-  subject: string;
-  message: string;
-  phone: string;
-  fullname: string;
-  budget: string;
-};
-
 const demandTypes = [
   {
     label: "contact.subject_types.project",
+    value: "project",
     color: "bg-blue-500",
   },
   {
     label: "contact.subject_types.question",
+    value: "question",
     color: "bg-yellow-500",
   },
   {
     label: "contact.subject_types.bug",
+    value: "bug",
     color: "bg-red-500",
   },
   {
     label: "contact.subject_types.other",
+    value: "other",
     color: "bg-gray-500",
   },
 ];
 
 const email = ref("");
-const subject = ref("");
 const message = ref("");
 const phone = ref("");
 const fullname = ref("");
@@ -52,23 +45,30 @@ const selected = ref(demandTypes[0]);
 
 const loading = ref(false);
 
+const contactData = computed(() => {
+  return {
+    email: email.value,
+    message: message.value,
+    phone: phone.value,
+    fullname: fullname.value,
+    budget: budget.value,
+    subject: selected.value.value,
+  } as ContactEmail;
+});
+
 async function submitForm() {
   loading.value = true;
   const { data } = await useFetch("/api/sendEmail", {
     method: "POST",
-    body: {
-      email: email.value,
-      subject: subject.value,
-      message: message.value,
-      phone: phone.value,
-      fullname: fullname.value,
-    },
+    body: contactData.value,
   });
   if (data) {
     email.value = "";
     message.value = "";
     phone.value = "";
     fullname.value = "";
+    budget.value = 450;
+    selected.value = demandTypes[0];
     toastStore.showSuccessToast({
       title: "contact.success",
     });
