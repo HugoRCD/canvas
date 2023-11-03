@@ -1,13 +1,20 @@
 {
   "title": "Contactez moi",
-  "description" : "Discutons ensemble de votre projet",
+  "description" : "Discutons de votre idée, projet ou de tout autre chose !",
   "fullname": "Nom complet",
   "email": "Email",
   "phone": "Téléphone",
   "subject": "Sujet de votre message",
   "message": "Message",
   "submit": "Envoyer",
-  "average_response_time" : "Délai de réponse d'environ 3 à 5 heures",
+  "average_response_time" : "Je réponds en moyenne entre 2 et 5 heures",
   "success": "Votre message a été envoyé avec succès",
-  "error": "Oups, une erreur s'est produite lors de l'envoi de votre message :("
+  "error": "Oups, une erreur s'est produite lors de l'envoi de votre message :(",
+  "budget": "Budget",
+  "subject_types": {
+    "project": "Projet",
+    "bug": "Bug",
+    "question": "Question",
+    "other": "Autre"
+  }
 }
