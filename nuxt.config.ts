@@ -1,11 +1,5 @@
-import messages from "./locales/messages";
-
 export default defineNuxtConfig({
   app: {
-    layoutTransition: {
-      name: "fade",
-      mode: "out-in",
-    },
     pageTransition: {
       name: "fade",
       mode: "out-in",
@@ -83,13 +77,7 @@ export default defineNuxtConfig({
       },
     ],
     baseUrl: "https://hrcd.fr",
-    vueI18n: {
-      legacy: false,
-      locale: "en",
-      fallbackLocale: "en",
-      availableLocales: ["en", "fr"],
-      messages: messages,
-    },
+    vueI18n: "~/i18n.config.ts",
   },
 
   nitro: {
@@ -114,8 +102,6 @@ export default defineNuxtConfig({
     locales: ["en", "fr"],
     defaultLocale: "en",
   },
-
-  buildModules: ["@nuxt/image"],
 
   svgo: {
     autoImportPath: "./assets/logo/",

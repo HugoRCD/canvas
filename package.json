@@ -10,6 +10,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . --fix"
   },
@@ -23,10 +24,9 @@
     "@nuxt/ui": "^2.8.1",
     "@nuxthq/studio": "^1.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@nuxtjs/i18n": "8.0.0-beta.9",
+    "@nuxtjs/i18n": "next",
     "@nuxtjs/mdc": "^0.1.6",
     "@pinia/nuxt": "^0.4.11",
-    "@tresjs/nuxt": "^1.0.0",
     "@types/node": "^18",
     "@vercel/analytics": "^1.0.1",
     "@vueuse/core": "^9.13.0",
@@ -43,7 +43,6 @@
     "prettier": "^2.8.8",
     "resend": "^0.16.0",
     "sass": "^1.63.3",
-    "sitemap": "^7.1.1",
-    "three": "^0.153.0"
+    "sitemap": "^7.1.1"
   }
 }
