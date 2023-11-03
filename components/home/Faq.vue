@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { services, pricing, personnal } from "~/data/faq";
+import { services, pricing, personal } from "~/data/faq";
 const { locale } = useI18n();
 
 const items = computed(() => {
@@ -13,7 +13,7 @@ const items = computed(() => {
       slot: "pricing",
     },
     {
-      label: personnal.title[locale.value as "en" | "fr"],
+      label: personal.title[locale.value as "en" | "fr"],
       slot: "personnal",
     },
   ];
@@ -66,7 +66,7 @@ const ui = {
           <FAQ :questions="pricing.faq" class="max-w-lg mt-8" />
         </template>
         <template #personnal>
-          <FAQ :questions="personnal.faq" class="max-w-lg mt-8" />
+          <FAQ :questions="personal.faq" class="max-w-lg mt-8" />
         </template>
       </UTabs>
     </div>

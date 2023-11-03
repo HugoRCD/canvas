@@ -62,6 +62,26 @@ export const pricing: Faq = {
     },
     {
       title: {
+        en: "How does payment work for a project?",
+        fr: "Comment fonctionne le paiement pour un projet?",
+      },
+      content: {
+        en: "I ask for a 40% deposit before starting a project, and the remaining 60% after a successful delivery. I accept payments by bank transfer, PayPal, etc...",
+        fr: "Je demande un acompte de 40% avant de commencer un projet, et les 60% restants après une livraison réussie. J'accepte les paiements par virement bancaire, PayPal, etc...",
+      },
+    },
+    {
+      title: {
+        en: "How long does a project take?",
+        fr: "Combien de temps dure un projet?",
+      },
+      content: {
+        fr: "Il est difficile de donner une estimation précise, car chaque projet est différent, mais la majorité de mes travaux passés ont pris entre 2 semaines et 2 mois.",
+        en: "It's hard to give an accurate estimate, because every project is different, but the majority of my past work has taken between 2 weeks and 2 months.",
+      },
+    },
+    {
+      title: {
         en: "Do you offer discounts?",
         fr: "Est-ce que je propose des réductions?",
       },
@@ -73,30 +93,30 @@ export const pricing: Faq = {
   ],
 };
 
-export const personnal: Faq = {
+export const personal: Faq = {
   title: {
-    en: "Personnal",
+    en: "Personal",
     fr: "Personnel",
   },
   faq: [
     {
       title: {
-        en: "Who are you?",
-        fr: "Qui êtes-vous?",
+        en: "What's your favourite thing about this work?",
+        fr: "Qu'est-ce que tu préfères dans ce travail?",
       },
       content: {
-        en: "We offer a wide range of services, from web development to mobile development, including design and consulting. You can find more information on our services page.",
-        fr: "Nous offrons une large gamme de services, du développement web au développement mobile, en passant par le design et le consulting. Vous pouvez trouver plus d'informations sur notre page services.",
+        en: "I love to learn new things and to be able to create everything from scratch, create beautiful things that people will use and enjoy.",
+        fr: "J'adore apprendre de nouvelles choses et pouvoir créer à peu près tout à partir de rien, créer de belles choses que les gens utiliseront et apprécieront.",
       },
     },
     {
       title: {
-        en: "What is your mission?",
-        fr: "Quelle est votre mission?",
+        en: "Any passions outside of work?",
+        fr: "Des passions en dehors du travail?",
       },
       content: {
-        en: "We offer a wide range of services, from web development to mobile development, including design and consulting. You can find more information on our services page.",
-        fr: "Nous offrons une large gamme de services, du développement web au développement mobile, en passant par le design et le consulting. Vous pouvez trouver plus d'informations sur notre page services.",
+        en: "I love what I do, so I generally spend a lot of time working on personal projects, photography, etc. I'm also a huge sports addict. I go to the gym frequently, and I recently started climbing!",
+        fr: "J'adore ce que je fais, donc je passe généralement beaucoup de temps à travailler sur des projets personnels, la photographie, etc. Je suis aussi un grand accro au sport. Je vais souvent à la salle de sport et j'ai récemment commencé l'escalade !",
       },
     },
   ],
