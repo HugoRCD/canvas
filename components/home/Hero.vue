@@ -13,9 +13,13 @@
     </h1>
 
     <!-- subtitle -->
-    <h2 class="mt-4 max-w-xl mx-auto text-center text-lg font-light text-white/60">
+    <h2 class="mt-4 max-w-xl mx-auto text-center text-lg font-extralight text-white/60">
       {{ $t("home.hero.subtitle") }}
     </h2>
+
+    <div class="flex items-center justify-center mt-3">
+      <SettingsAvailability background />
+    </div>
   </div>
 </template>
 

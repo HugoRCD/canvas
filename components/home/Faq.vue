@@ -53,7 +53,7 @@ const ui = {
       <h3 class="text-4xl font-bold font-testimonial text-white-shadow">
         {{ $t("faq.title") }}
       </h3>
-      <p class="text-sm text-center text-muted">
+      <p class="text-sm font-light text-center text-muted">
         {{ $t("faq.description") }}
       </p>
     </div>
