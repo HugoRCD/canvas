@@ -10,21 +10,45 @@ definePageMeta({
 
 useHead({
   title: "HR Folio - Contact",
-  meta: [
-    {
-      name: "description",
-      content: "Profile",
-    },
-  ],
 });
 
 const toastStore = useToastStore();
+
+type ContactForm = {
+  email: string;
+  subject: string;
+  message: string;
+  phone: string;
+  fullname: string;
+  budget: string;
+};
+
+const demandTypes = [
+  {
+    label: "contact.subject_types.project",
+    color: "bg-blue-500",
+  },
+  {
+    label: "contact.subject_types.question",
+    color: "bg-yellow-500",
+  },
+  {
+    label: "contact.subject_types.bug",
+    color: "bg-red-500",
+  },
+  {
+    label: "contact.subject_types.other",
+    color: "bg-gray-500",
+  },
+];
 
 const email = ref("");
 const subject = ref("");
 const message = ref("");
 const phone = ref("");
 const fullname = ref("");
+const budget = ref(450);
+const selected = ref(demandTypes[0]);
 
 const loading = ref(false);
 
@@ -67,95 +91,121 @@ defineShortcuts({
 </script>
 
 <template>
-  <div class="mx-auto max-w-6xl lg:grid lg:grid-cols-5 -z-1">
-    <div class="py-16 px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
-      <div class="mx-auto max-w-2xl">
-        <Availability class="mb-6" />
-        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl text-main text-white-shadow">
-          {{ $t("contact.title") }}<span class="text-main text-white-shadow ml-2">.</span>
-        </h2>
-        <p class="mt-3 text-lg leading-6 text-muted">
-          {{ $t("contact.description") }}
-        </p>
-        <dl class="mt-8 text-base text-muted flex flex-col gap-4">
-          <div>
-            <dd class="flex">
-              <PhoneIcon class="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-              <span class="ml-3">(+33) 6 21 56 22 18</span>
-            </dd>
-          </div>
-          <div>
-            <dt class="sr-only">Email</dt>
-            <dd class="flex">
-              <EnvelopeIcon class="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-              <UTooltip :text="$t('home.hero.email')" :shortcuts="['⌘', 'O']">
-                <span class="ml-3 cursor-pointer hover:text-main transition-colors duration-300" @click="copyToClipboard('contact@hrcd.fr')">
-                  contact@hrcd.fr
-                </span>
-              </UTooltip>
-            </dd>
-          </div>
+  <LayoutInfoWrapper page="contact">
+    <div class="flex flex-col sm:items-center sm:justify-between">
+      <form @submit.prevent="submitForm" class="flex flex-col gap-3 max-w-[40rem] w-full">
+        <!-- Fullname -->
+        <div>
+          <label for="fullname" class="sr-only">
+            {{ $t("contact.fullname") }}
+          </label>
+          <UInput
+            icon="i-heroicons-user-solid"
+            v-model="fullname"
+            type="text"
+            required
+            name="fullname"
+            id="full-name"
+            autocomplete="name"
+            variant="none"
+            :placeholder="$t('contact.fullname')"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="sr-only">
+            {{ $t("contact.email") }}
+          </label>
+          <UInput
+            icon="i-heroicons-inbox-solid"
+            variant="none"
+            required
+            v-model="email"
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            :placeholder="$t('contact.email')"
+          />
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label for="phone" class="sr-only">
+            {{ $t("contact.phone") }}
+          </label>
+          <UInput
+            icon="i-heroicons-phone-solid"
+            variant="none"
+            v-model="phone"
+            type="text"
+            name="phone"
+            id="phone"
+            autocomplete="tel"
+            :placeholder="$t('contact.phone')"
+          />
+        </div>
+
+        <!-- Subject -->
+        <div>
+          <label for="subject" class="sr-only">
+            {{ $t("contact.subject") }}
+          </label>
+          <USelectMenu v-model="selected" :options="demandTypes">
+            <template #label>
+              <div class="rounded-full h-2 w-2" :class="selected.color"></div>
+              <span class="text-gray-400">{{ $t(selected.label) }}</span>
+            </template>
+            <template #option="{ option }">
+              <div class="flex items-center gap-3">
+                <div class="rounded-full h-2 w-2" :class="option.color"></div>
+                <span>{{ $t(option.label) }}</span>
+              </div>
+            </template>
+          </USelectMenu>
+        </div>
+
+        <!-- Budget -->
+        <div class="flex flex-col gap-2 my-2" v-if="selected.label === 'contact.subject_types.project'">
+          <URange size="xs" color="blue" :min="400" :max="10000" :step="10" v-model="budget" />
+          <span class="text-gray-400 text-sm"> {{ $t("contact.budget") }}: {{ budget }}€ </span>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="sr-only">
+            {{ $t("contact.message") }}
+          </label>
+          <UTextarea autoresize variant="none" required v-model="message" id="message" name="message" :rows="4" :placeholder="$t('contact.message')" />
+        </div>
+        <div class="flex justify-center">
+          <button type="submit" class="btn btn-primary">
+            <span>
+              {{ $t("contact.submit") }}
+            </span>
+          </button>
+        </div>
+        <p class="text-center font-light text-sm text-muted">{{ $t("contact.average_response_time") }}</p>
+      </form>
+      <Divider class="my-10" />
+      <div class="w-full flex flex-col sm:flex-row gap-4 items-center justify-between">
+        <div class="flex flex-col gap-3">
+          <dd class="flex items-center gap-3 text-gray-400">
+            <PhoneIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
+            <span>(+33) 6 21 56 22 18</span>
+          </dd>
+          <dd class="flex items-center gap-3 text-gray-400">
+            <EnvelopeIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
+            <UTooltip :text="$t('home.hero.email')" :shortcuts="['⌘', 'O']">
+              <NuxtLink to="mailto:contact@hrcd.fr" class="cursor-pointer hover:text-main transition-colors duration-300"> contact@hrcd.fr </NuxtLink>
+            </UTooltip>
+          </dd>
+        </div>
+        <div>
           <MeetingButton />
-        </dl>
+        </div>
       </div>
     </div>
-    <div class="sm:py-16 px-6 lg:col-span-3">
-      <div class="mx-auto max-w-2xl lg:max-w-none">
-        <form @submit.prevent="submitForm" class="grid grid-cols-1 gap-y-6">
-          <div>
-            <label for="fullname" class="sr-only">
-              {{ $t("contact.fullname") }}
-            </label>
-            <input
-              v-model="fullname"
-              type="text"
-              required
-              name="fullname"
-              id="full-name"
-              autocomplete="name"
-              class="input w-full"
-              :placeholder="$t('contact.fullname')"
-            />
-          </div>
-          <div>
-            <label for="email" class="sr-only">
-              {{ $t("contact.email") }}
-            </label>
-            <input required v-model="email" id="email" name="email" type="email" autocomplete="email" class="input w-full" :placeholder="$t('contact.email')" />
-          </div>
-          <div>
-            <label for="phone" class="sr-only">
-              {{ $t("contact.phone") }}
-            </label>
-            <input v-model="phone" type="text" name="phone" id="phone" autocomplete="tel" class="input w-full" :placeholder="$t('contact.phone')" />
-          </div>
-          <div>
-            <label for="subject" class="sr-only">
-              {{ $t("contact.subject") }}
-            </label>
-            <input
-              required
-              v-model="subject"
-              type="text"
-              name="subject"
-              id="subject"
-              autocomplete="subject"
-              class="input w-full"
-              :placeholder="$t('contact.subject')"
-            />
-          </div>
-          <div>
-            <label for="message" class="sr-only">
-              {{ $t("contact.message") }}
-            </label>
-            <textarea required v-model="message" id="message" name="message" rows="4" class="input w-full" :placeholder="$t('contact.message')" />
-          </div>
-          <div class="flex justify-center">
-            <ButtonPrimary type="submit" :pending="loading" :text="$t('contact.submit')" />
-          </div>
-          <p class="text-center text-muted">{{ $t("contact.average_response_time") }}</p>
-        </form>
-      </div>
-    </div>
-  </div>
+  </LayoutInfoWrapper>
 </template>
