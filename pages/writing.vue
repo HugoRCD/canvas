@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Article } from "~/types/Article";
+import { quotes } from "~/data/quotes";
 
 definePageMeta({
   name: "Writing",
@@ -123,8 +124,18 @@ const items = computed(() => [
         </div>
       </template>
       <template #quotes>
-        <div class="h-64 flex items-center justify-center">
+        <div class="h-64 flex items-center justify-center" v-if="!quotes.length">
           {{ $t("writing.empty_quotes") }}
+        </div>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 mt-8" v-else>
+          <SpotlightCard white v-for="quote in quotes" :key="quote.text" class="flex flex-col gap-2 p-4">
+            <div class="text-lg text-shadow-sm italic font-light">
+              {{ quote.text[locale] }}
+            </div>
+            <div class="text-sm text-muted">
+              {{ quote.author === "Unknown" ? $t("writing.unknown_author") : quote.author }}
+            </div>
+          </SpotlightCard>
         </div>
       </template>
     </UTabs>
