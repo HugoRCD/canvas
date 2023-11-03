@@ -25,56 +25,11 @@ import fr_about from "./fr/about.json";
 import en_writing from "./en/writing.json";
 import fr_writing from "./fr/writing.json";
 
-const tags = {
-  fr: {
-    design: "Design",
-    productivity: "Productivité",
-    development: "Développement",
-    writing: "Écriture",
-    task_manager: "Gestion de tâches",
-    browser: "Navigateur",
-    deployment: "Déploiement",
-    database: "Base de données",
-    orm: "ORM",
-    framework: "Framework",
-    css: "CSS",
-    terminal: "Terminal",
-    notes: "Notes",
-    calendar: "Calendrier",
-    password_manager: "Gestionnaire de mots de passe",
-    mail: "Mail",
-    prototyping: "Prototypage",
-    illustration: "Illustration",
-    logo: "Logo",
-    graphic_design: "Design graphique",
-    retouching: "Retouche photo",
-    photography: "Photographie",
-  },
-  en: {
-    design: "Design",
-    productivity: "Productivity",
-    development: "Development",
-    writing: "Writing",
-    task_manager: "Task manager",
-    browser: "Browser",
-    deployment: "Deployment",
-    database: "Database",
-    orm: "ORM",
-    framework: "Framework",
-    css: "CSS",
-    terminal: "Terminal",
-    notes: "Notes",
-    calendar: "Calendar",
-    password_manager: "Password manager",
-    mail: "Mail",
-    prototyping: "Prototyping",
-    illustration: "Illustration",
-    logo: "Logo",
-    graphic_design: "Graphic design",
-    retouching: "Photo retouching",
-    photography: "Photography",
-  },
-};
+import en_faq from "./en/faq.json";
+import fr_faq from "./fr/faq.json";
+
+import en_tags from "./en/tags.json";
+import fr_tags from "./fr/tags.json";
 
 const messages = {
   en: {
@@ -87,7 +42,8 @@ const messages = {
     projects: en_projects,
     about: en_about,
     writing: en_writing,
-    tags: tags.en,
+    faq: en_faq,
+    tags: en_tags,
   },
   fr: {
     home: fr_home,
@@ -99,7 +55,8 @@ const messages = {
     projects: fr_projects,
     about: fr_about,
     writing: fr_writing,
-    tags: tags.fr,
+    faq: fr_faq,
+    tags: fr_tags,
   },
 };
 

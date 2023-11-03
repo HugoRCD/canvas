@@ -29,7 +29,7 @@ const tags = [
 ];
 
 useHead({
-  title: appName + " - " + t("home.hero.job.part1") + " / " + t("home.hero.job.part2"),
+  title: `${appName} - ${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - Hugo Richard`,
   meta: [
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { name: "author", content: "Hugo Richard" },

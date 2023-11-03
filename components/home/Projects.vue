@@ -3,7 +3,7 @@ import projects from "~/data/projects";
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 w-full">
+  <div class="flex flex-col gap-6 w-full">
     <h3 class="text-xl font-bold font-testimonial text-white-shadow">
       {{ $t("navigation.works") }}
     </h3>
@@ -24,11 +24,11 @@ import projects from "~/data/projects";
           {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
         </span>
       </NuxtLink>
-      <div class="flex justify-center mt-4">
-        <button class="btn-primary" @click="useRouter().push('/works')">
-          <span class="white-gradient">{{ $t("global.see_more") }}</span>
-        </button>
-      </div>
+    </div>
+    <div @click="useRouter().push('/works')">
+      <span class="text-sm font-testimonial text-white-shadow cursor-pointer">
+        {{ $t("global.see_more") }}
+      </span>
     </div>
   </div>
 </template>

@@ -33,6 +33,11 @@ definePageMeta({
           <!-- projects -->
           <HomeProjects />
         </div>
+
+        <Divider class="my-9" />
+
+        <!-- faq -->
+        <HomeFaq />
       </div>
     </div>
   </section>
