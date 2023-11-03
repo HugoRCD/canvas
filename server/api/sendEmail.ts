@@ -20,7 +20,7 @@ export default defineEventHandler(async (event: H3Event) => {
         <li>Email : ${email}</li>
         <li>Téléphone : ${phone}</li>
         <li>Sujet : ${subject}</li>
-        <li>Budget : ${budget}</li>
+        <li>Budget : ${budget}€</li>
         <li>Message : ${message}</li>
       </ul>
       `,

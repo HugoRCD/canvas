@@ -18,21 +18,25 @@ const demandTypes = [
     label: "contact.subject_types.project",
     value: "project",
     color: "bg-blue-500",
+    button_color: "blue",
   },
   {
     label: "contact.subject_types.question",
     value: "question",
     color: "bg-yellow-500",
+    button_color: "yellow",
   },
   {
     label: "contact.subject_types.bug",
     value: "bug",
     color: "bg-red-500",
+    button_color: "red",
   },
   {
     label: "contact.subject_types.other",
     value: "other",
     color: "bg-gray-500",
+    button_color: "gray",
   },
 ];
 
@@ -180,11 +184,9 @@ defineShortcuts({
           <UTextarea autoresize variant="none" required v-model="message" id="message" name="message" :rows="4" :placeholder="$t('contact.message')" />
         </div>
         <div class="flex justify-center">
-          <button type="submit" class="btn btn-primary">
-            <span>
-              {{ $t("contact.submit") }}
-            </span>
-          </button>
+          <UButton :loading="loading" type="submit" :color="selected.button_color" block>
+            {{ $t("contact.submit") }}
+          </UButton>
         </div>
         <p class="text-center font-light text-sm text-muted">{{ $t("contact.average_response_time") }}</p>
       </form>
