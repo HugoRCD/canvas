@@ -6,9 +6,9 @@ draft: false
 description: "Finally launch your portfolio"
 head.description: "Fini ton portfolio !"
 tags: ["Portfolio", "Development", "Design"]
-image: "/articles/first.webp"
-image.src: "/articles/first.webp"
-head.image: "/articles/first.webp"
+image: "https://hrcd.fr/articles/first.webp"
+image.src: "https://hrcd.fr/articles/first.webp"
+head.image: "https://hrcd.fr/articles/first.webp"
 readingTime: "3"
 ---
 
