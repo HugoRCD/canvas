@@ -12,10 +12,6 @@ export default defineNuxtConfig({
 
   css: ["~/assets/style/main.scss"],
 
-  imports: {
-    dirs: ["store"],
-  },
-
   runtimeConfig: {
     public: {
       available: process.env.AVAILABLE,
@@ -30,7 +26,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@pinia/nuxt", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image"],
+  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image"],
 
   image: {
     format: ["webp"],

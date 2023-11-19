@@ -1,13 +1,5 @@
 <script setup lang="ts">
 import { EnvelopeIcon } from "@heroicons/vue/24/outline";
-defineShortcuts({
-  meta_o: {
-    usingInput: true,
-    handler: () => {
-      copyToClipboard("contact@hrcd.fr");
-    },
-  },
-});
 </script>
 
 <template>

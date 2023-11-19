@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ArrowLeftIcon, LinkIcon } from "@heroicons/vue/24/outline";
 import type { Article } from "~/types/Article";
-const { locale } = useI18n();
+const { locale, t } = useI18n();
+const toast = useToast();
 
 definePageMeta({
   layout: "article",
@@ -12,13 +13,19 @@ const articleLink = computed(() => {
 });
 
 defineShortcuts({
-  meta_o: {
+  meta_k: {
     usingInput: true,
     handler: () => {
       copyToClipboard(articleLink.value);
+      toast.add({ title: t("global.article_link_copied"), icon: "i-heroicons-check-circle", timeout: 2500 });
     },
   },
 });
+
+function copyArticleLink() {
+  copyToClipboard(articleLink.value);
+  toast.add({ title: t("global.article_link_copied"), icon: "i-heroicons-check-circle", timeout: 2500 });
+}
 
 const route = useRoute();
 
@@ -68,8 +75,8 @@ watch(locale, async (oldLocale, newLocale) => {
           <p class="hidden sm:block">|</p>
           <p>{{ data.readingTime }} {{ $t("writing.readingTime") }}</p>
           <p class="hidden sm:block">|</p>
-          <UTooltip :text="$t('writing.copy_link')" :shortcuts="['⌘', 'O']">
-            <p class="flex items-center gap-1 cursor-pointer hover:text-main transition-colors duration-200" @click="copyToClipboard(articleLink)">
+          <UTooltip :text="$t('writing.copy_link')" :shortcuts="['⌘', 'K']">
+            <p class="flex items-center gap-1 cursor-pointer hover:text-main transition-colors duration-200" @click="copyArticleLink()">
               <LinkIcon class="w-4 h-4 inline-block mr-1" />
               {{ $t("writing.share") }}
             </p>

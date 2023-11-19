@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
 import type { ContactEmail } from "~/types/ContactEmail";
+const { t } = useI18n();
 
 definePageMeta({
   name: "Contact",
@@ -11,7 +12,7 @@ useHead({
   title: "HR Folio - Contact",
 });
 
-const toastStore = useToastStore();
+const toast = useToast();
 
 const demandTypes = [
   {
@@ -73,25 +74,12 @@ async function submitForm() {
     fullname.value = "";
     budget.value = 450;
     selected.value = demandTypes[0];
-    toastStore.showSuccessToast({
-      title: "contact.success",
-    });
+    toast.add({ title: t("contact.success"), icon: "i-heroicons-check-circle", timeout: 2500 });
   } else {
-    toastStore.showErrorToast({
-      title: "contact.error",
-    });
+    toast.add({ title: t("contact.error"), icon: "i-heroicons-x-circle", timeout: 2500, color: "red" });
   }
   loading.value = false;
 }
-
-defineShortcuts({
-  meta_o: {
-    usingInput: true,
-    handler: () => {
-      copyToClipboard("hrichard206@gmail.com");
-    },
-  },
-});
 </script>
 
 <template>

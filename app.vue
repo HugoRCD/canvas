@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const { appName } = useAppConfig();
 const { t } = useI18n();
+const toast = useToast();
 
 const tags = [
   "web",
@@ -109,17 +110,6 @@ useHead({
   ],
 });
 
-const toastStore = useToastStore();
-const toast = computed(() => {
-  return {
-    show: toastStore.getShow,
-    title: toastStore.getTitle,
-    message: toastStore.getMessage,
-    type: toastStore.getType,
-    infos: toastStore.getInfos,
-  };
-});
-
 if (process.client) {
   console.log(`
 __/\\\\\\________/\\\\\\_        ____/\\\\\\\\\\\\\\\\\\_____        ________/\\\\\\\\\\\\\\\\\\_        __/\\\\\\\\\\\\\\\\\\\\\\\\____
@@ -134,23 +124,26 @@ __/\\\\\\________/\\\\\\_        ____/\\\\\\\\\\\\\\\\\\_____        ________/\\
 `);
   console.log("I see you're curious, just like me. If you want to have more information about the code, you can contact me :)");
 }
+
+defineShortcuts({
+  meta_o: {
+    usingInput: true,
+    handler: () => {
+      copyToClipboard("contact@hrcd.fr");
+      toast.add({ title: t("global.email_copied"), icon: "i-heroicons-check-circle", timeout: 2500 });
+    },
+  },
+});
 </script>
 
 <template>
   <Html :lang="$i18n.locale" class="bg-zinc-950 text-main selection:bg-white/60 selection:text-zinc-800 transition-colors duration-300">
     <Body>
-      <ToastsBasic
-        :show="toast.show"
-        :title="toast.title"
-        :description="toast.message"
-        :type="toast.type"
-        :infos="toast.infos"
-        @close="toastStore.closeToast()"
-      />
       <LayoutScrollToTop />
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
+      <UNotifications />
       <DotPattern class="absolute -z-10 inset-0 h-full w-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
     </Body>
   </Html>
