@@ -10,6 +10,10 @@ export default defineNuxtConfig({
     "/": { isr: true, prerender: true },
   },
 
+  site: {
+    url: process.env.NUXT_SITE_URL || "https://hrcd.fr",
+  },
+
   css: ["~/assets/style/main.scss"],
 
   runtimeConfig: {
