@@ -29,30 +29,22 @@ function copyArticleLink() {
 
 const route = useRoute();
 
-const article = ref<Article>();
-
-async function fetchArticle() {
-  article.value = (await queryContent("articles")
+const { data: article, error } = await useAsyncData(`blog-post-${route.path}`, () =>
+  queryContent("articles")
     .where({
       _path: {
         $eq: route.path as string,
       },
     })
     .locale(locale.value)
-    .findOne()) as Article;
-  useContentHead(article.value as Article);
-}
+    .findOne(),
+);
 
-onMounted(() => {
-  fetchArticle();
-});
+if (error.value) navigateTo("/404");
 
-useContentHead(article.value as Article);
-
-watch(locale, async (oldLocale, newLocale) => {
-  if (oldLocale !== newLocale) {
-    await fetchArticle();
-  }
+defineOgImage({
+  component: "Article",
+  image: article.value?.image,
 });
 </script>
 

@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image"],
+  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image", "nuxt-og-image"],
 
   image: {
     format: ["webp"],

@@ -2,13 +2,10 @@
 title: "Fini ton portfolio !"
 head.title: "Fini ton portfolio !"
 date: "27/08/2023"
-draft: false
 description: "Fini ton portfolio !"
 head.description: "Fini ton portfolio !"
 tags: ["Portfolio", "Développement", "Design"]
 image: "https://hrcd.fr/articles/first.webp"
-image.src: "https://hrcd.fr/articles/first.webp"
-head.image: "https://hrcd.fr/articles/first.webp"
 readingTime: "3"
 ---
 

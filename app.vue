@@ -134,6 +134,10 @@ defineShortcuts({
     },
   },
 });
+
+defineOgImage({
+  component: "Main",
+});
 </script>
 
 <template>
