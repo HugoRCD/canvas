@@ -42,10 +42,7 @@ const { data: article, error } = await useAsyncData(`blog-post-${path}`, () =>
 
 if (error.value) navigateTo("/writing");
 
-defineOgImage({
-  component: "Article",
-  image: article.value?.image,
-});
+defineOgImage({ url: article.value?.image, width: 1200, height: 630, alt: article.value?.title });
 </script>
 
 <template>
