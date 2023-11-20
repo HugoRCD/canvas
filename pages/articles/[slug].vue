@@ -8,6 +8,7 @@ definePageMeta({
   layout: "article",
 });
 
+const runtimeConfig = useRuntimeConfig();
 const { path } = useRoute();
 
 const fetchedArticle = ref();
@@ -26,13 +27,14 @@ async function fetchArticle() {
   if (error.value) navigateTo("/writing");
   else fetchedArticle.value = data.value;
 }
+await fetchArticle();
 
 const article = computed<MinArticle>(() => {
   return {
-    title: fetchedArticle.value?.title || "no-title available",
-    description: fetchedArticle.value?.description || "no-descriptoin available",
-    image: fetchedArticle.value?.image || "/nuxt-blog/no-image_cyyits.png",
-    date: fetchedArticle.value?.date || "not-date-available",
+    title: fetchedArticle.value?.title || "no article available",
+    description: fetchedArticle.value?.description || "no description available",
+    image: fetchedArticle.value?.image || "",
+    date: fetchedArticle.value?.date || "",
     tags: fetchedArticle.value?.tags || [],
     path: fetchedArticle.value?._path || "/writing",
   };
@@ -62,7 +64,7 @@ useSeoMeta({
   ogType: "website",
   ogTitle: `${article.value.title}`,
   ogDescription: () => `${article.value.description}`,
-  ogUrl: () => `${useRuntimeConfig().public.siteUrl}`,
+  ogUrl: () => `${runtimeConfig.public.siteUrl}`,
   ogLocale: () => `${locale.value}`,
   twitterTitle: `${article.value.title}`,
   twitterDescription: () => `${article.value.description}`,
@@ -70,6 +72,8 @@ useSeoMeta({
   twitterSite: "@HugoRCD__",
   twitterCreator: "@HugoRCD__",
   twitterImage: article.value.image,
+  articleTag: () => article.value.tags,
+  articleAuthor: ["Hugo Richard"],
 });
 
 watch(locale, () => {

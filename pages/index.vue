@@ -4,6 +4,8 @@ const { t, locale } = useI18n();
 
 const siteTitle = computed(() => `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`);
 
+const runtimeConfig = useRuntimeConfig();
+
 useSeoMeta({
   title: () => `${siteTitle.value}`,
   description: () => `${t("seo.description")}`,
@@ -11,7 +13,7 @@ useSeoMeta({
   ogType: "website",
   ogTitle: `${siteTitle.value}`,
   ogDescription: () => `${t("seo.description")}`,
-  ogUrl: () => `${useRuntimeConfig().public.siteUrl}`,
+  ogUrl: () => `${runtimeConfig.public.siteUrl}`,
   ogLocale: () => `${locale.value}`,
   twitterTitle: `${siteTitle.value}`,
   twitterDescription: () => `${t("seo.description")}`,
