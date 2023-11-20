@@ -1,47 +1,24 @@
 <script setup lang="ts">
-import { tags } from "~/seo/tags";
 const { appName } = useAppConfig();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
-useHead({
-  meta: [
-    {
-      name: "description",
-      content: t("seo.description"),
-    },
-    {
-      name: "keywords",
-      content: tags.join(", "),
-    },
-    {
-      property: "og:title",
-      content: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`,
-    },
-    {
-      property: "og:url",
-      content: "https://hrcd.fr/",
-    },
-    {
-      property: "og:description",
-      content: t("seo.description"),
-    },
-    {
-      property: "twitter:card",
-      content: "summary_large_image",
-    },
-    {
-      property: "twitter:title",
-      content: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`,
-    },
-    {
-      property: "twitter:description",
-      content: t("seo.description"),
-    },
-    {
-      property: "twitter:url",
-      content: "https://hrcd.fr/",
-    },
-  ],
+const siteTitle = computed(() => `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`);
+
+useSeoMeta({
+  title: () => `${siteTitle.value}`,
+  description: () => `${t("seo.description")}`,
+  author: "Hugo Richard",
+  ogType: "website",
+  ogTitle: `${siteTitle.value}`,
+  ogDescription: () => `${t("seo.description")}`,
+  ogUrl: () => `${useRuntimeConfig().public.siteUrl}`,
+  ogLocale: () => `${locale.value}`,
+  twitterTitle: `${siteTitle.value}`,
+  twitterDescription: () => `${t("seo.description")}`,
+  twitterCard: "summary_large_image",
+  twitterSite: "@HugoRCD__",
+  twitterCreator: "@HugoRCD__",
+  twitterImage: "https://hrcd.fr/preview.webp",
 });
 
 defineOgImage({ url: "https://hrcd.fr/preview.webp", width: 1200, height: 630, alt: "Home image" });

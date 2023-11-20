@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ArrowLeftIcon, LinkIcon } from "@heroicons/vue/24/outline";
+import type { MinArticle } from "~/types/Article";
 const { locale, t } = useI18n();
 const toast = useToast();
 
@@ -9,20 +10,35 @@ definePageMeta({
 
 const { path } = useRoute();
 
-const { data: article, error } = await useAsyncData(`blog-post-${path}`, () =>
-  queryContent("articles")
-    .where({
-      _path: {
-        $eq: path,
-      },
-    })
-    .locale(locale.value)
-    .findOne(),
-);
+const fetchedArticle = ref();
 
-if (error.value) navigateTo("/writing");
+async function fetchArticle() {
+  const { data, error } = await useAsyncData(`blog-post-${path}`, () =>
+    queryContent("articles")
+      .where({
+        _path: {
+          $eq: path,
+        },
+      })
+      .locale(locale.value)
+      .findOne(),
+  );
+  if (error.value) navigateTo("/writing");
+  else fetchedArticle.value = data.value;
+}
 
-const articleLink = ref(useRuntimeConfig().public.siteUrl + article.value?._path);
+const article = computed<MinArticle>(() => {
+  return {
+    title: fetchedArticle.value?.title || "no-title available",
+    description: fetchedArticle.value?.description || "no-descriptoin available",
+    image: fetchedArticle.value?.image || "/nuxt-blog/no-image_cyyits.png",
+    date: fetchedArticle.value?.date || "not-date-available",
+    tags: fetchedArticle.value?.tags || [],
+    path: fetchedArticle.value?._path || "/writing",
+  };
+});
+
+const articleLink = ref(useRuntimeConfig().public.siteUrl + article.value.path);
 
 defineShortcuts({
   meta_k: {
@@ -39,26 +55,28 @@ function copyArticleLink() {
   toast.add({ title: t("global.article_link_copied"), icon: "i-heroicons-check-circle", timeout: 2500 });
 }
 
-useHead({
-  title: article.value?.title,
-  meta: [
-    { name: "description", content: article.value?.description },
-    { name: "keywords", content: article.value?.tags.join(", ") },
-    { name: "author", content: "Hugo Richard" },
-    { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:site", content: "@HugoRCD__" },
-    { name: "twitter:creator", content: "@HugoRCD__" },
-    { name: "twitter:title", content: article.value?.title },
-    { name: "twitter:description", content: article.value?.description },
-    { name: "twitter:image:alt", content: article.value?.title },
-    { name: "og:title", content: article.value?.title },
-    { name: "og:description", content: article.value?.description },
-    { name: "og:image:alt", content: article.value?.title },
-    { name: "og:url", content: articleLink.value },
-  ],
+useSeoMeta({
+  title: () => `${article.value.title}`,
+  description: () => `${article.value.description}`,
+  author: "Hugo Richard",
+  ogType: "website",
+  ogTitle: `${article.value.title}`,
+  ogDescription: () => `${article.value.description}`,
+  ogUrl: () => `${useRuntimeConfig().public.siteUrl}`,
+  ogLocale: () => `${locale.value}`,
+  twitterTitle: `${article.value.title}`,
+  twitterDescription: () => `${article.value.description}`,
+  twitterCard: "summary_large_image",
+  twitterSite: "@HugoRCD__",
+  twitterCreator: "@HugoRCD__",
+  twitterImage: article.value.image,
 });
 
-defineOgImage({ url: article.value?.image, width: 1200, height: 630, alt: article.value?.title });
+watch(locale, () => {
+  fetchArticle();
+});
+
+defineOgImage({ url: article.value.image, width: 1200, height: 630, alt: article.value.title });
 </script>
 
 <template>
