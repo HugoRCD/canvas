@@ -5,6 +5,10 @@ definePageMeta({
   name: "About",
   title: "About",
 });
+
+defineOgImage({
+  component: "Main",
+});
 </script>
 
 <template>

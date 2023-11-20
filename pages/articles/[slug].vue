@@ -27,20 +27,20 @@ function copyArticleLink() {
   toast.add({ title: t("global.article_link_copied"), icon: "i-heroicons-check-circle", timeout: 2500 });
 }
 
-const route = useRoute();
+const { path } = useRoute();
 
-const { data: article, error } = await useAsyncData(`blog-post-${route.path}`, () =>
+const { data: article, error } = await useAsyncData(`blog-post-${path}`, () =>
   queryContent("articles")
     .where({
       _path: {
-        $eq: route.path as string,
+        $eq: path,
       },
     })
     .locale(locale.value)
     .findOne(),
 );
 
-if (error.value) navigateTo("/404");
+if (error.value) navigateTo("/writing");
 
 defineOgImage({
   component: "Article",

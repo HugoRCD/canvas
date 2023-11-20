@@ -80,6 +80,10 @@ async function submitForm() {
   }
   loading.value = false;
 }
+
+defineOgImage({
+  component: "Main",
+});
 </script>
 
 <template>

@@ -56,10 +56,6 @@ useHead({
       content: t("seo.description"),
     },
     {
-      property: "og:image",
-      content: "https://hrcd.fr/preview.webp",
-    },
-    {
       property: "twitter:card",
       content: "summary_large_image",
     },
@@ -70,10 +66,6 @@ useHead({
     {
       property: "twitter:description",
       content: t("seo.description"),
-    },
-    {
-      property: "twitter:image",
-      content: "https://hrcd.fr/preview.webp",
     },
     {
       property: "twitter:url",
@@ -133,10 +125,6 @@ defineShortcuts({
       toast.add({ title: t("global.email_copied"), icon: "i-heroicons-check-circle", timeout: 2500 });
     },
   },
-});
-
-defineOgImage({
-  component: "Main",
 });
 </script>
 

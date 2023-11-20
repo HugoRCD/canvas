@@ -73,6 +73,10 @@ const items = computed(() => [
     label: "quotes",
   },
 ]);
+
+defineOgImage({
+  component: "Main",
+});
 </script>
 
 <template>

@@ -3,6 +3,10 @@ definePageMeta({
   title: "Home",
   name: "Home",
 });
+
+defineOgImage({
+  component: "Main",
+});
 </script>
 
 <template>
