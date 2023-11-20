@@ -3,7 +3,7 @@ title: "Fini ton portfolio !"
 date: "27/08/2023"
 description: "Viser le perfectionnisme est un très bon état d'esprit. D'un autre côté, travailler jusqu'à ce que le perfectionnisme soit à 100 % peut aussi être mauvais. Voici quelques conseils pour vous aider à lancer votre portfolio."
 tags: ["Portfolio", "Développement", "Design"]
-image: "https://hrcd.fr/articles/first.webp"
+image: "https://hrcd.fr/articles/first-article-preview.jpg"
 readingTime: "3"
 ---
 
@@ -13,7 +13,7 @@ Il n'est pas nécessaire qu'il soit parfait ou entièrement terminé. Il manque 
 
 Viser le perfectionnisme est un très bon état d'esprit. D'un autre côté, travailler jusqu'à ce que le perfectionnisme soit à 100 % peut aussi être mauvais. Vous en avez peut-être déjà fait l'expérience. Corriger les imperfections encore et encore est source de stress, car cela paralyse tout le reste. Faire quelque chose de parfait prend beaucoup de temps, ce qui vous empêche de travailler sur d'autres choses. Moins de temps se traduit par moins d'efficacité, de profit et de fiabilité.
 
-![preview](/articles/first.webp)
+![preview](/articles/first-article-preview.jpg)
 
 ### S'engager pour une seule chose
 Il fut un temps où je créais une trentaine de versions de mon portfolio parce que je n'en étais plus satisfait quelques semaines plus tard. Certaines d'entre elles ont déjà été développées. Mais je repartais de zéro encore et encore. C'est précisément ce qui m'a empêché de le lancer. Optez pour celui qui vous plaît et tenez-vous en à lui jusqu'à ce qu'il soit complètement terminé. Fixez-vous un délai ambitieux pour votre projet final. Et ensuite, un autre pour la mise en ligne. Cela vous aidera grandement à améliorer votre productivité.

@@ -3,7 +3,7 @@ title: "Finally launch your portfolio"
 date: "27/08/2023"
 description: "Aiming for perfectionism is a very good state of mind. On the other hand, working until perfectionism is 100% can also be bad. Here are some tips to help you get your portfolio off the ground."
 tags: ["Portfolio", "Development", "Design"]
-image: "https://hrcd.fr/articles/first.webp"
+image: "https://hrcd.fr/articles/first-article-preview.jpg"
 readingTime: "3"
 ---
 
@@ -13,7 +13,7 @@ It doesn’t need to be perfect or fully finished. Any missing projects or websi
 
 Aiming for perfectionism is a very good mindset. On the other side, working until 100% perfectionism can also be bad. You might have had this experience already. Putting right imperfections over and over again ends in stress because it's paralyzing everything else. Making something perfect takes a lot of time, which restricts you from working on other things. Less time ends up in less efficiency, profit, and reliability.
 
-![preview](/articles/first.webp)
+![preview](/articles/first-article-preview.jpg)
 
 ### Commit to one
 There was a time when I used to create about 30 portfolio design versions because I wasn't happy with it anymore a few weeks later. Some of them have already been developed. But I started from scratch again and again. Exactly that kept me away from launching it. Commit to the one you like and stick with it until it’s completely done. Set yourself a challenging deadline for your final design. And after that, another one for putting it online. That helps you massively with your productivity.
