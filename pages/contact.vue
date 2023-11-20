@@ -3,11 +3,6 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
 import type { ContactEmail } from "~/types/ContactEmail";
 const { t } = useI18n();
 
-definePageMeta({
-  name: "Contact",
-  title: "Contact",
-});
-
 useHead({
   title: "Contact",
 });

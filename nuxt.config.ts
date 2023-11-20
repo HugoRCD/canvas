@@ -1,5 +1,15 @@
 export default defineNuxtConfig({
   app: {
+    head: {
+      viewport: "width=device-width, initial-scale=1",
+      charset: "utf-8",
+      meta: [
+        {
+          name: "author",
+          content: "Hugo Richard",
+        },
+      ],
+    },
     pageTransition: {
       name: "fade",
       mode: "out-in",
@@ -12,6 +22,10 @@ export default defineNuxtConfig({
 
   site: {
     url: process.env.NUXT_SITE_URL || "https://hrcd.fr",
+    identity: {
+      type: "Person",
+    },
+    twitter: "@HugoRCD__",
   },
 
   css: ["~/assets/style/main.scss"],

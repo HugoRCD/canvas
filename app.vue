@@ -1,41 +1,14 @@
 <script lang="ts" setup>
+import { tags } from "~/seo/tags";
+
 const { appName } = useAppConfig();
 const { t } = useI18n();
 const toast = useToast();
 
-const tags = [
-  "web",
-  "developer",
-  "portfolio",
-  "hugo",
-  "richard",
-  "hugo richard",
-  "hrfolio",
-  "hr",
-  "folio",
-  "hr folio",
-  "Nice",
-  "France",
-  "Nice France",
-  "Côte d'Azur",
-  "Cote d'Azur",
-  "Côte d'Azur France",
-  "Cote d'Azur France",
-  "art",
-  "design",
-  "designer",
-  "art director",
-  "directeur artistique",
-  "Développeur",
-];
-
 useHead({
-  title: `${appName} - ${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`,
-  titleTemplate: "%s - HR Folio",
+  title: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`,
+  titleTemplate: `%s - ${appName}`,
   meta: [
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
-    { name: "author", content: "Hugo Richard" },
-    { charset: "utf-8" },
     {
       name: "description",
       content: t("seo.description"),
@@ -46,7 +19,7 @@ useHead({
     },
     {
       property: "og:title",
-      content: appName,
+      content: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`,
     },
     {
       property: "og:url",
@@ -62,7 +35,7 @@ useHead({
     },
     {
       property: "twitter:title",
-      content: appName,
+      content: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`,
     },
     {
       property: "twitter:description",

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ArrowLeftIcon, LinkIcon } from "@heroicons/vue/24/outline";
-import type { Article } from "~/types/Article";
 const { locale, t } = useI18n();
 const toast = useToast();
 
