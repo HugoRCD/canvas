@@ -1,51 +1,11 @@
 <script lang="ts" setup>
-import { tags } from "~/seo/tags";
-
 const { appName } = useAppConfig();
-const { t } = useI18n();
 const toast = useToast();
+const { t } = useI18n();
 
 useHead({
   title: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`,
   titleTemplate: `%s - ${appName}`,
-  meta: [
-    {
-      name: "description",
-      content: t("seo.description"),
-    },
-    {
-      name: "keywords",
-      content: tags.join(", "),
-    },
-    {
-      property: "og:title",
-      content: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`,
-    },
-    {
-      property: "og:url",
-      content: "https://hrcd.fr/",
-    },
-    {
-      property: "og:description",
-      content: t("seo.description"),
-    },
-    {
-      property: "twitter:card",
-      content: "summary_large_image",
-    },
-    {
-      property: "twitter:title",
-      content: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`,
-    },
-    {
-      property: "twitter:description",
-      content: t("seo.description"),
-    },
-    {
-      property: "twitter:url",
-      content: "https://hrcd.fr/",
-    },
-  ],
   link: [
     {
       rel: "icon",
