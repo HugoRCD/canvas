@@ -1,9 +1,7 @@
 ---
 title: "Finally launch your portfolio"
-head.title: "Finally launch your portfolio"
 date: "27/08/2023"
-description: "Finally launch your portfolio"
-head.description: "Fini ton portfolio !"
+description: "Aiming for perfectionism is a very good state of mind. On the other hand, working until perfectionism is 100% can also be bad. Here are some tips to help you get your portfolio off the ground."
 tags: ["Portfolio", "Development", "Design"]
 image: "https://hrcd.fr/articles/first.webp"
 readingTime: "3"

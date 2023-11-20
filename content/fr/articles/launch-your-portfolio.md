@@ -1,9 +1,7 @@
 ---
 title: "Fini ton portfolio !"
-head.title: "Fini ton portfolio !"
 date: "27/08/2023"
-description: "Fini ton portfolio !"
-head.description: "Fini ton portfolio !"
+description: "Viser le perfectionnisme est un très bon état d'esprit. D'un autre côté, travailler jusqu'à ce que le perfectionnisme soit à 100 % peut aussi être mauvais. Voici quelques conseils pour vous aider à lancer votre portfolio."
 tags: ["Portfolio", "Développement", "Design"]
 image: "https://hrcd.fr/articles/first.webp"
 readingTime: "3"

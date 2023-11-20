@@ -42,6 +42,27 @@ const { data: article, error } = await useAsyncData(`blog-post-${path}`, () =>
 
 if (error.value) navigateTo("/writing");
 
+useHead({
+  title: article.value?.title,
+  meta: [
+    { name: "description", content: article.value?.description },
+    { name: "keywords", content: article.value?.tags.join(", ") },
+    { name: "author", content: "Hugo Richard" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:site", content: "@HugoRCD__" },
+    { name: "twitter:creator", content: "@HugoRCD__" },
+    { name: "twitter:title", content: article.value?.title },
+    { name: "twitter:description", content: article.value?.description },
+    { name: "twitter:image", content: article.value?.image },
+    { name: "twitter:image:alt", content: article.value?.title },
+    { name: "og:title", content: article.value?.title },
+    { name: "og:description", content: article.value?.description },
+    { name: "og:image", content: article.value?.image },
+    { name: "og:image:alt", content: article.value?.title },
+    { name: "og:url", content: articleLink.value },
+  ],
+});
+
 defineOgImage({ url: article.value?.image, width: 1200, height: 630, alt: article.value?.title });
 </script>
 
