@@ -9,7 +9,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "HR Folio - Contact",
+  title: "Contact",
 });
 
 const toast = useToast();

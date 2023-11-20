@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import projects from "~/data/projects";
+const { t } = useI18n();
 
-definePageMeta({
-  name: "Works",
-  title: "Works",
+useHead({
+  title: t("navigation.works"),
 });
 
 defineOgImage({ url: "https://hrcd.fr/preview.webp", width: 1200, height: 630, alt: "Home image" });
