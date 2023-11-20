@@ -18,10 +18,10 @@ useSeoMeta({
   twitterCard: "summary_large_image",
   twitterSite: "@HugoRCD__",
   twitterCreator: "@HugoRCD__",
-  twitterImage: "https://hrcd.fr/preview.webp",
+  twitterImage: "https://hrcd.fr/social-preview.jpg",
 });
 
-defineOgImage({ url: "https://hrcd.fr/preview.webp", width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>

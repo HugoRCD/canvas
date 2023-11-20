@@ -18,7 +18,7 @@
     "@headlessui/vue": "^1.7.13",
     "@heroicons/vue": "^2.0.18",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
-    "@nuxt/devtools": "latest",
+    "@nuxt/devtools": "^1.0.3",
     "@nuxt/image": "1.0.0-rc.1",
     "@nuxt/ui": "^2.8.1",
     "@nuxthq/studio": "^1.0.3",

@@ -6,7 +6,7 @@ useHead({
   title: t("navigation.works"),
 });
 
-defineOgImage({ url: "https://hrcd.fr/preview.webp", width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>
