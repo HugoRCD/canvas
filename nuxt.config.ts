@@ -32,6 +32,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
+      siteUrl: process.env.NUXT_SITE_URL,
       available: process.env.AVAILABLE,
       meetingLink: process.env.MEETING_LINK,
     },

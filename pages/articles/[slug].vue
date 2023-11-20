@@ -7,9 +7,22 @@ definePageMeta({
   layout: "article",
 });
 
-const articleLink = computed(() => {
-  return window.location.href;
-});
+const { path } = useRoute();
+
+const { data: article, error } = await useAsyncData(`blog-post-${path}`, () =>
+  queryContent("articles")
+    .where({
+      _path: {
+        $eq: path,
+      },
+    })
+    .locale(locale.value)
+    .findOne(),
+);
+
+if (error.value) navigateTo("/writing");
+
+const articleLink = ref(useRuntimeConfig().public.siteUrl + article.value?._path);
 
 defineShortcuts({
   meta_k: {
@@ -25,21 +38,6 @@ function copyArticleLink() {
   copyToClipboard(articleLink.value);
   toast.add({ title: t("global.article_link_copied"), icon: "i-heroicons-check-circle", timeout: 2500 });
 }
-
-const { path } = useRoute();
-
-const { data: article, error } = await useAsyncData(`blog-post-${path}`, () =>
-  queryContent("articles")
-    .where({
-      _path: {
-        $eq: path,
-      },
-    })
-    .locale(locale.value)
-    .findOne(),
-);
-
-if (error.value) navigateTo("/writing");
 
 useHead({
   title: article.value?.title,
