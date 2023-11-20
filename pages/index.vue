@@ -1,21 +1,20 @@
 <script setup lang="ts">
 const { t, locale } = useI18n();
 
+const runtimeConfig = useRuntimeConfig();
 const siteTitle = computed(() => `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`);
 
-const runtimeConfig = useRuntimeConfig();
-
 useSeoMeta({
-  title: () => `${siteTitle.value}`,
-  description: () => `${t("seo.description")}`,
+  title: () => siteTitle.value,
+  description: () => t("seo.description"),
   author: "Hugo Richard",
   ogType: "website",
-  ogTitle: `${siteTitle.value}`,
-  ogDescription: () => `${t("seo.description")}`,
-  ogUrl: () => `${runtimeConfig.public.siteUrl}`,
-  ogLocale: () => `${locale.value}`,
-  twitterTitle: `${siteTitle.value}`,
-  twitterDescription: () => `${t("seo.description")}`,
+  ogTitle: siteTitle.value,
+  ogDescription: () => t("seo.description"),
+  ogUrl: () => runtimeConfig.public.siteUrl,
+  ogLocale: () => locale.value,
+  twitterTitle: siteTitle.value,
+  twitterDescription: () => t("seo.description"),
   twitterCard: "summary_large_image",
   twitterSite: "@HugoRCD__",
   twitterCreator: "@HugoRCD__",
