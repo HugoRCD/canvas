@@ -1,8 +1,7 @@
 <script setup lang="ts">
-const { appName } = useAppConfig();
 const { t, locale } = useI18n();
 
-const siteTitle = computed(() => `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - ${appName}`);
+const siteTitle = computed(() => `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`);
 
 const runtimeConfig = useRuntimeConfig();
 
