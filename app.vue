@@ -1,85 +1,11 @@
 <script lang="ts" setup>
 const { appName } = useAppConfig();
-const { t } = useI18n();
 const toast = useToast();
-
-const tags = [
-  "web",
-  "developer",
-  "portfolio",
-  "hugo",
-  "richard",
-  "hugo richard",
-  "hrfolio",
-  "hr",
-  "folio",
-  "hr folio",
-  "Nice",
-  "France",
-  "Nice France",
-  "Côte d'Azur",
-  "Cote d'Azur",
-  "Côte d'Azur France",
-  "Cote d'Azur France",
-  "art",
-  "design",
-  "designer",
-  "art director",
-  "directeur artistique",
-  "Développeur",
-];
+const { t } = useI18n();
 
 useHead({
-  title: `${appName} - ${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - Hugo Richard`,
-  meta: [
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
-    { name: "author", content: "Hugo Richard" },
-    { charset: "utf-8" },
-    {
-      name: "description",
-      content: t("seo.description"),
-    },
-    {
-      name: "keywords",
-      content: tags.join(", "),
-    },
-    {
-      property: "og:title",
-      content: appName,
-    },
-    {
-      property: "og:url",
-      content: "https://hrcd.fr/",
-    },
-    {
-      property: "og:description",
-      content: t("seo.description"),
-    },
-    {
-      property: "og:image",
-      content: "https://hrcd.fr/preview.webp",
-    },
-    {
-      property: "twitter:card",
-      content: "summary_large_image",
-    },
-    {
-      property: "twitter:title",
-      content: appName,
-    },
-    {
-      property: "twitter:description",
-      content: t("seo.description"),
-    },
-    {
-      property: "twitter:image",
-      content: "https://hrcd.fr/preview.webp",
-    },
-    {
-      property: "twitter:url",
-      content: "https://hrcd.fr/",
-    },
-  ],
+  title: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`,
+  titleTemplate: `%s - ${appName}`,
   link: [
     {
       rel: "icon",

@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import type { Article } from "~/types/Article";
 import { quotes } from "~/data/quotes";
+const { t } = useI18n();
 
-definePageMeta({
-  name: "Writing",
-  title: "Writing",
+useHead({
+  title: t("navigation.writing"),
 });
+
 const { locale } = useI18n();
 
 const loading = ref(false);
@@ -73,6 +74,8 @@ const items = computed(() => [
     label: "quotes",
   },
 ]);
+
+defineOgImage({ url: "https://hrcd.fr/preview.webp", width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>

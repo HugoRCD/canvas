@@ -3,13 +3,8 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
 import type { ContactEmail } from "~/types/ContactEmail";
 const { t } = useI18n();
 
-definePageMeta({
-  name: "Contact",
-  title: "Contact",
-});
-
 useHead({
-  title: "HR Folio - Contact",
+  title: "Contact",
 });
 
 const toast = useToast();
@@ -80,6 +75,8 @@ async function submitForm() {
   }
   loading.value = false;
 }
+
+defineOgImage({ url: "https://hrcd.fr/preview.webp", width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>

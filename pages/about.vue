@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { techStack, productivityStack, designStack } from "~/data/stack";
+const { t } = useI18n();
 
-definePageMeta({
-  name: "About",
-  title: "About",
+useHead({
+  title: t("navigation.about"),
 });
+
+defineOgImage({ url: "https://hrcd.fr/preview.webp", width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>

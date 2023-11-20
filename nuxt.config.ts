@@ -1,5 +1,15 @@
 export default defineNuxtConfig({
   app: {
+    head: {
+      viewport: "width=device-width, initial-scale=1",
+      charset: "utf-8",
+      meta: [
+        {
+          name: "author",
+          content: "Hugo Richard",
+        },
+      ],
+    },
     pageTransition: {
       name: "fade",
       mode: "out-in",
@@ -10,10 +20,19 @@ export default defineNuxtConfig({
     "/": { isr: true, prerender: true },
   },
 
+  site: {
+    url: process.env.NUXT_SITE_URL || "https://hrcd.fr",
+    identity: {
+      type: "Person",
+    },
+    twitter: "@HugoRCD__",
+  },
+
   css: ["~/assets/style/main.scss"],
 
   runtimeConfig: {
     public: {
+      siteUrl: process.env.NUXT_SITE_URL,
       available: process.env.AVAILABLE,
       meetingLink: process.env.MEETING_LINK,
     },
@@ -26,7 +45,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image"],
+  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image", "nuxt-og-image"],
 
   image: {
     format: ["webp"],
