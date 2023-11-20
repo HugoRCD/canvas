@@ -69,7 +69,7 @@ defineOgImage({ url: "https://hrcd.fr/preview.webp", width: 1200, height: 630, a
         <HomeSocial />
 
         <!-- cta -->
-        <HomeCTA />
+        <HomeCta />
 
         <div class="flex flex-col gap-4 w-full max-w-3xl lg:mt-16 mt-12">
           <!-- projects -->
