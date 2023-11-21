@@ -1,34 +1,38 @@
 ---
 title: "Fini ton portfolio !"
-date: "27/08/2023"
+date: "20/10/2023"
 description: "Viser le perfectionnisme est un très bon état d'esprit. D'un autre côté, travailler jusqu'à ce que le perfectionnisme soit à 100 % peut aussi être mauvais. Voici quelques conseils pour vous aider à lancer votre portfolio."
-tags: ["Portfolio", "Développement", "Design"]
-image: "https://hrcd.fr/articles/first-article-preview.jpg"
-readingTime: "3"
+tags: ["Portfolio", "Développement", "Design", "Productivité"]
+image: "https://hrcd.fr/articles/launch-your-porfolio.jpg"
+readingTime: "5"
 ---
 
 ## Introduction
 
-Il n'est pas nécessaire qu'il soit parfait ou entièrement terminé. Il manque des projets ou des parties du site web qui ne sont pas encore terminés ? Il suffit d'itérer plus tard, après la mise en ligne. Cela vous permettra de faire des pas en avant et d'optimiser chaque fois que vous travaillerez sur le site. Et vous pouvez travailler dessus quand vous le souhaitez et vous sentir bien. Pas de stress.
+La création d'un portfolio en tant que professionnel du développement, du design ou de la tech est un voyage ponctué de choix complexes. L'un de ces dilemmes les plus prégnants réside dans le délicat équilibre entre l'aspiration à la perfection et la nécessité de lancer rapidement. Explorez avec moi les nuances de ces perspectives contradictoires.
 
-Viser le perfectionnisme est un très bon état d'esprit. D'un autre côté, travailler jusqu'à ce que le perfectionnisme soit à 100 % peut aussi être mauvais. Vous en avez peut-être déjà fait l'expérience. Corriger les imperfections encore et encore est source de stress, car cela paralyse tout le reste. Faire quelque chose de parfait prend beaucoup de temps, ce qui vous empêche de travailler sur d'autres choses. Moins de temps se traduit par moins d'efficacité, de profit et de fiabilité.
+![preview](/articles/launch-your-porfolio.jpg)
 
-![preview](/articles/first-article-preview.jpg)
+### L'aspiration à la perfection : un idéal inatteignable ?
+La vision traditionnelle de la création artistique nous incite à poursuivre la perfection dès le départ. Chaque ligne de code, chaque élément de design devrait converger vers l'excellence absolue. Cependant, ce rêve de perfection peut parfois devenir un fardeau, un frein au progrès. La quête incessante de la perfection peut paralyser le processus créatif, transformant la création en une poursuite infinie.
 
-### S'engager pour une seule chose
-Il fut un temps où je créais une trentaine de versions de mon portfolio parce que je n'en étais plus satisfait quelques semaines plus tard. Certaines d'entre elles ont déjà été développées. Mais je repartais de zéro encore et encore. C'est précisément ce qui m'a empêché de le lancer. Optez pour celui qui vous plaît et tenez-vous en à lui jusqu'à ce qu'il soit complètement terminé. Fixez-vous un délai ambitieux pour votre projet final. Et ensuite, un autre pour la mise en ligne. Cela vous aidera grandement à améliorer votre productivité.
+### Le Piège du perfectionnisme : quand le mieux devient l'ennemi du bien
+Le perfectionnisme peut se transformer en un piège subtil. Attendre que chaque détail soit impeccable peut retarder indéfiniment la mise en ligne du portfolio. Ce piétinement prolongé peut avoir des implications sur la crédibilité professionnelle, car le marché exige souvent une présence en ligne rapide et dynamique.
 
-### Inspirez-vous (avec prudence)
-L'inspiration est importante, mais elle peut aussi être dangereuse. Vous pouvez chercher de l'inspiration avant de commencer vos projets, ce qui est tout à fait normal et bon. Cela peut se faire sur Dribbble, Pinterest, Behance, ou sur d'autres plateformes comme Awwwards ou SiteInspire. Là où il est crucial de ne pas chercher l'inspiration, c'est au moment où vous pensez que le design de votre site web personnel est terminé. Il se peut que vous voyiez un autre beau site quelque part et que vous vous disiez : "Hmm, je veux aussi créer un site comme celui-ci, alors effaçons les derniers designs de votre portfolio et repartons de zéro". C'est alors que cela se produit. Ce moment vous empêche (cela m'est arrivé plusieurs fois) de vous lancer. Comme je l'ai déjà écrit plus haut, l'engagement est tout à fait essentiel. En fin de compte, tout se résume à s'engager et à faire ce qu'il y a à faire.
+### La proposition audacieuse de lancer rapidement : itérer plutôt que parfaire
+L'idée de lancer rapidement, même si le portfolio n'atteint pas un niveau de perfection immédiat, offre une perspective alternative. Il s'agit de reconnaître que chaque itération peut être une amélioration par rapport à la précédente. Cette approche encourage une mentalité d'itération constante, où chaque version devient une opportunité d'apprentissage.
 
-### La simplicité est la clé
-Restez simple. Le travail sur votre site web est plus important que votre site lui-même. Essayez de construire un conteneur pour vos projets et présentez-les de manière élégante mais simple. Faites en sorte que votre travail parle de lui-même.
+### Rapidité comme moyen d'apprentissage : créer en faisant
+Lancer rapidement devient ainsi un moyen d'apprentissage. La rapidité n'est pas synonyme de compromis sur la qualité, mais plutôt d'une acceptation que la perfection peut être inatteignable initialement. C'est une invitation à apprendre en faisant, à utiliser chaque version du portfolio comme un terrain d'expérimentation.
 
-### Maintenez-le à jour et procédez par itérations
-Votre portfolio ne sera jamais terminé ou parfait comme indiqué ci-dessus. Mettez à jour vos projets et faites des itérations sur votre design web en cours de route. Cela vous permet de le mettre en avant plus tôt et de réduire le stress.
+### L'importance cruciale du temps : efficacité temporelle et gestion judicieuse
+Le temps joue un rôle crucial dans ce débat. L'efficacité temporelle, soulignée par la perspective de la rapidité, devient une compétence essentielle. La gestion judicieuse du temps est la clé pour maintenir l'élan sans compromettre la qualité. Choisir consciemment où investir son temps devient un acte stratégique.
 
-### Quelle plateforme utiliser ?
-Beaucoup de gens utilisent WordPress avec des modèles de thèmes pour construire un portfolio. Il en existe d'assez bons, mais la plupart d'entre eux ne sont pas assez bons ou sont très limités dans le design que vous pouvez construire si vous n'avez pas beaucoup d'expérience en matière de codage.
+### L'art de la réflexion : regard en arrière pour aller de l'avant
 
-Mais il existe une alternative : Framer. Avec Framer, vous pouvez créer des sites web entièrement personnalisés sans utiliser de code, grâce à un canevas entièrement visuel. Je l'utilise depuis plus d'un an maintenant et je ne reviendrais plus à WordPress ou Webflow. Il accélère considérablement le processus et vous permet de construire votre portfolio personnalisé pour toutes les tailles d'écran en quelques heures.
- 
+
+### Contrôle total vs. flexibilité : naviguer entre les deux extrêmes
+Contrôler entièrement le processus de création offre un sentiment d'autonomie et d'empowerment. Cependant, il est vital de ne pas confondre contrôle avec rigidité. Être ouvert aux évolutions du marché et aux nouvelles tendances est tout aussi essentiel que le contrôle personnel. C'est un équilibre délicat entre autonomie et adaptabilité.
+
+### L'équilibre délicat : un voyage continu de découverte et d'adaptation
+En fin de compte, la création du portfolio est un voyage continu. C'est naviguer dans ce paradoxe avec intention. C'est trouver un équilibre entre la quête de l'excellence et la nécessité d'agir rapidement, sachant que chaque itération est une progression vers une version améliorée de soi-même. Créer un portfolio, c'est embrasser le paradoxe, c'est choisir consciemment entre perfection et rapidité, et c'est accepter que le chemin vers l'excellence est un voyage plutôt qu'une destination.
