@@ -2,8 +2,8 @@
   "hello_world": "Bonjour le monde",
   "hero": {
     "job": {
-      "part1": "Directeur artistique",
-      "part2": "Développeur web"
+      "part1": "Développeur web",
+      "part2": "Directeur artistique"
     },
     "part1": "L'efficacité d'un, le talent de trois",
     "part2": "Pourquoi chercher ailleurs ?",
