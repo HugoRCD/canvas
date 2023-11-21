@@ -35,6 +35,6 @@ The quest for productivity is different from perfectionism. It's about striking 
 
 ### Strategies for escaping the trap: Concrete steps towards freedom
 
-Escaping the perfection trap doesn't happen overnight, but with concrete steps. Adopting realistic goals, celebrating small victories, seeking support from caring peers, and practicing mindfulness become powerful tools for undoing the bonds of perfectionism.
+Escaping the perfection trap doesn't happen overnight, but with concrete steps. Adopting realistic goals, celebrating small victories and seeking support from caring peers become powerful tools for undoing the bonds of perfectionism.
 
 In conclusion, the perfection trap is complex, but far from insurmountable. By embracing a more balanced, self-aware approach, everyone can find the path to a richer, more satisfying life, free from the shackles of illusory perfection.

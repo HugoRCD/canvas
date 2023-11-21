@@ -35,6 +35,6 @@ La quête de la productivité se démarque du perfectionnisme. Il s'agit de trou
 
 ### Stratégies pour échapper au piège : Des pas concrets vers la liberté
 
-Échapper au piège de la perfection ne se fait pas du jour au lendemain, mais avec des pas concrets. Adopter des objectifs réalistes, célébrer les petites victoires, chercher le soutien de pairs bienveillants, et pratiquer la pleine conscience deviennent des outils puissants pour défaire les liens du perfectionnisme.
+Échapper au piège de la perfection ne se fait pas du jour au lendemain, mais avec des pas concrets. Adopter des objectifs réalistes, célébrer les petites victoires et chercher le soutien de pairs bienveillants deviennent des outils puissants pour défaire les liens du perfectionnisme.
 
 En conclusion, le piège de la perfection est complexe, mais loin d'être insurmontable. En embrassant une approche plus équilibrée et bienveillante envers soi-même, chacun peut trouver la voie vers une vie plus riche, plus satisfaisante, libérée des entraves de la perfection illusoire.
