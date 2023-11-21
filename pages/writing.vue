@@ -42,7 +42,8 @@ async function fetchArticles() {
   articles.value = findArticles.map((article) => {
     return article as Article;
   });
-  tags.value = articles.value.map((article) => article.tags).flat();
+  const findTags = articles.value.map((article) => article.tags).flat();
+  tags.value = [...new Set(findTags)];
   loading.value = false;
 }
 
