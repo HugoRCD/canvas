@@ -12,9 +12,9 @@
   "error": "Oups, une erreur s'est produite lors de l'envoi de votre message :(",
   "budget": "Budget",
   "subject_types": {
-    "project": "Projet",
-    "bug": "Bug",
-    "question": "Question",
+    "project": "Parler d'un projet",
+    "bug": "Signaler un bug",
+    "question": "Poser une question",
     "other": "Autre"
   }
 }

@@ -12,9 +12,9 @@
   "error": "Oups, an error occurred while sending your message",
   "budget": "Budget",
   "subject_types": {
-    "project": "Project",
-    "bug": "Bug",
-    "question": "Question",
+    "project": "Talk about a project",
+    "bug": "Report a bug",
+    "question": "Ask a question",
     "other": "Other"
   }
 }
