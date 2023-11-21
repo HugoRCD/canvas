@@ -92,11 +92,11 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
           <div class="my-4">
             <UInput v-model="searchedTitle" variant="none" :placeholder="$t('writing.search_article')" />
           </div>
-          <div class="flex justify-center gap-2 mb-4" v-if="tags.length > 0">
+          <div class="flex flex-wrap justify-center gap-2 mb-4" v-if="tags.length > 0">
             <div
               v-for="tag of tags"
               :key="tag"
-              class="flex items-center rounded-md text-shadow-sm hover:text-shadow-md select-none px-2 py-1 bg-secondary text-main cursor-pointer hover:bg-zinc-700 transition-colors duration-100"
+              class="flex items-center rounded-md text-shadow-sm hover:text-shadow-md select-none text-xs sm:text-sm px-2 py-1 bg-secondary text-main cursor-pointer hover:bg-zinc-700 transition-colors duration-100"
               :class="{ 'bg-zinc-700': searchedTags.includes(tag) }"
               @click="toggleTag(tag)"
             >
