@@ -74,12 +74,15 @@ export default defineNuxtConfig({
       {
         code: "en",
         iso: "en-US",
+        domain: "https://hrcd.me",
       },
       {
         code: "fr",
         iso: "fr-FR",
+        domain: "https://hrcd.fr",
       },
     ],
+    differentDomains: process.env.NODE_ENV === "production",
     baseUrl: "https://hrcd.fr",
     vueI18n: "~/i18n.config.ts",
   },
