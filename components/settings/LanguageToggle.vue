@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { locale, setLocaleCookie } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
 
 defineProps({
   isText: {
@@ -17,11 +18,13 @@ const locales = [
     name: "English",
     iso: "en",
     flag: "🇺🇸",
+    domain: "https://hrcd.me",
   },
   {
     name: "Français",
     iso: "fr",
     flag: "🇫🇷",
+    domain: "https://hrcd.fr",
   },
 ];
 
@@ -33,11 +36,11 @@ watch(locale, (newLocale) => {
 <template>
   <div class="z-99 bg-zinc-900/90 backdrop-blur-xl flex items-center rounded-xl px-3 py-0">
     <ClientOnly>
-      <div class="cursor-pointer select-none" @click="() => ($i18n.locale = $i18n.locale === 'en' ? 'fr' : 'en')">
+      <a class="cursor-pointer select-none" :href="switchLocalePath(locales.find((l) => l.iso !== $i18n.locale).iso)">
         <span class="font-semibold" :style="{ fontSize: `${size}px` }">
           {{ locales.find((l) => l.iso === $i18n.locale).flag }}
         </span>
-      </div>
+      </a>
       <template #fallback>
         <div class="w-8 h-8" />
       </template>
