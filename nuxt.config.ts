@@ -56,13 +56,6 @@ export default defineNuxtConfig({
     },
   },
 
-  /*colorMode: {
-    preference: "dark",
-    fallback: "dark",
-    classSuffix: "",
-    storageKey: "hr-folio-color-mode",
-  },*/
-
   i18n: {
     strategy: "no_prefix",
     detectBrowserLanguage: {
