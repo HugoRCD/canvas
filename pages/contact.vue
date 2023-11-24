@@ -157,7 +157,7 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
 
         <!-- Budget -->
         <div class="flex flex-col gap-2 my-2" v-if="selected.label === 'contact.subject_types.project'">
-          <URange size="xs" color="gray" :min="400" :max="8000" :step="50" v-model="budget" />
+          <URange size="xs" :min="400" :max="8000" :step="50" v-model="budget" />
           <span class="text-gray-400 text-sm"> {{ $t("contact.budget") }}: {{ budget }}€ </span>
         </div>
 

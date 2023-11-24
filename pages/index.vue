@@ -40,15 +40,15 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
 
       <div class="flex flex-col items-center justify-center z-20">
         <!-- title -->
-        <HomeHero />
+        <HomeHero style="--stagger: 1; --delay: 10ms" data-animate />
 
         <!-- social -->
-        <HomeSocial />
+        <HomeSocial style="--stagger: 2" data-animate />
 
         <!-- cta -->
-        <HomeCta />
+        <HomeCta style="--stagger: 3" data-animate />
 
-        <div class="flex flex-col gap-4 w-full max-w-3xl lg:mt-16 mt-12">
+        <div style="--stagger: 4" data-animate class="flex flex-col gap-4 w-full max-w-3xl lg:mt-16 mt-12">
           <!-- projects -->
           <HomeProjects />
         </div>
@@ -56,7 +56,7 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
         <Divider class="my-9" />
 
         <!-- faq -->
-        <HomeFaq />
+        <HomeFaq style="--stagger: 5" data-animate />
       </div>
     </div>
   </section>
