@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const localePath = useLocalePath();
+
 definePageMeta({
   name: "Articles",
   title: "Articles",
@@ -23,8 +25,11 @@ const resetError = (error: { value: null }) => {
           <p class="text-center text-muted mt-4">
             {{ $t("writing.not_found_description") }}
           </p>
+          <p>
+            {{ error }}
+          </p>
           <div class="flex justify-center mt-4">
-            <button class="btn-primary" @click="resetError(error)">
+            <button class="btn-primary" @click="localePath({ name: 'writing' })">
               {{ $t("writing.back_link") }}
             </button>
           </div>

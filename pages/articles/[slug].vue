@@ -37,6 +37,7 @@ const article = computed<MinArticle>(() => {
     date: fetchedArticle.value?.date || "",
     tags: fetchedArticle.value?.tags || [],
     path: fetchedArticle.value?._path || "/writing",
+    readingTime: fetchedArticle.value?.readingTime || 0,
   };
 });
 
@@ -86,15 +87,15 @@ defineOgImage({ url: article.value.image, width: 1200, height: 630, alt: article
 <template>
   <main relative="relative">
     <ContentQuery v-slot="{ data }" :locale="locale" :path="$route.path" find="one">
-      <div
+      <NuxtLink
+        to="/writing"
         class="lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4 mx-auto flex items-center gap-2 my-8 text-muted cursor-pointer hover:text-main transition-colors duration-200"
-        @click="$router.push('/writing')"
       >
         <ArrowLeftIcon class="w-5 h-5" />
-        <NuxtLink to="/writing" class="text-sm font-light">
+        <span class="text-sm font-light">
           {{ $t("navigation.writing") }}
-        </NuxtLink>
-      </div>
+        </span>
+      </NuxtLink>
       <article class="prose mx-auto lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4">
         <h1>{{ data.title }}</h1>
         <div class="flex gap-2 sm:gap-6 info-section mt-1 flex-col sm:flex-row">

@@ -57,7 +57,15 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    strategy: "no_prefix",
+    strategy: "prefix_except_default",
+    defaultLocale: "en",
+    customRoutes: "config",
+    pages: {
+      "articles/[slug]": {
+        en: "/articles/[slug]",
+        fr: "/articles/[slug]",
+      },
+    },
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
