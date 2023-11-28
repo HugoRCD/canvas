@@ -43,6 +43,11 @@ export default defineNuxtConfig({
     },
   },
 
+  colorMode: {
+    preference: "dark",
+    fallback: "dark",
+  },
+
   devtools: {
     enabled: true,
     timeline: {
