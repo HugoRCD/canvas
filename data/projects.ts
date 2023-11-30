@@ -21,6 +21,22 @@ export type Project = {
 
 const projects: Project[] = [
   {
+    name: "Mockline",
+    logo: "SvgoMockline",
+    image: "/projects/mockline.webp",
+    description: {
+      short: {
+        fr: "Librairie UI nouvelle génération",
+        en: "Next gen UI library",
+      },
+    },
+    link: "https://mockline.hrcd.me/",
+    release: "soon",
+    featured: true,
+    tags: ["Vue", "Nuxt"],
+    color: "#FFFFFF",
+  },
+  {
     name: "Sekoïa",
     logo: "SvgoSekoia",
     image: "/projects/sekoia.webp",
