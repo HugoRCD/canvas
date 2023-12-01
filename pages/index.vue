@@ -2,7 +2,7 @@
 const { t, locale } = useI18n();
 
 const runtimeConfig = useRuntimeConfig();
-const siteTitle = computed(() => `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")} - HR Folio`);
+const siteTitle = computed(() => `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`);
 
 useSeoMeta({
   title: () => siteTitle.value,
