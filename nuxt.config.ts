@@ -73,18 +73,15 @@ export default defineNuxtConfig({
       cookieKey: "i18n_redirected",
       redirectOn: "root",
     },
-    differentDomains: process.env.NODE_ENV === "production",
     baseUrl: "/",
     locales: [
       {
         code: "en",
         iso: "en-US",
-        domain: "https://hrcd.me",
       },
       {
         code: "fr",
         iso: "fr-FR",
-        domain: "https://hrcd.fr",
       },
     ],
     vueI18n: "~/i18n.config.ts",
