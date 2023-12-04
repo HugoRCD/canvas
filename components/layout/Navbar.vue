@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Navigation } from "~/composables/useNavigation";
+
 defineProps({
   isText: {
     type: Boolean,
@@ -6,7 +8,7 @@ defineProps({
   },
 });
 
-const navigation = getNavigation("home").filter((link) => link.devOnly !== true);
+const navigation = getNavigation("home") as Record<string, Navigation>;
 </script>
 
 <template>

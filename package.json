@@ -15,7 +15,6 @@
     "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . --fix"
   },
   "devDependencies": {
-    "@headlessui/vue": "^1.7.13",
     "@heroicons/vue": "^2.0.18",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/devtools": "^1.0.3",
@@ -33,7 +32,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.13.0",
     "nuxt": "^3.8.1",
-    "nuxt-headlessui": "^1.1.4",
     "nuxt-og-image": "^2.2.4",
     "nuxt-svgo": "^3.4.0",
     "prettier": "^2.8.8",

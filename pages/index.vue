@@ -46,7 +46,7 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
         <HomeSocial style="--stagger: 2" data-animate />
 
         <!-- cta -->
-        <HomeCta style="--stagger: 3" data-animate />
+        <HomeCTA style="--stagger: 3" data-animate />
 
         <div style="--stagger: 4" data-animate class="flex flex-col gap-4 w-full max-w-3xl lg:mt-16 mt-12">
           <!-- projects -->

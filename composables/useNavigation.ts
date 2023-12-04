@@ -3,23 +3,42 @@ import { type FunctionalComponent } from "vue";
 
 type Where = "home" | "app";
 
-type Navigation = {
+export type Navigation = {
   name: string;
   to: string;
   icon: FunctionalComponent;
-  devOnly?: boolean;
 };
 
-export function getNavigation(where: Where): Navigation[] {
+export function getNavigation(where: Where): Record<string, Navigation> | [] {
   switch (where) {
     case "home":
-      return [
-        { name: "Home", to: "/", icon: HomeIcon },
-        { name: "Works", to: "/works", icon: BriefcaseIcon },
-        { name: "Writing", to: "/writing", icon: PencilIcon },
-        { name: "About", to: "/about", icon: UserIcon },
-        { name: "Contact", to: "/contact", icon: EnvelopeIcon },
-      ];
+      return {
+        home: {
+          name: "Home",
+          to: "/",
+          icon: HomeIcon,
+        },
+        works: {
+          name: "Works",
+          to: "/works",
+          icon: BriefcaseIcon,
+        },
+        writing: {
+          name: "Writing",
+          to: "/writing",
+          icon: PencilIcon,
+        },
+        about: {
+          name: "About",
+          to: "/about",
+          icon: UserIcon,
+        },
+        contact: {
+          name: "Contact",
+          to: "/contact",
+          icon: EnvelopeIcon,
+        },
+      };
     default:
       return [];
   }
