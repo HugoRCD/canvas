@@ -43,10 +43,6 @@ export default defineNuxtConfig({
     },
   },
 
-  devtools: {
-    enabled: true,
-  },
-
   colorMode: {
     preference: "dark",
     fallback: "dark",
@@ -59,7 +55,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image", "nuxt-og-image"],
+  modules: ["@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image", "nuxt-og-image"],
 
   image: {
     format: ["webp"],
@@ -71,29 +67,25 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    customRoutes: "config",
-    pages: {
-      "articles/[slug]": {
-        en: "/writing/[slug]",
-        fr: "/articles/[slug]",
-      },
-    },
+    strategy: "no_prefix",
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
       redirectOn: "root",
     },
+    differentDomains: process.env.NODE_ENV === "production",
     locales: [
       {
         code: "en",
         iso: "en-US",
+        domain: "https://hrcd.me",
       },
       {
         code: "fr",
         iso: "fr-FR",
+        domain: "https://hrcd.fr",
       },
     ],
-    baseUrl: "https://hrcd.fr",
     vueI18n: "~/i18n.config.ts",
   },
 
