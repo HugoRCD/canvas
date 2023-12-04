@@ -73,7 +73,7 @@ export default defineNuxtConfig({
       cookieKey: "i18n_redirected",
       redirectOn: "root",
     },
-    differentDomains: process.env.NODE_ENV === "production",
+    differentDomains: true,
     locales: [
       {
         code: "en",
