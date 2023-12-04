@@ -3,8 +3,8 @@ const switchLocalePath = useSwitchLocalePath();
 const { locale: current, setLocaleCookie } = useI18n();
 
 const locales = [
-  { code: "en", name: "English" },
-  { code: "fr", name: "Français" },
+  { code: "en", name: "English", domain: "https://hrcd.me" },
+  { code: "fr", name: "Français", domain: "https://hrcd.fr" },
 ];
 
 const currentLocale = computed(() => {
