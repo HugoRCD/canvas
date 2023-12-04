@@ -43,7 +43,17 @@ export default defineNuxtConfig({
     },
   },
 
-  devtools: { enabled: true },
+  colorMode: {
+    preference: "dark",
+    fallback: "dark",
+  },
+
+  devtools: {
+    enabled: true,
+    timeline: {
+      enabled: true,
+    },
+  },
 
   modules: ["nuxt-headlessui", "@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image", "nuxt-og-image"],
 
