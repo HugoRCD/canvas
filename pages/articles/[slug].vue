@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ArrowLeftIcon, LinkIcon } from "@heroicons/vue/24/outline";
 import type { MinArticle } from "~/types/Article";
+const localePath = useLocalePath();
 const { locale, t } = useI18n();
 const toast = useToast();
 
@@ -11,20 +12,29 @@ definePageMeta({
 const runtimeConfig = useRuntimeConfig();
 const { path } = useRoute();
 
+// remove the first part of path "/en/articles/..." => "articles/..."
+function sanitizePath(path: string) {
+  // if path is contains a locale, remove it like "/en/articles/..." => "/articles/..." or "/fr/articles/..." => "/articles/..."
+  if (path.includes("/en/") || path.includes("/fr/")) return "/" + path.split("/").slice(2).join("/");
+}
+const sanitizedPath = sanitizePath(path);
+console.log(sanitizedPath);
+
 const fetchedArticle = ref();
 
 async function fetchArticle() {
-  const { data, error } = await useAsyncData(`blog-post-${path}`, () =>
+  const { data, error } = await useAsyncData(`blog-post-${sanitizedPath}`, () =>
     queryContent("articles")
       .where({
         _path: {
-          $eq: path,
+          $eq: sanitizedPath,
         },
       })
       .locale(locale.value)
       .findOne(),
   );
-  if (error.value) navigateTo("/writing");
+  console.log(data.value);
+  if (error.value) navigateTo(localePath({ name: "writing" }));
   else fetchedArticle.value = data.value;
 }
 await fetchArticle();
@@ -41,7 +51,7 @@ const article = computed<MinArticle>(() => {
   };
 });
 
-const articleLink = ref(useRuntimeConfig().public.siteUrl + article.value.path);
+const articleLink = ref(runtimeConfig.public.siteUrl + article.value.path);
 
 defineShortcuts({
   meta_k: {
@@ -86,9 +96,9 @@ defineOgImage({ url: article.value.image, width: 1200, height: 630, alt: article
 
 <template>
   <main relative="relative">
-    <ContentQuery v-slot="{ data }" :locale="locale" :path="$route.path" find="one">
+    <ContentQuery v-slot="{ data }" :locale="locale" :path="sanitizePath($route.path)" find="one">
       <NuxtLink
-        to="/writing"
+        :to="localePath({ name: 'writing' })"
         class="lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4 mx-auto flex items-center gap-2 my-8 text-muted cursor-pointer hover:text-main transition-colors duration-200"
       >
         <ArrowLeftIcon class="w-5 h-5" />

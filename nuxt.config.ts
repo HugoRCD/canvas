@@ -43,6 +43,10 @@ export default defineNuxtConfig({
     },
   },
 
+  devtools: {
+    enabled: true,
+  },
+
   colorMode: {
     preference: "dark",
     fallback: "dark",
@@ -67,12 +71,10 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    strategy: "prefix_except_default",
-    defaultLocale: "en",
     customRoutes: "config",
     pages: {
       "articles/[slug]": {
-        en: "/articles/[slug]",
+        en: "/writing/[slug]",
         fr: "/articles/[slug]",
       },
     },

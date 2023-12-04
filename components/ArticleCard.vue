@@ -1,5 +1,7 @@
 <script setup lang="ts">
-defineProps({
+const localePath = useLocalePath();
+
+const props = defineProps({
   title: {
     type: String,
     required: true,
@@ -17,10 +19,12 @@ defineProps({
     required: true,
   },
 });
+
+const to = computed(() => props.path.split("/")[2]);
 </script>
 
 <template>
-  <NuxtLink :to="path" :aria-label="title" class="flex flex-col gap-2 cursor-pointer">
+  <NuxtLink :to="localePath({ name: 'articles-slug', params: { slug: to } })" :aria-label="title" class="flex flex-col gap-2 cursor-pointer">
     <div class="overflow-hidden rounded-md border border-white/10 shadow-md shadow-zinc-950/50 hover:border-white/20 transition-colors duration-200">
       <NuxtImg
         width="1536"
