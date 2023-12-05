@@ -38,18 +38,6 @@ html, body, #__nuxt, #__layout {
     @apply tracking-wider
   }
 
-  .input {
-    @apply bg-secondary;
-    @apply text-main placeholder:text-placeholder;
-    @apply rounded-md border-[1px] border-primary hover:border-primary-hover;
-    @apply focus:outline-none focus:ring-2 focus:ring-accent;
-    @apply px-4 py-2;
-  }
-
-  .gradient {
-    @apply bg-gradient-to-bl from-accent-primary to-accent-secondary;
-  }
-
   .text-gradient {
     @apply bg-clip-text text-transparent;
     @apply bg-gradient-to-bl from-accent-primary to-accent-secondary;
@@ -70,30 +58,6 @@ html, body, #__nuxt, #__layout {
     height: 1px;
     margin: 0 auto;
     background-image: linear-gradient(96.18deg, rgba(215, 196, 255, 0) 10%, rgba(200, 200, 200, 0.24) 50%, rgba(215, 196, 255, 0) 90%);
-  }
-
-  .btn-primary {
-    @apply flex items-center justify-center gap-2 px-8 py-1;
-    @apply bg-zinc-900 hover:bg-zinc-800 rounded-md text-muted shadow-sm;
-    @apply border-[1px] border-primary hover:border-primary-hover;
-    @apply transition-colors duration-200;
-  }
-
-  .t-card {
-    @apply bg-secondary rounded-lg border-[1px] border-primary w-full shadow-md;
-  }
-
-  .card {
-    @apply flex p-2 gap-4 rounded-lg text-main w-full;
-    @apply bg-card hover:bg-card-hover shadow-sm;
-    @apply border-[1px] border-primary hover:border-primary-hover;
-    @apply transition-colors duration-200 ease-in-out cursor-pointer;
-  }
-
-  .kbd {
-    @apply bg-main-opacity/30 hover:bg-card-hover rounded-md text-muted shadow-sm px-2;
-    @apply border-[1px] border-primary hover:border-primary-hover;
-    @apply transition-colors duration-200;
   }
 
   .text-white-shadow {
