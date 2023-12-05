@@ -11,7 +11,7 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
 
 <template>
   <LayoutInfoWrapper page="projects">
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <!--    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <SpotlightCard v-for="project in projects" :key="project.name" white>
         <NuxtLink :aria-label="project.name + ' project link'" :to="project.link" target="_blank" class="cursor-pointer h-full">
           <div
@@ -45,6 +45,9 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
           </div>
         </NuxtLink>
       </SpotlightCard>
+    </div>-->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <ProjectCard v-for="project in projects" :key="project.name" :project="project" />
     </div>
   </LayoutInfoWrapper>
 </template>

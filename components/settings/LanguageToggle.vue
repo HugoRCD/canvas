@@ -24,7 +24,7 @@ watch(current, (newLocale) => {
         </span>
       </div>
       <template #fallback>
-        <div class="w-8 h-8" />
+        <div class="w-5 h-2" />
       </template>
     </ClientOnly>
   </div>
