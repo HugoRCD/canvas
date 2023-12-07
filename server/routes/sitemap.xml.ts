@@ -28,15 +28,11 @@ export default defineEventHandler(async (event) => {
     changefreq: "daily",
   });
   sitemap.write({
-    url: "/projects",
+    url: "/works",
     changefreq: "daily",
   });
   sitemap.write({
     url: "/writing",
-    changefreq: "daily",
-  });
-  sitemap.write({
-    url: "/stack",
     changefreq: "daily",
   });
   sitemap.end();
