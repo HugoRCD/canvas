@@ -32,14 +32,12 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_SITE_URL,
-      available: process.env.AVAILABLE,
-      meetingLink: process.env.MEETING_LINK,
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+      available: process.env.NUXT_PUBLIC_AVAILABLE,
+      meetingLink: process.env.NUXT_PUBLIC_MEETING_LINK,
     },
     private: {
-      resendApiKey: process.env.RESEND_API_KEY,
-      openAiKey: process.env.OPENAI_API_KEY,
-      apiKey: process.env.LINEAR_API_KEY,
+      resendApiKey: process.env.NUXT_PRIVATE_RESEND_API_KEY,
     },
   },
 
