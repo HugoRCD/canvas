@@ -64,18 +64,15 @@ defineShortcuts({
 </script>
 
 <template>
-  <Html :lang="$i18n.locale"
-    class="bg-zinc-950 text-main selection:bg-white/60 selection:text-zinc-800 transition-colors duration-300">
-
-  <Body>
-    <SpeedInsights />
-    <LayoutScrollToTop />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-    <UNotifications />
-    <DotPattern
-      class="absolute -z-10 inset-0 h-full w-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
-  </Body>
-
-</Html></template>
+  <Html :lang="$i18n.locale" class="bg-zinc-950 text-main selection:bg-white/60 selection:text-zinc-800 transition-colors duration-300">
+    <Body>
+      <SpeedInsights />
+      <LayoutScrollToTop />
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+      <UNotifications />
+      <DotPattern class="absolute -z-10 inset-0 h-full w-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
+    </Body>
+  </Html>
+</template>
