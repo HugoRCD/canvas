@@ -12,5 +12,7 @@
   "blog" : "Blog",
   "quotes" : "Citations",
   "empty_quotes" : "Aucune citation pour le moment, mais ça ne saurait tarder !",
-  "unknown_author" : "Auteur inconnu"
+  "unknown_author" : "Auteur inconnu",
+  "show_search" : "Recherche",
+  "hide_search" : "Masquer la recherche"
 }

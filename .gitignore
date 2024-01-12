@@ -19,8 +19,6 @@ logs
 
 # Local env files
 .env
-.env.*
-!.env.example
 .vercel
 
 rt_base

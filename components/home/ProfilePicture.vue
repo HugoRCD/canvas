@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { profilePicture } = useAppConfig();
+</script>
 
 <template>
   <div class="flex items-center justify-center z-10">
@@ -8,7 +10,7 @@
       >
         <NuxtImg
           width="96"
-          src="/assets/hugo-richard-light.webp"
+          :src="profilePicture"
           class="rounded-full h-24 w-24 object-cover border-2 border-gray-800/30"
           alt="Hugo Richard Profile Picture"
           aria-label="Hugo Richard Profile Picture"

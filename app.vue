@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { SpeedInsights } from "@vercel/speed-insights/nuxt";
-const { appName } = useAppConfig();
+const { appName, email } = useAppConfig();
 const toast = useToast();
 const { t } = useI18n();
 
@@ -39,15 +39,12 @@ useHead({
 
 if (process.client) {
   console.log(`
-__/\\\\\\________/\\\\\\_        ____/\\\\\\\\\\\\\\\\\\_____        ________/\\\\\\\\\\\\\\\\\\_        __/\\\\\\\\\\\\\\\\\\\\\\\\____
- _\\/\\\\\\_______\\/\\\\\\_        __/\\\\\\///////\\\\\\___        _____/\\\\\\////////__        _\\/\\\\\\////////\\\\\\__
-  _\\/\\\\\\_______\\/\\\\\\_        _\\/\\\\\\_____\\/\\\\\\___        ___/\\\\\\/___________        _\\/\\\\\\______\\//\\\\\\_
-   _\\/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_        _\\/\\\\\\\\\\\\\\\\\\\\\\/____        __/\\\\\\_____________        _\\/\\\\\\_______\\/\\\\\\_
-    _\\/\\\\\\/////////\\\\\\_        _\\/\\\\\\//////\\\\\\____        _\\/\\\\\\_____________        _\\/\\\\\\_______\\/\\\\\\_
-     _\\/\\\\\\_______\\/\\\\\\_        _\\/\\\\\\____\\//\\\\\\___        _\\//\\\\\\____________        _\\/\\\\\\_______\\/\\\\\\_
-      _\\/\\\\\\_______\\/\\\\\\_        _\\/\\\\\\_____\\//\\\\\\__        __\\///\\\\\\__________        _\\/\\\\\\_______/\\\\\\__
-       _\\/\\\\\\_______\\/\\\\\\_        _\\/\\\\\\______\\//\\\\\\_        ____\\////\\\\\\\\\\\\\\\\\\_        _\\/\\\\\\\\\\\\\\\\\\\\\\\\/___
-        _\\///________\\///__        _\\///________\\///__        _______\\/////////__        _\\////////////_____
+.------..------..------..------.
+|H.--. ||R.--. ||C.--. ||D.--. |
+| :(): || :(): || :  : || :(): |
+| (__) || ()() || :  : || (__) |
+| '--'H|| '--'R|| '--'C|| '--'D|
+'------''------''------''------'
 `);
   console.log("I see you're curious, just like me. If you want to have more information about the code, you can contact me :)");
 }
@@ -56,7 +53,7 @@ defineShortcuts({
   meta_o: {
     usingInput: true,
     handler: () => {
-      copyToClipboard("contact@hrcd.fr");
+      copyToClipboard(email);
       toast.add({ title: t("global.email_copied"), icon: "i-heroicons-check-circle", timeout: 2500 });
     },
   },
@@ -66,13 +63,13 @@ defineShortcuts({
 <template>
   <Html :lang="$i18n.locale" class="bg-zinc-950 text-main selection:bg-white/60 selection:text-zinc-800 transition-colors duration-300">
     <Body>
-      <SpeedInsights />
       <LayoutScrollToTop />
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
       <UNotifications />
       <DotPattern class="absolute -z-10 inset-0 h-full w-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
+      <SpeedInsights />
     </Body>
   </Html>
 </template>

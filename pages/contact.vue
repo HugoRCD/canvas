@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/outline";
 import type { ContactEmail } from "~/types/ContactEmail";
+const appConfig = useAppConfig();
 const { t } = useI18n();
 
 useHead({
@@ -180,12 +181,16 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
         <div class="flex flex-col gap-3">
           <dd class="flex items-center gap-3 text-gray-400">
             <PhoneIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
-            <span>(+33) 6 21 56 22 18</span>
+            <span>
+              {{ appConfig.phone }}
+            </span>
           </dd>
           <dd class="flex items-center gap-3 text-gray-400">
             <EnvelopeIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
             <UTooltip :text="$t('home.hero.email')" :shortcuts="['⌘', 'O']">
-              <NuxtLink to="mailto:contact@hrcd.fr" class="cursor-pointer hover:text-main transition-colors duration-300"> contact@hrcd.fr </NuxtLink>
+              <NuxtLink :to="`mailto:${appConfig.email}`" class="cursor-pointer hover:text-main transition-colors duration-300">
+                {{ appConfig.email }}
+              </NuxtLink>
             </UTooltip>
           </dd>
         </div>
