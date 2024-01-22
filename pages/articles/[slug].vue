@@ -164,12 +164,20 @@ p {
 }
 
 article :deep(h2),
-:deep(h3) {
+:deep(h3),
+:deep(h4) {
   color: #f2f2f2;
   text-decoration: none;
 }
 
 article :deep(a) {
   color: #959595;
+}
+
+article :deep(code),
+:deep(pre),
+:deep(strong) {
+  color: #f2f2f2;
+  font-weight: 400;
 }
 </style>
