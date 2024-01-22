@@ -98,6 +98,9 @@ export default defineNuxtConfig({
         showURL: false,
       },
     },
+    highlight: {
+      theme: "github-dark",
+    },
     navigation: {
       fields: ["image", "_id"],
     },
