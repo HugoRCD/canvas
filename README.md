@@ -11,13 +11,13 @@
   </a>
 </p>
 
-# HR Folio
+# Canvas template
 
 This is a fully customizable portfolio template built with [Nuxt.js](https://nuxtjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Use it to showcase your work, testimonials and other information to your clients.
 
 ## Demo
 
-You can see a live demo at [hrcd.fr](https://hrcd.fr/).
+You can see a live demo at [canvas.hrcd.fr](https://canvas.hrcd.fr/).
 
 ## Features
 
@@ -40,9 +40,9 @@ You can see a live demo at [hrcd.fr](https://hrcd.fr/).
 
 ## Quick Setup
 
-1. Clone this repository
+1. Clone this repository if you have access or download it from the store
 ```bash
-git clone git@github.com:HugoRCD/hr_folio_2023.git
+git clone git@github.com:HugoRCD/canvas.git
 ```
 
 2. Install dependencies
@@ -68,6 +68,8 @@ bun start
 ## How to Modify the Portfolio Content
 
 This portfolio uses [Nuxt Content](https://content.nuxt.com/) to manage the content. Here's how you can modify it:
+
+First check the `app.config.ts` file to change the global configuration of the portfolio, there is a lot of stuff you can change here.
 
 ### Articles
 
