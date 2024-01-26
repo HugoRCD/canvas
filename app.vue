@@ -5,8 +5,7 @@ const toast = useToast();
 const { t } = useI18n();
 
 useHead({
-  title: `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`,
-  titleTemplate: `%s - ${appName}`,
+  titleTemplate: `%s | ${appName}`,
   link: [
     {
       rel: "icon",

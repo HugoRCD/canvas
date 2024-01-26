@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: process.env.NUXT_SITE_URL || "https://hrcd.fr",
+    url: process.env.NUXT_SITE_URL || "https://canvas.hrcd.fr",
     identity: {
       type: "Person",
     },

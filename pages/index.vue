@@ -3,7 +3,7 @@ const appConfig = useAppConfig();
 const { t, locale } = useI18n();
 
 const runtimeConfig = useRuntimeConfig();
-const siteTitle = computed(() => `${t("home.hero.job.part1")} / ${t("home.hero.job.part2")}`);
+const siteTitle = computed(() => `Home`);
 
 useSeoMeta({
   title: () => siteTitle.value,
@@ -17,8 +17,8 @@ useSeoMeta({
   twitterTitle: siteTitle.value,
   twitterDescription: () => t("seo.description"),
   twitterCard: "summary_large_image",
-  twitterSite: "@HugoRCD__",
-  twitterCreator: "@HugoRCD__",
+  twitterSite: appConfig.twitterUsername,
+  twitterCreator: appConfig.twitterUsername,
   twitterImage: "https://hrcd.fr/social-preview.jpg",
 });
 
