@@ -54,7 +54,13 @@ function setActive() {
 </script>
 
 <template>
-  <component :is="as" ref="container">
-    <slot :set-active="setActive" :is-active="isActive" />
+  <component
+    :is="as"
+    ref="container"
+  >
+    <slot
+      :set-active="setActive"
+      :is-active="isActive"
+    />
   </component>
 </template>

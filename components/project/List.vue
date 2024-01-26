@@ -5,7 +5,7 @@ import projects from "~/data/projects";
 <template>
   <div class="flex flex-col gap-4 w-full">
     <NuxtLink
-      v-for="project in projects.filter((project) => project.featured)"
+      v-for="project in projects.filter(() => project.featured)"
       :key="project.name"
       class="flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg hover:bg-secondary hover:text-main"
       :to="project.release === 'soon' ? '/' : project.link"
@@ -15,13 +15,18 @@ import projects from "~/data/projects";
       <span class="whitespace-nowrap">
         {{ project.name }}
       </span>
-      <div class="w-full h-[0.1px] mx-2 bg-muted"></div>
+      <div class="w-full h-[0.1px] mx-2 bg-muted" />
       <span class="text-muted whitespace-nowrap">
         {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
       </span>
     </NuxtLink>
     <div class="flex justify-center mt-4">
-      <button class="btn-primary" @click="useRouter().push('/works')">{{ $t("global.see_more") }}</button>
+      <button
+        class="btn-primary"
+        @click="useRouter().push('/works')"
+      >
+        {{ $t("global.see_more") }}
+      </button>
     </div>
   </div>
 </template>

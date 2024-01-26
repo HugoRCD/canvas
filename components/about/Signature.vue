@@ -1,7 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375.38 299.03" width="250" fill="none" class="signature">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 375.38 299.03"
+    width="250"
+    fill="none"
+    class="signature"
+  >
     <path
       class="signature"
       stroke-width="2"

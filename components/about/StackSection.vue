@@ -20,7 +20,11 @@ defineProps({
       {{ $t(`tags.${stack}`) }}
     </h4>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-      <AboutStackItem v-for="item in items" :key="item.name" :item="item" />
+      <AboutStackItem
+        v-for="item in items"
+        :key="item.name"
+        :item="item"
+      />
     </div>
   </div>
 </template>

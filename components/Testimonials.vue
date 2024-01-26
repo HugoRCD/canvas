@@ -35,17 +35,34 @@ const testimonials = [
   <div class="overflow-hidden py-8 lg:py-16">
     <div class="mt-8 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] lg:mt-32">
       <div class="flex w-max animate-marquee items-stretch [--duration:50s] hover:[animation-play-state:paused]">
-        <div v-for="testimonial in [...testimonials, ...testimonials]" :key="testimonial.name" class="px-2.5">
-          <SpotlightCard white class="relative h-full w-[28rem] p-8">
-            <div class="pb-8 font-light text-white/75">{{ testimonial.body }}</div>
+        <div
+          v-for="testimonial in [...testimonials, ...testimonials]"
+          :key="testimonial.name"
+          class="px-2.5"
+        >
+          <SpotlightCard
+            white
+            class="relative h-full w-[28rem] p-8"
+          >
+            <div class="pb-8 font-light text-white/75">
+              {{ testimonial.body }}
+            </div>
 
             <div class="mt-auto flex items-center gap-4">
-              <img :alt="testimonial.name" :src="testimonial.image" class="h-10 w-10 rounded-full" />
+              <img
+                :alt="testimonial.name"
+                :src="testimonial.image"
+                class="h-10 w-10 rounded-full"
+              >
 
               <div class="flex flex-col">
-                <div class="text-white">{{ testimonial.name }}</div>
+                <div class="text-white">
+                  {{ testimonial.name }}
+                </div>
 
-                <div class="text-sm text-white/50">{{ testimonial.title }}</div>
+                <div class="text-sm text-white/50">
+                  {{ testimonial.title }}
+                </div>
               </div>
             </div>
           </SpotlightCard>

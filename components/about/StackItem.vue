@@ -11,14 +11,22 @@ defineProps({
 </script>
 
 <template>
-  <SpotlightCard white class="p-6">
-    <NuxtLink :to="item.link" target="_blank" :aria-label="item.name + ' link'" class="flex gap-4">
+  <SpotlightCard
+    white
+    class="p-6"
+  >
+    <NuxtLink
+      :to="item.link"
+      target="_blank"
+      :aria-label="item.name + ' link'"
+      class="flex gap-4"
+    >
       <div class="h-14 w-14">
         <component
           :is="item.logo"
           class="w-8 h-8 text-main"
           :class="item.logo.includes('Color') ? '' : 'text-main'"
-          :fontControlled="false"
+          :font-controlled="false"
           :alt="item.name + ' logo'"
           :filled="item.logo.includes('Color')"
           :aria-label="item.name + ' logo'"
@@ -32,7 +40,13 @@ defineProps({
           {{ item.description[$i18n.locale as "en" | "fr"] }}
         </p>
         <div class="flex gap-2">
-          <UKbd size="sm" v-for="item in item.tags" :key="item" :aria-label="item" :value="$t(`tags.${item}`)" />
+          <UKbd
+            v-for="tag in item.tags"
+            :key="tag"
+            size="sm"
+            :aria-label="tag"
+            :value="$t(`tags.${tag}`)"
+          />
         </div>
       </div>
     </NuxtLink>

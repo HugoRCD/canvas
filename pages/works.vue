@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import projects from "~/data/projects";
+const appConfig = useAppConfig();
 const { t } = useI18n();
 
 useHead({
   title: t("navigation.works"),
 });
 
-defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>
@@ -47,7 +48,11 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
       </SpotlightCard>
     </div>-->
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      <ProjectCard v-for="project in projects" :key="project.name" :project="project" />
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.name"
+        :project="project"
+      />
     </div>
   </LayoutInfoWrapper>
 </template>

@@ -100,6 +100,11 @@ provide("nav-context", {
 
 <template>
   <component :is="as">
-    <slot :ready="isReady" :position="`${activeItem.position}px`" :duration="`${duration}ms`" :size="`${activeItem.size}px`" />
+    <slot
+      :ready="isReady"
+      :position="`${activeItem.position}px`"
+      :duration="`${duration}ms`"
+      :size="`${activeItem.size}px`"
+    />
   </component>
 </template>

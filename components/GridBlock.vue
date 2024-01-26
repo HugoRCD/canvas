@@ -20,5 +20,5 @@ const grid = inject("grid-context");
     :height="grid.size - 1"
     :x="column * grid.size + grid.offsetX + 1"
     :y="row * grid.size + grid.offsetY + 1"
-  ></rect>
+  />
 </template>

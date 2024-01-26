@@ -18,7 +18,10 @@ provide("peers", children);
 </script>
 
 <template>
-  <component :is="as" ref="container">
+  <component
+    :is="as"
+    ref="container"
+  >
     <slot />
   </component>
 </template>

@@ -86,7 +86,12 @@ defineOgImage({ url: article.value.image, width: 1200, height: 630, alt: article
 
 <template>
   <main relative="relative">
-    <ContentQuery v-slot="{ data }" :locale="locale" :path="$route.path" find="one">
+    <ContentQuery
+      v-slot="{ data }"
+      :locale="locale"
+      :path="$route.path"
+      find="one"
+    >
       <NuxtLink
         to="/writing"
         class="lg:max-w-4xl md:max-w-3xl sm:max-w-2xl px-4 mx-auto flex items-center gap-2 my-8 text-muted cursor-pointer hover:text-main transition-colors duration-200"
@@ -100,11 +105,21 @@ defineOgImage({ url: article.value.image, width: 1200, height: 630, alt: article
         <h1>{{ data.title }}</h1>
         <div class="flex gap-2 sm:gap-6 info-section mt-1 flex-col sm:flex-row">
           <p>{{ data.date }}</p>
-          <p class="hidden sm:block">|</p>
+          <p class="hidden sm:block">
+            |
+          </p>
           <p>{{ data.readingTime }} {{ $t("writing.readingTime") }}</p>
-          <p class="hidden sm:block">|</p>
-          <UTooltip :text="$t('writing.copy_link')" :shortcuts="['⌘', 'K']">
-            <p class="flex items-center gap-1 cursor-pointer hover:text-main transition-colors duration-200" @click="copyArticleLink()">
+          <p class="hidden sm:block">
+            |
+          </p>
+          <UTooltip
+            :text="$t('writing.copy_link')"
+            :shortcuts="['⌘', 'K']"
+          >
+            <p
+              class="flex items-center gap-1 cursor-pointer hover:text-main transition-colors duration-200"
+              @click="copyArticleLink()"
+            >
               <LinkIcon class="w-4 h-4 inline-block mr-1" />
               {{ $t("writing.share") }}
             </p>
@@ -112,7 +127,11 @@ defineOgImage({ url: article.value.image, width: 1200, height: 630, alt: article
         </div>
         <ContentRenderer :value="data" />
         <div>
-          <div v-for="tag of data.tags" :key="tag" class="inline-block mr-2">
+          <div
+            v-for="tag of data.tags"
+            :key="tag"
+            class="inline-block mr-2"
+          >
             <UKbd size="sm">
               {{ tag }}
             </UKbd>

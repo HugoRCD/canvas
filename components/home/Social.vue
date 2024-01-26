@@ -15,7 +15,7 @@ import socials from "~/data/socials";
       <component
         :is="social.logo"
         class="social-item w-6 h-6 text-muted hover:text-main transition-all duration-300"
-        :fontControlled="false"
+        :font-controlled="false"
         :alt="social.name + ' logo'"
         :aria-label="social.name + ' logo'"
       />

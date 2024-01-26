@@ -28,15 +28,15 @@ You can see a live demo at [hrcd.fr](https://hrcd.fr/).
 - Article & Project Content Type using [Nuxt Content](https://content.nuxt.com/)
 - [Nuxt i18n](https://i18n.nuxtjs.org/) for multi-language support
 - Open Graph Image support with [Nuxt OG Image](https://nuxtseo.com/og-image/getting-started/installation)
-- [Nuxt Sitemap](https://sitemap.nuxt.com/) for auto-generate sitemap.xml
 - [Nuxt Robots](https://sitemap.nuxt.com/) for auto-generate robots.txt
-- [ESLint](https://eslint.org/) with [Prettier](https://prettier.io/) for code linting
+- [ESLint](https://eslint.org/) with official Nuxt configuration
 - Full typescript support
 - Optimized images with [Nuxt Image](https://image.nuxt.com/)
 - [Vue Composition Collection (Vueuse)](https://vueuse.org/)
 - Fully responsive on all modern browsers
 - Professional and minimal design
 - Easy to customize
+- Auto generated sitemap
 
 ## Quick Setup
 
@@ -84,3 +84,17 @@ This portfolio uses [Nuxt Content](https://content.nuxt.com/) to manage the cont
 ### Other Content
 
 Simply go to the `data/` directory and do the exact same thing as above. All content works the same way.
+
+## Setup the Contact Form
+
+This portfolio uses [Resend](https://resend.com/) to handle the contact form. To set it up, follow these steps:
+- Get your api key from [Resend](https://resend.com/) here [your api key](https://resend.com/api-keys)
+- Add your api key in the `.env` file
+- change the `from` key in the `sendEmail` route in the `server/api/` folder, you can customize everything you want in this route
+- That's it, you're good to go!
+
+## Setup the Open Graph Image
+
+To change the main open graph image, go to the `app.config.ts` file and change the `openGrapImage` key.
+For the blog open graph image, go to the `content/articles` directory and change the `image` key in the Markdown file of the article.
+

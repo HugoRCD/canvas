@@ -77,25 +77,31 @@ async function submitForm() {
   loading.value = false;
 }
 
-defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>
   <LayoutInfoWrapper page="contact">
     <div class="flex flex-col sm:items-center sm:justify-between">
-      <form @submit.prevent="submitForm" class="flex flex-col gap-3 max-w-[40rem] w-full">
+      <form
+        class="flex flex-col gap-3 max-w-[40rem] w-full"
+        @submit.prevent="submitForm"
+      >
         <!-- Fullname -->
         <div>
-          <label for="fullname" class="sr-only">
+          <label
+            for="fullname"
+            class="sr-only"
+          >
             {{ $t("contact.fullname") }}
           </label>
           <UInput
-            icon="i-heroicons-user-solid"
+            id="full-name"
             v-model="fullname"
+            icon="i-heroicons-user-solid"
             type="text"
             required
             name="fullname"
-            id="full-name"
             autocomplete="name"
             variant="none"
             :placeholder="$t('contact.fullname')"
@@ -104,15 +110,18 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
 
         <!-- Email -->
         <div>
-          <label for="email" class="sr-only">
+          <label
+            for="email"
+            class="sr-only"
+          >
             {{ $t("contact.email") }}
           </label>
           <UInput
+            id="email"
+            v-model="email"
             icon="i-heroicons-inbox-solid"
             variant="none"
             required
-            v-model="email"
-            id="email"
             name="email"
             type="email"
             autocomplete="email"
@@ -122,16 +131,19 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
 
         <!-- Phone -->
         <div>
-          <label for="phone" class="sr-only">
+          <label
+            for="phone"
+            class="sr-only"
+          >
             {{ $t("contact.phone") }}
           </label>
           <UInput
+            id="phone"
+            v-model="phone"
             icon="i-heroicons-phone-solid"
             variant="none"
-            v-model="phone"
             type="text"
             name="phone"
-            id="phone"
             autocomplete="tel"
             :placeholder="$t('contact.phone')"
           />
@@ -139,17 +151,29 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
 
         <!-- Subject -->
         <div>
-          <label for="subject" class="sr-only">
+          <label
+            for="subject"
+            class="sr-only"
+          >
             {{ $t("contact.subject") }}
           </label>
-          <USelectMenu v-model="selected" :options="demandTypes">
+          <USelectMenu
+            v-model="selected"
+            :options="demandTypes"
+          >
             <template #label>
-              <div class="rounded-full h-2 w-2" :class="selected.color"></div>
+              <div
+                class="rounded-full h-2 w-2"
+                :class="selected.color"
+              />
               <span class="text-gray-400">{{ $t(selected.label) }}</span>
             </template>
             <template #option="{ option }">
               <div class="flex items-center gap-3">
-                <div class="rounded-full h-2 w-2" :class="option.color"></div>
+                <div
+                  class="rounded-full h-2 w-2"
+                  :class="option.color"
+                />
                 <span>{{ $t(option.label) }}</span>
               </div>
             </template>
@@ -157,38 +181,78 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
         </div>
 
         <!-- Budget -->
-        <div class="flex flex-col gap-2 my-2" v-if="selected.label === 'contact.subject_types.project'">
-          <URange size="xs" :min="400" :max="8000" :step="50" v-model="budget" />
+        <div
+          v-if="selected.label === 'contact.subject_types.project'"
+          class="flex flex-col gap-2 my-2"
+        >
+          <URange
+            v-model="budget"
+            size="xs"
+            :min="400"
+            :max="8000"
+            :step="50"
+          />
           <span class="text-gray-400 text-sm"> {{ $t("contact.budget") }}: {{ budget }}€ </span>
         </div>
 
         <!-- Message -->
         <div>
-          <label for="message" class="sr-only">
+          <label
+            for="message"
+            class="sr-only"
+          >
             {{ $t("contact.message") }}
           </label>
-          <UTextarea autoresize variant="none" required v-model="message" id="message" name="message" :rows="4" :placeholder="$t('contact.message')" />
+          <UTextarea
+            id="message"
+            v-model="message"
+            autoresize
+            variant="none"
+            required
+            name="message"
+            :rows="4"
+            :placeholder="$t('contact.message')"
+          />
         </div>
         <div class="flex justify-center">
-          <UButton :loading="loading" type="submit" color="gray" block>
+          <UButton
+            :loading="loading"
+            type="submit"
+            color="gray"
+            block
+          >
             {{ $t("contact.submit") }}
           </UButton>
         </div>
-        <p class="text-center font-light text-sm text-muted">{{ $t("contact.average_response_time") }}</p>
+        <p class="text-center font-light text-sm text-muted">
+          {{ $t("contact.average_response_time") }}
+        </p>
       </form>
       <Divider class="my-10" />
       <div class="w-full flex flex-col sm:flex-row gap-4 items-center justify-between">
         <div class="flex flex-col gap-3">
           <dd class="flex items-center gap-3 text-gray-400">
-            <PhoneIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
+            <PhoneIcon
+              class="h-6 w-6 flex-shrink-0"
+              aria-hidden="true"
+            />
             <span>
               {{ appConfig.phone }}
             </span>
           </dd>
           <dd class="flex items-center gap-3 text-gray-400">
-            <EnvelopeIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
-            <UTooltip :text="$t('home.hero.email')" :shortcuts="['⌘', 'O']">
-              <NuxtLink :to="`mailto:${appConfig.email}`" class="cursor-pointer hover:text-main transition-colors duration-300">
+            <EnvelopeIcon
+              class="h-6 w-6 flex-shrink-0"
+              aria-hidden="true"
+            />
+            <UTooltip
+              :text="$t('home.hero.email')"
+              :shortcuts="['⌘', 'O']"
+            >
+              <NuxtLink
+                :to="`mailto:${appConfig.email}`"
+                class="cursor-pointer hover:text-main transition-colors duration-300"
+              >
                 {{ appConfig.email }}
               </NuxtLink>
             </UTooltip>

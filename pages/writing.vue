@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Article } from "~/types/Article";
 // import { quotes } from "~/data/quotes";
+const appConfig = useAppConfig();
 const { t } = useI18n();
 
 useHead({
@@ -67,21 +68,35 @@ onMounted(async () => {
 
 const showSearch = ref(false);
 
-defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>
   <LayoutInfoWrapper page="writing">
     <div :class="showSearch ? '' : 'mb-3'">
-      <span class="font-testimonial text-white-shadow cursor-pointer text-lg select-none" @click="showSearch = !showSearch">
+      <span
+        class="font-testimonial text-white-shadow cursor-pointer text-lg select-none"
+        @click="showSearch = !showSearch"
+      >
         {{ showSearch ? $t("writing.hide_search") : $t("writing.show_search") }}
       </span>
     </div>
-    <div class="flex flex-col gap-2 mb-4" v-if="showSearch">
+    <div
+      v-if="showSearch"
+      class="flex flex-col gap-2 mb-4"
+    >
       <div class="my-4">
-        <UInput v-model="searchedTitle" variant="none" class="w-full sm:w-96" :placeholder="$t('writing.search_article')" />
+        <UInput
+          v-model="searchedTitle"
+          variant="none"
+          class="w-full sm:w-96"
+          :placeholder="$t('writing.search_article')"
+        />
       </div>
-      <div class="flex flex-wrap gap-2 mb-4" v-if="tags.length > 0">
+      <div
+        v-if="tags.length > 0"
+        class="flex flex-wrap gap-2 mb-4"
+      >
         <div
           v-for="tag of tags"
           :key="tag"
@@ -89,17 +104,35 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
           :class="{ 'bg-zinc-700': searchedTags.includes(tag) }"
           @click="toggleTag(tag)"
         >
-          <div class="font-light">{{ tag }}</div>
+          <div class="font-light">
+            {{ tag }}
+          </div>
         </div>
       </div>
     </div>
     <nav v-if="!loading">
-      <TransitionGroup name="list" tag="ul" class="grid grid-cols-1 gap-4 sm:grid-cols-2" v-if="filteredArticles.length">
-        <li v-for="article of filteredArticles" :key="article._path">
-          <ArticleCard :title="article.title!" :date="article.date" :image="article.image" :path="article._path!" />
+      <TransitionGroup
+        v-if="filteredArticles.length"
+        name="list"
+        tag="ul"
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2"
+      >
+        <li
+          v-for="article of filteredArticles"
+          :key="article._path"
+        >
+          <ArticleCard
+            :title="article.title!"
+            :date="article.date"
+            :image="article.image"
+            :path="article._path!"
+          />
         </li>
       </TransitionGroup>
-      <div v-else class="h-64 flex flex-col items-center justify-center gap-2">
+      <div
+        v-else
+        class="h-64 flex flex-col items-center justify-center gap-2"
+      >
         <span class="text-2xl">
           {{ $t("writing.not_found") }}
         </span>
@@ -108,8 +141,15 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
         </span>
       </div>
     </nav>
-    <div v-else class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      <div v-for="n of 4" :key="n" class="flex flex-col gap-1 p-4 rounded-lg shadow-lg">
+    <div
+      v-else
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2"
+    >
+      <div
+        v-for="n of 4"
+        :key="n"
+        class="flex flex-col gap-1 p-4 rounded-lg shadow-lg"
+      >
         <USkeleton class="w-full h-64" />
         <USkeleton class="w-full h-4" />
         <USkeleton class="w-1/2 h-4" />

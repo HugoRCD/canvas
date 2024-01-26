@@ -28,10 +28,19 @@ watch(locale, (newLocale) => {
 </script>
 
 <template>
-  <Menu as="div" class="relative inline-block text-left">
-    <MenuButton as="button" class="inline-flex gap-2 justify-center w-full px-4 py-2 text-sm font-medium text-inverted border border-transparent rounded-md">
+  <Menu
+    as="div"
+    class="relative inline-block text-left"
+  >
+    <MenuButton
+      as="button"
+      class="inline-flex gap-2 justify-center w-full px-4 py-2 text-sm font-medium text-inverted border border-transparent rounded-md"
+    >
       <span class="text-xs font-semibold">{{ locales.find((l) => l.iso === $i18n.locale).flag }}</span>
-      <span class="text-xs font-semibold" v-if="isText">{{ locales.find((l) => l.iso === $i18n.locale).name }}</span>
+      <span
+        v-if="isText"
+        class="text-xs font-semibold"
+      >{{ locales.find((l) => l.iso === $i18n.locale).name }}</span>
     </MenuButton>
     <transition
       enter-active-class="transition ease-out duration-100"
@@ -46,15 +55,18 @@ watch(locale, (newLocale) => {
         class="absolute mt-2 origin-center bg-main border-[1px] border-white/20 divide-y-[1px] divide-white/20 rounded-md shadow-lg outline-none"
       >
         <MenuItem
-          v-for="locale in $i18n.availableLocales"
-          :key="locale"
+          v-for="item in $i18n.availableLocales"
+          :key="item"
           as="button"
-          @click="() => ($i18n.locale = $i18n.locale === 'en' ? 'fr' : 'en')"
           class="flex justify-between w-full px-4 py-2 text-sm"
+          @click="() => ($i18n.locale = $i18n.locale === 'en' ? 'fr' : 'en')"
         >
           <div class="flex items-center gap-2 text-inverted">
             <span class="text-xs font-semibold">{{ locales.find((l) => l.iso === locale).flag }}</span>
-            <span class="text-xs font-semibold" v-if="isText">{{ locales.find((l) => l.iso === locale).name }}</span>
+            <span
+              v-if="isText"
+              class="text-xs font-semibold"
+            >{{ locales.find((l) => l.iso === locale).name }}</span>
           </div>
         </MenuItem>
       </MenuItems>

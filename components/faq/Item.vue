@@ -22,7 +22,13 @@ provide("isActive", isActive);
 </script>
 
 <template>
-  <component :is="as" ref="container">
-    <slot :toggle="toggle" :is-active="isActive" />
+  <component
+    :is="as"
+    ref="container"
+  >
+    <slot
+      :toggle="toggle"
+      :is-active="isActive"
+    />
   </component>
 </template>

@@ -20,7 +20,11 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :to="path" :aria-label="title" class="flex flex-col gap-2 cursor-pointer">
+  <NuxtLink
+    :to="path"
+    :aria-label="title"
+    class="flex flex-col gap-2 cursor-pointer"
+  >
     <div class="overflow-hidden rounded-md border border-white/10 shadow-md shadow-zinc-950/50 hover:border-white/20 transition-colors duration-200">
       <NuxtImg
         width="1536"
@@ -31,7 +35,9 @@ defineProps({
       />
     </div>
     <div class="flex flex-col">
-      <h3 class="text-lg font-semibold">{{ title }}</h3>
+      <h3 class="text-lg font-semibold">
+        {{ title }}
+      </h3>
       <span class="text-xs text-muted">{{ date }}</span>
     </div>
   </NuxtLink>

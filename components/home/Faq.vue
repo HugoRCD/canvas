@@ -58,15 +58,28 @@ const ui = {
       </p>
     </div>
     <div>
-      <UTabs :items="items" orientation="horizontal" :ui="ui">
+      <UTabs
+        :items="items"
+        orientation="horizontal"
+        :ui="ui"
+      >
         <template #services>
-          <FAQ :questions="services.faq" class="max-w-lg mt-8" />
+          <FAQ
+            :questions="services.faq"
+            class="max-w-lg mt-8"
+          />
         </template>
         <template #pricing>
-          <FAQ :questions="pricing.faq" class="max-w-lg mt-8" />
+          <FAQ
+            :questions="pricing.faq"
+            class="max-w-lg mt-8"
+          />
         </template>
         <template #personnal>
-          <FAQ :questions="personal.faq" class="max-w-lg mt-8" />
+          <FAQ
+            :questions="personal.faq"
+            class="max-w-lg mt-8"
+          />
         </template>
       </UTabs>
     </div>

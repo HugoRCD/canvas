@@ -13,7 +13,10 @@ const isLanguageDifferent = computed(() => {
 </script>
 
 <template>
-  <div class="fixed z-999 bottom-0 left-0 w-full p-4 text-white text-center" :class="{ 'bg-red-500': isLanguageDifferent }">
+  <div
+    class="fixed z-999 bottom-0 left-0 w-full p-4 text-white text-center"
+    :class="{ 'bg-red-500': isLanguageDifferent }"
+  >
     {{ $t("layout.languageAlert") }} --- {{ locale }} --- {{ languages }}
   </div>
 </template>

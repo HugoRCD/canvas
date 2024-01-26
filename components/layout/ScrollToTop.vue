@@ -22,9 +22,9 @@ function scrollToTop() {
     <SpotlightButton
       aria-label="scroll to top button"
       class="flex items-center justify-center w-10 h-10 p-1 text-muted hover:text-main transition-all duration-200"
-      @click="scrollToTop"
       rounded
       :class="{ 'opacity-100': isScrolling, 'opacity-0': !isScrolling }"
+      @click="scrollToTop"
     >
       <ArrowUpIcon class="z-20 w-6 h-6" />
     </SpotlightButton>

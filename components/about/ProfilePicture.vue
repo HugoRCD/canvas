@@ -27,7 +27,12 @@ const { profilePicture } = useAppConfig();
         />
       </div>
     </SpotlightCard>
-    <SpotlightCard mode="after" from="rgba(255,255,255,0.1)" :size="400" class="sm:hidden group w-64 rounded-2xl border border-white/10 bg-white/5 p-2 pb-4">
+    <SpotlightCard
+      mode="after"
+      from="rgba(255,255,255,0.1)"
+      :size="400"
+      class="sm:hidden group w-64 rounded-2xl border border-white/10 bg-white/5 p-2 pb-4"
+    >
       <NuxtImg
         width="256"
         :src="profilePicture"

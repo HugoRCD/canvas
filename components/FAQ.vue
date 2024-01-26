@@ -20,7 +20,10 @@ defineProps({
       v-slot="{ isActive, toggle }"
       class="group rounded-xl will-change-transform transform-gpu border border-white/10 bg-white/5 transition duration-500 hover:bg-white/[0.075]"
     >
-      <div class="flex cursor-pointer items-center p-4" @click="toggle">
+      <div
+        class="flex cursor-pointer items-center p-4"
+        @click="toggle"
+      >
         <div class="text-white/75 transition group-hover:text-white">
           {{ item.title[locale as "en" | "fr"] }}
         </div>

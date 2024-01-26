@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { techStack, productivityStack, designStack } from "~/data/stack";
+const appConfig = useAppConfig();
 const { t } = useI18n();
 
 useHead({
   title: t("navigation.about"),
 });
 
-defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "Home image" });
 </script>
 
 <template>
@@ -27,11 +28,20 @@ defineOgImage({ url: "https://hrcd.fr/social-preview.jpg", width: 1200, height: 
           {{ $t("about.stack_description") }}
         </p>
       </div>
-      <AboutStackSection stack="development" :items="techStack" />
+      <AboutStackSection
+        stack="development"
+        :items="techStack"
+      />
       <Divider class="my-4" />
-      <AboutStackSection stack="productivity" :items="productivityStack" />
+      <AboutStackSection
+        stack="productivity"
+        :items="productivityStack"
+      />
       <Divider class="my-4" />
-      <AboutStackSection stack="design" :items="designStack" />
+      <AboutStackSection
+        stack="design"
+        :items="designStack"
+      />
     </div>
   </LayoutInfoWrapper>
 </template>

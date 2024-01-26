@@ -42,7 +42,7 @@ const img = useImage();
               v-if="project.name !== 'Sekoïa'"
               :alt="project.name + ' logo'"
               :aria-label="project.name + ' logo'"
-              :fontControlled="false"
+              :font-controlled="false"
               class="w-5 h-5 text-white/90"
             />
             <div class="flex items-center gap-2">
@@ -57,7 +57,10 @@ const img = useImage();
           <div
             class="rounded-full border border-transparent group-hover:border-white/10 shadow-md backdrop-blur-md p-1 flex items-center justify-center group-hover:-rotate-45 transition-all duration-500"
           >
-            <UIcon name="i-heroicons-arrow-right" class="w-3 h-3 text-white" />
+            <UIcon
+              name="i-heroicons-arrow-right"
+              class="w-3 h-3 text-white"
+            />
           </div>
         </div>
       </div>

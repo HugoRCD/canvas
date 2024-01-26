@@ -26,7 +26,11 @@ const height = computed(() => (isActive.value ? targetHeight.value : 0));
 </script>
 
 <template>
-  <component :is="as" ref="container" :style="{ height: `${height}px` }">
+  <component
+    :is="as"
+    ref="container"
+    :style="{ height: `${height}px` }"
+  >
     <slot />
   </component>
 </template>

@@ -6,7 +6,7 @@
       <span>
         {{ $t("home.hero.part1") }}
       </span>
-      <br />
+      <br>
       <span class="bg-gradient-to-br from-white/90 to-white/30 bg-clip-text text-transparent">
         {{ $t("home.hero.part2") }}
       </span>
