@@ -121,7 +121,7 @@ The `!fcomp` snippet is designed for fetching data using Vue's Composition API. 
 
 ```vue
 <script setup lang="ts">
-const { data, error, refresh, loading } = useFetch("your_url", { 
+const { data, pending, error, refresh } = useFetch("your_url", { 
   immediate: false 
 });
 
@@ -133,7 +133,7 @@ function loadData() {
 <template>
   <div>
     <button @click="loadData">Load Data</button>
-    <div v-if="loading">Loading...</div>
+    <div v-if="pending">Loading...</div>
     <div v-if="error">{{ error }}</div>
     <div v-if="data">{{ data }}</div>
   </div>
