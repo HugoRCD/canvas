@@ -3,18 +3,22 @@ const appConfig = useAppConfig();
 const { t, locale } = useI18n();
 
 const runtimeConfig = useRuntimeConfig();
-const siteTitle = computed(() => `Home`);
+
+useHead({
+  title: "",
+  titleTemplate: appConfig.appName,
+});
 
 useSeoMeta({
-  title: () => siteTitle.value,
+  title: () => appConfig.appName,
   description: () => t("seo.description"),
   author: "Hugo Richard",
   ogType: "website",
-  ogTitle: siteTitle.value,
+  ogTitle: appConfig.appName,
   ogDescription: () => t("seo.description"),
   ogUrl: () => runtimeConfig.public.siteUrl,
   ogLocale: () => locale.value,
-  twitterTitle: siteTitle.value,
+  twitterTitle: appConfig.appName,
   twitterDescription: () => t("seo.description"),
   twitterCard: "summary_large_image",
   twitterSite: appConfig.twitterUsername,

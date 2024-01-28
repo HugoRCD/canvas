@@ -5,7 +5,7 @@ const toast = useToast();
 const { t } = useI18n();
 
 useHead({
-  titleTemplate: `%s | ${appName}`,
+  titleTemplate: `%s - ${appName}`,
   link: [
     {
       rel: "icon",
