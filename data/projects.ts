@@ -30,7 +30,7 @@ const projects: Project[] = [
         en: "Next gen UI library",
       },
     },
-    link: "https://mockline.hrcd.me/",
+    link: "https://mockline.dev/",
     release: "soon",
     featured: true,
     tags: ["Vue", "Nuxt"],
