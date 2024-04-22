@@ -1,24 +1,24 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   as: {
     type: String,
-    default: "div",
+    default: 'div',
   },
-});
+})
 
-const container = ref();
+const container = ref()
 
-const context = inject("details-context");
+const context = inject('details-context')
 
 const index = computed(() => {
-  return context.peers?.value ? context.peers.value.indexOf(container.value) : -1;
-});
+  return context.peers?.value ? context.peers.value.indexOf(container.value) : -1
+})
 
-const isActive = computed(() => index.value === context.activeItem.value);
+const isActive = computed(() => index.value === context.activeItem.value)
 
-const toggle = () => context.setActive(index.value);
+const toggle = () => context.setActive(index.value)
 
-provide("isActive", isActive);
+provide('isActive', isActive)
 </script>
 
 <template>
@@ -27,8 +27,8 @@ provide("isActive", isActive);
     ref="container"
   >
     <slot
-      :toggle="toggle"
-      :is-active="isActive"
+      :toggle
+      :is-active
     />
   </component>
 </template>

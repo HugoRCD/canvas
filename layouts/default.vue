@@ -2,8 +2,8 @@
 
 <template>
   <div>
-    <SettingsLanguageToggle class="fixed z-50 bottom-20 right-3 sm:bottom-4" />
-    <LayoutNavbar class="fixed z-50 bottom-0 sm:top-0 sm:bottom-auto flex" />
+    <SettingsLanguageToggle class="fixed bottom-20 right-3 z-50 sm:bottom-4" />
+    <LayoutNavbar class="fixed bottom-0 z-50 flex sm:bottom-auto sm:top-0" />
     <div class="sm:mt-[50px]">
       <slot />
     </div>

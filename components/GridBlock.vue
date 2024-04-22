@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   row: {
     type: Number,
@@ -8,9 +8,9 @@ defineProps({
     type: Number,
     required: true,
   },
-});
+})
 
-const grid = inject("grid-context");
+const grid = inject('grid-context')
 </script>
 
 <template>

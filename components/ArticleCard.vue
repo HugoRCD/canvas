@@ -16,20 +16,20 @@ defineProps({
     type: String,
     required: true,
   },
-});
+})
 </script>
 
 <template>
   <NuxtLink
     :to="path"
     :aria-label="title"
-    class="flex flex-col gap-2 cursor-pointer"
+    class="flex cursor-pointer flex-col gap-2"
   >
-    <div class="overflow-hidden rounded-md border border-white/10 shadow-md shadow-zinc-950/50 hover:border-white/20 transition-colors duration-200">
+    <div class="overflow-hidden rounded-md border border-white/10 shadow-md shadow-zinc-950/50 transition-colors duration-200 hover:border-white/20">
       <NuxtImg
         width="1536"
         :alt="`${title} article image`"
-        class="object-cover w-full h-64 hover:scale-105 transition-transform duration-200"
+        class="h-64 w-full object-cover transition-transform duration-200 hover:scale-105"
         :src="image"
         :aria-label="`${title} article image`"
       />

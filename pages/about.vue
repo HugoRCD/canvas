@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { techStack, productivityStack, designStack } from "~/data/stack";
-const appConfig = useAppConfig();
-const { t } = useI18n();
+import { techStack, productivityStack, designStack } from '~/data/stack'
+const appConfig = useAppConfig()
+const { t } = useI18n()
 
 useHead({
-  title: t("navigation.about"),
-});
+  title: t('navigation.about'),
+})
 
-defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'Home image' })
 </script>
 
 <template>
@@ -20,8 +20,8 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "H
     <AboutExperience />
     <Divider class="my-6" />
     <div class="flex flex-col gap-3">
-      <div class="flex flex-col gap-1 mb-6">
-        <h3 class="text-3xl text-white-shadow font-testimonial font-bold">
+      <div class="mb-6 flex flex-col gap-1">
+        <h3 class="text-white-shadow font-testimonial text-3xl font-bold">
           {{ $t("about.stack") }}
         </h3>
         <p class="text-sm text-muted">

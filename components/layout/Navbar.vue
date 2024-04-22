@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import type { Navigation } from "~/composables/useNavigation";
+import type { Navigation } from '~/composables/useNavigation'
 
 defineProps({
   isText: {
     type: Boolean,
     default: false,
   },
-});
+})
 
-const navigation = getNavigation("home") as Record<string, Navigation>;
+const navigation = getNavigation('home') as Record<string, Navigation>
 </script>
 
 <template>
-  <div class="flex items-center justify-center mx-auto w-full my-2">
+  <div class="mx-auto my-2 flex w-full items-center justify-center">
     <header class="rounded-full">
       <SpotlightButton
         rounded
@@ -20,7 +20,7 @@ const navigation = getNavigation("home") as Record<string, Navigation>;
         :animate="false"
         class="border border-white/10"
       >
-        <nav class="z-10 h-[50px] sm:h-[45px] flex justify-around gap-2 sm:hover:gap-4 p-1 transition-all duration-300 ease-in-out">
+        <nav class="z-10 flex h-[50px] justify-around gap-2 p-1 transition-all duration-300 ease-in-out sm:h-[45px] sm:hover:gap-4">
           <NuxtLink
             v-for="item in navigation"
             :id="item.name.toLowerCase()"
@@ -28,15 +28,15 @@ const navigation = getNavigation("home") as Record<string, Navigation>;
             :aria-label="item.name + ' navigation link'"
             :class="[
               item.to === $route.path
-                ? 'text-white/75 shadow-white/50 shadow-2xl text-shadow-sm border border-white/5 backdrop-blur-3xl bg-zinc-900/10'
+                ? 'border border-white/5 bg-zinc-900/10 text-white/75 shadow-2xl shadow-white/50 backdrop-blur-3xl text-shadow-sm'
                 : 'text-muted',
             ]"
             :to="item.to"
-            class="flex items-center rounded-full px-4 sm:px-6 py-1 border border-transparent hover:bg-zinc-900/50 hover:backdrop-blur-3xl hover:border-white/5 hover:text-main duration-300 ease-in-out transition-all"
+            class="flex items-center rounded-full border border-transparent px-4 py-1 transition-all duration-300 ease-in-out hover:border-white/5 hover:bg-zinc-900/50 hover:text-main hover:backdrop-blur-3xl sm:px-6"
           >
             <component
               :is="item.icon"
-              class="w-7 h-7 sm:w-6 sm:h-6 font-medium"
+              class="size-7 font-medium sm:size-6"
             />
           </NuxtLink>
         </nav>

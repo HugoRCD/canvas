@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   size: {
     type: Number,
@@ -16,7 +16,7 @@ defineProps({
     type: Number,
     default: 0,
   },
-});
+})
 </script>
 
 <template>

@@ -1,81 +1,81 @@
 <script setup lang="ts">
-import type { Article } from "~/types/Article";
+import type { Article } from '~/types/Article'
 // import { quotes } from "~/data/quotes";
-const appConfig = useAppConfig();
-const { t } = useI18n();
+const appConfig = useAppConfig()
+const { t } = useI18n()
 
 useHead({
-  title: t("navigation.writing"),
-});
+  title: t('navigation.writing'),
+})
 
-const { locale } = useI18n();
+const { locale } = useI18n()
 
-const loading = ref(false);
-const articles = ref<Article[]>([]);
-const tags = ref<string[]>([]);
-const searchedTags = ref<string[]>([]);
-const searchedTitle = ref("");
+const loading = ref(false)
+const articles = ref<Article[]>([])
+const tags = ref<string[]>([])
+const searchedTags = ref<string[]>([])
+const searchedTitle = ref('')
 
 const filteredArticles = computed(() => {
   return articles.value
     .filter((article) => {
       if (searchedTags.value.length === 0) {
-        return true;
+        return true
       }
-      return searchedTags.value.some((tag) => article.tags.includes(tag));
+      return searchedTags.value.some((tag) => article.tags.includes(tag))
     })
     .filter((article) => {
-      if (searchedTitle.value === "") {
-        return true;
+      if (searchedTitle.value === '') {
+        return true
       }
-      return article.title!.toLowerCase().includes(searchedTitle.value.toLowerCase());
-    });
-});
+      return article.title!.toLowerCase().includes(searchedTitle.value.toLowerCase())
+    })
+})
 
 async function fetchArticles() {
-  loading.value = true;
-  const findArticles = await queryContent("articles")
+  loading.value = true
+  const findArticles = await queryContent('articles')
     .locale(locale.value)
     .sort({
       date: -1,
     })
-    .find();
+    .find()
   articles.value = findArticles.map((article) => {
-    return article as Article;
-  });
-  const findTags = articles.value.map((article) => article.tags).flat();
-  tags.value = [...new Set(findTags)];
-  loading.value = false;
+    return article as Article
+  })
+  const findTags = articles.value.map((article) => article.tags).flat()
+  tags.value = [...new Set(findTags)]
+  loading.value = false
 }
 
 function toggleTag(tag: string) {
   if (searchedTags.value.includes(tag)) {
-    searchedTags.value = searchedTags.value.filter((t) => t !== tag);
+    searchedTags.value = searchedTags.value.filter((t) => t !== tag)
   } else {
-    searchedTags.value.push(tag);
+    searchedTags.value.push(tag)
   }
 }
 
 watch(locale, async (oldLocale, newLocale) => {
   if (oldLocale !== newLocale) {
-    await fetchArticles();
+    await fetchArticles()
   }
-});
+})
 
 onMounted(async () => {
-  await fetchArticles();
-});
+  await fetchArticles()
+})
 
-const showSearch = ref(false);
+const showSearch = ref(false)
 
-defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'Home image' })
 </script>
 
 <template>
   <LayoutInfoWrapper page="writing">
     <div :class="showSearch ? '' : 'mb-3'">
       <span
-        class="font-testimonial text-white-shadow cursor-pointer text-lg select-none"
+        class="font-testimonial text-white-shadow cursor-pointer select-none text-lg"
         @click="showSearch = !showSearch"
       >
         {{ showSearch ? $t("writing.hide_search") : $t("writing.show_search") }}
@@ -83,7 +83,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "H
     </div>
     <div
       v-if="showSearch"
-      class="flex flex-col gap-2 mb-4"
+      class="mb-4 flex flex-col gap-2"
     >
       <div class="my-4">
         <UInput
@@ -95,12 +95,12 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "H
       </div>
       <div
         v-if="tags.length > 0"
-        class="flex flex-wrap gap-2 mb-4"
+        class="mb-4 flex flex-wrap gap-2"
       >
         <div
           v-for="tag of tags"
           :key="tag"
-          class="flex items-center rounded-md text-shadow-sm hover:text-shadow-md select-none text-xs sm:text-sm px-2 py-1 bg-secondary text-main cursor-pointer hover:bg-zinc-700 transition-colors duration-100"
+          class="hover:text-shadow-md flex cursor-pointer select-none items-center rounded-md bg-secondary px-2 py-1 text-xs text-main transition-colors duration-100 text-shadow-sm hover:bg-zinc-700 sm:text-sm"
           :class="{ 'bg-zinc-700': searchedTags.includes(tag) }"
           @click="toggleTag(tag)"
         >
@@ -131,7 +131,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "H
       </TransitionGroup>
       <div
         v-else
-        class="h-64 flex flex-col items-center justify-center gap-2"
+        class="flex h-64 flex-col items-center justify-center gap-2"
       >
         <span class="text-2xl">
           {{ $t("writing.not_found") }}
@@ -148,11 +148,11 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "H
       <div
         v-for="n of 4"
         :key="n"
-        class="flex flex-col gap-1 p-4 rounded-lg shadow-lg"
+        class="flex flex-col gap-1 rounded-lg p-4 shadow-lg"
       >
-        <USkeleton class="w-full h-64" />
-        <USkeleton class="w-full h-4" />
-        <USkeleton class="w-1/2 h-4" />
+        <USkeleton class="h-64 w-full" />
+        <USkeleton class="h-4 w-full" />
+        <USkeleton class="h-4 w-1/2" />
       </div>
     </div>
 
