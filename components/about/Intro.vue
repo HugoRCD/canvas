@@ -2,7 +2,7 @@
 
 <template>
   <div class="relative flex flex-col gap-3 sm:ml-4">
-    <h3 class="text-muted text-lg">
+    <h3 class="text-lg text-muted">
       Intro
     </h3>
     <div class="flex flex-col gap-4 text-main">
@@ -19,8 +19,8 @@
         {{ $t("about.intro.part4") }}
       </p>
     </div>
-    <AboutSignature class="absolute w-40 hidden sm:block -bottom-1/3 right-0" />
-    <AboutSignature class="absolute black sm:hidden -right-2 w-32 -bottom-[6rem]" />
+    <AboutSignature class="absolute -bottom-1/3 right-0 hidden w-40 sm:block" />
+    <AboutSignature class="black absolute -bottom-[6rem] -right-2 w-32 sm:hidden" />
   </div>
 </template>
 

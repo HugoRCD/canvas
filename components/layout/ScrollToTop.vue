@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { ArrowUpIcon } from "@heroicons/vue/24/outline";
+import { ArrowUpIcon } from '@heroicons/vue/24/outline'
 
-const isScrolling = ref(false);
+const isScrolling = ref(false)
 
 onMounted(() => {
-  window.addEventListener("scroll", () => {
-    isScrolling.value = window.scrollY > 0;
-  });
-});
+  window.addEventListener('scroll', () => {
+    isScrolling.value = window.scrollY > 0
+  })
+})
 
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
-  });
+    behavior: 'smooth',
+  })
 }
 </script>
 
 <template>
-  <div class="fixed z-50 bottom-36 sm:bottom-20 right-3">
+  <div class="fixed bottom-36 right-3 z-50 sm:bottom-20">
     <SpotlightButton
       aria-label="scroll to top button"
-      class="flex items-center justify-center w-10 h-10 p-1 text-muted hover:text-main transition-all duration-200"
+      class="flex size-10 items-center justify-center p-1 text-muted transition-all duration-200 hover:text-main"
       rounded
       :class="{ 'opacity-100': isScrolling, 'opacity-0': !isScrolling }"
       @click="scrollToTop"
     >
-      <ArrowUpIcon class="z-20 w-6 h-6" />
+      <ArrowUpIcon class="z-20 size-6" />
     </SpotlightButton>
   </div>
 </template>

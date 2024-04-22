@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   size: {
     type: Number,
@@ -12,11 +12,11 @@ const props = defineProps({
     type: Number,
     default: -1,
   },
-});
+})
 
-const id = Math.round(Math.random() * 999);
+const id = Math.round(Math.random() * 999)
 
-provide("grid-context", props);
+provide('grid-context', props)
 </script>
 
 <template>

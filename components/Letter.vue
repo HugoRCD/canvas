@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import appConfig from "~/app.config";
-const colorMode = useColorMode();
+import appConfig from '~/app.config'
+const colorMode = useColorMode()
 
-const theme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"));
+const theme = computed(() => (colorMode.preference === 'dark' ? 'light' : 'dark'))
 </script>
 
 <template>
-  <div class="letter flex flex-col items-center justify-center max-w-xl mx-auto gap-10">
+  <div class="letter mx-auto flex max-w-xl flex-col items-center justify-center gap-10">
     <div>
-      <p class="text-muted text-left">
+      <p class="text-left text-muted">
         {{ $t("home.letter.part1") }}
         <br>
         <br>
@@ -18,7 +18,7 @@ const theme = computed(() => (colorMode.preference === "dark" ? "light" : "dark"
         <NuxtLink
           :to="appConfig.socials.instagram"
           target="_blank"
-          class="text-main text-left"
+          class="text-left text-main"
         >
           @HugoRCD
         </NuxtLink>

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-full text-center italic bg-main quotes select-all">
+  <div class="quotes w-full select-all bg-main text-center italic">
     <slot />
   </div>
 </template>

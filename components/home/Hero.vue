@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <h1 class="text-center font-display text-3xl font-light leading-tight lg:text-5xl">
+    <h1 class="font-display text-center text-3xl font-light leading-tight lg:text-5xl">
       <span>
         {{ $t("home.hero.part1") }}
       </span>
@@ -13,11 +13,11 @@
     </h1>
 
     <!-- subtitle -->
-    <h2 class="mt-4 max-w-xl mx-auto text-center text-lg font-extralight text-white/60">
+    <h2 class="mx-auto mt-4 max-w-xl text-center text-lg font-extralight text-white/60">
       {{ $t("home.hero.subtitle") }}
     </h2>
 
-    <div class="flex items-center justify-center mt-3">
+    <div class="mt-3 flex items-center justify-center">
       <SettingsAvailability background />
     </div>
   </div>

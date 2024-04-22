@@ -1,22 +1,22 @@
 <script setup lang="ts">
-const { locale: current, setLocaleCookie } = useI18n();
+const { locale: current, setLocaleCookie } = useI18n()
 
 const locales = [
-  { code: "en", name: "English" },
-  { code: "fr", name: "Français" },
-];
+  { code: 'en', name: 'English' },
+  { code: 'fr', name: 'Français' },
+]
 
 const currentLocale = computed(() => {
-  return locales.find((locale) => locale.code === current.value);
-});
+  return locales.find((locale) => locale.code === current.value)
+})
 
 watch(current, (newLocale) => {
-  setLocaleCookie(newLocale);
-});
+  setLocaleCookie(newLocale)
+})
 </script>
 
 <template>
-  <div class="z-99 bg-zinc-900/90 backdrop-blur-xl flex items-center rounded-lg px-3 py-1 gap-3 border border-white/10">
+  <div class="z-99 flex items-center gap-3 rounded-lg border border-white/10 bg-zinc-900/90 px-3 py-1 backdrop-blur-xl">
     <ClientOnly>
       <div
         v-for="locale in locales"
@@ -32,7 +32,7 @@ watch(current, (newLocale) => {
         </span>
       </div>
       <template #fallback>
-        <div class="w-5 h-2" />
+        <div class="h-2 w-5" />
       </template>
     </ClientOnly>
   </div>

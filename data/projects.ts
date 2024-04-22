@@ -12,7 +12,7 @@ export type Project = {
       fr: string;
     };
   };
-  link: string | "soon";
+  link: string | 'soon';
   tags: string[];
   release: string;
   featured: boolean;
@@ -21,69 +21,69 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    name: "Mockline",
-    logo: "SvgoMockline",
-    image: "/projects/mockline.webp",
+    name: 'Mockline',
+    logo: 'SvgoMockline',
+    image: '/projects/mockline.webp',
     description: {
       short: {
-        fr: "Librairie UI nouvelle génération",
-        en: "Next gen UI library",
+        fr: 'Librairie UI nouvelle génération',
+        en: 'Next gen UI library',
       },
     },
-    link: "https://mockline.dev/",
-    release: "soon",
+    link: 'https://mockline.dev/',
+    release: 'soon',
     featured: true,
-    tags: ["Vue", "Nuxt"],
-    color: "#FFFFFF",
+    tags: ['Vue', 'Nuxt'],
+    color: '#FFFFFF',
   },
   {
-    name: "Sekoïa",
-    logo: "SvgoSekoia",
-    image: "/projects/sekoia.webp",
+    name: 'Sekoïa',
+    logo: 'SvgoSekoia',
+    image: '/projects/sekoia.webp',
     description: {
       short: {
-        fr: "Marque d'ameublement et de décoration haut de gamme",
-        en: "High-end furniture and decoration brand",
+        fr: 'Marque d\'ameublement et de décoration haut de gamme',
+        en: 'High-end furniture and decoration brand',
       },
     },
-    link: "https://sekoia.studio/",
-    release: "soon",
+    link: 'https://sekoia.studio/',
+    release: 'soon',
     featured: true,
     tags: [],
-    color: "#3f3f3f",
+    color: '#3f3f3f',
   },
   {
-    name: "Helpr",
-    logo: "SvgoHelpr",
-    image: "/projects/helpr.webp",
+    name: 'Helpr',
+    logo: 'SvgoHelpr',
+    image: '/projects/helpr.webp',
     description: {
       short: {
-        fr: "Outils d'automatisation connectant diverses applications afin de créer de puissants workflows",
-        en: "Automation tools connecting various applications to create powerful workflows",
+        fr: 'Outils d\'automatisation connectant diverses applications afin de créer de puissants workflows',
+        en: 'Automation tools connecting various applications to create powerful workflows',
       },
     },
-    link: "https://helpr.tech/",
-    release: "2023",
+    link: 'https://helpr.tech/',
+    release: '2023',
     featured: true,
-    tags: ["Nuxt"],
-    color: "#FFFFFF",
+    tags: ['Nuxt'],
+    color: '#FFFFFF',
   },
   {
-    name: "Maison Hochard",
-    logo: "SvgoMaisonHochard",
-    image: "/projects/maison-hochard.webp",
+    name: 'Maison Hochard',
+    logo: 'SvgoMaisonHochard',
+    image: '/projects/maison-hochard.webp',
     description: {
       short: {
-        fr: "Agence de design graphique et de communication visuelle",
-        en: "Graphic design and visual communication agency",
+        fr: 'Agence de design graphique et de communication visuelle',
+        en: 'Graphic design and visual communication agency',
       },
     },
-    link: "https://mh.hrcd.fr/",
-    release: "2022",
+    link: 'https://mh.hrcd.fr/',
+    release: '2022',
     featured: true,
-    tags: ["Design", "Graphic Design"],
-    color: "#000",
+    tags: ['Design', 'Graphic Design'],
+    color: '#000',
   },
-];
+]
 
-export default projects;
+export default projects

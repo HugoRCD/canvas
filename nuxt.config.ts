@@ -1,34 +1,34 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      viewport: "width=device-width, initial-scale=1",
-      charset: "utf-8",
+      viewport: 'width=device-width, initial-scale=1',
+      charset: 'utf-8',
       meta: [
         {
-          name: "author",
-          content: "Hugo Richard",
+          name: 'author',
+          content: 'Hugo Richard',
         },
       ],
     },
     pageTransition: {
-      name: "fade",
-      mode: "out-in",
+      name: 'fade',
+      mode: 'out-in',
     },
   },
 
   routeRules: {
-    "/": { isr: true, prerender: true },
+    '/': { isr: true, prerender: true },
   },
 
   site: {
-    url: process.env.NUXT_SITE_URL || "https://canvas.hrcd.fr",
+    url: process.env.NUXT_SITE_URL || 'https://canvas.hrcd.fr',
     identity: {
-      type: "Person",
+      type: 'Person',
     },
-    twitter: "@HugoRCD__",
+    twitter: '@HugoRCD__',
   },
 
-  css: ["~/assets/style/main.scss"],
+  css: ['~/assets/style/main.scss'],
 
   runtimeConfig: {
     public: {
@@ -42,8 +42,8 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: "dark",
-    fallback: "dark",
+    preference: 'dark',
+    fallback: 'dark',
   },
 
   devtools: {
@@ -53,10 +53,10 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@vueuse/nuxt", "@nuxtjs/i18n", "@nuxt/ui", "nuxt-svgo", "@nuxt/content", "@nuxthq/studio", "@nuxt/image", "nuxt-og-image"],
+  modules: ['@vueuse/nuxt', '@nuxtjs/i18n', '@nuxt/ui', 'nuxt-svgo', '@nuxt/content', '@nuxthq/studio', '@nuxt/image', 'nuxt-og-image'],
 
   image: {
-    format: ["webp"],
+    format: ['webp'],
     screens: {
       avatar: 96,
       cover: 256,
@@ -65,30 +65,30 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    strategy: "no_prefix",
+    strategy: 'no_prefix',
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: "i18n_redirected",
-      redirectOn: "root",
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
     },
-    baseUrl: "/",
+    baseUrl: '/',
     locales: [
       {
-        code: "en",
-        iso: "en-US",
+        code: 'en',
+        iso: 'en-US',
       },
       {
-        code: "fr",
-        iso: "fr-FR",
+        code: 'fr',
+        iso: 'fr-FR',
       },
     ],
-    vueI18n: "~/i18n.config.ts",
+    vueI18n: '~/i18n.config.ts',
   },
 
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ["/sitemap.xml", "/", "/writing", "/works", "/about", "/contact"],
+      routes: ['/sitemap.xml', '/', '/writing', '/works', '/about', '/contact'],
     },
   },
 
@@ -99,21 +99,21 @@ export default defineNuxtConfig({
       },
     },
     highlight: {
-      theme: "github-dark",
+      theme: 'github-dark',
     },
     navigation: {
-      fields: ["image", "_id"],
+      fields: ['image', '_id'],
     },
     markdown: {
       anchorLinks: false,
     },
-    locales: ["en", "fr"],
-    defaultLocale: "en",
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
   },
 
   svgo: {
-    autoImportPath: "./assets/logo/",
+    autoImportPath: './assets/logo/',
   },
 
-  plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],
-});
+  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
+})

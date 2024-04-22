@@ -1,41 +1,41 @@
-import { serverQueryContent } from "#content/server";
-import { SitemapStream, streamToPromise } from "sitemap";
+import { SitemapStream, streamToPromise } from 'sitemap'
+import { serverQueryContent } from '#content/server'
 
 export default defineEventHandler(async (event) => {
   // Fetch all documents
-  const docs = await serverQueryContent(event).find();
+  const docs = await serverQueryContent(event).find()
   const sitemap = new SitemapStream({
-    hostname: "https://hrcd.fr",
-  });
+    hostname: 'https://hrcd.fr',
+  })
 
   for (const doc of docs) {
     sitemap.write({
       url: doc._path,
-      changefreq: "daily",
-    });
+      changefreq: 'daily',
+    })
   }
   // add other pages like /about, /contact etc
   sitemap.write({
-    url: "/",
-    changefreq: "daily",
-  });
+    url: '/',
+    changefreq: 'daily',
+  })
   sitemap.write({
-    url: "/about",
-    changefreq: "daily",
-  });
+    url: '/about',
+    changefreq: 'daily',
+  })
   sitemap.write({
-    url: "/contact",
-    changefreq: "daily",
-  });
+    url: '/contact',
+    changefreq: 'daily',
+  })
   sitemap.write({
-    url: "/works",
-    changefreq: "daily",
-  });
+    url: '/works',
+    changefreq: 'daily',
+  })
   sitemap.write({
-    url: "/writing",
-    changefreq: "daily",
-  });
-  sitemap.end();
+    url: '/writing',
+    changefreq: 'daily',
+  })
+  sitemap.end()
 
-  return streamToPromise(sitemap);
-});
+  return streamToPromise(sitemap)
+})

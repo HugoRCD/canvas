@@ -1,14 +1,14 @@
 <script setup lang="ts">
 definePageMeta({
-  name: "Articles",
-  title: "Articles",
+  name: 'Articles',
+  title: 'Articles',
   middleware: [],
-});
+})
 
 const resetError = (error: { value: null }) => {
-  error.value = null;
-  useRouter().back();
-};
+  error.value = null
+  useRouter().back()
+}
 </script>
 
 <template>
@@ -16,17 +16,17 @@ const resetError = (error: { value: null }) => {
     <NuxtErrorBoundary>
       <NuxtPage />
       <template #error="{ error }">
-        <div class="h-screen flex flex-col justify-center">
-          <h2 class="text-4xl font-bold text-center">
+        <div class="flex h-screen flex-col justify-center">
+          <h2 class="text-center text-4xl font-bold">
             {{ $t("writing.not_found") }}
           </h2>
-          <p class="text-center text-muted mt-4">
+          <p class="mt-4 text-center text-muted">
             {{ $t("writing.not_found_description") }}
           </p>
           <p>
             {{ error }}
           </p>
-          <div class="flex justify-center mt-4">
+          <div class="mt-4 flex justify-center">
             <button
               class="btn-primary"
               @click="resetError"

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import projects from "~/data/projects";
-const appConfig = useAppConfig();
-const { t } = useI18n();
+import projects from '~/data/projects'
+const appConfig = useAppConfig()
+const { t } = useI18n()
 
 useHead({
-  title: t("navigation.works"),
-});
+  title: t('navigation.works'),
+})
 
-defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "Home image" });
+defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'Home image' })
 </script>
 
 <template>
@@ -51,7 +51,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: "H
       <ProjectCard
         v-for="project in projects"
         :key="project.name"
-        :project="project"
+        :project
       />
     </div>
   </LayoutInfoWrapper>

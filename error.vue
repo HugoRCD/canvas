@@ -1,25 +1,25 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   error: {
     type: Object,
     required: true,
   },
-});
+})
 
 function handleError() {
-  clearError({ redirect: "/" });
+  clearError({ redirect: '/' })
 }
 
 function goBack() {
-  clearError();
-  useRouter().back();
+  clearError()
+  useRouter().back()
 }
 </script>
 
 <template>
-  <main class="grid min-h-full place-items-center bg-black py-24 px-6 sm:py-32 lg:px-8">
+  <main class="grid min-h-full place-items-center bg-black px-6 py-24 sm:py-32 lg:px-8">
     <div class="text-center">
-      <p class="text-base font-semibold text-accent">
+      <p class="text-accent text-base font-semibold">
         {{ error.statusCode }}
       </p>
       <h1 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
@@ -30,13 +30,13 @@ function goBack() {
       </p>
       <div class="mt-10 flex items-center justify-center gap-x-6">
         <NuxtLink
-          class="rounded-md bg-accent px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover cursor-pointer"
+          class="bg-accent hover:bg-accent-hover cursor-pointer rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
           @click="handleError"
         >
           Go back home
         </NuxtLink>
         <button
-          class="rounded-md bg-accent px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover cursor-pointer"
+          class="bg-accent hover:bg-accent-hover cursor-pointer rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
           @click="goBack"
         >
           Go back

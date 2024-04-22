@@ -2,7 +2,7 @@
 defineProps({
   as: {
     type: String,
-    default: "button",
+    default: 'button',
   },
   rounded: {
     type: Boolean,
@@ -16,7 +16,7 @@ defineProps({
     type: Boolean,
     default: false,
   },
-});
+})
 </script>
 
 <template>
@@ -31,7 +31,7 @@ defineProps({
       class="absolute inset-0 flex items-center [container-type:inline-size]"
     >
       <div
-        class="absolute h-[100cqw] w-[100cqw] animate-spin bg-[conic-gradient(from_0_at_50%_50%,rgba(255,255,255,0.5)_0deg,transparent_60deg,transparent_300deg,rgba(255,255,255,0.5)_360deg)] opacity-0 transition duration-300 group-hover:opacity-100"
+        class="absolute size-[100cqw] animate-spin bg-[conic-gradient(from_0_at_50%_50%,rgba(255,255,255,0.5)_0deg,transparent_60deg,transparent_300deg,rgba(255,255,255,0.5)_360deg)] opacity-0 transition duration-300 group-hover:opacity-100"
       />
     </div>
 

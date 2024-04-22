@@ -4,24 +4,24 @@ defineProps({
     type: String,
     required: true,
   },
-});
+})
 </script>
 
 <template>
-  <section class="flex flex-col max-w-4xl mx-auto p-7 mt-4 sm:mt-20">
-    <h1 class="text-4xl text-center font-bold font-testimonial text-white-shadow">
+  <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
+    <h1 class="font-testimonial text-white-shadow text-center text-4xl font-bold">
       {{ $t(`${page}.title`) }}
     </h1>
-    <h2 class="text-lg text-center font-light italic text-muted">
+    <h2 class="text-center text-lg font-light italic text-muted">
       {{ $t(`${page}.description`) }}
     </h2>
     <div
       v-if="page === 'contact'"
-      class="flex justify-center my-3"
+      class="my-3 flex justify-center"
     >
       <SettingsAvailability background />
     </div>
-    <Divider class="mt-2 mb-8" />
+    <Divider class="mb-8 mt-2" />
     <slot />
   </section>
 </template>

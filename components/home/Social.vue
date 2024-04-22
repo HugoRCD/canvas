@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import socials from "~/data/socials";
+import socials from '~/data/socials'
 </script>
 
 <template>
-  <div class="flex items-center justify-center gap-6 sm:gap-10 my-7">
+  <div class="my-7 flex items-center justify-center gap-6 sm:gap-10">
     <NuxtLink
       v-for="social in socials"
       :key="social.name"
@@ -14,7 +14,7 @@ import socials from "~/data/socials";
     >
       <component
         :is="social.logo"
-        class="social-item w-6 h-6 text-muted hover:text-main transition-all duration-300"
+        class="social-item size-6 text-muted transition-all duration-300 hover:text-main"
         :font-controlled="false"
         :alt="social.name + ' logo'"
         :aria-label="social.name + ' logo'"
