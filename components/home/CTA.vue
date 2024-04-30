@@ -21,14 +21,6 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
       </UTooltip>
       <MeetingButton />
     </div>
-    <SpotlightButton>
-      <NuxtLink
-        class="white-gradient relative flex items-center justify-center gap-2 transition-all duration-200"
-        to="https://hrcd.lemonsqueezy.com/checkout/buy/bc114e94-7886-40a7-8497-63adec2c82fb"
-      >
-        {{ $t("home.hero.buy_this_template") }}
-      </NuxtLink>
-    </SpotlightButton>
   </div>
 </template>
 
