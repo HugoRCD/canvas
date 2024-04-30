@@ -34,6 +34,13 @@ useHead({
       href: '/site.webmanifest',
     },
   ],
+  script: [
+    {
+      src: 'https://plausible.hrcd.fr/js/script.js',
+      defer: true,
+      'data-domain': 'canvas.hrcd.fr'
+    },
+  ],
 })
 
 if (process.client) {
