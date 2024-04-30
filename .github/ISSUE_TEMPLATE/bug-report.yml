@@ -1,0 +1,54 @@
+name: "🐛 Bug report"
+description: Report a bug to help us improve the project.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before reporting a bug, please make sure that you have read through our [documentation](https://hrcd.fr) and existing [issues](https://github.com/HugoRCD/shelve/issues) to see if the bug has already been reported or fixed. If it has, please add your reaction to the existing issue instead of creating a new one.
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: |
+        Please complete the following information, for example:
+        - OS: Windows 10
+        - Browser: Chrome 88
+        - Node.js version: 14.15.4
+        - Package manager: npm 6.14.10
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: v2.8.0
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: A reproduction is strongly encouraged, to help us identify the issue and fix it. You can use a code sandbox or a repository to reproduce the issue.
+      placeholder: https://stackblitz.com/edit/blanked
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description.
+    validations:
+      required: true
+  - type: textarea
+    id: additonal
+    attributes:
+      label: Additional context
+      description: If applicable, add any other context or screenshots here.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Optional if provided reproduction. Please try not to insert an image but copy paste the log text.
+      render: shell-script

@@ -3,7 +3,7 @@
 <p align="center">
     <a aria-label="Hugo's Website" href="https://hrcd.fr">
         <img alt="" src="https://img.shields.io/badge/Website-hrcd.fr-blue?style=for-the-badge&labelColor=000000&logo=google-chrome&logoColor=white">
-  <a aria-label="License" href="https://github.com/hugorcd/hr_folio_2023/blob/master/LICENSE">
+  <a aria-label="License" href="https://github.com/hugorcd/canvas/blob/master/LICENSE">
     <img alt="" src="https://img.shields.io/npm/l/vue.svg?style=for-the-badge&labelColor=000000&color=blue">
     </a>
   <a aria-label="Follow Hugo on Twitter" href="https://twitter.com/HugoRCD__">
