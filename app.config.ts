@@ -6,7 +6,7 @@ export default defineAppConfig({
   email: 'contact@hrcd.fr',
   twitterUsername: '@HugoRCD__',
   phone: '(+33) 6 21 56 22 18',
-  openGraphImage: 'https://hrcd.fr/social-preview.jpg',
+  openGraphImage: 'https://canvas.hrcd.fr/social-preview.jpg',
   socials: {
     github: 'https://github.com/HugoRCD',
     twitter: 'https://twitter.com/HugoRCD__',
