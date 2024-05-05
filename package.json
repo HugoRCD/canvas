@@ -20,7 +20,7 @@
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/devtools": "^1.2.0",
     "@nuxt/eslint-config": "^0.3.10",
-    "@nuxt/image": "1.6.0",
+    "@nuxt/image": "1.7.0",
     "@nuxt/ui": "^2.15.2",
     "@nuxthq/studio": "^1.0.15",
     "@nuxtjs/i18n": "next",
