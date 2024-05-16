@@ -52,5 +52,3 @@ defineProps({
     </NuxtLink>
   </SpotlightCard>
 </template>
-
-<style scoped lang="scss"></style>

@@ -1,13 +1,13 @@
 export type Stack = {
-  name: string;
-  link: string;
-  tags: string[];
-  logo: string;
+  name: string
+  link: string
+  tags: string[]
+  logo: string
   description: {
-    en: string;
-    fr: string;
-  };
-};
+    en: string
+    fr: string
+  }
+}
 
 export const techStack: Stack[] = [
   {

@@ -1,19 +1,19 @@
 export type Faq = {
   title: {
-    en: string;
-    fr: string;
-  };
+    en: string
+    fr: string
+  }
   faq: {
     title: {
-      en: string;
-      fr: string;
-    };
+      en: string
+      fr: string
+    }
     content: {
-      en: string;
-      fr: string;
-    };
-  }[];
-};
+      en: string
+      fr: string
+    }
+  }[]
+}
 
 export const services: Faq = {
   title: {

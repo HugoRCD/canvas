@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline'
 import type { ContactEmail } from '~/types/ContactEmail'
+
 const appConfig = useAppConfig()
 const { t } = useI18n()
 
 useHead({
-  title: 'Contact',
+  title: () => t('contact.title'),
 })
 
 const toast = useToast()
@@ -71,7 +71,8 @@ async function submitForm() {
     budget.value = 450
     selected.value = demandTypes[0]
     toast.add({ title: t('contact.success'), icon: 'i-heroicons-check-circle', timeout: 2500 })
-  } else {
+  }
+  else {
     toast.add({ title: t('contact.error'), icon: 'i-heroicons-x-circle', timeout: 2500, color: 'red' })
   }
   loading.value = false
@@ -81,7 +82,14 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
 </script>
 
 <template>
-  <LayoutInfoWrapper page="contact">
+  <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
+    <h1 class="font-testimonial text-white-shadow text-center text-4xl font-bold">
+      <ContentSlot :use="$slots.title" />
+    </h1>
+    <h2 class="text-center text-lg font-light italic text-muted">
+      <ContentSlot :use="$slots.subtitle" />
+    </h2>
+    <Divider class="mb-8 mt-2" />
     <div class="flex flex-col sm:items-center sm:justify-between">
       <form
         class="flex w-full max-w-[40rem] flex-col gap-3"
@@ -232,8 +240,8 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
       <div class="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
         <div class="flex flex-col gap-3">
           <dd class="flex items-center gap-3 text-gray-400">
-            <PhoneIcon
-              class="size-6 shrink-0"
+            <span
+              class="i-heroicons-phone size-6"
               aria-hidden="true"
             />
             <span>
@@ -241,8 +249,8 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             </span>
           </dd>
           <dd class="flex items-center gap-3 text-gray-400">
-            <EnvelopeIcon
-              class="size-6 shrink-0"
+            <span
+              class="i-heroicons-envelope size-6"
               aria-hidden="true"
             />
             <UTooltip
@@ -263,5 +271,9 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
         </div>
       </div>
     </div>
-  </LayoutInfoWrapper>
+  </section>
 </template>
+
+<style scoped>
+
+</style>

@@ -6,7 +6,8 @@ const activeItem = ref(-1)
 function setActive(index) {
   if (activeItem.value === index) {
     activeItem.value = -1
-  } else {
+  }
+  else {
     activeItem.value = index
   }
 }

@@ -1,23 +1,23 @@
 export type Project = {
-  name: string;
-  logo: string;
-  image: string;
+  name: string
+  logo: string
+  image: string
   description: {
     short: {
-      en: string;
-      fr: string;
-    };
+      en: string
+      fr: string
+    }
     long?: {
-      en: string;
-      fr: string;
-    };
-  };
-  link: string | 'soon';
-  tags: string[];
-  release: string;
-  featured: boolean;
-  color: string;
-};
+      en: string
+      fr: string
+    }
+  }
+  link: string | 'soon'
+  tags: string[]
+  release: string
+  featured: boolean
+  color: string
+}
 
 const projects: Project[] = [
   {

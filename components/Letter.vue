@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import appConfig from '~/app.config'
+
 const colorMode = useColorMode()
 
 const theme = computed(() => (colorMode.preference === 'dark' ? 'light' : 'dark'))

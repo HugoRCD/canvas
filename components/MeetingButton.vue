@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { CalendarDaysIcon } from '@heroicons/vue/24/outline'
 const meetingLink = useRuntimeConfig().public.meetingLink
 </script>
 
@@ -11,7 +10,7 @@ const meetingLink = useRuntimeConfig().public.meetingLink
         :to="meetingLink"
       >
         {{ $t("home.hero.meeting") }}
-        <CalendarDaysIcon class="size-5 text-white/80" />
+        <span class="i-heroicons-calendar-days size-5 text-white/80" />
       </NuxtLink>
     </SpotlightButton>
   </div>

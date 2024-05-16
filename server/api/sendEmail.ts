@@ -25,7 +25,8 @@ export default defineEventHandler(async (event: H3Event) => {
       </ul>
       `,
     })
-  } catch (error) {
+  }
+  catch (error) {
     return { error }
   }
 })

@@ -1,9 +1,9 @@
+@import "themes/dark.css";
+@import "animation.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "animation";
-@import "themes/dark";
 
 html, body, #__nuxt, #__layout {
   height: 100% !important;

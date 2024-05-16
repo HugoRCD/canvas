@@ -1,13 +1,13 @@
 type Item = {
-  title: string;
-  company: string;
-  date: string;
-};
+  title: string
+  company: string
+  date: string
+}
 
 type About = {
-  en: Item[];
-  fr: Item[];
-};
+  en: Item[]
+  fr: Item[]
+}
 
 const experience: About = {
   en: [

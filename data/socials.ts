@@ -1,8 +1,8 @@
 type Social = {
-  name: string;
-  link: string;
-  logo: string;
-};
+  name: string
+  link: string
+  logo: string
+}
 
 const socials: Social[] = [
   {

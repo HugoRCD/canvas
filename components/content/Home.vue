@@ -1,12 +1,10 @@
 <script setup lang="ts">
+const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const { t, locale } = useI18n()
 
-const runtimeConfig = useRuntimeConfig()
-
 useHead({
-  title: '',
-  titleTemplate: appConfig.appName,
+  title: () => t('navigation.home'),
 })
 
 useSeoMeta({
@@ -25,6 +23,10 @@ useSeoMeta({
   twitterCreator: appConfig.twitterUsername,
   twitterImage: 'https://hrcd.fr/social-preview.jpg',
 })
+
+/* const { data: projects } = await useAsyncData('projects', () => queryContent('/projects').locale(locale.value).find(), {
+  watch: [locale],
+}); */
 
 defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'Home image' })
 </script>
@@ -45,10 +47,20 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
 
       <div class="z-20 flex flex-col items-center justify-center">
         <!-- title -->
-        <HomeHero
+        <div
+          class="font-geist"
           style="--stagger: 1; --delay: 10ms"
           data-animate
-        />
+        >
+          <h1 class="mx-auto text-pretty bg-gradient-to-br from-white/90 to-white/30 bg-clip-text text-center text-3xl leading-tight text-transparent lg:max-w-3xl lg:text-4xl">
+            <ContentSlot :use="$slots.hero_title" />
+          </h1>
+
+          <!-- subtitle -->
+          <h2 class="mx-auto mt-4 max-w-xl text-center text-lg font-extralight text-white/60">
+            <ContentSlot :use="$slots.hero_subtitle" />
+          </h2>
+        </div>
 
         <!-- social -->
         <HomeSocial
@@ -82,3 +94,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
     </div>
   </section>
 </template>
+
+<style scoped>
+
+</style>

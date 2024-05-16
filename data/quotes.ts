@@ -1,10 +1,10 @@
 export type Quote = {
   text: {
-    en: string;
-    fr: string;
-  };
-  author: string;
-};
+    en: string
+    fr: string
+  }
+  author: string
+}
 
 export const quotes: Quote[] = [
   {

@@ -27,7 +27,7 @@ defineProps({
 })
 
 const currentAvailability = computed(() => {
-  return availability.value.find((a) => a.status === isAvailable.value) || availability.value[0]
+  return availability.value.find(a => a.status === isAvailable.value) || availability.value[0]
 })
 </script>
 

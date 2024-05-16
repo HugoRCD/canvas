@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { services, pricing, personal } from '~/data/faq'
+
 const { locale } = useI18n()
 
 const items = computed(() => {

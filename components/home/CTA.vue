@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { EnvelopeIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
@@ -15,7 +14,10 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
             to="/contact"
           >
             {{ $t("home.hero.contact") }}
-            <EnvelopeIcon class="size-5 text-white/80" />
+            <span
+              class="i-heroicons-envelope size-5 text-white/80"
+              aria-hidden="true"
+            />
           </NuxtLink>
         </SpotlightButton>
       </UTooltip>

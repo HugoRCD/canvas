@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { XMarkIcon } from '@heroicons/vue/24/outline'
 import type { PropType } from 'vue'
 import type { Faq } from '~/data/faq'
+
 const { locale } = useI18n()
 
 defineProps({
@@ -29,9 +29,9 @@ defineProps({
         </div>
 
         <div class="relative ml-auto">
-          <XMarkIcon
+          <span
+            class="i-heroicons-x-mark size-6 transform-gpu text-white/50 transition-transform duration-500 will-change-transform"
             :class="{ 'rotate-180': isActive, 'rotate-45': !isActive }"
-            class="size-6 transform-gpu text-white/50 transition-transform duration-500 will-change-transform"
           />
         </div>
       </div>

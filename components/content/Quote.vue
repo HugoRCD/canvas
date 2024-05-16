@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .quotes {
   margin-top: 2rem;
   font-weight: 400;

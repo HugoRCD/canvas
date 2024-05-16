@@ -28,7 +28,11 @@ export default defineNuxtConfig({
     twitter: '@HugoRCD__',
   },
 
-  css: ['~/assets/style/main.scss'],
+  css: ['~/assets/style/main.css'],
+
+  ui: {
+    icons: ['heroicons', 'lucide'],
+  },
 
   runtimeConfig: {
     public: {
@@ -93,6 +97,7 @@ export default defineNuxtConfig({
   },
 
   content: {
+    documentDriven: true,
     watch: {
       ws: {
         showURL: false,
@@ -114,6 +119,4 @@ export default defineNuxtConfig({
   svgo: {
     autoImportPath: './assets/logo/',
   },
-
-  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
 })

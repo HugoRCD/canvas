@@ -29,11 +29,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        main: 'var(--bg-main)',
+        'main': 'var(--bg-main)',
         'main-opacity': withOpacity('--bg-main-opacity'),
-        secondary: 'var(--bg-secondary)',
-        muted: 'var(--font-muted)',
-        placeholder: 'var(--font-placeholder)',
+        'secondary': 'var(--bg-secondary)',
+        'muted': 'var(--font-muted)',
+        'placeholder': 'var(--font-placeholder)',
       },
       textColor: {
         main: 'var(--font-primary)',
@@ -42,10 +42,10 @@ module.exports = {
         inverted: 'var(--font-inverted)',
       },
       borderColor: {
-        primary: 'var(--border-primary)',
+        'primary': 'var(--border-primary)',
         'primary-hover': 'var(--border-primary-hover)',
-        muted: 'var(--border-muted)',
-        transparent: 'transparent',
+        'muted': 'var(--border-muted)',
+        'transparent': 'transparent',
       },
       borderWidth: {
         sm: '1px',
@@ -70,7 +70,7 @@ module.exports = {
     plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
-          'text-shadow': (value) => ({
+          'text-shadow': value => ({
             textShadow: value,
           }),
         },
@@ -78,7 +78,7 @@ module.exports = {
       )
       matchUtilities(
         {
-          'bg-grid': (value) => ({
+          'bg-grid': value => ({
             backgroundImage: `url("${svgToDataUri(
               `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke="${value}" fill="none"><path d="M64 0H0V64"/></svg>`,
             )}")`,
@@ -91,7 +91,7 @@ module.exports = {
       )
       matchUtilities(
         {
-          'bg-grid': (value) => ({
+          'bg-grid': value => ({
             backgroundSize: value,
           }),
         },
