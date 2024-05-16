@@ -5,6 +5,7 @@
   "private": true,
   "license": "MIT License",
   "scripts": {
+    "automd": "automd",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -31,6 +32,7 @@
     "nuxt-svgo": "^3.7.0",
     "resend": "^0.17.2",
     "sass": "^1.77.1",
-    "sitemap": "^7.1.1"
+    "sitemap": "^7.1.1",
+    "automd": "^0.3.7"
   }
 }
