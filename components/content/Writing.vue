@@ -1,13 +1,50 @@
 <script setup lang="ts">
+import type { Article } from '~/types/Article'
+
 const { t, locale } = useI18n()
 
 useHead({
   title: () => t('writing.title'),
 })
 
+const searchedTags = ref<string[]>([])
+const searchedTitle = ref('')
+const showSearch = ref(false)
+
 const { data } = await useAsyncData('articles', () => queryContent('/articles').locale(locale.value).sort({ date: -1 }).find(), {
   watch: [locale],
 })
+const articles = computed(() => data.value as Article[])
+const tags = computed(() => {
+  const tags = new Set<string>()
+  articles.value.forEach(article => article.tags.forEach(tag => tags.add(tag)))
+  return Array.from(tags)
+})
+
+const filteredArticles = computed(() => {
+  return articles.value
+    .filter((article) => {
+      if (searchedTags.value.length === 0) {
+        return true
+      }
+      return searchedTags.value.some(tag => article.tags.includes(tag))
+    })
+    .filter((article) => {
+      if (searchedTitle.value === '') {
+        return true
+      }
+      return article.title!.toLowerCase().includes(searchedTitle.value.toLowerCase())
+    })
+})
+
+function toggleTag(tag: string) {
+  if (searchedTags.value.includes(tag)) {
+    searchedTags.value = searchedTags.value.filter(t => t !== tag)
+  }
+  else {
+    searchedTags.value.push(tag)
+  }
+}
 </script>
 
 <template>
@@ -19,9 +56,51 @@ const { data } = await useAsyncData('articles', () => queryContent('/articles').
       <ContentSlot :use="$slots.subtitle" />
     </h2>
     <Divider class="mb-8 mt-2" />
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div :class="showSearch ? '' : 'mb-3'">
+      <span
+        class="font-testimonial text-white-shadow cursor-pointer select-none text-lg"
+        @click="showSearch = !showSearch"
+      >
+        {{ showSearch ? $t("writing.hide_search") : $t("writing.show_search") }}
+      </span>
+    </div>
+    <div
+      v-if="showSearch"
+      class="mb-4 flex flex-col gap-2"
+    >
+      <div class="my-4">
+        <UInput
+          v-model="searchedTitle"
+          variant="none"
+          class="w-full sm:w-96"
+          :placeholder="$t('writing.search_article')"
+        />
+      </div>
       <div
-        v-for="article of data"
+        v-if="tags.length > 0"
+        class="mb-4 flex flex-wrap gap-2"
+      >
+        <div
+          v-for="tag of tags"
+          :key="tag"
+          class="hover:text-shadow-md flex cursor-pointer select-none items-center rounded-md bg-secondary px-2 py-1 text-xs text-main transition-colors duration-100 text-shadow-sm hover:bg-zinc-700 sm:text-sm"
+          :class="{ 'bg-zinc-700': searchedTags.includes(tag) }"
+          @click="toggleTag(tag)"
+        >
+          <div class="font-light">
+            {{ tag }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <TransitionGroup
+      v-if="filteredArticles.length"
+      name="list"
+      tag="ul"
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2"
+    >
+      <li
+        v-for="article of filteredArticles"
         :key="article._path"
       >
         <ArticleCard
@@ -30,11 +109,36 @@ const { data } = await useAsyncData('articles', () => queryContent('/articles').
           :image="article.image"
           :path="article._path!"
         />
-      </div>
+      </li>
+    </TransitionGroup>
+    <div
+      v-else
+      class="flex h-64 flex-col items-center justify-center gap-2"
+    >
+      <span class="text-2xl">
+        {{ $t("writing.not_found") }}
+      </span>
+      <span class="text-sm">
+        {{ $t("writing.not_found_description") }}
+      </span>
     </div>
   </section>
 </template>
 
-<style scoped>
+<style>
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
 
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.list-leave-active {
+  position: absolute;
+}
 </style>

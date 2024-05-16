@@ -5,7 +5,7 @@ useHead({
   title: () => t('writing.title'),
 })
 
-const { data: projects } = await useAsyncData('projects', () => queryContent('/projects').locale(locale.value).sort({ date: -1 }).find(), {
+const { data: projects } = await useAsyncData('projects', () => queryContent('/projects').locale(locale.value).sort({ release: -1 }).find(), {
   watch: [locale],
 })
 </script>
