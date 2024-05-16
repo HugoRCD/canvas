@@ -43,7 +43,7 @@ useHead({
   ],
 })
 
-if (process.client) {
+if (import.meta.client) {
   console.log(`
 .------..------..------..------.
 |H.--. ||R.--. ||C.--. ||D.--. |
