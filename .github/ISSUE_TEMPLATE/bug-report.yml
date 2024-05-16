@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before reporting a bug, please make sure that you have read through our [documentation](https://hrcd.fr) and existing [issues](https://github.com/HugoRCD/shelve/issues) to see if the bug has already been reported or fixed. If it has, please add your reaction to the existing issue instead of creating a new one.
+        Before reporting a bug, please make sure that you have read existing [issues](https://github.com/HugoRCD/canvas/issues) to see if the bug has already been reported or fixed. If it has, please add your reaction to the existing issue instead of creating a new one.
   - type: textarea
     id: env
     attributes:
@@ -30,7 +30,7 @@ body:
     attributes:
       label: Reproduction
       description: A reproduction is strongly encouraged, to help us identify the issue and fix it. You can use a code sandbox or a repository to reproduce the issue.
-      placeholder: https://stackblitz.com/edit/blanked
+      placeholder: https://stackblitz.com/edit/canvas
     validations:
       required: true
   - type: textarea
