@@ -3,6 +3,7 @@ const appConfig = useAppConfig()
 
 useHead({
   title: () => appConfig.appName,
+  titleTemplate: () => appConfig.appName,
 })
 
 defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'Home image' })
