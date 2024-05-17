@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import type { Faq } from '~/data/faq'
-
-const { locale } = useI18n()
+import type { Question } from '~/types/Faq'
 
 defineProps({
   questions: {
-    type: Array as PropType<Faq['faq']>,
+    type: Object as PropType<Question[]>,
     required: true,
   },
 })
@@ -15,7 +13,7 @@ defineProps({
 <template>
   <FaqGroup class="select-none space-y-5">
     <FaqItem
-      v-for="(item, index) in questions"
+      v-for="(question, index) in questions"
       :key="index"
       v-slot="{ isActive, toggle }"
       class="group transform-gpu rounded-xl border border-white/10 bg-white/5 transition duration-500 will-change-transform hover:bg-white/[0.075]"
@@ -25,7 +23,7 @@ defineProps({
         @click="toggle"
       >
         <div class="text-white/75 transition group-hover:text-white">
-          {{ item.title[locale as "en" | "fr"] }}
+          {{ question.title }}
         </div>
 
         <div class="relative ml-auto">
@@ -38,7 +36,7 @@ defineProps({
 
       <FaqContent class="transform-gpu overflow-hidden px-4 transition-all duration-500 will-change-[height]">
         <p class="pb-4 font-light leading-relaxed tracking-wide text-white/75">
-          {{ item.content[locale as "en" | "fr"] }}
+          {{ question.answer }}
         </p>
       </FaqContent>
     </FaqItem>

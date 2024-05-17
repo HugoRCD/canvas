@@ -86,7 +86,8 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
         <Divider class="my-9" />
 
         <!-- faq -->
-        <HomeFaq
+        <ContentSlot
+          :use="$slots.faq"
           style="--stagger: 5"
           data-animate
         />
