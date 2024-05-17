@@ -48,7 +48,17 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  modules: ['@vueuse/nuxt', '@nuxtjs/i18n', '@nuxt/ui', 'nuxt-svgo', '@nuxt/content', '@nuxthq/studio', '@nuxt/image', 'nuxt-og-image'],
+  modules: [
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/ui',
+    'nuxt-svgo',
+    '@nuxt/content',
+    '@nuxthq/studio',
+    '@nuxt/image',
+    'nuxt-og-image',
+    "@nuxt/fonts"
+  ],
 
   image: {
     format: ['webp'],

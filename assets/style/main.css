@@ -26,17 +26,14 @@ html, body, #__nuxt, #__layout {
 }
 
 @font-face {
-  font-family: "Testimonial";
-  src: local("Testimonial"), url("/font/PPEditorialNew-UltralightItalic.otf") format("opentype");
-  font-display: swap;
+  font-family: "Testimonial", serif;
+}
+
+@font-face {
+  font-family: "Geist", sans-serif;
 }
 
 @layer components {
-  .font-testimonial {
-    font-family: "Testimonial", sans-serif;
-    @apply tracking-wider
-  }
-
   .text-gradient {
     @apply bg-clip-text text-transparent;
     @apply bg-gradient-to-bl from-accent-primary to-accent-secondary;
@@ -76,7 +73,7 @@ html, body, #__nuxt, #__layout {
 }
 
 .writing {
-  @apply prose antialiased text-gray-700/90 dark:text-gray-400/80 leading-relaxed;
+  @apply prose antialiased font-geist text-gray-700/90 dark:text-gray-400/80 leading-relaxed;
   @apply prose-h1:text-2xl prose-h1:mb-0 sm:prose-h1:text-3xl prose-h1:text-zinc-900 dark:prose-h1:text-zinc-100 prose-h1:italic prose-h1:font-[600];
   @apply prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:text-zinc-900 dark:prose-h2:text-zinc-100;
   @apply prose-h3:text-lg sm:prose-h3:text-xl prose-h3:text-zinc-900 dark:prose-h3:text-zinc-100;

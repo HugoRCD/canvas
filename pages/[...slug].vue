@@ -76,7 +76,7 @@ defineShortcuts({
   <div>
     <Html
       :lang="$i18n.locale"
-      class="bg-zinc-950 text-main transition-colors duration-300 selection:bg-white/60 selection:text-zinc-800"
+      class="bg-zinc-950 text-main font-geist transition-colors duration-300 selection:bg-white/60 selection:text-zinc-800"
     >
       <Body>
         <LayoutScrollToTop />
