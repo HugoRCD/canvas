@@ -1,22 +1,20 @@
 <script setup lang="ts">
-import { services, pricing, personal } from '~/data/faq'
+import type { Faq } from '~/types/Faq'
+
 const { locale } = useI18n()
 
+const { data: faq } = await useAsyncData('faq', () => queryContent('/faq').locale(locale.value).findOne(), {
+  watch: [locale],
+})
+
 const items = computed(() => {
-  return [
-    {
-      label: services.title[locale.value as 'en' | 'fr'],
-      slot: 'services',
-    },
-    {
-      label: pricing.title[locale.value as 'en' | 'fr'],
-      slot: 'pricing',
-    },
-    {
-      label: personal.title[locale.value as 'en' | 'fr'],
-      slot: 'personnal',
-    },
-  ]
+  return faq.value?.faqQuestions.map((faq: Faq) => {
+    return {
+      label: faq.title,
+      key: faq.title.toLowerCase(),
+      questions: faq.questions,
+    }
+  })
 })
 
 const ui = {
@@ -51,10 +49,10 @@ const ui = {
   <div class="flex flex-col items-center justify-center space-y-8">
     <div class="flex flex-col items-center justify-center gap-2">
       <h3 class="font-testimonial text-white-shadow text-4xl font-bold">
-        {{ $t("faq.title") }}
+        {{ faq!.title }}
       </h3>
       <p class="text-center text-sm font-light text-muted">
-        {{ $t("faq.description") }}
+        {{ faq!.subtitle }}
       </p>
     </div>
     <div>
@@ -63,21 +61,9 @@ const ui = {
         orientation="horizontal"
         :ui
       >
-        <template #services>
+        <template #item="{ item }">
           <FAQ
-            :questions="services.faq"
-            class="mt-8 max-w-lg"
-          />
-        </template>
-        <template #pricing>
-          <FAQ
-            :questions="pricing.faq"
-            class="mt-8 max-w-lg"
-          />
-        </template>
-        <template #personnal>
-          <FAQ
-            :questions="personal.faq"
+            :questions="item.questions"
             class="mt-8 max-w-lg"
           />
         </template>
@@ -85,5 +71,3 @@ const ui = {
     </div>
   </div>
 </template>
-
-<style scoped></style>

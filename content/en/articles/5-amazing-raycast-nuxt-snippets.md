@@ -5,6 +5,7 @@ description: "In the realm of web development, where efficiency is as valuable a
 tags: ["Nuxt", "Vue", "Raycast", "Productivity"]
 image: "https://canvas.hrcd.fr/articles/5-raycast-snippets.jpg"
 readingTime: "10"
+layout: "article"
 ---
 
 ![preview](/articles/5-raycast-snippets.jpg)
