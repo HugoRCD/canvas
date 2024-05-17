@@ -64,6 +64,11 @@ module.exports = {
       textShadow: {
         sm: 'rgba(255, 255, 255, 0.35) 1px 1px 12px',
       },
+
+      fontFamily: {
+        testimonial: ['Testimonial', 'sans-serif'],
+        geist: ['Geist', 'sans-serif'],
+      },
     },
   },
   plugins: [
