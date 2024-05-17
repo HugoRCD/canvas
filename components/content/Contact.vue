@@ -4,39 +4,11 @@ import type { ContactEmail } from '~/types/ContactEmail'
 const appConfig = useAppConfig()
 const { t } = useI18n()
 
-const demandTypes = [
-  {
-    label: 'contact.subject_types.project',
-    value: 'project',
-    color: 'bg-blue-500',
-    button_color: 'blue',
-  },
-  {
-    label: 'contact.subject_types.question',
-    value: 'question',
-    color: 'bg-yellow-500',
-    button_color: 'yellow',
-  },
-  {
-    label: 'contact.subject_types.bug',
-    value: 'bug',
-    color: 'bg-red-500',
-    button_color: 'red',
-  },
-  {
-    label: 'contact.subject_types.other',
-    value: 'other',
-    color: 'bg-gray-500',
-    button_color: 'gray',
-  },
-]
-
 const email = ref('')
 const message = ref('')
 const phone = ref('')
 const fullname = ref('')
-const budget = ref(1000)
-const selected = ref(demandTypes[0])
+const subject = ref('')
 
 const loading = ref(false)
 
@@ -46,28 +18,26 @@ const contactData = computed(() => {
     message: message.value,
     phone: phone.value,
     fullname: fullname.value,
-    budget: budget.value,
-    subject: selected.value.value,
+    subject: subject.value,
   } as ContactEmail
 })
 
 async function submitForm() {
   loading.value = true
-  const { data } = await useFetch('/api/sendEmail', {
-    method: 'POST',
-    body: contactData.value,
-  })
-  if (data) {
+  try {
+    await $fetch('/api/sendEmail', {
+      method: 'POST',
+      body: contactData.value,
+    })
     email.value = ''
     message.value = ''
     phone.value = ''
     fullname.value = ''
-    budget.value = 450
-    selected.value = demandTypes[0]
+    subject.value = ''
     toast.success(t('contact.success'))
   }
-  else {
-    toast.success(t('contact.error'))
+  catch (error) {
+    toast.error(t('contact.error'))
   }
   loading.value = false
 }
@@ -90,121 +60,74 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
         @submit.prevent="submitForm"
       >
         <!-- Fullname -->
-        <div>
-          <label
-            for="fullname"
-            class="sr-only"
-          >
-            {{ $t("contact.fullname") }}
-          </label>
+        <UFormGroup
+          label="Fullname"
+          required
+        >
           <UInput
             id="full-name"
             v-model="fullname"
-            icon="i-heroicons-user-solid"
             type="text"
             required
             name="fullname"
             autocomplete="name"
             variant="none"
-            :placeholder="$t('contact.fullname')"
+            placeholder="John Doe"
           />
-        </div>
+        </UFormGroup>
 
         <!-- Email -->
-        <div>
-          <label
-            for="email"
-            class="sr-only"
-          >
-            {{ $t("contact.email") }}
-          </label>
+        <UFormGroup
+          label="Email"
+          required
+        >
           <UInput
             id="email"
             v-model="email"
-            icon="i-heroicons-inbox-solid"
-            variant="none"
+            type="email"
             required
             name="email"
-            type="email"
             autocomplete="email"
-            :placeholder="$t('contact.email')"
+            variant="none"
+            placeholder="john.doe@gmail.com"
           />
-        </div>
+        </UFormGroup>
 
         <!-- Phone -->
-        <div>
-          <label
-            for="phone"
-            class="sr-only"
-          >
-            {{ $t("contact.phone") }}
-          </label>
+        <UFormGroup
+          label="Phone"
+        >
           <UInput
             id="phone"
             v-model="phone"
-            icon="i-heroicons-phone-solid"
-            variant="none"
             type="text"
             name="phone"
             autocomplete="tel"
-            :placeholder="$t('contact.phone')"
+            variant="none"
+            placeholder="123-456-7890"
           />
-        </div>
+        </UFormGroup>
 
         <!-- Subject -->
-        <div>
-          <label
-            for="subject"
-            class="sr-only"
-          >
-            {{ $t("contact.subject") }}
-          </label>
-          <USelectMenu
-            v-model="selected"
-            :options="demandTypes"
-          >
-            <template #label>
-              <div
-                class="size-2 rounded-full"
-                :class="selected.color"
-              />
-              <span class="text-gray-400">{{ $t(selected.label) }}</span>
-            </template>
-            <template #option="{ option }">
-              <div class="flex items-center gap-3">
-                <div
-                  class="size-2 rounded-full"
-                  :class="option.color"
-                />
-                <span>{{ $t(option.label) }}</span>
-              </div>
-            </template>
-          </USelectMenu>
-        </div>
-
-        <!-- Budget -->
-        <div
-          v-if="selected.label === 'contact.subject_types.project'"
-          class="my-2 flex flex-col gap-2"
+        <UFormGroup
+          label="Subject"
+          required
         >
-          <URange
-            v-model="budget"
-            size="xs"
-            :min="400"
-            :max="8000"
-            :step="50"
+          <UInput
+            id="subject"
+            v-model="subject"
+            variant="none"
+            type="text"
+            name="subject"
+            :placeholder="$t('contact.subject')"
           />
-          <span class="text-sm text-gray-400"> {{ $t("contact.budget") }}: {{ budget }}€ </span>
-        </div>
+        </UFormGroup>
 
         <!-- Message -->
-        <div>
-          <label
-            for="message"
-            class="sr-only"
-          >
-            {{ $t("contact.message") }}
-          </label>
+        <UFormGroup
+          label="Message"
+          required
+        >
           <UTextarea
             id="message"
             v-model="message"
@@ -213,14 +136,15 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             required
             name="message"
             :rows="4"
-            :placeholder="$t('contact.message')"
+            placeholder="Lets work together!"
           />
-        </div>
+        </UFormGroup>
         <div class="flex justify-center">
           <UButton
             :loading
             type="submit"
             color="gray"
+            loading-icon="i-lucide-loader"
             block
           >
             {{ $t("contact.submit") }}
@@ -264,7 +188,3 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
     </div>
   </section>
 </template>
-
-<style scoped>
-
-</style>
