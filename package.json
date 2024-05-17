@@ -34,5 +34,8 @@
     "nuxt-svgo": "^3.7.0",
     "resend": "^0.17.2",
     "sitemap": "^7.1.1"
+  },
+  "dependencies": {
+    "vue-sonner": "^1.1.2"
   }
 }

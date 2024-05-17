@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { Toaster } from 'vue-sonner'
+
 const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const { appName, email } = useAppConfig()
-const toast = useToast()
 const { t } = useI18n()
 const { locale } = useI18n()
 
@@ -66,7 +67,7 @@ defineShortcuts({
     usingInput: true,
     handler: () => {
       copyToClipboard(email)
-      toast.add({ title: t('global.email_copied'), icon: 'i-heroicons-check-circle', timeout: 2500 })
+      toast.success(t('global.email_copied'))
     },
   },
 })
@@ -90,7 +91,7 @@ defineShortcuts({
             <ContentRenderer :value="data" />
           </ContentQuery>
         </NuxtLayout>
-        <UNotifications />
+        <Toaster close-button />
         <DotPattern class="absolute inset-0 -z-10 size-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
       </Body>
     </Html>
