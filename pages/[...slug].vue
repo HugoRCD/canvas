@@ -1,13 +1,10 @@
 <script setup lang="ts">
-const { page } = useContent()
 const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const { appName, email } = useAppConfig()
 const toast = useToast()
 const { t } = useI18n()
 const { locale } = useI18n()
-
-useContentHead(page)
 
 useHead({
   titleTemplate: `%s - ${appName}`,

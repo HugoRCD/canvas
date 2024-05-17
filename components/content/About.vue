@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { designStack, productivityStack, techStack } from '~/data/stack'
+const { data: stack } = await useAsyncData('stack', () => queryContent('/stack').findOne())
 </script>
 
 <template>
@@ -36,16 +36,11 @@ import { designStack, productivityStack, techStack } from '~/data/stack'
           <ContentSlot :use="$slots.stack_description" />
         </p>
       </div>
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div class="flex flex-wrap gap-4">
         <AboutStackItem
-          v-for="item in techStack"
+          v-for="item in stack!.items"
           :key="item.name"
-          :item="item"
-        />
-        <AboutStackItem
-          v-for="item in productivityStack"
-          :key="item.name"
-          :item="item"
+          :item
         />
       </div>
     </div>

@@ -1,7 +1,27 @@
 <script lang="ts" setup>
 const { page } = useContent()
+const { t } = useI18n()
+const toast = useToast()
 
 useContentHead(page)
+
+const runtimeConfig = useRuntimeConfig()
+const articleLink = ref(`${runtimeConfig.public.siteUrl}${page.value._path}`)
+
+function copyArticleLink() {
+  copyToClipboard(articleLink.value)
+  toast.add({ title: t('global.article_link_copied'), icon: 'i-heroicons-check-circle', timeout: 2500 })
+}
+
+defineShortcuts({
+  meta_k: {
+    usingInput: true,
+    handler: () => {
+      copyToClipboard(articleLink.value)
+      toast.add({ title: t('global.article_link_copied'), icon: 'i-heroicons-check-circle', timeout: 2500 })
+    },
+  },
+})
 </script>
 
 <template>
@@ -36,6 +56,7 @@ useContentHead(page)
           >
             <p
               class="flex cursor-pointer items-center gap-1 transition-colors duration-200 hover:text-main"
+              @click="copyArticleLink"
             >
               {{ $t("writing.share") }}
             </p>
