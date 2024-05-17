@@ -47,7 +47,8 @@ watch(context.isMounted, () => {
 function setActive() {
   if (context.isVertical) {
     context.setActiveItem(index.value, container.value.getBoundingClientRect().height, container.value.offsetTop)
-  } else {
+  }
+  else {
     context.setActiveItem(index.value, container.value.getBoundingClientRect().width, container.value.offsetLeft)
   }
 }

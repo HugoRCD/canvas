@@ -1,6 +1,6 @@
 import { Resend } from 'resend'
-import { H3Event } from 'h3'
-import { ContactEmail } from '~/types/ContactEmail'
+import type { H3Event } from 'h3'
+import type { ContactEmail } from '~/types/ContactEmail'
 
 const resend = new Resend(process.env.NUXT_PRIVATE_RESEND_API_KEY)
 
@@ -25,7 +25,8 @@ export default defineEventHandler(async (event: H3Event) => {
       </ul>
       `,
     })
-  } catch (error) {
+  }
+  catch (error) {
     return { error }
   }
 })

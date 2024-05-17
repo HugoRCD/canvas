@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ArrowUpIcon } from '@heroicons/vue/24/outline'
-
 const isScrolling = ref(false)
 
 onMounted(() => {
@@ -26,7 +24,7 @@ function scrollToTop() {
       :class="{ 'opacity-100': isScrolling, 'opacity-0': !isScrolling }"
       @click="scrollToTop"
     >
-      <ArrowUpIcon class="z-20 size-6" />
+      <span class="i-heroicons-arrow-up z-20 size-6" />
     </SpotlightButton>
   </div>
 </template>

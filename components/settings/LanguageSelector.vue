@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+
 const { locale, setLocaleCookie } = useI18n()
 
 defineProps({

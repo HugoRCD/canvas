@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { EnvelopeIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
   <div class="flex flex-col items-center justify-center gap-4 sm:gap-2">
     <div class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-2">
       <UTooltip
-        :text="$t('home.hero.email')"
+        :text="$t('global.email')"
         :shortcuts="['⌘', 'O']"
       >
         <SpotlightButton>
@@ -14,13 +13,22 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
             class="white-gradient relative flex items-center justify-center gap-2 transition-all duration-200"
             to="/contact"
           >
-            {{ $t("home.hero.contact") }}
-            <EnvelopeIcon class="size-5 text-white/80" />
+            {{ $t("global.contact") }}
+            <span
+              class="i-heroicons-envelope size-5 text-white/80"
+              aria-hidden="true"
+            />
           </NuxtLink>
         </SpotlightButton>
       </UTooltip>
       <MeetingButton />
     </div>
+    <NuxtLink href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHugoRCD%2Fcanvas&env=NUXT_PUBLIC_AVAILABLE,NUXT_PRIVATE_RESEND_API_KEY,NUXT_PUBLIC_STUDIO_TOKENS,NUXT_PUBLIC_MEETING_LINK,NUXT_PUBLIC_SITE_URL&envDescription=You%20will%20require%20an%20API%20key%20for%20Resend%20and%20Nuxt%20Studio%2C%20but%20it%20is%20not%20essential%20for%20the%20portfolio%20to%20work.%20Simply%20add%20%22test%2C%22%20for%20example%2C%20and%20edit%20the%20variable%20later.&project-name=canvas-portfolio&repository-name=canvas-portfolio&demo-title=Canvas&demo-url=canvas.hrcd.fr&demo-image=https%3A%2F%2Fcanvas.hrcd.fr%2Fsocial-preview.jpg">
+      <img
+        src="https://vercel.com/button"
+        alt="Deploy with Vercel"
+      >
+    </NuxtLink>
   </div>
 </template>
 
