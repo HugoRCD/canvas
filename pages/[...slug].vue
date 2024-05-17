@@ -4,7 +4,6 @@ import { Toaster } from 'vue-sonner'
 const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const { appName, email } = useAppConfig()
-const toast = useToast()
 const { t } = useI18n()
 const { locale } = useI18n()
 
@@ -68,7 +67,7 @@ defineShortcuts({
     usingInput: true,
     handler: () => {
       copyToClipboard(email)
-      toast.add({ title: t('global.email_copied'), icon: 'i-heroicons-check-circle', timeout: 2500 })
+      toast.success(t('global.email_copied'))
     },
   },
 })
