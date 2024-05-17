@@ -3,47 +3,35 @@ import type { Article } from '~/types/Article'
 
 const { t, locale } = useI18n()
 
-useHead({
-  title: () => t('writing.title'),
-})
+useHead({ title: () => t('writing.title') })
 
 const searchedTags = ref<string[]>([])
 const searchedTitle = ref('')
 const showSearch = ref(false)
 
-const { data } = await useAsyncData('articles', () => queryContent('/articles').locale(locale.value).sort({ date: -1 }).find(), {
-  watch: [locale],
-})
+const { data } = await useAsyncData('articles', () =>
+  queryContent('/articles')
+    .locale(locale.value)
+    .sort({ date: -1 }).find(),
+{ watch: [locale] },
+)
+
 const articles = computed(() => data.value as Article[])
-const tags = computed(() => {
-  const tags = new Set<string>()
-  articles.value.forEach(article => article.tags.forEach(tag => tags.add(tag)))
-  return Array.from(tags)
-})
+const tags = computed(() =>
+  Array.from(new Set(articles.value.flatMap(article => article.tags))),
+)
 
-const filteredArticles = computed(() => {
-  return articles.value
-    .filter((article) => {
-      if (searchedTags.value.length === 0) {
-        return true
-      }
-      return searchedTags.value.some(tag => article.tags.includes(tag))
-    })
-    .filter((article) => {
-      if (searchedTitle.value === '') {
-        return true
-      }
-      return article.title!.toLowerCase().includes(searchedTitle.value.toLowerCase())
-    })
-})
+const filteredArticles = computed(() =>
+  articles.value.filter(article =>
+    (searchedTags.value.length === 0 || searchedTags.value.some(tag => article.tags.includes(tag)))
+    && (searchedTitle.value === '' || article.title!.toLowerCase().includes(searchedTitle.value.toLowerCase())),
+  ),
+)
 
-function toggleTag(tag: string) {
-  if (searchedTags.value.includes(tag)) {
-    searchedTags.value = searchedTags.value.filter(t => t !== tag)
-  }
-  else {
-    searchedTags.value.push(tag)
-  }
+const toggleTag = (tag: string) => {
+  searchedTags.value = searchedTags.value.includes(tag)
+    ? searchedTags.value.filter(t => t !== tag)
+    : [...searchedTags.value, tag]
 }
 </script>
 

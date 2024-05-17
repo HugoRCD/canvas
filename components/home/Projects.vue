@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import projects from '~/data/projects'
+const { locale } = useI18n()
+
+const { data: projects } = await useAsyncData('projects', () => queryContent('/projects').locale(locale.value).sort({ release: -1 }).find(), {
+  watch: [locale],
+})
 </script>
 
 <template>
@@ -9,7 +13,7 @@ import projects from '~/data/projects'
     </h3>
     <div class="flex w-full flex-col gap-4">
       <NuxtLink
-        v-for="project in projects.filter((work) => work.featured)"
+        v-for="project in projects?.filter((work) => work.featured)"
         :key="project.name"
         role="link"
         class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 hover:bg-secondary hover:text-main"
