@@ -62,20 +62,27 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
           </h2>
         </div>
 
+        <SettingsAvailability
+          background
+          class="mt-2"
+          style="--stagger: 2"
+          data-animate
+        />
+
         <!-- social -->
         <HomeSocial
-          style="--stagger: 2"
+          style="--stagger: 3"
           data-animate
         />
 
         <!-- cta -->
         <HomeCTA
-          style="--stagger: 3"
+          style="--stagger: 4"
           data-animate
         />
 
         <div
-          style="--stagger: 4"
+          style="--stagger: 5"
           data-animate
           class="mt-12 flex w-full max-w-3xl flex-col gap-4 lg:mt-16"
         >
@@ -88,7 +95,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
         <!-- faq -->
         <ContentSlot
           :use="$slots.faq"
-          style="--stagger: 5"
+          style="--stagger: 6"
           data-animate
         />
       </div>

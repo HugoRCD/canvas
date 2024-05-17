@@ -65,6 +65,7 @@ export default defineNuxtConfig({
       avatar: 96,
       cover: 256,
       project: 1536,
+      projectLg: 3072,
     },
   },
 

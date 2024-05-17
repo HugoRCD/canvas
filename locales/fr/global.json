@@ -10,5 +10,11 @@
   "not_found": "Aucune commande trouvée",
   "see_more": "Voir plus",
   "soon": "Bientôt disponible",
-  "experiences": "Expériences"
+  "experiences": "Expériences",
+  "contact": "Prenons contact",
+  "email": "Copier l'e-mail",
+  "cv": "Télécharger mon CV",
+  "meeting": "Prendre rendez-vous",
+  "available" : "Disponible pour de nouvelles opportunités",
+  "unavailable" : "Actuellement en train de travailler sur d'autres projet génial"
 }

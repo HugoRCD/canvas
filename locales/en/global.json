@@ -10,5 +10,11 @@
   "not_found": "Command not found",
   "see_more": "See more",
   "soon": "Coming soon",
-  "experiences": "Experiences"
+  "experiences": "Experiences",
+  "contact": "Let's work together",
+  "email": "Copy email",
+  "cv": "Download resume",
+  "meeting": "Schedule a meeting",
+  "available": "Available for new opportunities",
+  "unavailable": "Currently working on other awesome projects"
 }

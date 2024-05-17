@@ -50,7 +50,7 @@ const currentAvailability = computed(() => {
       class="ml-2 text-sm font-medium"
       :class="currentAvailability.textColor"
     >
-      {{ $t("availability." + currentAvailability.status) }}
+      {{ $t("global." + currentAvailability.status) }}
     </span>
   </div>
 </template>
