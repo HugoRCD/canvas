@@ -26,13 +26,12 @@
     "@nuxtjs/i18n": "next",
     "@vueuse/core": "^9.13.0",
     "@vueuse/nuxt": "^9.13.0",
+    "automd": "^0.3.7",
     "eslint": "^9.2.0",
     "nuxt": "^3.11.2",
     "nuxt-og-image": "^2.2.4",
     "nuxt-svgo": "^3.7.0",
     "resend": "^0.17.2",
-    "sass": "^1.77.1",
-    "sitemap": "^7.1.1",
-    "automd": "^0.3.7"
+    "sitemap": "^7.1.1"
   }
 }

@@ -1,32 +1,9 @@
 <script setup lang="ts">
-const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
-const { t, locale } = useI18n()
 
 useHead({
-  title: () => t('navigation.home'),
-})
-
-useSeoMeta({
   title: () => appConfig.appName,
-  description: () => t('seo.description'),
-  author: 'Hugo Richard',
-  ogType: 'website',
-  ogTitle: appConfig.appName,
-  ogDescription: () => t('seo.description'),
-  ogUrl: () => runtimeConfig.public.siteUrl,
-  ogLocale: () => locale.value,
-  twitterTitle: appConfig.appName,
-  twitterDescription: () => t('seo.description'),
-  twitterCard: 'summary_large_image',
-  twitterSite: appConfig.twitterUsername,
-  twitterCreator: appConfig.twitterUsername,
-  twitterImage: 'https://hrcd.fr/social-preview.jpg',
 })
-
-/* const { data: projects } = await useAsyncData('projects', () => queryContent('/projects').locale(locale.value).find(), {
-  watch: [locale],
-}); */
 
 defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'Home image' })
 </script>
@@ -93,11 +70,11 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
         <Divider class="my-9" />
 
         <!-- faq -->
-        <ContentSlot
+        <!--        <ContentSlot
           :use="$slots.faq"
-          style="--stagger: 6"
+          style="&#45;&#45;stagger: 6"
           data-animate
-        />
+        /> -->
       </div>
     </div>
   </section>

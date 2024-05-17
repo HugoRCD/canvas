@@ -1,73 +1,58 @@
 <script lang="ts" setup>
-const { appName } = useAppConfig()
+const { page } = useContent()
 
-useHead({
-  titleTemplate: `%s - ${appName}`,
-  script: [
-    {
-      'src': 'https://plausible.hrcd.fr/js/script.js',
-      'defer': true,
-      'data-domain': 'canvas.hrcd.fr',
-    },
-  ],
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico',
-    },
-    {
-      rel: 'apple-touch-icon',
-      sizes: '180x180',
-      href: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      href: '/favicon-32x32.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      href: '/favicon-16x16.png',
-    },
-    {
-      rel: 'manifest',
-      href: '/site.webmanifest',
-    },
-  ],
-})
+useContentHead(page)
 </script>
 
 <template>
-  <Html
-    :lang="$i18n.locale"
-    class="bg-zinc-950 text-main transition-colors duration-300 selection:bg-white/60 selection:text-zinc-800"
-  >
-    <Body>
-      <LayoutScrollToTop />
-      <div>
-        <NuxtLink
-          to="/writing"
-          class="mx-auto my-8 flex cursor-pointer items-center gap-2 px-4 text-muted transition-colors duration-200 hover:text-main sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
-        >
-          <span class="i-lucide-arrow-left size-4" />
-          <span class="text-sm font-light">
-            {{ $t("navigation.writing") }}
-          </span>
-        </NuxtLink>
-        <SettingsLanguageToggle class="fixed bottom-4 right-4 sm:bottom-4" />
-        <article class="markdown prose mx-auto px-4 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
-          <slot />
-        </article>
-        <LayoutFooter class="pt-6" />
-      </div>
-      <UNotifications />
-      <DotPattern class="absolute inset-0 -z-10 size-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
-    </Body>
-  </Html>
+  <div>
+    <div>
+      <NuxtLink
+        to="/writing"
+        class="mx-auto my-8 flex cursor-pointer items-center gap-2 px-4 text-muted transition-colors duration-200 hover:text-main sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
+      >
+        <span class="i-lucide-arrow-left size-4" />
+        <span class="text-sm font-light">
+          {{ $t("navigation.writing") }}
+        </span>
+      </NuxtLink>
+      <SettingsLanguageToggle class="fixed bottom-4 right-4 sm:bottom-4" />
+      <article class="writing prose mx-auto px-4 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
+        <h1>
+          {{ page.title }}
+        </h1>
+        <div class="info-section mt-1 flex flex-col gap-2 sm:flex-row sm:gap-4">
+          <p>{{ page.date }}</p>
+          <p class="hidden sm:block">
+            |
+          </p>
+          <p>{{ page.readingTime }} {{ $t("writing.readingTime") }}</p>
+          <p class="hidden sm:block">
+            |
+          </p>
+          <UTooltip
+            :text="$t('writing.copy_link')"
+            :shortcuts="['⌘', 'K']"
+          >
+            <p
+              class="flex cursor-pointer items-center gap-1 transition-colors duration-200 hover:text-main"
+            >
+              {{ $t("writing.share") }}
+            </p>
+          </UTooltip>
+        </div>
+        <slot />
+      </article>
+      <LayoutFooter class="pt-6" />
+    </div>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.info-section {
+  font-weight: 300;
+  color: #7d8084;
+  text-decoration: none;
+  text-align: left;
+}
+</style>

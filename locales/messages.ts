@@ -10,9 +10,6 @@ import fr_seo from './fr/seo.json'
 import en_global from './en/global.json'
 import fr_global from './fr/global.json'
 
-import en_about from './en/about.json'
-import fr_about from './fr/about.json'
-
 import en_writing from './en/writing.json'
 import fr_writing from './fr/writing.json'
 
@@ -25,7 +22,6 @@ const messages = {
     contact: en_contact,
     seo: en_seo,
     global: en_global,
-    about: en_about,
     writing: en_writing,
     tags: en_tags,
   },
@@ -34,7 +30,6 @@ const messages = {
     contact: fr_contact,
     seo: fr_seo,
     global: fr_global,
-    about: fr_about,
     writing: fr_writing,
     tags: fr_tags,
   },

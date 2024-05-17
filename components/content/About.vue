@@ -1,11 +1,5 @@
 <script setup lang="ts">
 import { designStack, productivityStack, techStack } from '~/data/stack'
-
-const { t } = useI18n()
-
-useHead({
-  title: () => t('navigation.about'),
-})
 </script>
 
 <template>

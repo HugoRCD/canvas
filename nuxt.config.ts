@@ -3,12 +3,6 @@ export default defineNuxtConfig({
     head: {
       viewport: 'width=device-width, initial-scale=1',
       charset: 'utf-8',
-      meta: [
-        {
-          name: 'author',
-          content: 'Hugo Richard',
-        },
-      ],
     },
     pageTransition: {
       name: 'fade',
@@ -52,9 +46,6 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: true,
-    timeline: {
-      enabled: true,
-    },
   },
 
   modules: ['@vueuse/nuxt', '@nuxtjs/i18n', '@nuxt/ui', 'nuxt-svgo', '@nuxt/content', '@nuxthq/studio', '@nuxt/image', 'nuxt-og-image'],

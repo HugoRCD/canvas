@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import type { Article } from '~/types/Article'
 
-const { t, locale } = useI18n()
-
-useHead({ title: () => t('writing.title') })
+const { locale } = useI18n()
 
 const searchedTags = ref<string[]>([])
 const searchedTitle = ref('')

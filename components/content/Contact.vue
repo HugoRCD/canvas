@@ -4,10 +4,6 @@ import type { ContactEmail } from '~/types/ContactEmail'
 const appConfig = useAppConfig()
 const { t } = useI18n()
 
-useHead({
-  title: () => t('contact.title'),
-})
-
 const toast = useToast()
 
 const demandTypes = [
@@ -232,9 +228,6 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             {{ $t("contact.submit") }}
           </UButton>
         </div>
-        <p class="text-center text-sm font-light text-muted">
-          {{ $t("contact.average_response_time") }}
-        </p>
       </form>
       <Divider class="my-10" />
       <div class="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
@@ -254,7 +247,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
               aria-hidden="true"
             />
             <UTooltip
-              :text="$t('home.hero.email')"
+              :text="$t('global.email')"
               :shortcuts="['⌘', 'O']"
             >
               <NuxtLink

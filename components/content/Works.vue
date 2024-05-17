@@ -1,9 +1,5 @@
 <script setup lang="ts">
-const { t, locale } = useI18n()
-
-useHead({
-  title: () => t('writing.title'),
-})
+const { locale } = useI18n()
 
 const { data: projects } = await useAsyncData('projects', () => queryContent('/projects').locale(locale.value).sort({ release: -1 }).find(), {
   watch: [locale],
