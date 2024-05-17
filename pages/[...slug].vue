@@ -49,15 +49,15 @@ useHead({
 })
 
 useSeoMeta({
-  description: () => t('seo.description'),
+  description: () => t('global.app_description'),
   author: 'Hugo Richard',
   ogType: 'website',
   ogTitle: appConfig.appName,
-  ogDescription: () => t('seo.description'),
+  ogDescription: () => t('global.app_description'),
   ogUrl: () => runtimeConfig.public.siteUrl,
   ogLocale: () => locale.value,
   twitterTitle: appConfig.appName,
-  twitterDescription: () => t('seo.description'),
+  twitterDescription: () => t('global.app_description'),
   twitterCard: 'summary_large_image',
   twitterSite: appConfig.twitterUsername,
   twitterCreator: appConfig.twitterUsername,
