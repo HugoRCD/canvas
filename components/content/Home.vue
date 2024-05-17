@@ -69,17 +69,11 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
 
         <Divider class="my-9" />
 
-        <!-- faq -->
-        <!--        <ContentSlot
-          :use="$slots.faq"
-          style="&#45;&#45;stagger: 6"
+        <HomeFaq
+          style="--stagger: 6"
           data-animate
-        /> -->
+        />
       </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-
-</style>

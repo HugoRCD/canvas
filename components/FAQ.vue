@@ -13,8 +13,8 @@ defineProps({
 <template>
   <FaqGroup class="select-none space-y-5">
     <FaqItem
-      v-for="(question, index) in questions"
-      :key="index"
+      v-for="question in questions"
+      :key="question.title"
       v-slot="{ isActive, toggle }"
       class="group transform-gpu rounded-xl border border-white/10 bg-white/5 transition duration-500 will-change-transform hover:bg-white/[0.075]"
     >

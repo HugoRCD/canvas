@@ -1,6 +1,6 @@
 ---
 name: Mockline
-release: Soon
+release: Coming soon...
 image: /projects/mockline.webp
 link: https://mockline.dev/
 featured: true

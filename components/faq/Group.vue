@@ -3,7 +3,7 @@ const container = ref()
 
 const activeItem = ref(-1)
 
-function setActive(index) {
+function setActive(index: number) {
   if (activeItem.value === index) {
     activeItem.value = -1
   }

@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import type { Faq } from '~/types/Faq'
 
-const props = defineProps({
-  faqQuestions: {
-    type: Object as PropType<Faq[]>,
-    required: true,
-  },
+const { locale } = useI18n()
+
+const { data: faq } = await useAsyncData('faq', () => queryContent('/faq').locale(locale.value).findOne(), {
+  watch: [locale],
 })
 
 const items = computed(() => {
-  return props.faqQuestions.map((faq) => {
+  return faq.value?.faqQuestions.map((faq: Faq) => {
     return {
       label: faq.title,
       key: faq.title.toLowerCase(),
@@ -51,10 +49,10 @@ const ui = {
   <div class="flex flex-col items-center justify-center space-y-8">
     <div class="flex flex-col items-center justify-center gap-2">
       <h3 class="font-testimonial text-white-shadow text-4xl font-bold">
-        <ContentSlot :use="$slots.title" />
+        {{ faq!.title }}
       </h3>
       <p class="text-center text-sm font-light text-muted">
-        <ContentSlot :use="$slots.subtitle" />
+        {{ faq!.subtitle }}
       </p>
     </div>
     <div>
@@ -73,5 +71,3 @@ const ui = {
     </div>
   </div>
 </template>
-
-<style scoped></style>
