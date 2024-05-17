@@ -87,24 +87,7 @@ defineShortcuts({
             :locale="locale"
             find="one"
           >
-            <ContentRenderer :value="data">
-              <template #empty>
-                <div class="flex h-64 flex-1 flex-col items-center justify-center">
-                  <h1 class="text-center text-7xl italic">
-                    404
-                  </h1>
-                  <p class="text-center">
-                    I think you're lost, let's go back
-                    <NuxtLink
-                      to="/"
-                      class="font-medium italic text-blue-600 hover:underline"
-                    >
-                      home
-                    </NuxtLink>.
-                  </p>
-                </div>
-              </template>
-            </ContentRenderer>
+            <ContentRenderer :value="data" />
           </ContentQuery>
         </NuxtLayout>
         <UNotifications />
