@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "name": "Nuxt",
+      "link": "https://nuxt.com/",
+      "logo": "SvgoNuxtColor"
+    },
+    {
+      "name": "Vue",
+      "link": "https://vuejs.org/",
+      "logo": "SvgoVueColor"
+    },
+    {
+      "name": "Nest",
+      "link": "https://nestjs.com/",
+      "logo": "SvgoNestColor"
+    },
+    {
+      "name": "TailwindCSS",
+      "link": "https://tailwindcss.com/",
+      "logo": "SvgoTailwindColor"
+    },
+    {
+      "name": "Prisma",
+      "link": "https://www.prisma.io/",
+      "logo": "SvgoPrismaColor"
+    },
+    {
+      "name": "Vercel",
+      "link": "https://vercel.com/",
+      "logo": "SvgoVercel"
+    },
+    {
+      "name": "Linear",
+      "link": "https://linear.app/",
+      "logo": "SvgoLinearColor"
+    },
+    {
+      "name": "Arc",
+      "link": "https://arc.net/",
+      "logo": "SvgoArcColor"
+    },
+    {
+      "name": "Raycast",
+      "link": "https://raycast.com/",
+      "logo": "SvgoRaycastColor"
+    },
+    {
+      "name": "Notion",
+      "link": "https://www.notion.so/",
+      "logo": "SvgoNotionColor"
+    },
+    {
+      "name": "Cron",
+      "link": "https://calendar.cron.com/",
+      "logo": "SvgoCronColor"
+    },
+    {
+      "name": "Spark",
+      "link": "https://sparkmailapp.com/",
+      "logo": "SvgoSparkColor"
+    },
+    {
+      "name": "1Password",
+      "link": "https://1password.com/",
+      "logo": "SvgoOnepasswordColor"
+    },
+    {
+      "name": "Fig",
+      "link": "https://fig.io/",
+      "logo": "SvgoFigColor"
+    },
+    {
+      "name": "Figma",
+      "link": "https://www.figma.com/",
+      "logo": "SvgoFigmaColor"
+    },
+    {
+      "name": "Photoshop",
+      "link": "https://www.adobe.com/products/photoshop.html",
+      "logo": "SvgoPhotoshopColor"
+    },
+    {
+      "name": "Illustrator",
+      "link": "https://www.adobe.com/products/illustrator.html",
+      "logo": "SvgoIllustratorColor"
+    },
+    {
+      "name": "Lightroom",
+      "link": "https://www.adobe.com/products/photoshop-lightroom.html",
+      "logo": "SvgoLightroomColor"
+    }
+  ]
+}

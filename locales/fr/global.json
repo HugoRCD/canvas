@@ -1,4 +1,5 @@
 {
+  "app_description": "Canvas est une template de portfolio simple et épuré pour les designers et les développeurs, fait avec Nuxt et Tailwind CSS. Réalisé avec ❤\uFE0F par HugoRCD",
   "copied_to_clipboard": "Copié dans le presse-papiers",
   "article_link_copied": "Lien de l'article copié dans le presse-papiers",
   "email_copied": "Email copié dans le presse-papiers",
@@ -9,5 +10,13 @@
   "command": "Commandes disponibles",
   "not_found": "Aucune commande trouvée",
   "see_more": "Voir plus",
-  "soon": "Bientôt disponible"
+  "soon": "Bientôt disponible",
+  "experiences": "Expériences",
+  "contact": "Prenons contact",
+  "email": "Copier l'e-mail",
+  "cv": "Télécharger mon CV",
+  "meeting": "Prendre rendez-vous",
+  "available" : "Disponible pour de nouvelles opportunités",
+  "unavailable" : "Actuellement en train de travailler sur d'autres projet génial",
+  "all_rights_reserved": "Tous droits réservés"
 }

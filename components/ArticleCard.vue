@@ -42,5 +42,3 @@ defineProps({
     </div>
   </NuxtLink>
 </template>
-
-<style scoped lang="scss"></style>

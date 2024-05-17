@@ -7,7 +7,7 @@ const locales = [
 ]
 
 const currentLocale = computed(() => {
-  return locales.find((locale) => locale.code === current.value)
+  return locales.find(locale => locale.code === current.value)
 })
 
 watch(current, (newLocale) => {

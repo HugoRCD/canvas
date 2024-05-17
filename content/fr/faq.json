@@ -1,0 +1,53 @@
+{
+  "title": "FAQ",
+  "subtitle": "Questions qu'on me pose souvent",
+  "faqQuestions": [
+    {
+      "title": "Services",
+      "questions": [
+        {
+          "title": "Quels services je propose?",
+          "answer": "Je propose principalement des services de développement web et mobile, mais aussi de design et de consulting web. Mon objectif est de vous aider à créer des produits de qualité, qui répondent à vos besoins et à ceux de vos utilisateurs."
+        },
+        {
+          "title": "Peux-tu m'aider à apprendre à faire un site web?",
+          "answer": "Je ne propose pas de cours pour le moment, mais je peux vous recommander des ressources et conseils pour vous orienter au mieux dans votre apprentissage."
+        }
+      ]
+    },
+    {
+      "title": "Tarification",
+      "questions": [
+        {
+          "title": "Combien coûte un projet?",
+          "answer": "Le coût d'un projet dépend de nombreux facteurs, tels que la taille du projet, les fonctionnalités, le temps de développement, etc. Le montant initial de mes services web commence à 2000€, avec une moyenne comprise entre 3000€ et 10000€. Pour tout autre service de design ou de consulting, je facture généralement 450€ par jour."
+        },
+        {
+          "title": "Comment fonctionne le paiement pour un projet?",
+          "answer": "Je demande un acompte de 40% avant de commencer un projet, et les 60% restants après une livraison réussie. J'accepte les paiements par virement bancaire, PayPal, etc..."
+        },
+        {
+          "title": "Combien de temps dure un projet?",
+          "answer": "Il est difficile de donner une estimation précise, car chaque projet est différent, mais la majorité de mes travaux passés ont pris entre 2 semaines et 2 mois."
+        },
+        {
+          "title": "Est-ce que je propose des réductions?",
+          "answer": "J'offre une réduction de 15% pour les étudiants et les organisations à but non lucratif."
+        }
+      ]
+    },
+    {
+      "title": "Personnel",
+      "questions": [
+        {
+          "title": "Qu'est-ce que tu préfères dans ce travail?",
+          "answer": "J'adore apprendre de nouvelles choses et pouvoir créer à peu près tout à partir de rien, créer de belles choses que les gens utiliseront et apprécieront."
+        },
+        {
+          "title": "Des passions en dehors du travail?",
+          "answer": "J'adore ce que je fais, donc je passe généralement beaucoup de temps à travailler sur des projets personnels, la photographie, etc. Je suis aussi un grand accro au sport. Je vais souvent à la salle de sport et j'ai récemment commencé l'escalade !"
+        }
+      ]
+    }
+  ]
+}

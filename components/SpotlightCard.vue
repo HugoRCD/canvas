@@ -40,7 +40,7 @@ const props = defineProps({
 const card = ref()
 const { elementX, elementY } = useMouseInElement(card)
 
-const spotlightColorStops = [props.from, props.via, props.to].filter((value) => !!value).join(',')
+const spotlightColorStops = [props.from, props.via, props.to].filter(value => !!value).join(',')
 </script>
 
 <template>
