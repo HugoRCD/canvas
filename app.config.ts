@@ -28,12 +28,12 @@ export default defineAppConfig({
     },
     input: {
       variant: {
-        none: 'bg-gray-100 dark:bg-gray-900 border-1 border-gray-700 hover:border-gray-400 focus:border-gray-400 transition-colors duration-300 ease-in-out',
+        none: 'bg-gray-100 dark:bg-gray-900/40 border-1 border-gray-700 hover:border-gray-400 focus:border-gray-400 transition-colors duration-300 ease-in-out',
       },
     },
     textarea: {
       variant: {
-        none: 'bg-gray-100 dark:bg-gray-900 border-1 border-gray-700 hover:border-gray-400 focus:border-gray-400 transition-colors duration-300 ease-in-out',
+        none: 'bg-gray-100 dark:bg-gray-900/40 border-1 border-gray-700 hover:border-gray-400 focus:border-gray-400 transition-colors duration-300 ease-in-out',
       },
     },
   },
