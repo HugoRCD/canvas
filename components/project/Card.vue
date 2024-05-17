@@ -67,5 +67,3 @@ const img = useImage()
     </div>
   </NuxtLink>
 </template>
-
-<style scoped lang="scss"></style>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { usePreferredLanguages } from '@vueuse/core'
+
 const { locale } = useI18n()
 
 // languages is a ref of an array of strings like ['en-US', 'en', 'fr']

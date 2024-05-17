@@ -5,6 +5,7 @@ description: "Dans le domaine du développement web, où l'efficacité est aussi
 tags: ["Nuxt", "Vue", "Raycast", "Productivité"]
 image: "https://canvas.hrcd.fr/articles/5-raycast-snippets.jpg"
 readingTime: "10"
+layout: "article"
 ---
 
 Arrive bientôt !

@@ -1,4 +1,5 @@
 {
+  "app_description": "Canvas is a simple but beautiful portfolio template for designers and developers built with Nuxt and Tailwind CSS. Made with ❤\uFE0F by HugoRCD",
   "copied_to_clipboard": "Copied to clipboard",
   "article_link_copied": "Article link copied to clipboard",
   "email_copied": "Email copied to clipboard",
@@ -9,5 +10,13 @@
   "command": "Available commands",
   "not_found": "Command not found",
   "see_more": "See more",
-  "soon": "Coming soon"
+  "soon": "Coming soon",
+  "experiences": "Experiences",
+  "contact": "Let's work together",
+  "email": "Copy email",
+  "cv": "Download resume",
+  "meeting": "Schedule a meeting",
+  "available": "Available for new opportunities",
+  "unavailable": "Currently working on other awesome projects",
+  "all_rights_reserved": "All rights reserved"
 }

@@ -7,7 +7,6 @@
   "subject": "Subject of your message",
   "message": "Message",
   "submit": "Send",
-  "average_response_time": "I usually respond between 2 and 5 hours",
   "success": "Your message has been sent successfully",
   "error": "Oups, an error occurred while sending your message",
   "budget": "Budget",

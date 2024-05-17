@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Ref } from 'vue'
+
 defineProps({
   as: {
     type: String,
@@ -8,7 +10,11 @@ defineProps({
 
 const container = ref()
 
-const context = inject('details-context')
+const context = inject('details-context') as {
+  peers: Ref<HTMLElement[]>
+  activeItem: Ref<number>
+  setActive: (index: number) => void
+}
 
 const index = computed(() => {
   return context.peers?.value ? context.peers.value.indexOf(container.value) : -1
@@ -27,8 +33,8 @@ provide('isActive', isActive)
     ref="container"
   >
     <slot
-      :toggle
-      :is-active
+      :toggle="toggle"
+      :is-active="isActive"
     />
   </component>
 </template>

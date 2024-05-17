@@ -1,13 +1,10 @@
-import { HomeIcon, BriefcaseIcon, UserIcon, EnvelopeIcon, PencilIcon } from '@heroicons/vue/24/outline'
-import { type FunctionalComponent } from 'vue'
-
-type Where = 'home' | 'app';
+type Where = 'home' | 'app'
 
 export type Navigation = {
-  name: string;
-  to: string;
-  icon: FunctionalComponent;
-};
+  name: string
+  to: string
+  icon: string
+}
 
 export function getNavigation(where: Where): Record<string, Navigation> | [] {
   switch (where) {
@@ -16,27 +13,27 @@ export function getNavigation(where: Where): Record<string, Navigation> | [] {
         home: {
           name: 'Home',
           to: '/',
-          icon: HomeIcon,
+          icon: 'i-lucide-home',
         },
         works: {
           name: 'Works',
           to: '/works',
-          icon: BriefcaseIcon,
+          icon: 'i-lucide-briefcase',
         },
         writing: {
           name: 'Writing',
           to: '/writing',
-          icon: PencilIcon,
+          icon: 'i-lucide-library',
         },
         about: {
           name: 'About',
           to: '/about',
-          icon: UserIcon,
+          icon: 'i-lucide-user',
         },
         contact: {
           name: 'Contact',
           to: '/contact',
-          icon: EnvelopeIcon,
+          icon: 'i-lucide-mail',
         },
       }
     default:

@@ -42,7 +42,8 @@ function handleFluidMove(targetSize, targetPosition) {
     activeItem.position = targetPosition
 
     animated = true
-  } else {
+  }
+  else {
     if (targetPosition > previousPosition) {
       activeItem.size = targetSize + targetPosition - previousPosition
 
@@ -52,7 +53,8 @@ function handleFluidMove(targetSize, targetPosition) {
 
         animated = true
       }, props.duration)
-    } else {
+    }
+    else {
       activeItem.position = targetPosition
       activeItem.size = previousSize + previousPosition - activeItem.position
 
@@ -73,7 +75,8 @@ function setActiveItem(index, size, position) {
 
   if (props.fluid) {
     handleFluidMove(size, position)
-  } else {
+  }
+  else {
     activeItem.size = size
     activeItem.position = position
   }

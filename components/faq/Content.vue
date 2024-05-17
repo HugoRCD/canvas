@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useElementSize } from '@vueuse/core'
+import type { Ref } from 'vue'
 
 defineProps({
   as: {
@@ -20,7 +21,7 @@ const { height: targetHeight } = useElementSize(content, undefined, {
   box: 'border-box',
 })
 
-const isActive = inject('isActive')
+const isActive = inject('isActive') as Ref<boolean>
 
 const height = computed(() => (isActive.value ? targetHeight.value : 0))
 </script>

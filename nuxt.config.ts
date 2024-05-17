@@ -3,12 +3,6 @@ export default defineNuxtConfig({
     head: {
       viewport: 'width=device-width, initial-scale=1',
       charset: 'utf-8',
-      meta: [
-        {
-          name: 'author',
-          content: 'Hugo Richard',
-        },
-      ],
     },
     pageTransition: {
       name: 'fade',
@@ -28,7 +22,11 @@ export default defineNuxtConfig({
     twitter: '@HugoRCD__',
   },
 
-  css: ['~/assets/style/main.scss'],
+  css: ['~/assets/style/main.css'],
+
+  ui: {
+    icons: ['heroicons', 'lucide'],
+  },
 
   runtimeConfig: {
     public: {
@@ -48,12 +46,19 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: true,
-    timeline: {
-      enabled: true,
-    },
   },
 
-  modules: ['@vueuse/nuxt', '@nuxtjs/i18n', '@nuxt/ui', 'nuxt-svgo', '@nuxt/content', '@nuxthq/studio', '@nuxt/image', 'nuxt-og-image'],
+  modules: [
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/ui',
+    'nuxt-svgo',
+    '@nuxt/content',
+    '@nuxthq/studio',
+    '@nuxt/image',
+    'nuxt-og-image',
+    "@nuxt/fonts"
+  ],
 
   image: {
     format: ['webp'],
@@ -61,6 +66,7 @@ export default defineNuxtConfig({
       avatar: 96,
       cover: 256,
       project: 1536,
+      projectLg: 3072,
     },
   },
 
@@ -72,16 +78,8 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
     baseUrl: '/',
-    locales: [
-      {
-        code: 'en',
-        iso: 'en-US',
-      },
-      {
-        code: 'fr',
-        iso: 'fr-FR',
-      },
-    ],
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
     vueI18n: '~/i18n.config.ts',
   },
 
@@ -93,6 +91,7 @@ export default defineNuxtConfig({
   },
 
   content: {
+    documentDriven: true,
     watch: {
       ws: {
         showURL: false,
@@ -114,6 +113,4 @@ export default defineNuxtConfig({
   svgo: {
     autoImportPath: './assets/logo/',
   },
-
-  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
 })
