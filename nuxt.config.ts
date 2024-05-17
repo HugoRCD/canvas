@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@nuxt/image',
     'nuxt-og-image',
-    "@nuxt/fonts"
+    '@nuxt/fonts',
   ],
 
   image: {
@@ -68,6 +68,15 @@ export default defineNuxtConfig({
       project: 1536,
       projectLg: 3072,
     },
+  },
+
+  imports: {
+    presets: [
+      {
+        from: 'vue-sonner',
+        imports: ['toast'],
+      },
+    ],
   },
 
   i18n: {

@@ -4,8 +4,6 @@ import type { ContactEmail } from '~/types/ContactEmail'
 const appConfig = useAppConfig()
 const { t } = useI18n()
 
-const toast = useToast()
-
 const demandTypes = [
   {
     label: 'contact.subject_types.project',
@@ -66,10 +64,10 @@ async function submitForm() {
     fullname.value = ''
     budget.value = 450
     selected.value = demandTypes[0]
-    toast.add({ title: t('contact.success'), icon: 'i-heroicons-check-circle', timeout: 2500 })
+    toast.success(t('contact.success'))
   }
   else {
-    toast.add({ title: t('contact.error'), icon: 'i-heroicons-x-circle', timeout: 2500, color: 'red' })
+    toast.success(t('contact.error'))
   }
   loading.value = false
 }

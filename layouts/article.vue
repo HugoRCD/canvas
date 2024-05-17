@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 const { page } = useContent()
 const { t } = useI18n()
-const toast = useToast()
 
 useContentHead(page)
 
@@ -10,7 +9,7 @@ const articleLink = ref(`${runtimeConfig.public.siteUrl}${page.value._path}`)
 
 function copyArticleLink() {
   copyToClipboard(articleLink.value)
-  toast.add({ title: t('global.article_link_copied'), icon: 'i-heroicons-check-circle', timeout: 2500 })
+  toast.success(t('global.article_link_copied'))
 }
 
 defineShortcuts({
@@ -18,7 +17,7 @@ defineShortcuts({
     usingInput: true,
     handler: () => {
       copyToClipboard(articleLink.value)
-      toast.add({ title: t('global.article_link_copied'), icon: 'i-heroicons-check-circle', timeout: 2500 })
+      toast.success(t('global.article_link_copied'))
     },
   },
 })

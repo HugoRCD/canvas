@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Toaster } from 'vue-sonner'
+
 const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const { appName, email } = useAppConfig()
@@ -90,7 +92,7 @@ defineShortcuts({
             <ContentRenderer :value="data" />
           </ContentQuery>
         </NuxtLayout>
-        <UNotifications />
+        <Toaster close-button />
         <DotPattern class="absolute inset-0 -z-10 size-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
       </Body>
     </Html>
