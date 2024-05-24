@@ -16,7 +16,7 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.1.187",
+    "@iconify-json/lucide": "^1.1.188",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/devtools": "^1.3.1",
     "@nuxt/eslint-config": "^0.3.13",
@@ -33,7 +33,7 @@
     "nuxt-og-image": "^2.2.4",
     "nuxt-svgo": "^3.7.0",
     "resend": "^0.17.2",
-    "sitemap": "^7.1.1"
+    "sitemap": "^7.1.2"
   },
   "dependencies": {
     "vue-sonner": "^1.1.2"
