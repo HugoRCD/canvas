@@ -3,6 +3,13 @@ export default defineNuxtConfig({
     head: {
       viewport: 'width=device-width, initial-scale=1',
       charset: 'utf-8',
+      script: [
+        {
+          'src': 'https://analytics.hrcd.fr/script.js',
+          'defer': true,
+          'data-website-id': '96506281-5dc2-4425-a864-b7491468bdc4',
+        },
+      ],
     },
     pageTransition: {
       name: 'fade',
