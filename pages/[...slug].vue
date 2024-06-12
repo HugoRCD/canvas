@@ -9,13 +9,6 @@ const { locale } = useI18n()
 
 useHead({
   titleTemplate: `%s - ${appName}`,
-  script: [
-    {
-      'src': 'https://plausible.hrcd.fr/js/script.js',
-      'defer': true,
-      'data-domain': 'canvas.hrcd.fr',
-    },
-  ],
   link: [
     {
       rel: 'icon',
