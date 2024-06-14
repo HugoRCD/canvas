@@ -5,7 +5,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       script: [
         {
-          'src': 'https://analytics.hrcd.fr/script.js',
+          'src': 'https://analytics.hrcd.fr/js/script.js',
           'defer': true,
           'data-domain': 'canvas.hrcd.fr',
         },
