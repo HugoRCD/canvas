@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         {
           'src': 'https://analytics.hrcd.fr/script.js',
           'defer': true,
-          'data-website-id': '96506281-5dc2-4425-a864-b7491468bdc4',
+          'data-domain': 'canvas.hrcd.fr',
         },
       ],
     },
