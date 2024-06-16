@@ -31,7 +31,7 @@
     "eslint": "^9.5.0",
     "nuxt": "^3.12.2",
     "nuxt-og-image": "^2.2.4",
-    "nuxt-svgo": "^3.7.0",
+    "nuxt-svgo": "^4.0.1",
     "resend": "^0.17.2",
     "sitemap": "^7.1.2"
   },
