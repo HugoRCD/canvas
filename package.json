@@ -26,7 +26,7 @@
     "@nuxthq/studio": "^2.0.0",
     "@nuxtjs/i18n": "next",
     "@vueuse/core": "^10.11.0",
-    "@vueuse/nuxt": "^9.13.0",
+    "@vueuse/nuxt": "^10.11.0",
     "automd": "^0.3.7",
     "eslint": "^9.5.0",
     "nuxt": "^3.12.2",
