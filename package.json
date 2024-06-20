@@ -30,12 +30,12 @@
     "automd": "^0.3.7",
     "eslint": "^9.5.0",
     "nuxt": "^3.12.2",
-    "nuxt-og-image": "^2.2.4",
+    "nuxt-og-image": "^2.2.6",
     "nuxt-svgo": "^4.0.1",
     "resend": "^3.3.0",
     "sitemap": "^8.0.0"
   },
   "dependencies": {
-    "vue-sonner": "^1.1.2"
+    "vue-sonner": "^1.1.3"
   }
 }
