@@ -35,7 +35,7 @@ defineProps({
       </div>
 
       <FaqContent class="transform-gpu overflow-hidden px-4 transition-all duration-500 will-change-[height]">
-        <p class="pb-4 font-light leading-relaxed tracking-wide text-white/75">
+        <p class="pb-4 font-extralight leading-relaxed tracking-wide text-white/75">
           {{ question.answer }}
         </p>
       </FaqContent>

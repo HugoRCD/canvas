@@ -65,8 +65,6 @@ module.exports = {
       },
 
       fontFamily: {
-        testimonial: ['Testimonial', 'sans-serif'],
-        instrument: ['Instrument', 'serif'],
         newsreader: ['Newsreader', 'serif'],
         geist: ['Geist', 'sans-serif'],
       },

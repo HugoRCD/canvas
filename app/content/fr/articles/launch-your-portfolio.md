@@ -5,7 +5,6 @@ description: "Viser le perfectionnisme est un très bon état d'esprit. D'un aut
 tags: ["Portfolio", "Développement", "Design", "Productivité"]
 image: "https://canvas.hrcd.fr/articles/launch-your-porfolio.jpg"
 readingTime: "5"
-layout: "article"
 ---
 
 ## Introduction

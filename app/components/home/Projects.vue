@@ -8,7 +8,7 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/p
 
 <template>
   <div class="flex w-full flex-col gap-6">
-    <h3 class="font-testimonial text-white-shadow text-xl font-bold">
+    <h3 class="font-newsreader italic text-white-shadow text-xl">
       {{ $t("navigation.works") }}
     </h3>
     <div class="flex w-full flex-col gap-4">
@@ -31,7 +31,7 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/p
       </NuxtLink>
     </div>
     <div @click="useRouter().push('/works')">
-      <span class="font-testimonial text-white-shadow cursor-pointer text-sm">
+      <span class="font-newsreader italic text-white-shadow cursor-pointer text-sm">
         {{ $t("global.see_more") }}
       </span>
     </div>

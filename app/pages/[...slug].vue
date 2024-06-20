@@ -1,42 +1,22 @@
 <script setup lang="ts">
 import { Toaster } from 'vue-sonner'
 
+const route = useRoute()
+const { data: page } = await useAsyncData(`${route.path}`, () => queryContent(route.path).findOne())
+
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+}
+
+useContentHead(page.value)
+
 const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const { appName, email } = useAppConfig()
-const { t } = useI18n()
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 
 useHead({
   titleTemplate: `%s - ${appName}`,
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico',
-    },
-    {
-      rel: 'apple-touch-icon',
-      sizes: '180x180',
-      href: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      href: '/favicon-32x32.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      href: '/favicon-16x16.png',
-    },
-    {
-      rel: 'manifest',
-      href: '/site.webmanifest',
-    },
-  ],
 })
 
 useSeoMeta({

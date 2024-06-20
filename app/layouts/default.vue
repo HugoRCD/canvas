@@ -1,9 +1,3 @@
-<script setup lang="ts">
-const { page } = useContent()
-
-useContentHead(page)
-</script>
-
 <template>
   <div>
     <div>

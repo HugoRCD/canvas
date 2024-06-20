@@ -38,13 +38,13 @@ const toggleTag = (tag: string) => {
     <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
       <ContentSlot :use="$slots.title" />
     </h1>
-    <h2 class="text-center text-lg font-medium italic text-muted">
+    <h2 class="text-center text-lg font-extralight italic text-muted">
       <ContentSlot :use="$slots.subtitle" />
     </h2>
     <Divider class="mb-8 mt-2" />
     <div :class="showSearch ? '' : 'mb-3'">
       <span
-        class="font-testimonial text-white-shadow cursor-pointer select-none text-lg"
+        class="font-newsreader italic text-white-shadow cursor-pointer select-none text-lg"
         @click="showSearch = !showSearch"
       >
         {{ showSearch ? $t("writing.hide_search") : $t("writing.show_search") }}
@@ -73,7 +73,7 @@ const toggleTag = (tag: string) => {
           :class="{ 'bg-zinc-700': searchedTags.includes(tag) }"
           @click="toggleTag(tag)"
         >
-          <div class="font-light">
+          <div class="font-extralight">
             {{ tag }}
           </div>
         </div>

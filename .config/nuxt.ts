@@ -111,7 +111,6 @@ export default defineNuxtConfig({
   },
 
   content: {
-    documentDriven: true,
     watch: {
       ws: {
         showURL: false,

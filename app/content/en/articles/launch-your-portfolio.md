@@ -5,7 +5,6 @@ description: "Aiming for perfectionism is a very good state of mind. On the othe
 tags: ["Portfolio", "Development", "Design", "Productivity"]
 image: "https://canvas.hrcd.fr/articles/launch-your-porfolio.jpg"
 readingTime: "5"
-layout: "article"
 ---
 
 ## Introduction
