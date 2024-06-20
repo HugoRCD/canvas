@@ -22,6 +22,7 @@ useHead({
 useSeoMeta({
   description: () => t('global.app_description'),
   author: 'Hugo Richard',
+  ogImage: 'https://canvas.hrcd.fr/social-preview.jpg',
   ogType: 'website',
   ogTitle: appConfig.appName,
   ogDescription: () => t('global.app_description'),
@@ -32,7 +33,7 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterSite: appConfig.twitterUsername,
   twitterCreator: appConfig.twitterUsername,
-  twitterImage: 'https://hrcd.fr/social-preview.jpg',
+  twitterImage: 'https://canvas.hrcd.fr/social-preview.jpg',
 })
 
 defineShortcuts({

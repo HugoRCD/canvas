@@ -29,6 +29,12 @@ defineShortcuts({
     },
   },
 })
+
+defineOgImage({
+  url: page.value.image,
+  width: 1200,
+  height: 600,
+})
 </script>
 
 <template>

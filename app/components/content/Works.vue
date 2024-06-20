@@ -24,7 +24,3 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/p
     </div>
   </section>
 </template>
-
-<style scoped>
-
-</style>
