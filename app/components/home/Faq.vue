@@ -48,10 +48,10 @@ const ui = {
 <template>
   <div class="flex flex-col items-center justify-center space-y-8">
     <div class="flex flex-col items-center justify-center gap-2">
-      <h3 class="font-testimonial text-white-shadow text-4xl font-bold">
+      <h3 class="font-newsreader italic text-white-shadow text-4xl">
         {{ faq!.title }}
       </h3>
-      <p class="text-center text-sm font-light text-muted">
+      <p class="text-center text-sm font-medium text-muted">
         {{ faq!.subtitle }}
       </p>
     </div>

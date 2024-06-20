@@ -4,11 +4,11 @@ const { data: stack } = await useAsyncData('stack', () => queryContent('/stack')
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
-    <h1 class="font-testimonial text-white-shadow text-center text-4xl font-bold">
+    <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
       <ContentSlot :use="$slots.title" />
     </h1>
-    <h2 class="text-center text-lg font-light italic text-muted">
-      <ContentSlot :use="$slots.description" />
+    <h2 class="text-center text-lg font-medium italic text-muted">
+      <ContentSlot :use="$slots.subtitle" />
     </h2>
     <Divider class="mb-8 mt-2" />
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -29,7 +29,7 @@ const { data: stack } = await useAsyncData('stack', () => queryContent('/stack')
     <Divider class="my-8" />
     <div class="flex flex-col gap-3">
       <div class="mb-6 flex flex-col gap-1">
-        <h3 class="text-white-shadow font-testimonial text-3xl font-bold">
+        <h3 class="text-white-shadow font-newsreader italic text-3xl">
           <ContentSlot :use="$slots.stack_title" />
         </h3>
         <p class="text-sm text-muted">

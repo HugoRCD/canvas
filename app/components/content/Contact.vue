@@ -47,10 +47,10 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
-    <h1 class="font-testimonial text-white-shadow text-center text-4xl font-bold">
+    <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
       <ContentSlot :use="$slots.title" />
     </h1>
-    <h2 class="text-center text-lg font-light italic text-muted">
+    <h2 class="text-center text-lg font-medium italic text-muted">
       <ContentSlot :use="$slots.subtitle" />
     </h2>
     <Divider class="mb-8 mt-2" />

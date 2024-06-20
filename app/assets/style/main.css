@@ -8,7 +8,6 @@
 html, body, #__nuxt, #__layout {
   height: 100% !important;
   width: 100% !important;
-  font-family: "Inter V", sans-serif;
 
   ::-webkit-scrollbar {
     width: 0.5rem;
@@ -23,14 +22,6 @@ html, body, #__nuxt, #__layout {
     background: var(--bg-card);
     border-radius: 0.5rem;
   }
-}
-
-@font-face {
-  font-family: "Testimonial", serif;
-}
-
-@font-face {
-  font-family: "Geist", sans-serif;
 }
 
 @layer components {

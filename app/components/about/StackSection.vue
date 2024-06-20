@@ -16,7 +16,7 @@ defineProps({
 
 <template>
   <div class="flex flex-col gap-3">
-    <h4 class="font-testimonial text-white-shadow text-2xl font-bold">
+    <h4 class="font-newsreader italic text-white-shadow text-2xl font-bold">
       {{ $t(`tags.${stack}`) }}
     </h4>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">

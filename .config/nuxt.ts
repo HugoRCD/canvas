@@ -1,4 +1,8 @@
 export default defineNuxtConfig({
+  future: {
+    compatibilityVersion: 4,
+  },
+
   app: {
     head: {
       viewport: 'width=device-width, initial-scale=1',
