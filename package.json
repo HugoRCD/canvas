@@ -1,9 +1,9 @@
 {
   "name": "canvas-template",
   "author": "HugoRCD",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "license": "MIT License",
+  "license": "Apache-2.0",
   "scripts": {
     "automd": "automd",
     "build": "nuxt build",
@@ -30,12 +30,10 @@
     "automd": "^0.3.7",
     "eslint": "^9.5.0",
     "nuxt": "^3.12.2",
-    "nuxt-og-image": "^2.2.4",
+    "nuxt-og-image": "^2.2.6",
     "nuxt-svgo": "^4.0.1",
     "resend": "^3.3.0",
-    "sitemap": "^8.0.0"
-  },
-  "dependencies": {
-    "vue-sonner": "^1.1.2"
+    "sitemap": "^8.0.0",
+    "vue-sonner": "^1.1.3"
   }
 }

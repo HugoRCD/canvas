@@ -5,8 +5,7 @@ import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
 import svgToDataUri from 'mini-svg-data-uri'
 
 function withOpacity(variableName: string) {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
+  // @ts-expect-error doesn't matter
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
       return `rgba(var(${variableName}), ${opacityValue})`
@@ -66,7 +65,7 @@ module.exports = {
       },
 
       fontFamily: {
-        testimonial: ['Testimonial', 'sans-serif'],
+        newsreader: ['Newsreader', 'serif'],
         geist: ['Geist', 'sans-serif'],
       },
     },
