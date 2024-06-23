@@ -16,14 +16,14 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.1.193",
+    "@iconify-json/lucide": "^1.1.194",
     "@nuxt/content": "^2.13.0",
-    "@nuxt/devtools": "^1.3.3",
+    "@nuxt/devtools": "^1.3.6",
     "@nuxt/eslint-config": "^0.3.13",
     "@nuxt/fonts": "^0.7.0",
     "@nuxt/image": "1.7.0",
     "@nuxt/ui": "^2.17.0",
-    "@nuxthq/studio": "^2.0.0",
+    "@nuxthq/studio": "^2.0.1",
     "@nuxtjs/i18n": "next",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
