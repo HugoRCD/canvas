@@ -36,11 +36,15 @@ useSeoMeta({
   twitterImage: 'https://canvas.hrcd.fr/social-preview.jpg',
 })
 
+const { copy } = useClipboard({
+  source: email,
+})
+
 defineShortcuts({
   meta_o: {
     usingInput: true,
     handler: () => {
-      copyToClipboard(email)
+      copy()
       toast.success(t('global.email_copied'))
     },
   },

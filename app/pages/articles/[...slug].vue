@@ -15,8 +15,12 @@ useContentHead(page.value)
 const runtimeConfig = useRuntimeConfig()
 const articleLink = ref(`${runtimeConfig.public.siteUrl}${page.value._path}`)
 
+const { copy } = useClipboard({
+  source: articleLink.value,
+})
+
 function copyArticleLink() {
-  copyToClipboard(articleLink.value)
+  copy()
   toast.success(t('global.article_link_copied'))
 }
 
@@ -24,7 +28,7 @@ defineShortcuts({
   meta_k: {
     usingInput: true,
     handler: () => {
-      copyToClipboard(articleLink.value)
+      copy()
       toast.success(t('global.article_link_copied'))
     },
   },
