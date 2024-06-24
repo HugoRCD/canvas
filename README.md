@@ -3,7 +3,7 @@
 <p align="center">
     <a aria-label="Hugo's Website" href="https://hrcd.fr">
         <img alt="" src="https://img.shields.io/badge/Website-hrcd.fr-blue?style=for-the-badge&labelColor=000000&logo=google-chrome&logoColor=white">
-  <a aria-label="License" href="https://github.com/hugorcd/canvas/blob/master/LICENSE">
+  <a aria-label="License" href="https://github.com/hugorcd/canvas/blob/main/LICENSE">
     <img alt="" src="https://img.shields.io/npm/l/vue.svg?style=for-the-badge&labelColor=000000&color=blue">
     </a>
   <a aria-label="Follow Hugo on Twitter" href="https://twitter.com/HugoRCD__">
@@ -160,6 +160,6 @@ Made by [@HugoRCD](https://github.com/HugoRCD) and [community](https://github.co
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Thu Jun 20 2024)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Mon Jun 24 2024)_
 
 <!-- /automd -->
