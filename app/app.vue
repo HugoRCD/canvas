@@ -38,6 +38,7 @@ useSeoMeta({
   author: 'Hugo Richard',
   ogType: 'website',
   ogTitle: appConfig.appName,
+  ogSiteName: 'Canvas',
   ogUrl: () => runtimeConfig.public.siteUrl,
   ogLocale: () => locale.value,
   twitterTitle: appConfig.appName,
