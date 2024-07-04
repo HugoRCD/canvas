@@ -18,7 +18,7 @@
   "devDependencies": {
     "@iconify-json/lucide": "^1.1.197",
     "@nuxt/content": "^2.13.0",
-    "@nuxt/devtools": "^1.3.7",
+    "@nuxt/devtools": "^1.3.9",
     "@nuxt/eslint-config": "^0.3.13",
     "@nuxt/fonts": "^0.7.1",
     "@nuxt/image": "1.7.0",
@@ -29,7 +29,7 @@
     "@vueuse/nuxt": "^10.11.0",
     "automd": "^0.3.7",
     "eslint": "^9.6.0",
-    "nuxt": "^3.12.2",
+    "nuxt": "^3.12.3",
     "nuxt-og-image": "^2.2.6",
     "nuxt-svgo": "^4.0.1",
     "resend": "^3.4.0",
