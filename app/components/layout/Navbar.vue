@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Navigation } from '~/composables/useNavigation'
+import type { Navigation } from '~/utils/useNavigation'
 
 defineProps({
   isText: {
