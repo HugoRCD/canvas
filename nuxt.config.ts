@@ -132,4 +132,6 @@ export default defineNuxtConfig({
   svgo: {
     autoImportPath: './assets/logo/',
   },
+
+  compatibilityDate: '2024-07-31',
 })

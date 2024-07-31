@@ -13,27 +13,27 @@ export function getNavigation(where: Where): Record<string, Navigation> | [] {
         home: {
           name: 'Home',
           to: '/',
-          icon: 'i-lucide-home',
+          icon: 'lucide:home',
         },
         works: {
           name: 'Works',
           to: '/works',
-          icon: 'i-lucide-briefcase',
+          icon: 'lucide:briefcase',
         },
         writing: {
           name: 'Writing',
           to: '/writing',
-          icon: 'i-lucide-library',
+          icon: 'lucide:library',
         },
         about: {
           name: 'About',
           to: '/about',
-          icon: 'i-lucide-user',
+          icon: 'lucide:user',
         },
         contact: {
           name: 'Contact',
           to: '/contact',
-          icon: 'i-lucide-mail',
+          icon: 'lucide:mail',
         },
       }
     default:

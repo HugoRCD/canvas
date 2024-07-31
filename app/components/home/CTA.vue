@@ -14,8 +14,9 @@
             to="/contact"
           >
             {{ $t("global.contact") }}
-            <span
-              class="i-heroicons-envelope size-5 text-white/80"
+            <UIcon
+              name="heroicons-envelope"
+              class="size-5 text-white/80"
               aria-hidden="true"
             />
           </NuxtLink>

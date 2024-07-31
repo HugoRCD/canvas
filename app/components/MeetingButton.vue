@@ -10,7 +10,10 @@ const meetingLink = useRuntimeConfig().public.meetingLink
         :to="meetingLink"
       >
         {{ $t("global.meeting") }}
-        <span class="i-heroicons-calendar-days size-5 text-white/80" />
+        <UIcon
+          name="heroicons:calendar-days"
+          class="size-5 text-white/80"
+        />
       </NuxtLink>
     </SpotlightButton>
   </div>

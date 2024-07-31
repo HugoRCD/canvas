@@ -155,8 +155,9 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
       <div class="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
         <div class="flex flex-col gap-3">
           <dd class="flex items-center gap-3 text-gray-400">
-            <span
-              class="i-heroicons-phone size-6"
+            <UIcon
+              name="heroicons-phone"
+              class="size-6"
               aria-hidden="true"
             />
             <span>
@@ -164,8 +165,9 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             </span>
           </dd>
           <dd class="flex items-center gap-3 text-gray-400">
-            <span
-              class="i-heroicons-envelope size-6"
+            <UIcon
+              name="heroicons-envelope"
+              class="size-6"
               aria-hidden="true"
             />
             <UTooltip
