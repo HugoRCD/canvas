@@ -50,22 +50,27 @@ You can see a live demo at [canvas.hrcd.fr](https://canvas.hrcd.fr/).
 git clone git@github.com:HugoRCD/canvas.git
 ```
 
-2. Install dependencies
+2. Copy env file (and input your NuxtStudio token, Resend API Key etc)
+```bash
+cp .env.exemple .env
+```
+
+3. Install dependencies
 ```bash
 bun install
 ```
 
-3. Start development server
+4. Start development server
 ```bash
 bun dev
 ```
 
-4. Generate static project
+5. Generate static project
 ```bash
 bun generate
 ```
 
-5. Start production server
+6. Start production server
 ```bash
 bun start
 ```
@@ -135,10 +140,32 @@ To start contributing, you can follow these steps:
   <summary>Local development</summary>
 
 - Clone this repository
+```bash
+git clone git@github.com:HugoRCD/canvas.git
+```
+
 - Install latest LTS version of [Node.js](https://nodejs.org/en/)
-- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
-- Install dependencies using `bun install`
-- Start development server using `bun dev`
+
+- Copy env file
+```bash
+cp .env.exemple .env
+```
+
+- Enable [Corepack](https://github.com/nodejs/corepack)
+```bash
+corepack enable
+```
+
+- Install dependencies
+```bash
+bun install
+```
+
+- Start development server
+```bash
+bun dev
+```
+
 - Open [http://localhost:3000](http://localhost:3000) in your browser
 
 </details>
