@@ -16,11 +16,11 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.1.205",
+    "@iconify-json/lucide": "^1.1.206",
     "@nuxt/content": "^2.13.2",
     "@nuxt/devtools": "^1.3.9",
     "@nuxt/eslint-config": "^0.5.0",
-    "@nuxt/fonts": "^0.7.1",
+    "@nuxt/fonts": "^0.7.2",
     "@nuxt/image": "1.7.0",
     "@nuxt/ui": "^2.18.4",
     "@nuxthq/studio": "^2.0.3",
