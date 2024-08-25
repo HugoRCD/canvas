@@ -55,17 +55,22 @@ git clone git@github.com:HugoRCD/canvas.git
 bun install
 ```
 
-3. Start development server
+3. Copy the `.env.example` file to `.env` and fill in the values
+```bash
+cp .env.exemple .env
+```
+
+4. Start development server
 ```bash
 bun dev
 ```
 
-4. Generate static project
+5. Generate static project
 ```bash
 bun generate
 ```
 
-5. Start production server
+6. Start production server
 ```bash
 bun start
 ```
@@ -160,6 +165,6 @@ Made by [@HugoRCD](https://github.com/HugoRCD) and [community](https://github.co
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Fri Jul 12 2024)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Sun Aug 25 2024)_
 
 <!-- /automd -->
