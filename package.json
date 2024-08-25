@@ -32,7 +32,7 @@
     "nuxt": "^3.13.0",
     "nuxt-og-image": "^2.2.6",
     "nuxt-svgo": "^4.0.3",
-    "resend": "^3.5.0",
+    "resend": "^4.0.0",
     "sitemap": "^8.0.0",
     "vue-sonner": "^1.1.5"
   }
