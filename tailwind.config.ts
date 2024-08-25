@@ -23,7 +23,6 @@ module.exports = {
     './nuxt.config.{js,ts}',
     './app.vue',
     './error.vue',
-    './**/*.svg',
   ],
   theme: {
     extend: {

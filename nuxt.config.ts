@@ -35,10 +35,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/style/main.css'],
 
-  ui: {
-    icons: ['heroicons', 'lucide'],
-  },
-
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
