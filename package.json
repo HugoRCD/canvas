@@ -30,7 +30,7 @@
     "automd": "^0.3.8",
     "eslint": "^9.11.1",
     "nuxt": "^3.13.2",
-    "nuxt-og-image": "^2.2.6",
+    "nuxt-og-image": "^3.0.4",
     "nuxt-svgo": "^4.0.6",
     "resend": "^4.0.0",
     "sitemap": "^8.0.0",
