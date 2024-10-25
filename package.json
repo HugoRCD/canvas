@@ -20,7 +20,7 @@
     "@nuxt/content": "^2.13.4",
     "@nuxt/devtools": "^1.6.0",
     "@nuxt/eslint-config": "^0.6.0",
-    "@nuxt/fonts": "^0.10.1",
+    "@nuxt/fonts": "^0.10.2",
     "@nuxt/image": "1.8.1",
     "@nuxt/ui": "^2.18.7",
     "@nuxthq/studio": "^2.1.1",
