@@ -16,9 +16,9 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.16",
+    "@iconify-json/lucide": "^1.2.17",
     "@nuxt/content": "^2.13.4",
-    "@nuxt/devtools": "^1.6.1",
+    "@nuxt/devtools": "^1.6.3",
     "@nuxt/eslint-config": "^0.7.2",
     "@nuxt/fonts": "^0.10.2",
     "@nuxt/image": "1.8.1",
@@ -28,7 +28,7 @@
     "@vueuse/core": "^11.3.0",
     "@vueuse/nuxt": "^11.3.0",
     "automd": "^0.3.12",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "nuxt": "^3.14.1592",
     "nuxt-og-image": "^3.1.1",
     "nuxt-svgo": "^4.0.9",
