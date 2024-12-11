@@ -22,7 +22,7 @@
     "@nuxt/eslint-config": "^0.7.2",
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/image": "1.8.1",
-    "@nuxt/ui": "^2.19.2",
+    "@nuxt/ui": "^2.20.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/i18n": "next",
     "@vueuse/core": "^11.3.0",
