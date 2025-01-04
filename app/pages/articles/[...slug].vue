@@ -12,15 +12,10 @@ if (!page.value) {
 
 useContentHead(page.value)
 
-const runtimeConfig = useRuntimeConfig()
-const articleLink = ref(`${runtimeConfig.public.siteUrl}${page.value._path}`)
-
-const { copy } = useClipboard({
-  source: articleLink.value,
-})
+const { copy } = useClipboard()
 
 function copyArticleLink() {
-  copy()
+  copy(`${window.location.origin}${route.fullPath}`)
   toast.success(t('global.article_link_copied'))
 }
 

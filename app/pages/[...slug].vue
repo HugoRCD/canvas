@@ -10,7 +10,6 @@ if (!page.value) {
 
 useContentHead(page.value)
 
-const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const { appName, email } = useAppConfig()
 const { t, locale } = useI18n()
@@ -26,7 +25,6 @@ useSeoMeta({
   ogType: 'website',
   ogTitle: appConfig.appName,
   ogDescription: () => t('global.app_description'),
-  ogUrl: () => runtimeConfig.public.siteUrl,
   ogLocale: () => locale.value,
   twitterTitle: appConfig.appName,
   twitterDescription: () => t('global.app_description'),

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const runtimeConfig = useRuntimeConfig()
 const appConfig = useAppConfig()
 const { locale } = useI18n()
 
@@ -39,7 +38,6 @@ useSeoMeta({
   ogType: 'website',
   ogTitle: appConfig.appName,
   ogSiteName: 'Canvas',
-  ogUrl: () => runtimeConfig.public.siteUrl,
   ogLocale: () => locale.value,
   twitterTitle: appConfig.appName,
   twitterCard: 'summary_large_image',
@@ -53,7 +51,3 @@ useSeoMeta({
     <NuxtPage />
   </div>
 </template>
-
-<style scoped>
-
-</style>
