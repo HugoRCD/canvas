@@ -14,24 +14,26 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "devDependencies": {
+  "dependencies": {
     "@nuxt/content": "^2.13.4",
     "@nuxt/devtools": "^1.7.0",
-    "@nuxt/eslint-config": "^0.7.4",
     "@nuxt/image": "1.8.1",
+    "@nuxt/scripts": "^0.9.5",
     "@nuxt/ui": "^3.0.0-alpha.10",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/i18n": "next",
-    "@shelve/cli": "^3.0.0",
     "@vueuse/core": "^12.2.0",
     "@vueuse/nuxt": "^12.2.0",
-    "automd": "^0.3.12",
-    "eslint": "^9.17.0",
     "nuxt": "^3.15.0",
     "nuxt-og-image": "^4.0.2",
-    "nuxt-svgo": "^4.0.9",
     "resend": "^4.0.1",
     "sitemap": "^8.0.0",
     "vue-sonner": "^1.3.0"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.7.4",
+    "@shelve/cli": "^3.0.0",
+    "automd": "^0.3.12",
+    "eslint": "^9.17.0"
   }
 }

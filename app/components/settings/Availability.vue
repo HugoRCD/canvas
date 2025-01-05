@@ -54,5 +54,3 @@ const currentAvailability = computed(() => {
     </span>
   </div>
 </template>
-
-<style scoped></style>

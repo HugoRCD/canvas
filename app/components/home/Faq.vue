@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Faq } from '~/types/Faq'
+import type { Faq } from '~~/types/Faq'
 
 const { locale } = useI18n()
 
@@ -22,19 +22,18 @@ const ui = {
   list: 'relative flex bg-transparent dark:bg-transparent gap-2',
   indicator: 'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-full bg-white/10 dark:bg-neutral-900',
   trigger: [
-    'relative inline-flex items-center justify-center flex-shrink-0 w-full focus:outline-none transition-colors duration-200 ease-out border-white/10 border-2',
+    'relative inline-flex items-center justify-center flex-shrink-0 focus:outline-none transition-colors duration-200 ease-out border-white/10 border-2',
     'px-3 py-2 font-medium rounded-full',
     'hover:bg-neutral-900/80',
     'data-[state=active]:text-neutral-900 dark:data-[state=active]:text-white',
     'data-[state=inactive]:text-neutral-500 dark:data-[state=inactive]:text-neutral-400',
   ],
-  content: 'focus:outline-none w-full',
   label: 'truncate',
 }
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center space-y-8 max-w-lg">
+  <div class="flex flex-col items-center justify-center space-y-8 w-full sm:px-60">
     <div class="flex flex-col items-center justify-center gap-2">
       <h3 class="font-newsreader italic text-white-shadow text-4xl">
         {{ faq!.title }}
@@ -49,9 +48,13 @@ const ui = {
       :ui
     >
       <template #content="{ item }">
-        <FAQ
-          :questions="item.questions"
-          class="mt-8"
+        <UAccordion
+          trailing-icon="lucide:plus"
+          :items="item.questions"
+          :ui="{
+            item: 'mb-2 group px-4 transform-gpu rounded-xl border border-white/10 bg-white/5 transition duration-500 will-change-transform hover:bg-white/[0.075]',
+            trailingIcon: 'group-data-[state=closed]:rotate-45 group-data-[state=open]:rotate-180',
+          }"
         />
       </template>
     </UTabs>

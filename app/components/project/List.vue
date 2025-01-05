@@ -30,5 +30,3 @@ import projects from '~/data/projects'
     </div>
   </div>
 </template>
-
-<style scoped></style>

@@ -3,12 +3,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/ui',
-    'nuxt-svgo',
     '@nuxt/content',
     '@nuxthq/studio',
     '@nuxt/image',
     'nuxt-og-image',
     '@nuxt/fonts',
+    '@nuxt/scripts',
   ],
 
   imports: {
@@ -24,28 +24,12 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  app: {
-    head: {
-      viewport: 'width=device-width, initial-scale=1',
-      charset: 'utf-8',
-      script: [
-        {
-          'src': 'https://analytics.hrcd.fr/js/script.js',
-          'defer': true,
-          'data-domain': 'canvas.hrcd.fr',
-        },
-      ],
-    },
-    pageTransition: {
-      name: 'fade',
-      mode: 'out-in',
-    },
-  },
-
   css: ['~/assets/style/main.css'],
 
   site: {
     url: 'https://canvas.hrcd.fr',
+    defaultLocale: 'en',
+    indexable: true,
   },
 
   colorMode: {
@@ -94,7 +78,7 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
 
-  compatibilityDate: '2024-07-31',
+  compatibilityDate: '2025-01-05',
 
   nitro: {
     prerender: {
@@ -128,19 +112,5 @@ export default defineNuxtConfig({
       includeCustomCollections: true,
     },
     provider: 'iconify',
-  },
-
-  image: {
-    format: ['webp'],
-    screens: {
-      avatar: 96,
-      cover: 256,
-      project: 1536,
-      projectLg: 3072,
-    },
-  },
-
-  svgo: {
-    autoImportPath: './assets/logo/',
   },
 })

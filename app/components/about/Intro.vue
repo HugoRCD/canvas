@@ -23,5 +23,3 @@
     <AboutSignature class="black absolute -right-2 bottom-[-6rem] w-32 sm:hidden" />
   </div>
 </template>
-
-<style scoped></style>

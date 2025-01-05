@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Toaster } from 'vue-sonner'
-
 const route = useRoute()
 const { data: page } = await useAsyncData(`${route.path}`, () => queryContent(route.path).findOne())
 
