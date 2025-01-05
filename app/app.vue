@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import { Toaster } from 'vue-sonner'
+import * as locales from '@nuxt/ui/locale'
+
+const { locale } = useI18n()
 </script>
 
 <template>
   <Html
-    :lang="$i18n.locale"
+    :lang="locale"
     class="font-geist transition-colors duration-300 selection:bg-white/60 selection:text-zinc-800"
   >
     <Body>
       <FolioMeta>
         <LayoutScrollToTop />
         <NuxtLayout>
-          <UApp>
+          <UApp :locale="locales[locale]">
             <NuxtPage />
           </UApp>
         </NuxtLayout>

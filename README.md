@@ -25,10 +25,10 @@ You can see a live demo at [canvas.hrcd.fr](https://canvas.hrcd.fr/).
 
 ## Features
 
-- Fully [Nuxt Content](https://content.nuxt.com/) driven with the content driven mode on
+- [Nuxt Content](https://content.nuxt.com/) for easy content management
 - Full and simple [Nuxt Studio](https://nuxt.studio/) editor support
 - Built-in Awesome Component & Layout
-- [NuxtUI](https://ui.nuxt.com/) for some UI components
+- [NuxtUI](https://ui3.nuxt.com/) v3 components
 - [Tailwind CSS](https://tailwindcss.com/)
 - Working contact form with [Resend](https://resend.com/)
 - [Nuxt i18n](https://i18n.nuxtjs.org/) for multi-language support
@@ -109,11 +109,6 @@ This portfolio uses [Resend](https://resend.com/) to handle the contact form. To
 - change the `from` key in the `sendEmail` route in the `server/api/` folder, you can customize everything you want in this route
 - That's it, you're good to go!
 
-## Setup the Open Graph Image
-
-To change the main open graph image, go to the `app.config.ts` file and change the `openGrapImage` key.
-For the blog open graph image, go to the `content/articles` directory and change the `image` key in the Markdown file of the article.
-
 <!-- automd:fetch url="gh:hugorcd/markdown/main/src/contributions.md" -->
 
 ## Contributing
@@ -165,6 +160,6 @@ Made by [@HugoRCD](https://github.com/HugoRCD) and [community](https://github.co
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Sun Aug 25 2024)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Sun Jan 05 2025)_
 
 <!-- /automd -->

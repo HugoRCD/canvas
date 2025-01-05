@@ -27,7 +27,7 @@ importers:
         specifier: ^2.2.1
         version: 2.2.1(magicast@0.3.5)(rollup@4.29.2)
       '@nuxtjs/i18n':
-        specifier: next
+        specifier: 9.0.0-rc.2
         version: 9.0.0-rc.2(@vue/compiler-dom@3.5.13)(eslint@9.17.0(jiti@2.4.2))(magicast@0.3.5)(rollup@4.29.2)(typescript@5.7.2)(vue@3.5.13(typescript@5.7.2))
       '@vueuse/core':
         specifier: ^12.2.0
