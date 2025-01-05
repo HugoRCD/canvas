@@ -116,6 +116,20 @@ export default defineNuxtConfig({
     vueI18n: '~/i18n.config.ts',
   },
 
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './app/assets/icons',
+      },
+    ],
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true,
+    },
+    provider: 'iconify',
+  },
+
   image: {
     format: ['webp'],
     screens: {

@@ -16,7 +16,7 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/p
         v-for="project in projects?.filter((work) => work.featured)"
         :key="project.name"
         role="link"
-        class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 hover:bg-secondary hover:text-main"
+        class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 hover:bg-secondary"
         :to="project.release === 'soon' ? '/' : project.link"
         :aria-label="'go to ' + project.name + ' project website'"
         :target="project.release === 'soon' ? '_self' : '_blank'"

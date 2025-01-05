@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
-import type { Stack } from '~/data/stack'
-
 defineProps({
   item: {
-    type: Object as PropType<Stack>,
+    type: Object,
     required: true,
   },
 })
@@ -23,8 +20,8 @@ defineProps({
     >
       <component
         :is="item.logo"
-        class="size-8 text-main"
-        :class="item.logo.includes('Color') ? '' : 'text-main'"
+        class="size-8"
+        :class="item.logo.includes('Color') ? '' : ''"
         :font-controlled="false"
         :alt="item.name + ' logo'"
         :filled="item.logo.includes('Color')"

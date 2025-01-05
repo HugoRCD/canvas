@@ -51,25 +51,13 @@ defineShortcuts({
 
 <template>
   <div>
-    <Html
-      :lang="$i18n.locale"
-      class="bg-zinc-950 text-main font-geist transition-colors duration-300 selection:bg-white/60 selection:text-zinc-800"
+    <ContentQuery
+      v-slot="{ data }"
+      :path="$route.path"
+      :locale="locale"
+      find="one"
     >
-      <Body>
-        <LayoutScrollToTop />
-        <NuxtLayout>
-          <ContentQuery
-            v-slot="{ data }"
-            :path="$route.path"
-            :locale="locale"
-            find="one"
-          >
-            <ContentRenderer :value="data" />
-          </ContentQuery>
-        </NuxtLayout>
-        <Toaster close-button />
-        <DotPattern class="absolute inset-0 -z-10 size-full fill-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
-      </Body>
-    </Html>
+      <ContentRenderer :value="data" />
+    </ContentQuery>
   </div>
 </template>

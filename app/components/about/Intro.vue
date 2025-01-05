@@ -5,7 +5,7 @@
     <h3 class="text-lg text-muted">
       Intro
     </h3>
-    <div class="flex flex-col gap-4 text-main">
+    <div class="flex flex-col gap-4">
       <p>
         {{ $t("about.intro.part1") }}
       </p>

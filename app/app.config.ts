@@ -16,7 +16,7 @@ export default defineAppConfig({
   },
   ui: {
     primary: 'emerald',
-    gray: 'zinc',
+    gray: 'neutral',
     notifications: {
       position: 'top-0 bottom-auto',
     },
@@ -26,15 +26,16 @@ export default defineAppConfig({
         background: 'bg-transparent dark:bg-transparent',
       },
     },
-    input: {
-      variant: {
-        none: 'bg-gray-100 dark:bg-gray-900/40 border-1 border-gray-700 hover:border-gray-400 focus:border-gray-400 transition-colors duration-300 ease-in-out',
+    button: {
+      slots: {
+        base: 'cursor-pointer',
+      },
+      defaultVariants: {
+        color: 'neutral',
       },
     },
-    textarea: {
-      variant: {
-        none: 'bg-gray-100 dark:bg-gray-900/40 border-1 border-gray-700 hover:border-gray-400 focus:border-gray-400 transition-colors duration-300 ease-in-out',
-      },
+    icons: {
+      loading: 'lucide:loader',
     },
   },
 })

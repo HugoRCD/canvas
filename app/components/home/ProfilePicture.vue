@@ -11,7 +11,7 @@ const { profilePicture } = useAppConfig()
         <NuxtImg
           width="96"
           :src="profilePicture"
-          class="size-24 rounded-full border-2 border-gray-800/30 object-cover"
+          class="size-24 rounded-full border-2 border-neutral-800/30 object-cover"
           alt="Hugo Richard Profile Picture"
           aria-label="Hugo Richard Profile Picture"
         />

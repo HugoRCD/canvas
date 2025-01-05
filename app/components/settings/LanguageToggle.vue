@@ -26,7 +26,7 @@ watch(current, (newLocale) => {
       >
         <span
           class="font-semibold"
-          :class="locale.code === currentLocale.code ? 'text-white' : 'text-gray-500'"
+          :class="locale.code === currentLocale.code ? 'text-white' : 'text-neutral-500'"
         >
           {{ locale.code }}
         </span>
