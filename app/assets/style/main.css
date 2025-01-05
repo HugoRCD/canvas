@@ -58,16 +58,6 @@ html, body, #__nuxt, #__layout {
 }
 
 @layer components {
-  /*.text-gradient {
-    @apply bg-clip-text text-transparent;
-    @apply bg-gradient-to-bl from-accent-primary to-accent-secondary;
-  }*/
-
-  .white-gradient-tb {
-    @apply bg-clip-text text-transparent tracking-wide;
-    @apply bg-gradient-to-b from-white to-neutral-400;
-  }
-
   .linebreak {
     position: relative;
     left: 0;
@@ -82,17 +72,6 @@ html, body, #__nuxt, #__layout {
 
   .text-white-shadow {
     text-shadow: 0 4px 10px rgba(0, 87, 255, .2), 0 -4px 10px rgba(255, 90, 0, .15), 0 0 30px rgba(255, 255, 255, .2);
-  }
-
-  .white-gradient {
-    @apply bg-gradient-to-b from-white/25 to-white bg-clip-text text-lg font-medium text-transparent
-  }
-
-  .text-white-gradient {
-    background-image: linear-gradient(#f2f2f2 50%, rgba(242, 242, 242, .2));
-    background-clip: text;
-    font-style: italic;
-    @apply tracking-wider;
   }
 }
 

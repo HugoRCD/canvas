@@ -1,0 +1,20 @@
+# Versioning
+.git
+.gitignore
+.github
+
+# Dependencies
+**/node_modules
+**/dist
+**/.next
+**/.nuxt
+**/.output
+
+# Dev files
+.data
+.env*
+.editorconfig
+
+# CI/CD
+.gitlab-ci.yml
+.circleci

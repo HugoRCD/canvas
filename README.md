@@ -52,7 +52,7 @@ git clone git@github.com:HugoRCD/canvas.git
 
 2. Install dependencies
 ```bash
-bun install
+pnpm install
 ```
 
 3. Copy the `.env.example` file to `.env` and fill in the values
@@ -62,17 +62,17 @@ cp .env.exemple .env
 
 4. Start development server
 ```bash
-bun dev
+pnpm dev
 ```
 
 5. Generate static project
 ```bash
-bun generate
+pnpm generate
 ```
 
 6. Start production server
 ```bash
-bun start
+pnpm start
 ```
 
 ## How to Modify the Portfolio Content
@@ -124,7 +124,7 @@ To start contributing, you can follow these steps:
 3. Create a branch using conventional commits and the issue number as the branch name. For example, `feat/123` or `fix/456`.
 4. Make changes following the local development steps.
 5. Commit your changes following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-6. If your changes affect the code, run tests using `bun run test`.
+6. If your changes affect the code, run tests using `pnpm run test`.
 7. Create a pull request following the [Pull Request Template](https://github.com/HugoRCD/markdown/blob/main/src/pull_request_template.md).
    - To be merged, the pull request must pass the tests/workflow and have at least one approval.
    - If your changes affect the documentation, make sure to update it.
@@ -142,8 +142,8 @@ To start contributing, you can follow these steps:
 - Clone this repository
 - Install latest LTS version of [Node.js](https://nodejs.org/en/)
 - Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
-- Install dependencies using `bun install`
-- Start development server using `bun dev`
+- Install dependencies using `pnpm install`
+- Start development server using `pnpm dev`
 - Open [http://localhost:3000](http://localhost:3000) in your browser
 
 </details>
