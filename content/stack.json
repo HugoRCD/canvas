@@ -3,92 +3,92 @@
     {
       "name": "Nuxt",
       "link": "https://nuxt.com/",
-      "logo": "SvgoNuxtColor"
+      "icon": "custom:nuxt"
     },
     {
       "name": "Vue",
       "link": "https://vuejs.org/",
-      "logo": "SvgoVueColor"
+      "icon": "custom:vue"
     },
     {
       "name": "Nest",
       "link": "https://nestjs.com/",
-      "logo": "SvgoNestColor"
+      "icon": "custom:nest"
     },
     {
       "name": "TailwindCSS",
       "link": "https://tailwindcss.com/",
-      "logo": "SvgoTailwindColor"
+      "icon": "custom:tailwind"
     },
     {
       "name": "Prisma",
       "link": "https://www.prisma.io/",
-      "logo": "SvgoPrismaColor"
+      "icon": "custom:prisma"
     },
     {
       "name": "Vercel",
       "link": "https://vercel.com/",
-      "logo": "SvgoVercel"
+      "icon": "custom:vercel"
     },
     {
       "name": "Linear",
       "link": "https://linear.app/",
-      "logo": "SvgoLinearColor"
+      "icon": "custom:linear"
     },
     {
       "name": "Arc",
       "link": "https://arc.net/",
-      "logo": "SvgoArcColor"
+      "icon": "custom:arc"
     },
     {
       "name": "Raycast",
       "link": "https://raycast.com/",
-      "logo": "SvgoRaycastColor"
+      "icon": "custom:raycast"
     },
     {
       "name": "Notion",
       "link": "https://www.notion.so/",
-      "logo": "SvgoNotionColor"
+      "icon": "custom:notion"
     },
     {
       "name": "Cron",
       "link": "https://calendar.cron.com/",
-      "logo": "SvgoCronColor"
+      "icon": "custom:cron"
     },
     {
       "name": "Spark",
       "link": "https://sparkmailapp.com/",
-      "logo": "SvgoSparkColor"
+      "icon": "custom:spark"
     },
     {
       "name": "1Password",
       "link": "https://1password.com/",
-      "logo": "SvgoOnepasswordColor"
+      "icon": "custom:onepassword"
     },
     {
       "name": "Fig",
       "link": "https://fig.io/",
-      "logo": "SvgoFigColor"
+      "icon": "custom:fig"
     },
     {
       "name": "Figma",
       "link": "https://www.figma.com/",
-      "logo": "SvgoFigmaColor"
+      "icon": "custom:figma"
     },
     {
       "name": "Photoshop",
       "link": "https://www.adobe.com/products/photoshop.html",
-      "logo": "SvgoPhotoshopColor"
+      "icon": "custom:photoshop"
     },
     {
       "name": "Illustrator",
       "link": "https://www.adobe.com/products/illustrator.html",
-      "logo": "SvgoIllustratorColor"
+      "icon": "custom:illustrator"
     },
     {
       "name": "Lightroom",
       "link": "https://www.adobe.com/products/photoshop-lightroom.html",
-      "logo": "SvgoLightroomColor"
+      "icon": "custom:lightroom"
     }
   ]
 }

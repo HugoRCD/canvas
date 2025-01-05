@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ContactEmail } from '~~/types/ContactEmail'
 
-const appConfig = useAppConfig()
+const { profile } = useAppConfig()
 const { t } = useI18n()
 
 const email = ref('')
@@ -41,8 +41,6 @@ async function submitForm() {
   }
   loading.value = false
 }
-
-defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'Home image' })
 </script>
 
 <template>
@@ -70,6 +68,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             required
             name="fullname"
             autocomplete="name"
+            variant="subtle"
             class="w-full"
             placeholder="John Doe"
           />
@@ -85,6 +84,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             type="email"
             required
             name="email"
+            variant="subtle"
             autocomplete="email"
             class="w-full"
             placeholder="john.doe@gmail.com"
@@ -99,6 +99,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             v-model="phone"
             type="text"
             name="phone"
+            variant="subtle"
             autocomplete="tel"
             class="w-full"
             placeholder="123-456-7890"
@@ -114,6 +115,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             v-model="subject"
             type="text"
             name="subject"
+            variant="subtle"
             class="w-full"
             :placeholder="$t('contact.subject')"
           />
@@ -129,6 +131,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             autoresize
             required
             name="message"
+            variant="subtle"
             class="w-full"
             :rows="4"
             placeholder="Lets work together!"
@@ -154,7 +157,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
               aria-hidden="true"
             />
             <span>
-              {{ appConfig.phone }}
+              {{ profile.phone }}
             </span>
           </dd>
           <dd class="flex items-center gap-3 text-neutral-400">
@@ -168,10 +171,10 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
               :shortcuts="['⌘', 'O']"
             >
               <NuxtLink
-                :to="`mailto:${appConfig.email}`"
+                :to="`mailto:${profile.email}`"
                 class="cursor-pointer transition-colors duration-300"
               >
-                {{ appConfig.email }}
+                {{ profile.email }}
               </NuxtLink>
             </UTooltip>
           </dd>

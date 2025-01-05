@@ -38,6 +38,11 @@ export default defineAppConfig({
         color: 'neutral',
       },
     },
+    input: {
+      defaultVariants: {
+        color: 'neutral',
+      },
+    },
     icons: {
       loading: 'lucide:loader',
     },

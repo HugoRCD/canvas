@@ -20,11 +20,26 @@ defineProps({
       {{ $t(`tags.${stack}`) }}
     </h4>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-      <AboutStackItem
+      <SpotlightCard
         v-for="item in items"
         :key="item.name"
-        :item
-      />
+        white
+      >
+        <NuxtLink
+          :to="item.link"
+          target="_blank"
+          :aria-label="item.name + ' link'"
+          class="flex gap-2 p-6"
+        >
+          <UIcon
+            :name="item.icon"
+            class="size-9"
+            :font-controlled="false"
+            :alt="item.name + ' logo'"
+            :aria-label="item.name + ' logo'"
+          />
+        </NuxtLink>
+      </SpotlightCard>
     </div>
   </div>
 </template>
