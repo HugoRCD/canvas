@@ -19,8 +19,10 @@ export default defineAppConfig({
     url: 'https://canvas.hrcd.fr',
   },
   ui: {
-    primary: 'emerald',
-    neutral: 'neutral',
+    colors: {
+      primary: 'emerald',
+      neutral: 'neutral',
+    },
     notifications: {
       position: 'top-0 bottom-auto',
     },
