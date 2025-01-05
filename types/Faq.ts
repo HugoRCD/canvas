@@ -1,6 +1,6 @@
 export type Question = {
-  title: string
-  answer: string
+  label: string
+  content: string
 }
 
 export type Faq = {

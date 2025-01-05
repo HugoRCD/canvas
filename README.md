@@ -1,4 +1,4 @@
-![Portfolio Social Preview](./public/social-preview.jpg)
+![Portfolio Social Preview](./public/og.png)
 
 <p align="center">
     <a aria-label="Hugo's Website" href="https://hrcd.fr">
@@ -21,14 +21,14 @@ You can see a live demo at [canvas.hrcd.fr](https://canvas.hrcd.fr/).
 
 ## Deploy with Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHugoRCD%2Fcanvas&env=NUXT_PUBLIC_AVAILABLE,NUXT_PRIVATE_RESEND_API_KEY,NUXT_PUBLIC_STUDIO_TOKENS,NUXT_PUBLIC_MEETING_LINK,NUXT_PUBLIC_SITE_URL&envDescription=You%20will%20require%20an%20API%20key%20for%20Resend%20and%20Nuxt%20Studio%2C%20but%20it%20is%20not%20essential%20for%20the%20portfolio%20to%20work.%20Simply%20add%20%22test%2C%22%20for%20example%2C%20and%20edit%20the%20variable%20later.&project-name=canvas-portfolio&repository-name=canvas-portfolio&demo-title=Canvas&demo-url=canvas.hrcd.fr&demo-image=https%3A%2F%2Fcanvas.hrcd.fr%2Fsocial-preview.jpg)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHugoRCD%2Fcanvas&env=NUXT_PUBLIC_AVAILABLE,NUXT_PRIVATE_RESEND_API_KEY,NUXT_PUBLIC_STUDIO_TOKENS,NUXT_PUBLIC_MEETING_LINK,NUXT_PUBLIC_SITE_URL&envDescription=You%20will%20require%20an%20API%20key%20for%20Resend%20and%20Nuxt%20Studio%2C%20but%20it%20is%20not%20essential%20for%20the%20portfolio%20to%20work.%20Simply%20add%20%22test%2C%22%20for%20example%2C%20and%20edit%20the%20variable%20later.&project-name=canvas-portfolio&repository-name=canvas-portfolio&demo-title=Canvas&demo-url=canvas.hrcd.fr&demo-image=https%3A%2F%2Fcanvas.hrcd.fr%2Fog.png)
 
 ## Features
 
-- Fully [Nuxt Content](https://content.nuxt.com/) driven with the content driven mode on
+- [Nuxt Content](https://content.nuxt.com/) for easy content management
 - Full and simple [Nuxt Studio](https://nuxt.studio/) editor support
 - Built-in Awesome Component & Layout
-- [NuxtUI](https://ui.nuxt.com/) for some UI components
+- [NuxtUI](https://ui3.nuxt.com/) v3 components
 - [Tailwind CSS](https://tailwindcss.com/)
 - Working contact form with [Resend](https://resend.com/)
 - [Nuxt i18n](https://i18n.nuxtjs.org/) for multi-language support
@@ -52,7 +52,7 @@ git clone git@github.com:HugoRCD/canvas.git
 
 2. Install dependencies
 ```bash
-bun install
+pnpm install
 ```
 
 3. Copy the `.env.example` file to `.env` and fill in the values
@@ -62,17 +62,17 @@ cp .env.exemple .env
 
 4. Start development server
 ```bash
-bun dev
+pnpm dev
 ```
 
 5. Generate static project
 ```bash
-bun generate
+pnpm generate
 ```
 
 6. Start production server
 ```bash
-bun start
+pnpm start
 ```
 
 ## How to Modify the Portfolio Content
@@ -109,11 +109,6 @@ This portfolio uses [Resend](https://resend.com/) to handle the contact form. To
 - change the `from` key in the `sendEmail` route in the `server/api/` folder, you can customize everything you want in this route
 - That's it, you're good to go!
 
-## Setup the Open Graph Image
-
-To change the main open graph image, go to the `app.config.ts` file and change the `openGrapImage` key.
-For the blog open graph image, go to the `content/articles` directory and change the `image` key in the Markdown file of the article.
-
 <!-- automd:fetch url="gh:hugorcd/markdown/main/src/contributions.md" -->
 
 ## Contributing
@@ -124,7 +119,7 @@ To start contributing, you can follow these steps:
 3. Create a branch using conventional commits and the issue number as the branch name. For example, `feat/123` or `fix/456`.
 4. Make changes following the local development steps.
 5. Commit your changes following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-6. If your changes affect the code, run tests using `bun run test`.
+6. If your changes affect the code, run tests using `pnpm run test`.
 7. Create a pull request following the [Pull Request Template](https://github.com/HugoRCD/markdown/blob/main/src/pull_request_template.md).
    - To be merged, the pull request must pass the tests/workflow and have at least one approval.
    - If your changes affect the documentation, make sure to update it.
@@ -142,8 +137,8 @@ To start contributing, you can follow these steps:
 - Clone this repository
 - Install latest LTS version of [Node.js](https://nodejs.org/en/)
 - Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
-- Install dependencies using `bun install`
-- Start development server using `bun dev`
+- Install dependencies using `pnpm install`
+- Start development server using `pnpm dev`
 - Open [http://localhost:3000](http://localhost:3000) in your browser
 
 </details>
@@ -165,6 +160,6 @@ Made by [@HugoRCD](https://github.com/HugoRCD) and [community](https://github.co
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Sun Aug 25 2024)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Sun Jan 05 2025)_
 
 <!-- /automd -->

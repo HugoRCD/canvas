@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { ContactEmail } from '~/types/ContactEmail'
+import type { ContactEmail } from '~~/types/ContactEmail'
 
-const appConfig = useAppConfig()
+const { profile } = useAppConfig()
 const { t } = useI18n()
 
 const email = ref('')
@@ -41,8 +41,6 @@ async function submitForm() {
   }
   loading.value = false
 }
-
-defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'Home image' })
 </script>
 
 <template>
@@ -59,8 +57,7 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
         class="flex w-full max-w-[40rem] flex-col gap-3"
         @submit.prevent="submitForm"
       >
-        <!-- Fullname -->
-        <UFormGroup
+        <UFormField
           label="Fullname"
           required
         >
@@ -71,13 +68,12 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             required
             name="fullname"
             autocomplete="name"
-            variant="none"
+            class="w-full"
             placeholder="John Doe"
           />
-        </UFormGroup>
+        </UFormField>
 
-        <!-- Email -->
-        <UFormGroup
+        <UFormField
           label="Email"
           required
         >
@@ -88,13 +84,12 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             required
             name="email"
             autocomplete="email"
-            variant="none"
+            class="w-full"
             placeholder="john.doe@gmail.com"
           />
-        </UFormGroup>
+        </UFormField>
 
-        <!-- Phone -->
-        <UFormGroup
+        <UFormField
           label="Phone"
         >
           <UInput
@@ -103,28 +98,26 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             type="text"
             name="phone"
             autocomplete="tel"
-            variant="none"
+            class="w-full"
             placeholder="123-456-7890"
           />
-        </UFormGroup>
+        </UFormField>
 
-        <!-- Subject -->
-        <UFormGroup
+        <UFormField
           label="Subject"
           required
         >
           <UInput
             id="subject"
             v-model="subject"
-            variant="none"
             type="text"
             name="subject"
+            class="w-full"
             :placeholder="$t('contact.subject')"
           />
-        </UFormGroup>
+        </UFormField>
 
-        <!-- Message -->
-        <UFormGroup
+        <UFormField
           label="Message"
           required
         >
@@ -132,19 +125,17 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
             id="message"
             v-model="message"
             autoresize
-            variant="none"
             required
             name="message"
+            class="w-full"
             :rows="4"
             placeholder="Lets work together!"
           />
-        </UFormGroup>
+        </UFormField>
         <div class="flex justify-center">
           <UButton
             :loading
             type="submit"
-            color="gray"
-            loading-icon="i-lucide-loader"
             block
           >
             {{ $t("contact.submit") }}
@@ -154,17 +145,17 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
       <Divider class="my-10" />
       <div class="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
         <div class="flex flex-col gap-3">
-          <dd class="flex items-center gap-3 text-gray-400">
+          <dd class="flex items-center gap-3 text-neutral-400">
             <UIcon
               name="heroicons-phone"
               class="size-6"
               aria-hidden="true"
             />
             <span>
-              {{ appConfig.phone }}
+              {{ profile.phone }}
             </span>
           </dd>
-          <dd class="flex items-center gap-3 text-gray-400">
+          <dd class="flex items-center gap-3 text-neutral-400">
             <UIcon
               name="heroicons-envelope"
               class="size-6"
@@ -175,10 +166,10 @@ defineOgImage({ url: appConfig.openGraphImage, width: 1200, height: 630, alt: 'H
               :shortcuts="['⌘', 'O']"
             >
               <NuxtLink
-                :to="`mailto:${appConfig.email}`"
-                class="cursor-pointer transition-colors duration-300 hover:text-main"
+                :to="`mailto:${profile.email}`"
+                class="cursor-pointer transition-colors duration-300"
               >
-                {{ appConfig.email }}
+                {{ profile.email }}
               </NuxtLink>
             </UTooltip>
           </dd>

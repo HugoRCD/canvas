@@ -5,7 +5,7 @@
     <h3 class="text-lg text-muted">
       Intro
     </h3>
-    <div class="flex flex-col gap-4 text-main">
+    <div class="flex flex-col gap-4">
       <p>
         {{ $t("about.intro.part1") }}
       </p>
@@ -23,5 +23,3 @@
     <AboutSignature class="black absolute -right-2 bottom-[-6rem] w-32 sm:hidden" />
   </div>
 </template>
-
-<style scoped></style>

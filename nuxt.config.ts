@@ -1,81 +1,15 @@
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4,
-  },
-
-  app: {
-    head: {
-      viewport: 'width=device-width, initial-scale=1',
-      charset: 'utf-8',
-      script: [
-        {
-          'src': 'https://analytics.hrcd.fr/js/script.js',
-          'defer': true,
-          'data-domain': 'canvas.hrcd.fr',
-        },
-      ],
-    },
-    pageTransition: {
-      name: 'fade',
-      mode: 'out-in',
-    },
-  },
-
-  routeRules: {
-    '/': { isr: true, prerender: true },
-  },
-
-  site: {
-    url: process.env.NUXT_SITE_URL || 'https://canvas.hrcd.fr',
-    identity: {
-      type: 'Person',
-    },
-    twitter: '@HugoRCD__',
-  },
-
-  css: ['~/assets/style/main.css'],
-
-  runtimeConfig: {
-    public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
-      available: process.env.NUXT_PUBLIC_AVAILABLE,
-      meetingLink: process.env.NUXT_PUBLIC_MEETING_LINK,
-    },
-    private: {
-      resendApiKey: process.env.NUXT_PRIVATE_RESEND_API_KEY,
-    },
-  },
-
-  colorMode: {
-    preference: 'dark',
-    fallback: 'dark',
-  },
-
-  devtools: {
-    enabled: true,
-  },
-
   modules: [
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/ui',
-    'nuxt-svgo',
     '@nuxt/content',
     '@nuxthq/studio',
     '@nuxt/image',
     'nuxt-og-image',
     '@nuxt/fonts',
+    '@nuxt/scripts',
   ],
-
-  image: {
-    format: ['webp'],
-    screens: {
-      avatar: 96,
-      cover: 256,
-      project: 1536,
-      projectLg: 3072,
-    },
-  },
 
   imports: {
     presets: [
@@ -86,32 +20,24 @@ export default defineNuxtConfig({
     ],
   },
 
-  i18n: {
-    strategy: 'no_prefix',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-    },
-    baseUrl: '/',
-    locales: ['en', 'fr'],
-    defaultLocale: 'en',
-    vueI18n: '~/i18n.config.ts',
+  devtools: {
+    enabled: true,
   },
 
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/sitemap.xml', '/', '/writing', '/works', '/about', '/contact'],
-    },
+  css: ['~/assets/style/main.css'],
+
+  site: {
+    url: 'https://canvas.hrcd.fr',
+    defaultLocale: 'en',
+    indexable: true,
+  },
+
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
   },
 
   content: {
-    watch: {
-      ws: {
-        showURL: false,
-      },
-    },
     highlight: {
       theme: 'github-dark',
     },
@@ -125,9 +51,60 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
-  svgo: {
-    autoImportPath: './assets/logo/',
+  runtimeConfig: {
+    public: {
+      available: process.env.NUXT_PUBLIC_AVAILABLE,
+      meetingLink: process.env.NUXT_PUBLIC_MEETING_LINK,
+    },
+    private: {
+      resendApiKey: process.env.NUXT_PRIVATE_RESEND_API_KEY,
+    },
   },
 
-  compatibilityDate: '2024-07-31',
+  routeRules: {
+    '/': { isr: true, prerender: true },
+  },
+
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  experimental: {
+    viewTransition: true,
+  },
+
+  compatibilityDate: '2025-01-05',
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/sitemap.xml', '/', '/writing', '/works', '/about', '/contact'],
+    },
+  },
+
+  i18n: {
+    strategy: 'no_prefix',
+    baseUrl: '/',
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
+    vueI18n: '~/i18n.config.ts',
+  },
+
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './app/assets/icons',
+      },
+    ],
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true,
+    },
+    provider: 'iconify',
+  },
+
+  ogImage: {
+    zeroRuntime: true,
+  },
 })

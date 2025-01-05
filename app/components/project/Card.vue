@@ -58,7 +58,7 @@ const img = useImage()
             class="flex items-center justify-center rounded-full border border-transparent p-1 shadow-md backdrop-blur-md transition-all duration-500 group-hover:-rotate-45 group-hover:border-white/10"
           >
             <UIcon
-              name="i-heroicons-arrow-right"
+              name="heroicons:arrow-right"
               class="size-3 text-white"
             />
           </div>

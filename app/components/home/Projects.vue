@@ -16,7 +16,7 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/p
         v-for="project in projects?.filter((work) => work.featured)"
         :key="project.name"
         role="link"
-        class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 hover:bg-secondary hover:text-main"
+        class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 hover:bg-neutral-900"
         :to="project.release === 'soon' ? '/' : project.link"
         :aria-label="'go to ' + project.name + ' project website'"
         :target="project.release === 'soon' ? '_self' : '_blank'"
@@ -25,17 +25,15 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/p
           {{ project.name }}
         </span>
         <div class="mx-2 h-[0.1px] w-full bg-muted" />
-        <span class="whitespace-nowrap text-muted">
+        <span class="whitespace-nowrap">
           {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
         </span>
       </NuxtLink>
     </div>
     <div @click="useRouter().push('/works')">
-      <span class="font-newsreader italic text-white-shadow cursor-pointer text-sm">
+      <span class="font-newsreader italic text-white-shadow cursor-pointer">
         {{ $t("global.see_more") }}
       </span>
     </div>
   </div>
 </template>
-
-<style scoped></style>

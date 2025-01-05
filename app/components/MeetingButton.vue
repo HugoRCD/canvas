@@ -18,5 +18,3 @@ const meetingLink = useRuntimeConfig().public.meetingLink
     </SpotlightButton>
   </div>
 </template>
-
-<style scoped></style>
