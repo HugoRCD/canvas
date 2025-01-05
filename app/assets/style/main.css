@@ -96,18 +96,74 @@ html, body, #__nuxt, #__layout {
   }
 }
 
-/*
 .writing {
-  @apply prose antialiased font-geist text-neutral-700/90 dark:text-neutral-400/80 leading-relaxed;
-  @apply prose-h1:text-2xl prose-h1:mb-0 sm:prose-h1:text-3xl prose-h1:text-zinc-900 dark:prose-h1:text-zinc-100 prose-h1:italic prose-h1:font-[600];
-  @apply prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:text-zinc-900 dark:prose-h2:text-zinc-100;
-  @apply prose-h3:text-lg sm:prose-h3:text-xl prose-h3:text-zinc-900 dark:prose-h3:text-zinc-100;
-  @apply prose-h4:text-base sm:prose-h4:text-lg prose-h4:text-zinc-900 dark:prose-h4:text-zinc-100;
-  @apply prose-h5:text-base prose-h5:text-zinc-900 dark:prose-h5:text-zinc-100;
-  @apply prose-a:text-blue-500 dark:prose-a:text-blue-500 prose-a:underline;
-  @apply prose-pre:text-sm sm:prose-pre:text-base prose-pre:text-zinc-900 dark:prose-pre:text-zinc-100;
-  @apply prose-code:text-zinc-900 dark:prose-code:text-zinc-100;
-  @apply prose-strong:text-neutral-900 dark:prose-strong:text-neutral-100 prose-strong:font-[500];
-  @apply prose-p:m-0;
+  @apply antialiased font-geist text-neutral-700/90 dark:text-neutral-400/80 leading-relaxed;
+
+  h1 {
+    @apply text-2xl sm:text-3xl text-zinc-900 dark:text-zinc-100 italic font-[600] mb-6 mt-8;
+  }
+
+  h2 {
+    @apply text-xl sm:text-2xl text-zinc-900 dark:text-zinc-100 mb-4 mt-8;
+  }
+
+  h3 {
+    @apply text-lg sm:text-xl text-zinc-900 dark:text-zinc-100 mb-4 mt-6;
+  }
+
+  h4 {
+    @apply text-base sm:text-lg text-zinc-900 dark:text-zinc-100 mb-4 mt-6;
+  }
+
+  h5 {
+    @apply text-base text-zinc-900 dark:text-zinc-100 mb-4 mt-6;
+  }
+
+  p {
+    @apply mb-4 mt-0;
+  }
+
+  a {
+    @apply text-blue-500 dark:text-blue-500 underline hover:text-blue-600;
+  }
+
+  pre {
+    @apply text-sm sm:text-base text-zinc-900 dark:text-zinc-100 my-4 p-4 bg-neutral-100 dark:bg-neutral-800 rounded-lg overflow-x-auto;
+  }
+
+  code {
+    @apply text-zinc-900 dark:text-zinc-100 text-sm px-1.5 py-0.5 bg-neutral-100 dark:bg-neutral-800 rounded;
+  }
+
+  strong {
+    @apply text-neutral-900 dark:text-neutral-100 font-[500];
+  }
+
+  ul, ol {
+    @apply mb-4 mt-4 pl-6;
+  }
+
+  li {
+    @apply mb-1;
+  }
+
+  blockquote {
+    @apply pl-4 border-l-4 border-neutral-300 dark:border-neutral-700 my-4 italic;
+  }
+
+  hr {
+    @apply my-8 border-neutral-200 dark:border-neutral-800;
+  }
+
+  img {
+    @apply my-4 rounded-lg max-w-full;
+  }
+
+  figure {
+    @apply my-4;
+  }
+
+  figcaption {
+    @apply text-sm text-neutral-500 dark:text-neutral-400 mt-2;
+  }
 }
-*/

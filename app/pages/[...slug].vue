@@ -1,6 +1,10 @@
 <script setup lang="ts">
+const { t, locale } = useI18n()
 const route = useRoute()
-const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
+
+const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).locale(locale.value).findOne(), {
+  watch: [locale],
+})
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
@@ -9,7 +13,6 @@ if (!page.value) {
 useContentHead(page.value)
 
 const { profile } = useAppConfig()
-const { t, locale } = useI18n()
 
 const { copy } = useClipboard()
 
@@ -26,13 +29,6 @@ defineShortcuts({
 
 <template>
   <div>
-    <ContentQuery
-      v-slot="{ data }"
-      :path="$route.path"
-      :locale="locale"
-      find="one"
-    >
-      <ContentRenderer :value="data" />
-    </ContentQuery>
+    <ContentRenderer :value="page" />
   </div>
 </template>

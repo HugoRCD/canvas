@@ -38,11 +38,6 @@ export default defineNuxtConfig({
   },
 
   content: {
-    watch: {
-      ws: {
-        showURL: false,
-      },
-    },
     highlight: {
       theme: 'github-dark',
     },
