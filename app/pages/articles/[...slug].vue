@@ -1,14 +1,10 @@
 <script lang="ts" setup>
-import { Toaster } from 'vue-sonner'
-
 const { t, locale } = useI18n()
 
 const route = useRoute()
 const { data: page } = await useAsyncData(`${route.path}`, () => queryContent(route.path).findOne())
 
-if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
-}
+if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found' })
 
 useContentHead(page.value)
 
@@ -31,8 +27,6 @@ defineShortcuts({
 
 defineOgImage({
   url: page.value.image,
-  width: 1200,
-  height: 600,
 })
 </script>
 
@@ -40,15 +34,17 @@ defineOgImage({
   <div>
     <NuxtLink
       to="/writing"
-      class="mx-auto my-8 flex cursor-pointer items-center gap-2 px-4 text-muted transition-colors duration-200 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
+      class="mx-auto my-8 flex cursor-pointer items-center gap-2 px-4 text-muted hover:text-primary transition-colors duration-200 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
     >
-      <span class="i-lucide-arrow-left size-4" />
+      <UIcon
+        name="lucide:arrow-left"
+        class="size-4"
+      />
       <span class="text-sm font-extralight">
         {{ $t("navigation.writing") }}
       </span>
     </NuxtLink>
-    <SettingsLanguageToggle class="fixed bottom-4 right-4 sm:bottom-4" />
-    <article class="writing prose mx-auto px-4 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
+    <article class="writing mx-auto px-4 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
       <h1>
         {{ page?.title }}
       </h1>

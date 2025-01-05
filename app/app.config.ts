@@ -43,6 +43,11 @@ export default defineAppConfig({
         color: 'neutral',
       },
     },
+    textarea: {
+      defaultVariants: {
+        color: 'neutral',
+      },
+    },
     icons: {
       loading: 'lucide:loader',
     },

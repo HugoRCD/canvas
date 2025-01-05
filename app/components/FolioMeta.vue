@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useScriptPlausibleAnalytics({
-  domain: 'hrcd.fr',
+  domain: 'canvas.hrcd.fr',
   scriptInput: {
     src: 'https://analytics.hrcd.fr/js/script.js',
   },
@@ -14,16 +14,22 @@ const getPageSEO = () => ({
   description: seo.description,
 })
 
+const isWriting = computed(() => route.path.includes('/articles/'))
+
 const getTitleTemplate = (title: string | undefined) => {
-  if (route.path === '/') return title || `${seo.title} | ${profile.job}`
-  return `${title} | ${seo.title} - ${profile.job}`
+  if (route.path === '/') return title || `${seo.title}`
+  if (isWriting.value) return title
+  return `${title} | ${seo.title}`
 }
 
 const pageSEO = getPageSEO()
 
 useSeoMeta({
   ogSiteName: seo.title,
+  ogTitle: pageSEO.title,
+  ogDescription: pageSEO.description,
   ogType: 'website',
+  ogUrl: seo.url,
   author: profile.name,
   title: pageSEO.title,
   description: pageSEO.description,
@@ -44,7 +50,7 @@ useHead({
   link,
 })
 
-defineOgImage({ url: 'https://canvas.hrcd.fr/social-preview.jpg', width: 1200, height: 630, alt: 'Home image' })
+defineOgImage({ url: 'https://canvas.hrcd.fr/og.png', width: 1200, height: 630, alt: 'Home image' })
 </script>
 
 <template>
