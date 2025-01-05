@@ -20,11 +20,11 @@ const items = computed(() => {
 const ui = {
   root: 'flex items-center gap-4 w-full',
   list: 'relative flex bg-transparent dark:bg-transparent gap-2',
-  indicator: 'absolute top-[4px] left-[4px] duration-200 ease-out focus:outline-none rounded-full bg-transparent',
+  indicator: 'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-full bg-white/10 dark:bg-neutral-900',
   trigger: [
     'relative inline-flex items-center justify-center flex-shrink-0 w-full focus:outline-none transition-colors duration-200 ease-out border-white/10 border-2',
     'px-3 py-2 font-medium rounded-full',
-    'hover:bg-zinc-900/80',
+    'hover:bg-neutral-900/80',
     'data-[state=active]:text-neutral-900 dark:data-[state=active]:text-white',
     'data-[state=inactive]:text-neutral-500 dark:data-[state=inactive]:text-neutral-400',
   ],

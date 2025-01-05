@@ -69,7 +69,7 @@ const toggleTag = (tag: string) => {
         <div
           v-for="tag of tags"
           :key="tag"
-          class="hover:text-shadow-md flex cursor-pointer select-none items-center rounded-md bg-secondary px-2 py-1 text-xs transition-colors duration-100 text-shadow-sm hover:bg-zinc-700 sm:text-sm"
+          class="hover:text-shadow-md flex cursor-pointer select-none items-center rounded-md bg-neutral-800 px-2 py-1 text-xs transition-colors duration-100 text-shadow-sm hover:bg-neutral-700 sm:text-sm"
           :class="{ 'bg-zinc-700': searchedTags.includes(tag) }"
           @click="toggleTag(tag)"
         >
