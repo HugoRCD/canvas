@@ -25,7 +25,7 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/p
           {{ project.name }}
         </span>
         <div class="mx-2 h-[0.1px] w-full bg-muted" />
-        <span class="whitespace-nowrap text-muted">
+        <span class="whitespace-nowrap">
           {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
         </span>
       </NuxtLink>

@@ -57,7 +57,6 @@ const toggleTag = (tag: string) => {
       <div class="my-4">
         <UInput
           v-model="searchedTitle"
-          variant="none"
           class="w-full sm:w-96"
           :placeholder="$t('writing.search_article')"
         />

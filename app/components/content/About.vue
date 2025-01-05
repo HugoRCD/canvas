@@ -17,7 +17,7 @@ const { data: stack } = await useAsyncData('stack', () => queryContent('/stack')
         <h3 class="text-lg">
           Intro
         </h3>
-        <div class="flex flex-col gap-4 text-[var(--ui-text-toned)]">
+        <div class="flex flex-col gap-4 text-primary">
           <ContentSlot :use="$slots.intro" />
         </div>
         <AboutSignature class="absolute -bottom-24 right-0 hidden w-40 sm:block" />
@@ -32,7 +32,7 @@ const { data: stack } = await useAsyncData('stack', () => queryContent('/stack')
         <h3 class="text-white-shadow font-newsreader italic text-3xl">
           <ContentSlot :use="$slots.stack_title" />
         </h3>
-        <p class="text-sm text-muted">
+        <p>
           <ContentSlot :use="$slots.stack_description" />
         </p>
       </div>

@@ -68,7 +68,6 @@ async function submitForm() {
             required
             name="fullname"
             autocomplete="name"
-            variant="subtle"
             class="w-full"
             placeholder="John Doe"
           />
@@ -84,7 +83,6 @@ async function submitForm() {
             type="email"
             required
             name="email"
-            variant="subtle"
             autocomplete="email"
             class="w-full"
             placeholder="john.doe@gmail.com"
@@ -99,7 +97,6 @@ async function submitForm() {
             v-model="phone"
             type="text"
             name="phone"
-            variant="subtle"
             autocomplete="tel"
             class="w-full"
             placeholder="123-456-7890"
@@ -115,7 +112,6 @@ async function submitForm() {
             v-model="subject"
             type="text"
             name="subject"
-            variant="subtle"
             class="w-full"
             :placeholder="$t('contact.subject')"
           />
@@ -131,7 +127,6 @@ async function submitForm() {
             autoresize
             required
             name="message"
-            variant="subtle"
             class="w-full"
             :rows="4"
             placeholder="Lets work together!"
