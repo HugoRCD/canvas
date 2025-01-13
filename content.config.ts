@@ -6,12 +6,22 @@ const commonContentSchema = z.object({
   date: z.string().nonempty(),
 })
 
+const commonArticleSchema = z.object({
+  title: z.string().nonempty(),
+  description: z.string().nonempty(),
+  date: z.string().nonempty(),
+  image: z.string().url(),
+  readingTime: z.string().nonempty(),
+  tags: z.array(z.string().nonempty()),
+})
+
 const commonProjectSchema = z.object({
   name: z.string().nonempty(),
   image: z.string().url(),
   link: z.string().url(),
   release: z.string().nonempty(),
   date: z.string().nonempty(),
+  featured: z.boolean(),
 })
 
 const commonFaqSchema = z.object({
@@ -49,13 +59,19 @@ export const collections = {
   }),
   articles_en: defineCollection({
     type: 'page',
-    source: 'en/articles/*.md',
-    schema: commonContentSchema,
+    source: {
+      include: 'en/articles/*.md',
+      prefix: '/articles',
+    },
+    schema: commonArticleSchema,
   }),
   articles_fr: defineCollection({
     type: 'page',
-    source: 'fr/articles/*.md',
-    schema: commonContentSchema,
+    source: {
+      include: 'fr/articles/*.md',
+      prefix: '/articles',
+    },
+    schema: commonArticleSchema,
   }),
   projects_en: defineCollection({
     type: 'data',

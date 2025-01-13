@@ -1,15 +1,18 @@
 <script lang="ts" setup>
-const { t, locale } = useI18n()
+import type { Collections } from '@nuxt/content'
 
 const route = useRoute()
+const { locale, t, localeProperties } = useI18n()
 
-const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).locale(locale.value).findOne(), {
+const { data: page } = await useAsyncData(route.path, async () => {
+  const collection = ('articles_' + locale.value) as keyof Collections
+  return await queryCollection(collection).path(route.path).first()
+}, {
   watch: [locale],
 })
 
-if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found' })
-
-useContentHead(page.value)
+if (!page.value)
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
 
 const { copy } = useClipboard()
 
@@ -65,14 +68,18 @@ defineOgImage({
           :shortcuts="['⌘', 'K']"
         >
           <p
-            class="flex cursor-pointer select-none items-center gap-1 transition-colors duration-200"
+            class="flex cursor-pointer select-none items-center gap-1 transition-colors duration-200 hover:text-primary"
             @click="copyArticleLink"
           >
             {{ $t("writing.share") }}
           </p>
         </UTooltip>
       </div>
-      <ContentRenderer :value="page" />
+      <ContentRenderer
+        v-if="page"
+        :dir="localeProperties?.dir ?? 'ltr'"
+        :value="page"
+      />
     </article>
   </div>
 </template>

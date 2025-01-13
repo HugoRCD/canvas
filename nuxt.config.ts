@@ -37,6 +37,9 @@ export default defineNuxtConfig({
   },
 
   content: {
+    renderer: {
+      anchorLinks: false,
+    },
     studio: {
       enabled: true,
       dev: true,
@@ -89,7 +92,7 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', language: 'en-US', dir: 'ltr' },
       { code: 'fr', name: 'French', language: 'fr-FR' },
     ],
-    strategy: 'no_prefix',
+    strategy: 'prefix_except_default',
     defaultLocale: 'en',
     vueI18n: '~/i18n.config.ts',
   },

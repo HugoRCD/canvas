@@ -10,20 +10,20 @@ const route = useRoute()
 const { locale } = useI18n()
 
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
-const { data } = await useAsyncData('articles-' + slug.value, async () => {
+const { data: articles } = await useAsyncData('articles-' + slug.value, async () => {
   const collection = ('articles_' + locale.value) as keyof Collections
-  return await queryCollection(collection).path(slug.value).first()
+  return await queryCollection(collection).all()
 }, {
   watch: [locale],
 })
+console.log(articles.value)
 
-if (!data.value)
+if (!articles.value)
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
 
-const articles = computed(() => data.value)
-/* const tags = computed(() =>
+const tags = computed(() =>
   Array.from(new Set(articles.value.flatMap(article => article.tags))),
-) */
+)
 
 const filteredArticles = computed(() =>
   articles.value.filter(article =>
@@ -73,7 +73,7 @@ const toggleTag = (tag: string) => {
           :placeholder="$t('writing.search_article')"
         />
       </div>
-      <!--      <div
+      <div
         v-if="tags.length > 0"
         class="mb-4 flex flex-wrap gap-2"
       >
@@ -88,7 +88,7 @@ const toggleTag = (tag: string) => {
             {{ tag }}
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
     <TransitionGroup
       v-if="filteredArticles.length"
@@ -98,13 +98,13 @@ const toggleTag = (tag: string) => {
     >
       <li
         v-for="article of filteredArticles"
-        :key="article._path"
+        :key="article.path"
       >
         <ArticleCard
           :title="article.title!"
           :date="article.date"
           :image="article.image"
-          :path="article._path!"
+          :path="article.path"
         />
       </li>
     </TransitionGroup>

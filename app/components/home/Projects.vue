@@ -1,9 +1,15 @@
 <script setup lang="ts">
+import type { Collections } from '@nuxt/content'
+
 const { locale } = useI18n()
 
-const { data: projects } = await useAsyncData('projects', () => queryContent('/projects').locale(locale.value).sort({ release: -1 }).find(), {
+const { data: projects } = await useAsyncData('projects', async () => {
+  const collection = ('projects_' + locale.value) as keyof Collections
+  return await queryCollection(collection).all()
+}, {
   watch: [locale],
 })
+console.log(projects.value)
 </script>
 
 <template>
