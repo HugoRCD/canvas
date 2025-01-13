@@ -1,23 +1,29 @@
 <script setup lang="ts">
-import type { Article } from '~/types/Article'
-
-const { locale } = useI18n()
+import { withLeadingSlash } from 'ufo'
+import type { Collections } from '@nuxt/content'
 
 const searchedTags = ref<string[]>([])
 const searchedTitle = ref('')
 const showSearch = ref(false)
 
-const { data } = await useAsyncData('articles', () =>
-  queryContent('/articles')
-    .locale(locale.value)
-    .sort({ date: -1 }).find(),
-{ watch: [locale] },
-)
+const route = useRoute()
+const { locale } = useI18n()
 
-const articles = computed(() => data.value as Article[])
-const tags = computed(() =>
+const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const { data } = await useAsyncData('articles-' + slug.value, async () => {
+  const collection = ('articles_' + locale.value) as keyof Collections
+  return await queryCollection(collection).path(slug.value).first()
+}, {
+  watch: [locale],
+})
+
+if (!data.value)
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+
+const articles = computed(() => data.value)
+/* const tags = computed(() =>
   Array.from(new Set(articles.value.flatMap(article => article.tags))),
-)
+) */
 
 const filteredArticles = computed(() =>
   articles.value.filter(article =>
@@ -36,10 +42,16 @@ const toggleTag = (tag: string) => {
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
     <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
-      <ContentSlot :use="$slots.title" />
+      <slot
+        name="title"
+        mdc-unwrap="p"
+      />
     </h1>
     <h2 class="text-center text-lg font-extralight italic text-muted">
-      <ContentSlot :use="$slots.subtitle" />
+      <slot
+        name="subtitle"
+        mdc-unwrap="p"
+      />
     </h2>
     <Divider class="mb-8 mt-2" />
     <div :class="showSearch ? '' : 'mb-3'">
@@ -61,7 +73,7 @@ const toggleTag = (tag: string) => {
           :placeholder="$t('writing.search_article')"
         />
       </div>
-      <div
+      <!--      <div
         v-if="tags.length > 0"
         class="mb-4 flex flex-wrap gap-2"
       >
@@ -76,7 +88,7 @@ const toggleTag = (tag: string) => {
             {{ tag }}
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <TransitionGroup
       v-if="filteredArticles.length"

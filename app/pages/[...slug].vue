@@ -1,16 +1,20 @@
 <script setup lang="ts">
-const { t, locale } = useI18n()
-const route = useRoute()
+import { withLeadingSlash } from 'ufo'
+import type { Collections } from '@nuxt/content'
 
-const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).locale(locale.value).findOne(), {
+const route = useRoute()
+const { locale, localeProperties, t } = useI18n()
+
+const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const { data: page } = await useAsyncData('page-' + slug.value, async () => {
+  const collection = ('content_' + locale.value) as keyof Collections
+  return await queryCollection(collection).path(slug.value).first()
+}, {
   watch: [locale],
 })
 
-if (!page.value) {
+if (!page.value)
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
-}
-
-useContentHead(page.value)
 
 const { profile } = useAppConfig()
 
@@ -28,7 +32,9 @@ defineShortcuts({
 </script>
 
 <template>
-  <div>
-    <ContentRenderer :value="page" />
-  </div>
+  <ContentRenderer
+    v-if="page"
+    :dir="localeProperties?.dir ?? 'ltr'"
+    :value="page"
+  />
 </template>

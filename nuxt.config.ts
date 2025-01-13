@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/ui',
     '@nuxt/content',
-    '@nuxthq/studio',
     '@nuxt/image',
     'nuxt-og-image',
     '@nuxt/fonts',
@@ -38,17 +37,20 @@ export default defineNuxtConfig({
   },
 
   content: {
+    studio: {
+      enabled: true,
+      dev: true,
+    },
+  },
+
+  mdc: {
     highlight: {
-      theme: 'github-dark',
+      theme: {
+        dark: 'github-dark',
+        default: 'github-dark',
+        light: 'github-light',
+      },
     },
-    navigation: {
-      fields: ['image', '_id'],
-    },
-    markdown: {
-      anchorLinks: false,
-    },
-    locales: ['en', 'fr'],
-    defaultLocale: 'en',
   },
 
   runtimeConfig: {
@@ -78,14 +80,16 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/sitemap.xml', '/', '/writing', '/works', '/about', '/contact'],
+      routes: ['/', '/writing', '/works', '/about', '/contact'],
     },
   },
 
   i18n: {
+    locales: [
+      { code: 'en', name: 'English', language: 'en-US', dir: 'ltr' },
+      { code: 'fr', name: 'French', language: 'fr-FR' },
+    ],
     strategy: 'no_prefix',
-    baseUrl: '/',
-    locales: ['en', 'fr'],
     defaultLocale: 'en',
     vueI18n: '~/i18n.config.ts',
   },
@@ -102,9 +106,5 @@ export default defineNuxtConfig({
       includeCustomCollections: true,
     },
     provider: 'iconify',
-  },
-
-  ogImage: {
-    zeroRuntime: true,
   },
 })

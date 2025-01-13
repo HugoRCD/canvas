@@ -1,14 +1,19 @@
 <script setup lang="ts">
-import type { Faq } from '~~/types/Faq'
+import { withLeadingSlash } from 'ufo'
 
+const route = useRoute()
 const { locale } = useI18n()
 
-const { data: faq } = await useAsyncData('faq', () => queryContent('/faq').locale(locale.value).findOne(), {
+const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const { data: faq } = await useAsyncData('faq-' + slug.value, async () => {
+  const collection = ('faq_' + locale.value)
+  return await queryCollection(collection).first()
+}, {
   watch: [locale],
 })
 
 const items = computed(() => {
-  return faq.value?.faqQuestions.map((faq: Faq) => {
+  return faq.value?.faqQuestions.map((faq) => {
     return {
       label: faq.title,
       key: faq.title.toLowerCase(),
