@@ -9,7 +9,6 @@ const { data: projects } = await useAsyncData('projects', async () => {
 }, {
   watch: [locale],
 })
-console.log(projects.value)
 </script>
 
 <template>
@@ -27,7 +26,7 @@ console.log(projects.value)
         :aria-label="'go to ' + project.name + ' project website'"
         :target="project.release === 'soon' ? '_self' : '_blank'"
       >
-        <span class="whitespace-nowrap">
+        <span class="whitespace-nowrap font-medium">
           {{ project.name }}
         </span>
         <div class="mx-2 h-[0.1px] w-full bg-muted" />

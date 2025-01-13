@@ -92,8 +92,9 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', language: 'en-US', dir: 'ltr' },
       { code: 'fr', name: 'French', language: 'fr-FR' },
     ],
-    strategy: 'prefix_except_default',
+    strategy: 'no_prefix',
     defaultLocale: 'en',
+    baseUrl: '/',
     vueI18n: '~/i18n.config.ts',
   },
 

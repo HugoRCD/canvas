@@ -21,7 +21,7 @@ const commonProjectSchema = z.object({
   link: z.string().url(),
   release: z.string().nonempty(),
   date: z.string().nonempty(),
-  featured: z.boolean(),
+  featured: z.boolean().optional(),
 })
 
 const commonFaqSchema = z.object({
@@ -75,18 +75,12 @@ export const collections = {
   }),
   projects_en: defineCollection({
     type: 'data',
-    source: {
-      include: 'en/projects/*.json',
-      prefix: '/',
-    },
+    source: 'en/projects/*.json',
     schema: commonProjectSchema,
   }),
   projects_fr: defineCollection({
     type: 'data',
-    source: {
-      include: 'fr/projects/*.json',
-      prefix: '/',
-    },
+    source: 'fr/projects/*.json',
     schema: commonProjectSchema,
   }),
   stack: defineCollection({
