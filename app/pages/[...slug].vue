@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { withLeadingSlash } from 'ufo'
 import type { Collections } from '@nuxt/content'
 
 const route = useRoute()
 const { locale, localeProperties, t } = useI18n()
 
-const slug = computed(() => withLeadingSlash(String(route.params.slug)))
-const { data: page } = await useAsyncData('page-' + slug.value, async () => {
+const { data: page } = await useAsyncData(route.path, async () => {
   const collection = ('content_' + locale.value) as keyof Collections
-  return await queryCollection(collection).path(slug.value).first()
+  return await queryCollection(collection).path(route.path).first() as Collections['content_en'] | Collections['content_fr']
 }, {
   watch: [locale],
 })
@@ -24,7 +22,7 @@ defineShortcuts({
   meta_o: {
     usingInput: true,
     handler: () => {
-      copy(profile.email)
+      copy(profile.email!)
       toast.success(t('global.email_copied'))
     },
   },

@@ -6,7 +6,7 @@ const { locale, t, localeProperties } = useI18n()
 
 const { data: page } = await useAsyncData(route.path, async () => {
   const collection = ('articles_' + locale.value) as keyof Collections
-  return await queryCollection(collection).path(route.path).first()
+  return await queryCollection(collection).path(route.path).first() as Collections['articles_en'] | Collections['articles_fr']
 }, {
   watch: [locale],
 })
