@@ -12,7 +12,6 @@ const { locale } = useI18n()
   >
     <Body>
       <LayoutScrollToTop />
-      <FolioMeta />
       <NuxtLayout>
         <UApp :locale="locales[locale]">
           <NuxtPage />

@@ -29,22 +29,22 @@ The `!comp` snippet is a basic yet powerful template for creating new Vue compon
 
 **Usage Example:** Use `!comp` to quickly create new Vue components, ensuring consistency and saving time on setup.
 
-```vue
+```vue [MyComponent.vue]
 <script setup lang="ts">
 import type { PropType } from "vue";
 
 const props = defineProps({
-  item: {
-    type: String,
-    required: true
-  }
+ item: {
+  type: String, 
+  required: true
+ }
 });
 </script>
 
 <template>
-  <div>
-    <h1>{{ item }}</h1>
-  </div>
+  <div>
+    <h1>{{ item }}</h1>
+  </div>
 </template>
 
 <style scoped>
@@ -58,7 +58,7 @@ Handling API requests is a common task in modern web applications. The `!api` sn
 
 **Usage Example:** Implement the `!api` snippet for creating efficient API routes in your Nuxt application, especially when dealing with CRUD operations.
 
-```ts
+```ts [~/server/api/MyHandler.ts]
 import { H3Event } from "h3";
 
 export default defineEventHandler(async (event: H3Event) => {
@@ -73,7 +73,7 @@ State management is crucial in large-scale applications. The `!store` snippet ut
 
 **Usage Example:** Utilize `!store` for setting up store modules in your Nuxt/Vue app, managing state more effectively and cleanly. the { clipboard } while be replaced by your actual clipboard.
 
-```ts
+```ts [~/store/{clipboard}.ts]
 import { defineStore } from 'pinia';
 
 type {clipboard}Store = { 
@@ -103,7 +103,7 @@ Composable functions in Vue 3 bring reusability and organization to your code. T
 
 **Usage Example:** Use `!cps` for creating reusable composable functions that can be shared across components, enhancing code reusability and maintainability.
 
-```ts
+```ts [~/composables/useComposables.ts]
 export function use{clipboard}() {
   const {clipboard} = ref(null);
   
@@ -119,7 +119,7 @@ The `!fcomp` snippet is designed for fetching data using Vue's Composition API. 
 
 **Usage Example:** Implement `!fcomp` in scenarios where you need to fetch data from an API, providing a robust structure for data fetching and state management.
 
-```vue
+```vue [MyComponent.vue]
 <script setup lang="ts">
 const { data, pending, error, refresh } = useFetch("your_url", { 
   immediate: false,

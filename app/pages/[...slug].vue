@@ -30,9 +30,14 @@ defineShortcuts({
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :dir="localeProperties?.dir ?? 'ltr'"
-    :value="page"
-  />
+  <div v-if="page">
+    <FolioMeta
+      :page
+      :is-writing="route.path.includes('/articles/')"
+    />
+    <ContentRenderer
+      :dir="localeProperties?.dir ?? 'ltr'"
+      :value="page"
+    />
+  </div>
 </template>
