@@ -1,3 +1,4 @@
+/*
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { serverQueryContent } from '#content/server'
 
@@ -39,3 +40,4 @@ export default defineEventHandler(async (event) => {
 
   return streamToPromise(sitemap)
 })
+*/

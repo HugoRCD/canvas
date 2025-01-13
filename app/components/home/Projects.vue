@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import type { Collections } from '@nuxt/content'
+
 const { locale } = useI18n()
 
-const { data: projects } = await useAsyncData('projects', () => queryContent('/projects').locale(locale.value).sort({ release: -1 }).find(), {
+const { data: projects } = await useAsyncData('projects', async () => {
+  const collection = ('projects_' + locale.value) as keyof Collections
+  return await queryCollection(collection).all() as Collections['projects_en'][] | Collections['projects_fr'][]
+}, {
   watch: [locale],
 })
 </script>
@@ -21,7 +26,7 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/p
         :aria-label="'go to ' + project.name + ' project website'"
         :target="project.release === 'soon' ? '_self' : '_blank'"
       >
-        <span class="whitespace-nowrap">
+        <span class="whitespace-nowrap font-medium">
           {{ project.name }}
         </span>
         <div class="mx-2 h-[0.1px] w-full bg-muted" />

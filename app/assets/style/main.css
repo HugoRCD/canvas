@@ -76,7 +76,7 @@ html, body, #__nuxt, #__layout {
 }
 
 .writing {
-  @apply antialiased font-geist text-neutral-700/90 dark:text-neutral-400/80 leading-relaxed;
+  @apply font-geist text-neutral-700/90 dark:text-neutral-300 leading-relaxed;
 
   h1 {
     @apply text-2xl sm:text-3xl text-zinc-900 dark:text-zinc-100 italic font-[600] mb-6 mt-8;

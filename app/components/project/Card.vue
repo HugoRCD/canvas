@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
-import type { Project } from '~/data/projects'
-
-defineProps({
+defineProps<{
   project: {
-    type: Object as PropType<Project>,
-    required: true,
-  },
-})
+    name: string
+    release: string
+    image: string
+    link: string
+  }
+}>()
 const img = useImage()
 </script>
 
@@ -37,14 +36,6 @@ const img = useImage()
       <div class="rounded-t-lg border-x border-t border-white/10 border-b-transparent px-4 py-[5px] shadow-md backdrop-blur-md sm:w-2/3">
         <div class="flex items-center justify-between gap-2">
           <div class="flex items-center gap-2">
-            <component
-              :is="project.logo"
-              v-if="project.name !== 'Sekoïa'"
-              :alt="project.name + ' logo'"
-              :aria-label="project.name + ' logo'"
-              :font-controlled="false"
-              class="size-5 text-white/90"
-            />
             <div class="flex items-center gap-2">
               <span class="whitespace-nowrap text-sm font-semibold text-white/90">
                 {{ project.name }}

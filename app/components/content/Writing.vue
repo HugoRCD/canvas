@@ -1,20 +1,26 @@
 <script setup lang="ts">
-import type { Article } from '~/types/Article'
-
-const { locale } = useI18n()
+import { withLeadingSlash } from 'ufo'
+import type { Collections } from '@nuxt/content'
 
 const searchedTags = ref<string[]>([])
 const searchedTitle = ref('')
 const showSearch = ref(false)
 
-const { data } = await useAsyncData('articles', () =>
-  queryContent('/articles')
-    .locale(locale.value)
-    .sort({ date: -1 }).find(),
-{ watch: [locale] },
-)
+const route = useRoute()
+const { locale } = useI18n()
 
-const articles = computed(() => data.value as Article[])
+const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const { data: articles } = await useAsyncData('articles-' + slug.value, async () => {
+  const collection = ('articles_' + locale.value) as keyof Collections
+  return await queryCollection(collection).all()
+}, {
+  watch: [locale],
+})
+console.log(articles.value)
+
+if (!articles.value)
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+
 const tags = computed(() =>
   Array.from(new Set(articles.value.flatMap(article => article.tags))),
 )
@@ -36,10 +42,16 @@ const toggleTag = (tag: string) => {
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
     <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
-      <ContentSlot :use="$slots.title" />
+      <slot
+        name="title"
+        mdc-unwrap="p"
+      />
     </h1>
     <h2 class="text-center text-lg font-extralight italic text-muted">
-      <ContentSlot :use="$slots.subtitle" />
+      <slot
+        name="subtitle"
+        mdc-unwrap="p"
+      />
     </h2>
     <Divider class="mb-8 mt-2" />
     <div :class="showSearch ? '' : 'mb-3'">
@@ -86,13 +98,13 @@ const toggleTag = (tag: string) => {
     >
       <li
         v-for="article of filteredArticles"
-        :key="article._path"
+        :key="article.path"
       >
         <ArticleCard
           :title="article.title!"
           :date="article.date"
           :image="article.image"
-          :path="article._path!"
+          :path="article.path"
         />
       </li>
     </TransitionGroup>

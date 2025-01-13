@@ -20,5 +20,6 @@ logs
 # Local env files
 .env
 .vercel
+.data
 
 rt_base

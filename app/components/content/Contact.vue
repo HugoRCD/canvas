@@ -1,39 +1,42 @@
 <script setup lang="ts">
-import type { ContactEmail } from '~~/types/ContactEmail'
+import * as z from 'zod'
+import type { FormSubmitEvent } from '#ui/types'
 
 const { profile } = useAppConfig()
 const { t } = useI18n()
 
-const email = ref('')
-const message = ref('')
-const phone = ref('')
-const fullname = ref('')
-const subject = ref('')
+const state = ref({
+  email: '',
+  message: '',
+  phone: '',
+  fullname: '',
+  subject: '',
+})
+
+const schema = z.object({
+  email: z.string().email('Invalid email'),
+  message: z.string().min(10, 'Message is too short'),
+  subject: z.string().min(5, 'Subject is too short'),
+  fullname: z.string().min(3, 'Name is too short'),
+})
+type Schema = z.output<typeof schema>
 
 const loading = ref(false)
 
-const contactData = computed(() => {
-  return {
-    email: email.value,
-    message: message.value,
-    phone: phone.value,
-    fullname: fullname.value,
-    subject: subject.value,
-  } as ContactEmail
-})
-
-async function submitForm() {
+async function onSubmit(event: FormSubmitEvent<Schema>) {
   loading.value = true
   try {
     await $fetch('/api/sendEmail', {
       method: 'POST',
-      body: contactData.value,
+      body: event.data,
     })
-    email.value = ''
-    message.value = ''
-    phone.value = ''
-    fullname.value = ''
-    subject.value = ''
+    state.value = {
+      email: '',
+      message: '',
+      phone: '',
+      fullname: '',
+      subject: '',
+    }
     toast.success(t('contact.success'))
   }
   catch (error) {
@@ -46,27 +49,33 @@ async function submitForm() {
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
     <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
-      <ContentSlot :use="$slots.title" />
+      <slot
+        name="title"
+        mdc-unwrap="p"
+      />
     </h1>
     <h2 class="text-center text-lg font-extralight italic text-muted">
-      <ContentSlot :use="$slots.subtitle" />
+      <slot
+        name="subtitle"
+        mdc-unwrap="p"
+      />
     </h2>
     <Divider class="mb-8 mt-2" />
     <div class="flex flex-col sm:items-center sm:justify-between">
-      <form
+      <UForm
+        :state
+        :schema
         class="flex w-full max-w-[40rem] flex-col gap-3"
-        @submit.prevent="submitForm"
+        @submit="onSubmit"
       >
         <UFormField
           label="Fullname"
+          name="fullname"
           required
         >
           <UInput
-            id="full-name"
-            v-model="fullname"
+            v-model="state.fullname"
             type="text"
-            required
-            name="fullname"
             autocomplete="name"
             class="w-full"
             placeholder="John Doe"
@@ -75,14 +84,11 @@ async function submitForm() {
 
         <UFormField
           label="Email"
+          name="email"
           required
         >
           <UInput
-            id="email"
-            v-model="email"
-            type="email"
-            required
-            name="email"
+            v-model="state.email"
             autocomplete="email"
             class="w-full"
             placeholder="john.doe@gmail.com"
@@ -91,12 +97,10 @@ async function submitForm() {
 
         <UFormField
           label="Phone"
+          name="phone"
         >
           <UInput
-            id="phone"
-            v-model="phone"
-            type="text"
-            name="phone"
+            v-model="state.phone"
             autocomplete="tel"
             class="w-full"
             placeholder="123-456-7890"
@@ -105,13 +109,11 @@ async function submitForm() {
 
         <UFormField
           label="Subject"
+          name="subject"
           required
         >
           <UInput
-            id="subject"
-            v-model="subject"
-            type="text"
-            name="subject"
+            v-model="state.subject"
             class="w-full"
             :placeholder="$t('contact.subject')"
           />
@@ -119,14 +121,12 @@ async function submitForm() {
 
         <UFormField
           label="Message"
+          name="message"
           required
         >
           <UTextarea
-            id="message"
-            v-model="message"
+            v-model="state.message"
             autoresize
-            required
-            name="message"
             class="w-full"
             :rows="4"
             placeholder="Lets work together!"
@@ -141,7 +141,7 @@ async function submitForm() {
             {{ $t("contact.submit") }}
           </UButton>
         </div>
-      </form>
+      </UForm>
       <Divider class="my-10" />
       <div class="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
         <div class="flex flex-col gap-3">
