@@ -1,15 +1,12 @@
 services:
-  canvas:
+  nuxt-app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: canvas
+    container_name: nuxt-app
     restart: always
     environment:
-      - NUXT_PRIVATE_RESEND_API_KEY=${NUXT_PRIVATE_RESEND_API_KEY}
-      - NUXT_PUBLIC_AVAILABLE=${NUXT_PUBLIC_AVAILABLE}
-      - NUXT_PUBLIC_STUDIO_TOKENS=${NUXT_PUBLIC_STUDIO_TOKENS}
-      - NUXT_PUBLIC_MEETING_LINK=${NUXT_PUBLIC_MEETING_LINK}
+      - YOUR_ENV_KEY=${YOUR_ENV_KEY}
     ports:
       - "3000:3000"
     healthcheck:
