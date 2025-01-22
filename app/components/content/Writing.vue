@@ -12,24 +12,23 @@ const { locale } = useI18n()
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
 const { data: articles } = await useAsyncData('articles-' + slug.value, async () => {
   const collection = ('articles_' + locale.value) as keyof Collections
-  return await queryCollection(collection).all()
+  return await queryCollection(collection).all() as Collections['articles_en'][] | Collections['articles_fr'][]
 }, {
   watch: [locale],
 })
-console.log(articles.value)
 
 if (!articles.value)
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
 
 const tags = computed(() =>
-  Array.from(new Set(articles.value.flatMap(article => article.tags))),
+  Array.from(new Set(articles.value?.flatMap(article => article.tags))),
 )
 
 const filteredArticles = computed(() =>
-  articles.value.filter(article =>
+  articles.value?.filter(article =>
     (searchedTags.value.length === 0 || searchedTags.value.some(tag => article.tags.includes(tag)))
     && (searchedTitle.value === '' || article.title!.toLowerCase().includes(searchedTitle.value.toLowerCase())),
-  ),
+  ) ?? [],
 )
 
 const toggleTag = (tag: string) => {

@@ -1,4 +1,5 @@
 import { defineCollection, z } from '@nuxt/content'
+import { asSeoCollection } from '@nuxtjs/seo/content'
 
 const commonContentSchema = z.object({
   title: z.string().nonempty(),
@@ -41,48 +42,60 @@ const commonFaqSchema = z.object({
 })
 
 export const collections = {
-  content_en: defineCollection({
-    type: 'page',
-    source: {
-      include: 'en/**/*.md',
-      prefix: '/',
-    },
-    schema: commonContentSchema,
-  }),
-  content_fr: defineCollection({
-    type: 'page',
-    source: {
-      include: 'fr/**/*.md',
-      prefix: '/',
-    },
-    schema: commonContentSchema,
-  }),
-  articles_en: defineCollection({
-    type: 'page',
-    source: {
-      include: 'en/articles/*.md',
-      prefix: '/articles',
-    },
-    schema: commonArticleSchema,
-  }),
-  articles_fr: defineCollection({
-    type: 'page',
-    source: {
-      include: 'fr/articles/*.md',
-      prefix: '/articles',
-    },
-    schema: commonArticleSchema,
-  }),
-  projects_en: defineCollection({
-    type: 'data',
-    source: 'en/projects/*.json',
-    schema: commonProjectSchema,
-  }),
-  projects_fr: defineCollection({
-    type: 'data',
-    source: 'fr/projects/*.json',
-    schema: commonProjectSchema,
-  }),
+  content_en: defineCollection(
+    asSeoCollection({
+      type: 'page',
+      source: {
+        include: 'en/**/*.md',
+        prefix: '/',
+      },
+      schema: commonContentSchema,
+    }),
+  ),
+  content_fr: defineCollection(
+    asSeoCollection({
+      type: 'page',
+      source: {
+        include: 'fr/**/*.md',
+        prefix: '/',
+      },
+      schema: commonContentSchema,
+    }),
+  ),
+  articles_en: defineCollection(
+    asSeoCollection({
+      type: 'page',
+      source: {
+        include: 'en/articles/*.md',
+        prefix: '/articles',
+      },
+      schema: commonArticleSchema,
+    }),
+  ),
+  articles_fr: defineCollection(
+    asSeoCollection({
+      type: 'page',
+      source: {
+        include: 'fr/articles/*.md',
+        prefix: '/articles',
+      },
+      schema: commonArticleSchema,
+    }),
+  ),
+  projects_en: defineCollection(
+    asSeoCollection({
+      type: 'data',
+      source: 'en/projects/*.json',
+      schema: commonProjectSchema,
+    }),
+  ),
+  projects_fr: defineCollection(
+    asSeoCollection({
+      type: 'data',
+      source: 'fr/projects/*.json',
+      schema: commonProjectSchema,
+    }),
+  ),
   stack: defineCollection({
     type: 'data',
     source: 'stack.json',

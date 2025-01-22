@@ -3,10 +3,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/ui',
+    '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/image',
-    'nuxt-og-image',
-    '@nuxt/fonts',
     '@nuxt/scripts',
   ],
 
@@ -40,8 +39,8 @@ export default defineNuxtConfig({
     renderer: {
       anchorLinks: false,
     },
-    studio: {
-      enabled: true,
+    preview: {
+      api: 'https://api.nuxt.studio',
       dev: true,
     },
   },
@@ -110,5 +109,9 @@ export default defineNuxtConfig({
       includeCustomCollections: true,
     },
     provider: 'iconify',
+  },
+
+  ogImage: {
+    zeroRuntime: true,
   },
 })
