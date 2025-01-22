@@ -42,7 +42,7 @@ defineOgImage({
       :page
       :is-writing="route.path.includes('/articles/')"
     />
-    <NuxtLink
+    <NuxtLinkLocale
       to="/writing"
       class="mx-auto my-8 flex cursor-pointer items-center gap-2 px-4 text-muted hover:text-primary transition-colors duration-200 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
     >
@@ -53,7 +53,7 @@ defineOgImage({
       <span class="text-sm font-extralight">
         {{ $t("navigation.writing") }}
       </span>
-    </NuxtLink>
+    </NuxtLinkLocale>
     <article class="writing mx-auto px-4 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
       <h1>
         {{ page?.title }}

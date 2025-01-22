@@ -1,8 +1,8 @@
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
-    '@nuxtjs/i18n',
     '@nuxt/ui',
+    '@nuxtjs/i18n',
     '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/image',
@@ -88,10 +88,15 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'en', name: 'English', language: 'en-US', dir: 'ltr' },
+      { code: 'en', name: 'English', language: 'en-US' },
       { code: 'fr', name: 'French', language: 'fr-FR' },
     ],
-    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+    strategy: 'prefix',
     defaultLocale: 'en',
     baseUrl: '/',
     vueI18n: '~/i18n.config.ts',

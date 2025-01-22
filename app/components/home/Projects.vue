@@ -35,10 +35,10 @@ const { data: projects } = await useAsyncData('projects', async () => {
         </span>
       </NuxtLink>
     </div>
-    <div @click="useRouter().push('/works')">
+    <NuxtLinkLocale to="/works">
       <span class="font-newsreader italic text-white-shadow cursor-pointer">
         {{ $t("global.see_more") }}
       </span>
-    </div>
+    </NuxtLinkLocale>
   </div>
 </template>

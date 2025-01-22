@@ -100,7 +100,7 @@ const toggleTag = (tag: string) => {
         :key="article.path"
       >
         <ArticleCard
-          :title="article.title!"
+          :title="article.title"
           :date="article.date"
           :image="article.image"
           :path="article.path"
@@ -120,21 +120,3 @@ const toggleTag = (tag: string) => {
     </div>
   </section>
 </template>
-
-<style>
-.list-move,
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
-}
-
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.list-leave-active {
-  position: absolute;
-}
-</style>
