@@ -57,7 +57,7 @@ export const collections = {
       type: 'page',
       source: {
         include: 'fr/**/*.md',
-        prefix: '/en',
+        prefix: '/fr',
       },
       schema: commonContentSchema,
     }),
