@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { withLeadingSlash } from 'ufo'
+import type { Collections } from '@nuxt/content'
 
 const route = useRoute()
 const { locale } = useI18n()
 
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
 const { data: faq } = await useAsyncData('faq-' + slug.value, async () => {
-  const collection = ('faq_' + locale.value)
-  return await queryCollection(collection).first()
+  const collection = ('faq_' + locale.value) as keyof Collections
+  return await queryCollection(collection).first() as Collections['faq_en'] | Collections['faq_fr']
 }, {
   watch: [locale],
 })
@@ -58,7 +59,7 @@ const ui = {
           :items="item.questions"
           :ui="{
             item: 'mb-2 group px-4 transform-gpu rounded-xl border border-white/10 bg-white/5 transition duration-500 will-change-transform hover:bg-white/[0.075]',
-            trailingIcon: 'group-data-[state=closed]:rotate-45 group-data-[state=open]:rotate-180',
+            trailingIcon: 'group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-135',
           }"
         />
       </template>
