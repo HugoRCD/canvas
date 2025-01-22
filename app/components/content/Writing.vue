@@ -36,6 +36,8 @@ const toggleTag = (tag: string) => {
     ? searchedTags.value.filter(t => t !== tag)
     : [...searchedTags.value, tag]
 }
+
+const localePath = useLocalePath()
 </script>
 
 <template>

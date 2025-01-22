@@ -88,10 +88,10 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'en', name: 'English', language: 'en-US', dir: 'ltr' },
+      { code: 'en', name: 'English', language: 'en-US' },
       { code: 'fr', name: 'French', language: 'fr-FR' },
     ],
-    strategy: 'no_prefix',
+    strategy: 'prefix',
     defaultLocale: 'en',
     baseUrl: '/',
     vueI18n: '~/i18n.config.ts',
