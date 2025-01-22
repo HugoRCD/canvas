@@ -91,6 +91,11 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', language: 'en-US' },
       { code: 'fr', name: 'French', language: 'fr-FR' },
     ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
     strategy: 'prefix',
     defaultLocale: 'en',
     baseUrl: '/',
