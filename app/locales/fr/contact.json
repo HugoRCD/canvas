@@ -7,6 +7,7 @@
   "subject": "Sujet de votre message",
   "message": "Message",
   "submit": "Envoyer",
+  "disabled": "Vous devez définir votre clé d'API resend",
   "success": "Votre message a été envoyé avec succès",
   "error": "Oups, une erreur s'est produite lors de l'envoi de votre message :(",
   "budget": "Budget",

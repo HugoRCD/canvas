@@ -5,6 +5,8 @@ import type { FormSubmitEvent } from '#ui/types'
 const { profile } = useAppConfig()
 const { t } = useI18n()
 
+const isResendEnabled = useRuntimeConfig().public.resend
+
 const state = ref({
   email: '',
   message: '',
@@ -26,7 +28,7 @@ const loading = ref(false)
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   loading.value = true
   try {
-    await $fetch('/api/sendEmail', {
+    await $fetch('/api/emails/send', {
       method: 'POST',
       body: event.data,
     })
@@ -39,7 +41,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     }
     toast.success(t('contact.success'))
   }
-  catch (error) {
+  catch {
     toast.error(t('contact.error'))
   }
   loading.value = false
@@ -133,13 +135,19 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           />
         </UFormField>
         <div class="flex justify-center">
-          <UButton
-            :loading
-            type="submit"
-            block
+          <UTooltip
+            :disabled="isResendEnabled"
+            :text="$t('contact.disabled')"
           >
-            {{ $t("contact.submit") }}
-          </UButton>
+            <UButton
+              :loading
+              :disabled="!isResendEnabled"
+              type="submit"
+              block
+            >
+              {{ $t("contact.submit") }}
+            </UButton>
+          </UTooltip>
         </div>
       </UForm>
       <Divider class="my-10" />
