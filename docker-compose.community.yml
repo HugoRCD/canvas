@@ -6,7 +6,6 @@ services:
     environment:
       - NUXT_PRIVATE_RESEND_API_KEY=${NUXT_PRIVATE_RESEND_API_KEY}
       - NUXT_PUBLIC_AVAILABLE=${NUXT_PUBLIC_AVAILABLE}
-      - NUXT_PUBLIC_STUDIO_TOKENS=${NUXT_PUBLIC_STUDIO_TOKENS}
       - NUXT_PUBLIC_MEETING_LINK=${NUXT_PUBLIC_MEETING_LINK}
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:3000/api/hello" ]
