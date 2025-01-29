@@ -1,4 +1,8 @@
 export default defineAppConfig({
+  global: {
+    meetingLink: 'https://schedule.rdv.fr',
+    available: true,
+  },
   profile: {
     name: 'Hugo Richard',
     job: 'Frontend Architect and Designer',

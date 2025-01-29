@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const meetingLink = useRuntimeConfig().public.meetingLink
+const meetingLink = useAppConfig().global.meetingLink
 </script>
 
 <template>
