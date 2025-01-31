@@ -2,6 +2,27 @@ import { field, group } from '@nuxt/content/preview'
 
 export default defineNuxtSchema({
   appConfig: {
+    global: group({
+      title: 'Website',
+      description: 'Global website configuration',
+      icon: 'lucide:settings',
+      fields: {
+        meetingLink: field({
+          type: 'string',
+          title: 'Meeting link',
+          description: 'Your meeting link.',
+          icon: 'lucide:calendar',
+          default: 'https://schedule.rdv.fr',
+        }),
+        available: field({
+          type: 'boolean',
+          title: 'Available',
+          description: 'Your availability.',
+          icon: 'lucide:check',
+          default: true,
+        }),
+      },
+    }),
     profile: group({
       title: 'Personal information',
       description: 'Personal information configuration',

@@ -57,11 +57,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      available: process.env.NUXT_PUBLIC_AVAILABLE,
-      meetingLink: process.env.NUXT_PUBLIC_MEETING_LINK,
-    },
-    private: {
-      resendApiKey: process.env.NUXT_PRIVATE_RESEND_API_KEY,
+      resend: !!process.env.NUXT_PRIVATE_RESEND_API_KEY,
     },
   },
 
@@ -83,6 +79,18 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/writing', '/works', '/about', '/contact'],
+    },
+  },
+
+  hooks: {
+    'nitro:config': (config) => {
+      if (process.env.NUXT_PRIVATE_RESEND_API_KEY) {
+        config.handlers?.push({
+          method: 'post',
+          route: '/api/emails/send',
+          handler: '~~/server/emails/send.ts',
+        })
+      }
     },
   },
 
