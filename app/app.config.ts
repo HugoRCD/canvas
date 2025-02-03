@@ -1,6 +1,6 @@
 export default defineAppConfig({
   global: {
-    meetingLink: 'https://schedule.rdv.fr',
+    meetingLink: 'https://cal.com/hugorcd/15min',
     available: true,
   },
   profile: {

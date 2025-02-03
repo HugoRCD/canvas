@@ -43,6 +43,10 @@ export default defineNuxtConfig({
       api: 'https://api.nuxt.studio',
       dev: true,
     },
+    database: {
+      type: 'd1',
+      binding: 'DB',
+    },
   },
 
   mdc: {
@@ -80,6 +84,10 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/', '/writing', '/works', '/about', '/contact'],
     },
+  },
+
+  hub: {
+    database: true,
   },
 
   hooks: {
