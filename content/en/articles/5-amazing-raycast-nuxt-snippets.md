@@ -1,9 +1,17 @@
 ---
-title: "5 Amazing Raycast Snippets for Enhancing Your Nuxt (Vue) Projects"
-date: "22/01/2024"
-description: "In the realm of web development, where efficiency is as valuable as expertise, tools that streamline and simplify our workflow are indispensable. Among these, Raycast snippets emerge as a powerful ally, especially for those working with Nuxt and Vue frameworks. But what exactly are these snippets, and how can they transform your development experience?"
-tags: ["Nuxt", "Vue", "Raycast", "Productivity"]
-image: "https://canvas.hrcd.fr/articles/5-raycast-snippets.jpg"
+title: 5 Amazing Raycast Snippets for Enhancing Your Nuxt (Vue) Projects
+date: 22/01/2024
+description: In the realm of web development, where efficiency is as valuable as
+  expertise, tools that streamline and simplify our workflow are indispensable.
+  Among these, Raycast snippets emerge as a powerful ally, especially for those
+  working with Nuxt and Vue frameworks. But what exactly are these snippets, and
+  how can they transform your development experience?
+tags:
+  - Nuxt
+  - Vue
+  - Raycast
+  - Productivity
+image: https://canvas.hrcd.fr/articles/5-raycast-snippets.jpg
 readingTime: "10"
 ---
 

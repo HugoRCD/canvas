@@ -1,9 +1,15 @@
 ---
-title: "Tu n'es pas un imposteur"
-date: "11/01/2024"
-description: "Dans le théâtre de la création de contenu, nombreux sont ceux qui, en coulisses, murmurent une phrase teintée de doute : 'Je ne suis pas légitime, les autres sont tellement meilleurs'. Cette mélodie d'insécurité, souvent jouée en boucle dans l'esprit des créateurs émergents, est le premier acte d'une œuvre bien plus vaste : la conquête de sa propre légitimité."
-tags: ["Création", "Productivité"]
-image: "https://canvas.hrcd.fr/articles/trap-of-perfection.jpg"
+title: Tu n'es pas un imposteur
+date: 11/01/2024
+description: "Dans le théâtre de la création de contenu, nombreux sont ceux qui,
+  en coulisses, murmurent une phrase teintée de doute : 'Je ne suis pas
+  légitime, les autres sont tellement meilleurs'. Cette mélodie d'insécurité,
+  souvent jouée en boucle dans l'esprit des créateurs émergents, est le premier
+  acte d'une œuvre bien plus vaste : la conquête de sa propre légitimité."
+tags:
+  - Création
+  - Productivité
+image: https://canvas.hrcd.fr/articles/trap-of-perfection.jpg
 readingTime: "3"
 ---
 
