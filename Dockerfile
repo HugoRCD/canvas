@@ -19,10 +19,10 @@ FROM node:22.13.1-alpine AS final
 
 WORKDIR /app
 
-COPY --from=build /app/dist dist
+COPY --from=build /app/.output .output
 
 RUN apk update && apk add --no-cache curl
 
 EXPOSE 3000
 
-CMD ["node", "dist/server/index.mjs"]
+CMD ["node", ".output/server/index.mjs"]

@@ -8,6 +8,7 @@ const showSearch = ref(false)
 
 const route = useRoute()
 const { locale } = useI18n()
+const localePath = useLocalePath()
 
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
 const { data: articles } = await useAsyncData('articles-' + slug.value, async () => {
@@ -103,7 +104,7 @@ const toggleTag = (tag: string) => {
           :title="article.title"
           :date="article.date"
           :image="article.image"
-          :path="article.path"
+          :path="localePath(article.path)"
         />
       </li>
     </TransitionGroup>
