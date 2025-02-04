@@ -117,9 +117,8 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
     },
-    strategy: 'prefix',
+    strategy: 'prefix_except_default',
     defaultLocale: 'en',
-    baseUrl: '/',
     vueI18n: '~/i18n.config.ts',
   },
 
