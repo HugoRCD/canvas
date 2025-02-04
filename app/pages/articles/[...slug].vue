@@ -4,7 +4,7 @@ import { withLeadingSlash } from 'ufo'
 
 const route = useRoute()
 const { locale, t, localeProperties } = useI18n()
-const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const slug = computed(() => withLeadingSlash(`articles/${String(route.params.slug)}`))
 
 const { data: page } = await useAsyncData('article-' + slug.value, async () => {
   const collection = ('articles_' + locale.value) as keyof Collections
