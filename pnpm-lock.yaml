@@ -41,6 +41,9 @@ importers:
       nuxt:
         specifier: 3.15.4
         version: 3.15.4(@libsql/client@0.14.0)(@parcel/watcher@2.5.0)(@types/node@22.10.5)(better-sqlite3@11.8.1)(db0@0.2.3(@libsql/client@0.14.0)(better-sqlite3@11.8.1))(encoding@0.1.13)(eslint@9.19.0(jiti@2.4.2))(ioredis@5.4.2)(lightningcss@1.29.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.30.1)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(yaml@2.7.0)
+      nuxt-visitors:
+        specifier: 1.1.2
+        version: 1.1.2(magicast@0.3.5)(rollup@4.30.1)
       resend:
         specifier: 4.1.2
         version: 4.1.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -4778,6 +4781,9 @@ packages:
   nuxt-site-config@3.0.6:
     resolution: {integrity: sha512-Mkyen81br21/nA2sxlLCOtJZ2L8sGL+YzxHlsVhLhEnC355CP2SwKVtYqJNJ4aYFbxeusqZXJFiD4KbveHhk0w==}
 
+  nuxt-visitors@1.1.2:
+    resolution: {integrity: sha512-gUSHTNhH0XDwo5/Op/+MrZe/inrLN++nuwLlMgwgciZmCQVrIbj8RXmtGAncVmeLKQim/n7gZlKWJbFASCq/rA==}
+
   nuxt@3.15.4:
     resolution: {integrity: sha512-hSbZO4mR0uAMJtZPNTnCfiAtgleoOu28gvJcBNU7KQHgWnNXPjlWgwMczko2O4Tmnv9zIe/CQged+2HsPwl2ZA==}
     engines: {node: ^18.20.5 || ^20.9.0 || >=22.0.0}
@@ -7671,7 +7677,7 @@ snapshots:
 
   '@nuxt/devtools-kit@1.7.0(magicast@0.3.5)(rollup@4.30.1)(vite@6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))':
     dependencies:
-      '@nuxt/kit': 3.15.1(magicast@0.3.5)(rollup@4.30.1)
+      '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.30.1)
       '@nuxt/schema': 3.15.1
       execa: 7.2.0
       vite: 6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)
@@ -7683,7 +7689,7 @@ snapshots:
   '@nuxt/devtools-kit@2.0.0-beta.3(magicast@0.3.5)(rollup@4.30.1)(vite@6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))':
     dependencies:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.30.1)
-      '@nuxt/schema': 3.15.2
+      '@nuxt/schema': 3.15.4
       execa: 7.2.0
       vite: 6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)
     transitivePeerDependencies:
@@ -7699,7 +7705,7 @@ snapshots:
       '@iconify-json/tabler': 1.2.14
       '@nuxt/devtools': 1.7.0(rollup@4.30.1)(vite@6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
       '@nuxt/devtools-kit': 1.7.0(magicast@0.3.5)(rollup@4.30.1)(vite@6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
-      '@nuxt/kit': 3.15.1(magicast@0.3.5)(rollup@4.30.1)
+      '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.30.1)
       '@unocss/core': 0.65.4
       '@unocss/nuxt': 0.65.4(magicast@0.3.5)(postcss@8.5.1)(rollup@4.30.1)(vite@6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))(webpack@5.97.1(esbuild@0.24.2))
       '@unocss/preset-attributify': 0.65.4
@@ -12923,7 +12929,7 @@ snapshots:
   nuxt-site-config-kit@3.0.6(magicast@0.3.5)(rollup@4.30.1)(vue@3.5.13(typescript@5.7.3)):
     dependencies:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.30.1)
-      '@nuxt/schema': 3.15.2
+      '@nuxt/schema': 3.15.4
       pkg-types: 1.3.1
       site-config-stack: 3.0.6(vue@3.5.13(typescript@5.7.3))
       std-env: 3.8.0
@@ -12951,6 +12957,14 @@ snapshots:
       - supports-color
       - vite
       - vue
+
+  nuxt-visitors@1.1.2(magicast@0.3.5)(rollup@4.30.1):
+    dependencies:
+      '@nuxt/kit': 3.15.2(magicast@0.3.5)(rollup@4.30.1)
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
 
   nuxt@3.15.4(@libsql/client@0.14.0)(@parcel/watcher@2.5.0)(@types/node@22.10.5)(better-sqlite3@11.8.1)(db0@0.2.3(@libsql/client@0.14.0)(better-sqlite3@11.8.1))(encoding@0.1.13)(eslint@9.19.0(jiti@2.4.2))(ioredis@5.4.2)(lightningcss@1.29.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.30.1)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(yaml@2.7.0):
     dependencies:

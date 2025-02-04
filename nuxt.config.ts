@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxthub/core',
+    'nuxt-visitors',
   ],
 
   imports: {
@@ -81,6 +82,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-05',
 
   nitro: {
+    experimental: {
+      websocket: true,
+    },
     prerender: {
       crawlLinks: true,
       routes: ['/', '/writing', '/works', '/about', '/contact'],
