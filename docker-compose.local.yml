@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - NITRO_PRESET=node-server
     container_name: nuxt-app
     restart: always
     environment:

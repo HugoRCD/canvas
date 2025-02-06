@@ -82,6 +82,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-05',
 
   nitro: {
+    preset: process.env.NITRO_PRESET || 'cloudflare-pages',
     experimental: {
       websocket: true,
     },
