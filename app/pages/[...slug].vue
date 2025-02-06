@@ -6,11 +6,9 @@ const route = useRoute()
 const { locale, localeProperties, t } = useI18n()
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
 
-const { data: page } = await useAsyncData('page-' + slug.value, async () => {
+const { data: page } = await useAsyncData('page-' + locale.value + '-' + slug.value, async () => {
   const collection = ('content_' + locale.value) as keyof Collections
   return await queryCollection(collection).path(slug.value).first() as Collections['content_en'] | Collections['content_fr']
-}, {
-  watch: [locale],
 })
 
 if (!page.value)

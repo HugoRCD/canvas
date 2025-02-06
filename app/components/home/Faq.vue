@@ -39,7 +39,7 @@ const ui = {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center space-y-8 w-full sm:px-20 md:px-50">
+  <div class="flex flex-col items-center justify-center space-y-8 w-full sm:px-20 md:px-30">
     <div class="flex flex-col items-center justify-center gap-2">
       <h3 class="font-newsreader italic text-white-shadow text-4xl">
         {{ faq!.title }}
