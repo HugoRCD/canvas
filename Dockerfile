@@ -1,6 +1,9 @@
 # Stage 1: Build Stage
 FROM node:22.13.1-alpine AS build
 
+ARG NITRO_PRESET
+ENV NITRO_PRESET=${NITRO_PRESET}
+
 WORKDIR /app
 
 COPY pnpm-lock.yaml package.json ./
