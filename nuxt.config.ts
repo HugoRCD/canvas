@@ -1,3 +1,7 @@
+// Hub require the cloudflare-pages or cloudflare-durable presets
+// this is a workaround to support vercel and Docker deployments
+const shouldEnableHub = () => !process.env.NITRO_PRESET || !['node-server', 'vercel'].includes(process.env.NITRO_PRESET)
+
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
@@ -7,9 +11,9 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@nuxthub/core',
+    shouldEnableHub() && '@nuxthub/core',
     'nuxt-visitors',
-  ],
+  ].filter(Boolean),
 
   imports: {
     presets: [
@@ -92,9 +96,7 @@ export default defineNuxtConfig({
     },
   },
 
-  hub: {
-    database: true,
-  },
+  hub: shouldEnableHub() ? { database: true } : undefined,
 
   hooks: {
     'nitro:config': (config) => {
