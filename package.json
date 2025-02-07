@@ -12,6 +12,7 @@
     "postinstall": "nuxt prepare",
     "typecheck": "tsc --noEmit",
     "start": "node .output/server/index.mjs",
+    "deploy": "nuxthub deploy",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
