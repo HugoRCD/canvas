@@ -15,15 +15,15 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "packageManager": "pnpm@9.15.5",
+  "packageManager": "pnpm@10.2.1",
   "dependencies": {
     "@nuxt/content": "https://pkg.pr.new/@nuxt/content@bddd834",
     "@nuxt/devtools": "1.7.0",
     "@nuxt/image": "1.9.0",
-    "@nuxt/scripts": "0.9.5",
+    "@nuxt/scripts": "0.10.0",
     "@nuxt/ui": "3.0.0-alpha.12",
-    "@nuxthub/core": "0.8.15",
-    "@nuxtjs/i18n": "9.1.5",
+    "@nuxthub/core": "0.8.16",
+    "@nuxtjs/i18n": "9.2.0",
     "@nuxtjs/seo": "^2.1.1",
     "@vueuse/core": "12.5.0",
     "@vueuse/nuxt": "12.5.0",
@@ -39,6 +39,6 @@
     "@shelve/cli": "3.1.1",
     "automd": "0.3.12",
     "eslint": "9.19.0",
-    "wrangler": "^3.107.2"
+    "wrangler": "^3.107.3"
   }
 }
