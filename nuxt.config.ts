@@ -45,10 +45,6 @@ export default defineNuxtConfig({
       api: 'https://api.nuxt.studio',
       dev: true,
     },
-    database: {
-      type: 'd1',
-      binding: 'DB',
-    },
   },
 
   mdc: {
@@ -91,10 +87,6 @@ export default defineNuxtConfig({
     },
   },
 
-  hub: {
-    database: true,
-  },
-
   hooks: {
     'nitro:config': (config) => {
       if (process.env.NUXT_PRIVATE_RESEND_API_KEY) {
@@ -112,6 +104,11 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', language: 'en-US' },
       { code: 'fr', name: 'French', language: 'fr-FR' },
     ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
     vueI18n: '~/i18n.config.ts',
