@@ -36,6 +36,10 @@
   "devDependencies": {
     "@nuxt/eslint-config": "1.0.1",
     "automd": "0.3.12",
-    "eslint": "9.19.0"
+    "eslint": "9.19.0",
+    "wrangler": "^3.107.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["better-sqlite3"]
   }
 }
