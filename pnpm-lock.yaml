@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@nuxt/content':
-        specifier: https://pkg.pr.new/@nuxt/content@bddd834
-        version: https://pkg.pr.new/@nuxt/content@bddd834(@libsql/client@0.14.0)(magicast@0.3.5)(rollup@4.30.1)(typescript@5.7.3)
+        specifier: https://pkg.pr.new/@nuxt/content@9c9306f
+        version: https://pkg.pr.new/@nuxt/content@9c9306f(@libsql/client@0.14.0)(magicast@0.3.5)(rollup@4.30.1)(typescript@5.7.3)
       '@nuxt/devtools':
         specifier: 2.0.0
         version: 2.0.0(rollup@4.30.1)(vite@6.0.11(@types/node@22.10.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
@@ -1063,9 +1063,9 @@ packages:
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
 
-  '@nuxt/content@https://pkg.pr.new/@nuxt/content@bddd834':
-    resolution: {tarball: https://pkg.pr.new/@nuxt/content@bddd834}
-    version: 3.0.1
+  '@nuxt/content@https://pkg.pr.new/@nuxt/content@9c9306f':
+    resolution: {tarball: https://pkg.pr.new/@nuxt/content@9c9306f}
+    version: 3.1.0
     peerDependencies:
       '@electric-sql/pglite': '*'
       '@libsql/client': '*'
@@ -7309,7 +7309,7 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@nuxt/content@https://pkg.pr.new/@nuxt/content@bddd834(@libsql/client@0.14.0)(magicast@0.3.5)(rollup@4.30.1)(typescript@5.7.3)':
+  '@nuxt/content@https://pkg.pr.new/@nuxt/content@9c9306f(@libsql/client@0.14.0)(magicast@0.3.5)(rollup@4.30.1)(typescript@5.7.3)':
     dependencies:
       '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.30.1)
       '@nuxtjs/mdc': 0.13.2(magicast@0.3.5)(rollup@4.30.1)
@@ -11269,10 +11269,10 @@ snapshots:
       citty: 0.1.6
       clipboardy: 4.0.0
       consola: 3.4.0
-      crossws: 0.3.1
+      crossws: 0.3.3
       defu: 6.1.4
       get-port-please: 3.1.2
-      h3: 1.13.1
+      h3: 1.15.0
       http-shutdown: 1.2.2
       jiti: 2.4.2
       mlly: 1.7.4
