@@ -6,7 +6,7 @@ services:
     container_name: nuxt-app
     restart: always
     environment:
-      - YOUR_ENV_KEY=${YOUR_ENV_KEY}
+      - NUXT_PRIVATE_RESEND_API_KEY=${NUXT_PRIVATE_RESEND_API_KEY}
     ports:
       - "3000:3000"
     healthcheck:

@@ -29,6 +29,7 @@
     "@vueuse/nuxt": "12.5.0",
     "nuxt": "3.15.4",
     "nuxt-visitors": "1.1.2",
+    "pg": "^8.13.1",
     "resend": "4.1.2",
     "sitemap": "8.0.0",
     "ufo": "^1.5.4",

@@ -5,6 +5,8 @@ services:
     restart: always
     environment:
       - NUXT_PRIVATE_RESEND_API_KEY=${NUXT_PRIVATE_RESEND_API_KEY}
+    ports:
+      - "3000:3000"
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:3000/api/hello" ]
       interval: 30s
