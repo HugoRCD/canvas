@@ -98,6 +98,8 @@ To deploy Canvas on Nuxthub, you have two options:
 -  Follow the [official Nuxthub documentation](https://hub.nuxt.com/docs/getting-started/installation#add-to-a-nuxt-project)
 -  Use the [official Canvas Nuxthub template](https://github.com/HugoRCD/canvas-nuxthub)
 
+BONUS: Once nuxthub is set up, you won't need an external db setup 🫠
+
 ---
 
 ### 3. Deployment via Docker
