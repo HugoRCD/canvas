@@ -19,10 +19,6 @@ Canvas Portfolio is a fully customizable i18n portfolio template built with Nuxt
 
 You can see a live demo at [canvas.hrcd.fr](https://canvas.hrcd.fr/).
 
-## Deploy to Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHugoRCD%2Fcanvas&env=NUXT_PRIVATE_RESEND_API_KEY,NUXT_PUBLIC_SITE_URL&envDescription=You%20will%20require%20an%20API%20key%20for%20Resend%20and%20Nuxt%20Studio%2C%20but%20it%20is%20not%20essential%20for%20the%20portfolio%20to%20work.%20Simply%20add%20%22test%2C%22%20for%20example%2C%20and%20edit%20the%20variable%20later.&project-name=canvas-portfolio&repository-name=canvas-portfolio&demo-title=Canvas&demo-url=canvas.hrcd.fr&demo-image=https%3A%2F%2Fcanvas.hrcd.fr%2Fog.png)
-
 ## Features
 
 - **Modern Components & Layouts** – Includes built-in components.
@@ -74,7 +70,7 @@ Canvas Portfolio is designed to simplify the deployment process on various platf
 
 ### 1. Serverless Platforms (Vercel, Netlify, etc.)
 
-When using serverless platforms, it's important to note that Nuxt Content v3 relies on SQLite for content storage. Since these platforms do not support SQLite natively, we recommend connecting Canvas Portfolio to an external database such as:
+When using serverless platforms, it's important to note that Nuxt Content v3 relies by default on SQLite for content storage. Since these platforms do not support SQLite natively, we recommend connecting Canvas Portfolio to an external database such as:
 
 -  **PostgreSQL**
 -  **Turso**
@@ -82,6 +78,10 @@ When using serverless platforms, it's important to note that Nuxt Content v3 rel
 
 For further details on this process and the suitable solutions for serverless deployments, refer to the official Nuxt Content documentation:  
 [Nuxt Content and Serverless Deployment](https://content.nuxt.com/docs/deploy/serverless)
+
+#### Vercel deployment do not need any extra configuration.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHugoRCD%2Fcanvas&env=NUXT_PRIVATE_RESEND_API_KEY,NUXT_PUBLIC_SITE_URL&envDescription=You%20will%20require%20an%20API%20key%20for%20Resend%20and%20Nuxt%20Studio%2C%20but%20it%20is%20not%20essential%20for%20the%20portfolio%20to%20work.%20Simply%20add%20%22test%2C%22%20for%20example%2C%20and%20edit%20the%20variable%20later.&project-name=canvas-portfolio&repository-name=canvas-portfolio&demo-title=Canvas&demo-url=canvas.hrcd.fr&demo-image=https%3A%2F%2Fcanvas.hrcd.fr%2Fog.png)
 
 ---
 
@@ -93,12 +93,11 @@ Nuxthub offers a powerful solution to deploy your portfolio in just a few clicks
 -  High-performance caching to reduce loading times
 -  Integration of AI tools and analytics for performance improvements
 
-To deploy Canvas on Nuxthub, you have two options:
+Check out the [official Nuxthub documentation](https://hub.nuxt.com/docs/getting-started/installation#add-to-a-nuxt-project) for more info.
 
--  Follow the [official Nuxthub documentation](https://hub.nuxt.com/docs/getting-started/installation#add-to-a-nuxt-project)
--  Use the [official Canvas Nuxthub template](https://github.com/HugoRCD/canvas-nuxthub)
+NuxtHub deployment do not need any extra configuration.
 
-BONUS: Once nuxthub is set up, you won't need an external db setup 🫠
+[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=HugoRCD/canvas-nuxthub)
 
 ---
 
