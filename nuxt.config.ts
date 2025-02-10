@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@nuxthub/core',
     'nuxt-visitors',
   ],
 
