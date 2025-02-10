@@ -13,7 +13,7 @@
 
 # Canvas template
 
-This is a fully customizable portfolio template built with [Nuxt.js](https://nuxtjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Use it to showcase your work, testimonials and other information to your clients.
+Canvas Portfolio is a fully customizable i18n portfolio template built with Nuxt and Nuxt UI, designed to help you showcase your work, testimonials, and key information with ease. The template integrates with Nuxt Studio for a smooth editing experience, while leveraging Nuxt Content for content management. Built with performance, flexibility, and responsiveness in mind, Canvas Portfolio provides a robust foundation for developers and creatives alike.
 
 ## Demo
 
@@ -25,23 +25,16 @@ You can see a live demo at [canvas.hrcd.fr](https://canvas.hrcd.fr/).
 
 ## Features
 
-- [Nuxt Content](https://content.nuxt.com/) for easy content management
-- Full and simple [Nuxt Studio](https://nuxt.studio/) editor support
-- Built-in Awesome Component & Layout
-- [NuxtUI](https://ui3.nuxt.com/) v3 components
-- [Tailwind CSS](https://tailwindcss.com/)
-- Working contact form with [Resend](https://resend.com/)
-- [Nuxt i18n](https://i18n.nuxtjs.org/) for multi-language support
-- Open Graph Image support with [Nuxt OG Image](https://nuxtseo.com/og-image/getting-started/installation)
-- [Nuxt Robots](https://sitemap.nuxt.com/) for auto-generate robots.txt
-- [ESLint](https://eslint.org/) with official Nuxt configuration (ESLint v9 with Flat config)
-- Full typescript support
-- Optimized images with [Nuxt Image](https://image.nuxt.com/)
-- [Vue Composition Collection (Vueuse)](https://vueuse.org/)
-- Fully responsive on all modern browsers
-- Professional and minimal design
-- Easy to customize
-- Auto generated sitemap
+- **Modern Components & Layouts** – Includes built-in components.
+- **Nuxt UI v3** – Utilize pre-built, customizable UI components.
+- **NuxtHub ready** - Deploy on NuxtHub in seconds.
+- **Tailwind CSS** – A beautiful, responsive design system.
+- **Working Contact Form** – Integrated with Resend for easy email handling.
+- **Multi-language Support** – Powered by Nuxt i18n.
+- **SEO-Ready** – Open Graph Image (Nuxt OG Image) & Nuxt Robots for automatic robots.txt generation.
+- **Good practices** – Auto-generated sitemap, optimized images (Nuxt Image), and ESLint (Nuxt config with Flat config).
+- **Fully Responsive** – Adapts to all modern browsers and devices.
+- **Minimal & Professional Design** – Clean, elegant, and easy to customize.
 
 ## Quick Setup
 
@@ -57,7 +50,7 @@ pnpm install
 
 3. Copy the `.env.example` file to `.env` and fill in the values
 ```bash
-cp .env.exemple .env
+cp .env.example .env
 ```
 
 4. Start development server
@@ -74,6 +67,52 @@ pnpm generate
 ```bash
 pnpm start
 ```
+
+## Deployments
+
+Canvas Portfolio is designed to simplify the deployment process on various platforms, whether serverless or not. Below are several detailed methods to deploy your portfolio.
+
+### 1. Serverless Platforms (Vercel, Netlify, etc.)
+
+When using serverless platforms, it's important to note that Nuxt Content v3 relies on SQLite for content storage. Since these platforms do not support SQLite natively, we recommend connecting Canvas Portfolio to an external database such as:
+
+-  **PostgreSQL**
+-  **Turso**
+-  **D1**
+
+For further details on this process and the suitable solutions for serverless deployments, refer to the official Nuxt Content documentation:  
+[Nuxt Content and Serverless Deployment](https://content.nuxt.com/docs/deploy/serverless)
+
+---
+
+### 2. Deployment on Nuxthub
+
+Nuxthub offers a powerful solution to deploy your portfolio in just a few clicks. With fast global delivery through the Cloudflare network, Nuxthub also provides advanced features such as:
+
+-  KV storage for optimized data management
+-  High-performance caching to reduce loading times
+-  Integration of AI tools and analytics for performance improvements
+
+To deploy Canvas on Nuxthub, you have two options:
+
+-  Follow the [official Nuxthub documentation](https://hub.nuxt.com/docs/getting-started/installation#add-to-a-nuxt-project)
+-  Use the [official Canvas Nuxthub template](https://github.com/HugoRCD/canvas-nuxthub)
+
+---
+
+### 3. Deployment via Docker
+
+Canvas Portfolio is also available as a Docker image, making it easy to deploy in containerized environments. An official Docker image is automatically created using a GitHub workflow whenever a new release is made, or it can be triggered manually. 
+
+This workflow not only builds the official Canvas image but also provides a standard way for anyone who forks the project to create their own Docker image with a proper version tag (e.g., v2.0, v1.0.0, etc.).
+
+**To pull the latest Docker image:**
+
+```bash
+docker pull ghcr.io/hugorcd/canvas:latest
+```
+
+You can also use Docker Compose for a quick deployment. A community-provided [docker-compose.community.yml](docker-compose.community.yml) file is available and can be used with platforms like Coolify for one-click deployments.
 
 ## How to Modify the Portfolio Content
 
@@ -95,7 +134,7 @@ First check the `app.config.ts` file to change the global configuration of the p
 
 #### Featured Works
 
-To change the featured works on the homepage, simply add the `featured: true` key to front matter of the markdown file.
+To change the featured works on the homepage, simply add the `"featured": true` key the JSON file.
 
 ### Other Content
 
@@ -103,7 +142,9 @@ Simply go to the `content/` directory and edit any of the Markdown or JSON files
 
 ## Setup the Contact Form
 
-This portfolio uses [Resend](https://resend.com/) to handle the contact form. To set it up, follow these steps:
+This portfolio uses [Resend](https://resend.com/) to handle the contact form, but it's not mandatory. The server handle will not be used if you don't set the `NUXT_PRIVATE_RESEND_API_KEY` environment variable.
+
+To set it up, follow these steps:
 - Get your api key from [Resend](https://resend.com/) here [your api key](https://resend.com/api-keys)
 - Add your api key in the `.env` file
 - change the `from` key in the `sendEmail` route in the `server/api/` folder, you can customize everything you want in this route
@@ -119,7 +160,7 @@ To start contributing, you can follow these steps:
 3. Create a branch using conventional commits and the issue number as the branch name. For example, `feat/123` or `fix/456`.
 4. Make changes following the local development steps.
 5. Commit your changes following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-6. If your changes affect the code, run tests using `pnpm run test`.
+6. If your changes affect the code, run tests using `bun run test`.
 7. Create a pull request following the [Pull Request Template](https://github.com/HugoRCD/markdown/blob/main/src/pull_request_template.md).
    - To be merged, the pull request must pass the tests/workflow and have at least one approval.
    - If your changes affect the documentation, make sure to update it.
@@ -137,8 +178,8 @@ To start contributing, you can follow these steps:
 - Clone this repository
 - Install latest LTS version of [Node.js](https://nodejs.org/en/)
 - Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
-- Install dependencies using `pnpm install`
-- Start development server using `pnpm dev`
+- Install dependencies using `bun install`
+- Start development server using `bun dev`
 - Open [http://localhost:3000](http://localhost:3000) in your browser
 
 </details>
@@ -160,6 +201,6 @@ Made by [@HugoRCD](https://github.com/HugoRCD) and [community](https://github.co
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Fri Jan 31 2025)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Mon Feb 10 2025)_
 
 <!-- /automd -->
