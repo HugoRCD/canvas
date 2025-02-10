@@ -28,7 +28,6 @@
     "@vueuse/core": "12.5.0",
     "@vueuse/nuxt": "12.5.0",
     "nuxt": "3.15.4",
-    "nuxt-visitors": "1.1.2",
     "resend": "4.1.2",
     "sitemap": "8.0.0",
     "ufo": "^1.5.4",
@@ -36,9 +35,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "1.0.1",
-    "@shelve/cli": "3.1.1",
     "automd": "0.3.12",
-    "eslint": "9.19.0",
-    "wrangler": "^3.107.3"
+    "eslint": "9.19.0"
   }
 }
