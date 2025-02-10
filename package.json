@@ -16,7 +16,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "packageManager": "pnpm@10.2.1",
+  "packageManager": "pnpm@9.15.5",
   "dependencies": {
     "@nuxt/content": "https://pkg.pr.new/@nuxt/content@9c9306f",
     "@nuxt/devtools": "2.0.0",
@@ -38,8 +38,5 @@
     "automd": "0.3.12",
     "eslint": "9.19.0",
     "wrangler": "^3.107.3"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": ["better-sqlite3"]
   }
 }
