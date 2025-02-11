@@ -6,7 +6,6 @@ const searchedTitle = ref('')
 const showSearch = ref(false)
 
 const { locale } = useI18n()
-const localePath = useLocalePath()
 
 const { data: articles } = await useAsyncData('articles-' + locale.value, async () => {
   const collection = ('articles_' + locale.value) as keyof Collections
@@ -101,7 +100,7 @@ const toggleTag = (tag: string) => {
           :title="article.title"
           :date="article.date"
           :image="article.image"
-          :path="localePath(article.path)"
+          :path="article.path"
         />
       </li>
     </TransitionGroup>
