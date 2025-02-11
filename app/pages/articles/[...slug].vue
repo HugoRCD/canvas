@@ -5,12 +5,13 @@ import { withLeadingSlash, joinURL } from 'ufo'
 const route = useRoute()
 const { locale, t, localeProperties } = useI18n()
 
-const slug = computed(() => withLeadingSlash(joinURL(locale.value, 'articles', ...(Array.isArray(route.params.slug) ? route.params.slug as string[] : [route.params.slug as string]))))
+const slug = computed(() => Array.isArray(route.params.slug) ? route.params.slug as string[] : [route.params.slug as string])
+const path = computed(() => withLeadingSlash(joinURL(locale.value, 'articles', ...slug.value)))
+const collection = computed(() => `articles_${locale.value}` as keyof Collections)
 
-const { data: page } = await useAsyncData('article-' + locale.value + '-' + slug.value, async () => {
-  const collection = ('articles_' + locale.value) as keyof Collections
-  return await queryCollection(collection).path(slug.value).first() as Collections['articles_en'] | Collections['articles_fr']
-})
+const { data: page } = await useAsyncData(path.value, async () =>
+  await queryCollection(collection.value).path(path.value).first() as Collections['articles_en'] | Collections['articles_fr'],
+)
 
 if (!page.value)
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
