@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import type { Collections } from '@nuxt/content'
-import { withLeadingSlash } from 'ufo'
+import { withLeadingSlash, joinURL } from 'ufo'
 
 const route = useRoute()
 const { locale, t, localeProperties } = useI18n()
-const slug = computed(() => withLeadingSlash(`articles/${String(route.params.slug)}`))
+
+const slug = computed(() => withLeadingSlash(joinURL(locale.value, 'articles', ...(Array.isArray(route.params.slug) ? route.params.slug as string[] : [route.params.slug as string]))))
 
 const { data: page } = await useAsyncData('article-' + locale.value + '-' + slug.value, async () => {
   const collection = ('articles_' + locale.value) as keyof Collections

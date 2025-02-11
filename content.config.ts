@@ -47,7 +47,8 @@ export const collections = {
       type: 'page',
       source: {
         include: 'en/**/*.md',
-        prefix: '',
+        exclude: ['en/articles/*.md'],
+        prefix: '/en',
       },
       schema: commonContentSchema,
     }),
@@ -57,7 +58,8 @@ export const collections = {
       type: 'page',
       source: {
         include: 'fr/**/*.md',
-        prefix: '',
+        exclude: ['fr/articles/*.md'],
+        prefix: '/fr',
       },
       schema: commonContentSchema,
     }),
@@ -67,7 +69,7 @@ export const collections = {
       type: 'page',
       source: {
         include: 'en/articles/*.md',
-        prefix: 'articles',
+        prefix: '/en/articles',
       },
       schema: commonArticleSchema,
     }),
@@ -77,7 +79,7 @@ export const collections = {
       type: 'page',
       source: {
         include: 'fr/articles/*.md',
-        prefix: 'articles',
+        prefix: '/fr/articles',
       },
       schema: commonArticleSchema,
     }),

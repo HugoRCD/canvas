@@ -1,17 +1,14 @@
 <script setup lang="ts">
-import { withLeadingSlash } from 'ufo'
 import type { Collections } from '@nuxt/content'
 
 const searchedTags = ref<string[]>([])
 const searchedTitle = ref('')
 const showSearch = ref(false)
 
-const route = useRoute()
 const { locale } = useI18n()
 const localePath = useLocalePath()
 
-const slug = computed(() => withLeadingSlash(String(route.params.slug)))
-const { data: articles } = await useAsyncData('articles-' + slug.value, async () => {
+const { data: articles } = await useAsyncData('articles-' + locale.value, async () => {
   const collection = ('articles_' + locale.value) as keyof Collections
   return await queryCollection(collection).all() as Collections['articles_en'][] | Collections['articles_fr'][]
 }, {

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { Collections } from '@nuxt/content'
-import { withLeadingSlash } from 'ufo'
+import { withLeadingSlash, joinURL } from 'ufo'
 
 const route = useRoute()
 const { locale, localeProperties, t } = useI18n()
-const slug = computed(() => withLeadingSlash(String(route.params.slug)))
+const slug = computed(() => withLeadingSlash(joinURL(locale.value, ...(Array.isArray(route.params.slug) ? route.params.slug as string[] : [route.params.slug as string]))))
 
-const { data: page } = await useAsyncData('page-' + locale.value + '-' + slug.value, async () => {
+const { data: page } = await useAsyncData(`page-${slug.value}`, async () => {
   const collection = ('content_' + locale.value) as keyof Collections
   return await queryCollection(collection).path(slug.value).first() as Collections['content_en'] | Collections['content_fr']
 })
