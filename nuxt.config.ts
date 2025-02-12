@@ -63,7 +63,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     // Needed to activate preview on Nuxt Studio
-    '/': { isr: true, prerender: false },
+    '/': { prerender: false },
   },
 
   future: {
