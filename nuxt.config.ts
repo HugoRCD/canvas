@@ -62,7 +62,8 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { isr: true, prerender: true },
+    // Needed to activate preview on Nuxt Studio
+    '/': { isr: true, prerender: false },
   },
 
   future: {
@@ -82,7 +83,7 @@ export default defineNuxtConfig({
     prerender: {
       autoSubfolderIndex: false,
       crawlLinks: true,
-      routes: ['/', '/writing', '/works', '/about', '/contact'],
+      routes: ['/en', '/fr'],
     },
   },
 
