@@ -21,12 +21,12 @@
     "@nuxt/content": "^3.1.1",
     "@nuxt/devtools": "2.0.0",
     "@nuxt/image": "1.9.0",
-    "@nuxt/scripts": "0.10.1",
+    "@nuxt/scripts": "0.10.3",
     "@nuxt/ui": "3.0.0-alpha.12",
     "@nuxtjs/i18n": "9.2.0",
     "@nuxtjs/seo": "^2.1.1",
-    "@vueuse/core": "12.5.0",
-    "@vueuse/nuxt": "12.5.0",
+    "@vueuse/core": "12.6.1",
+    "@vueuse/nuxt": "12.6.1",
     "nuxt": "3.15.4",
     "resend": "4.1.2",
     "sitemap": "8.0.0",
@@ -37,6 +37,6 @@
     "@nuxt/eslint-config": "1.0.1",
     "automd": "0.3.12",
     "eslint": "9.20.1",
-    "wrangler": "^3.108.1"
+    "wrangler": "^3.109.1"
   }
 }
