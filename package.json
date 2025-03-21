@@ -28,6 +28,7 @@
     "@vueuse/core": "12.8.2",
     "@vueuse/nuxt": "12.8.2",
     "nuxt": "3.16.1",
+    "nuxt-og-image": "^5.0.5",
     "resend": "4.1.2",
     "sitemap": "8.0.0",
     "ufo": "^1.5.4",
