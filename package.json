@@ -22,8 +22,8 @@
     "@nuxt/devtools": "2.3.1",
     "@nuxt/image": "1.10.0",
     "@nuxt/scripts": "0.11.2",
-    "@nuxt/ui": "3.0.0",
-    "@nuxtjs/i18n": "9.3.3",
+    "@nuxt/ui": "3.0.1",
+    "@nuxtjs/i18n": "9.3.4",
     "@nuxtjs/seo": "^2.2.0",
     "@vueuse/core": "12.8.2",
     "@vueuse/nuxt": "12.8.2",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "1.2.0",
     "automd": "0.4.0",
-    "eslint": "9.22.0",
+    "eslint": "9.23.0",
     "wrangler": "^3.114.2"
   }
 }
