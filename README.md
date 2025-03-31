@@ -187,6 +187,18 @@ To start contributing, you can follow these steps:
 
 <!-- /automd -->
 
+<!-- automd:fetch url="gh:hugorcd/markdown/main/src/sponsors.md" -->
+
+## Sponsors
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/hugorcd/static/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/hugorcd/static/sponsors.svg' alt="HugoRCD sponsors" />
+  </a>
+</p>
+
+<!-- /automd -->
+
 <!-- automd:contributors license=Apache author=HugoRCD github="hugorcd/canvas" -->
 
 Published under the [APACHE](https://github.com/hugorcd/canvas/blob/main/LICENSE) license.
