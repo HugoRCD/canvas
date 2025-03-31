@@ -199,6 +199,8 @@ To start contributing, you can follow these steps:
 
 <!-- /automd -->
 
+## Community
+
 <!-- automd:contributors license=Apache author=HugoRCD github="hugorcd/canvas" -->
 
 Published under the [APACHE](https://github.com/hugorcd/canvas/blob/main/LICENSE) license.
