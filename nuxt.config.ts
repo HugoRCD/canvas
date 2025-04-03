@@ -111,7 +111,6 @@ export default defineNuxtConfig({
     },
     strategy: 'prefix',
     defaultLocale: 'en',
-    vueI18n: '~/i18n.config.ts',
   },
 
   icon: {
