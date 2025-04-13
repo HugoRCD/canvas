@@ -31,7 +31,7 @@
     "resend": "4.2.0",
     "sitemap": "8.0.0",
     "ufo": "^1.6.1",
-    "vue-sonner": "1.3.0"
+    "vue-sonner": "1.3.2"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "1.3.0",
