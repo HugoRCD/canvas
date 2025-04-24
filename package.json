@@ -18,7 +18,7 @@
   },
   "packageManager": "pnpm@9.15.9",
   "dependencies": {
-    "@nuxt/content": "^3.4.0",
+    "@nuxt/content": "^3.5.0",
     "@nuxt/devtools": "2.4.0",
     "@nuxt/image": "1.10.0",
     "@nuxt/scripts": "^0.11.6",
