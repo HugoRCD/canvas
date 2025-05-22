@@ -21,20 +21,20 @@
     "@nuxt/content": "^3.5.1",
     "@nuxt/devtools": "2.4.1",
     "@nuxt/image": "1.10.0",
-    "@nuxt/scripts": "^0.11.6",
+    "@nuxt/scripts": "^0.11.7",
     "@nuxt/ui": "^3.1.2",
     "@nuxtjs/i18n": "^9.5.4",
     "@nuxtjs/seo": "^3.0.3",
     "@vueuse/core": "13.2.0",
     "@vueuse/nuxt": "13.2.0",
-    "nuxt": "3.17.3",
+    "nuxt": "3.17.4",
     "resend": "4.5.1",
     "sitemap": "8.0.0",
     "ufo": "^1.6.1",
     "vue-sonner": "1.3.2"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "1.4.0",
+    "@nuxt/eslint-config": "1.4.1",
     "automd": "0.4.0",
     "eslint": "9.27.0"
   }
