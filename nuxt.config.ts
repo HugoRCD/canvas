@@ -8,7 +8,13 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
   ],
-
+  build: {
+    splitChunks: {
+      layouts: true, // Divide layouts em chunks separados
+      pages: true, // Divide páginas em chunks separados
+      commons: true // Divide dependências comuns em chunks separados
+    }
+  },
   imports: {
     presets: [
       {
