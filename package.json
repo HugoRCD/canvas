@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "automd": "automd",
-    "build": "nuxt build",
+    "build": "NODE_OPTIONS=--max-old-space-size=4096 nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
