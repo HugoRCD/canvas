@@ -15,6 +15,14 @@ export default defineNuxtConfig({
       commons: true // Divide dependências comuns em chunks separados
     }
   },
+ transpile: ['vue-sonner'], // Transpile apenas módulos necessários
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 20000,
+      maxSize: 50000
+    }
+  },
   imports: {
     presets: [
       {
@@ -84,6 +92,7 @@ export default defineNuxtConfig({
 
   nitro: {
     experimental: {
+      asyncContext: true,
       websocket: true,
     },
     prerender: {
