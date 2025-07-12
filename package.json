@@ -16,7 +16,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "@nuxt/content": "^3.6.3",
     "@nuxt/devtools": "2.6.2",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "1.5.2",
     "automd": "0.4.0",
-    "eslint": "9.30.1"
+    "eslint": "9.31.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
