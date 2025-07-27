@@ -37,7 +37,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "1.7.1",
     "automd": "0.4.0",
-    "eslint": "9.31.0"
+    "eslint": "9.32.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
