@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/scripts',
+    'vue-sonner/nuxt',
   ],
 
   imports: {
@@ -64,10 +65,6 @@ export default defineNuxtConfig({
   routeRules: {
     // Needed to activate preview on Nuxt Studio
     '/': { prerender: false },
-  },
-
-  future: {
-    compatibilityVersion: 4,
   },
 
   experimental: {
