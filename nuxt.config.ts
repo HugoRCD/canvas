@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/scripts',
+    'vue-sonner/nuxt',
   ],
 
   imports: {
