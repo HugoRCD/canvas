@@ -31,8 +31,8 @@ const ui = {
     'relative inline-flex items-center justify-center flex-shrink-0 focus:outline-none transition-colors duration-200 ease-out border-white/10 border-2',
     'px-3 py-2 font-medium rounded-full',
     'hover:bg-neutral-900/80',
-    'data-[state=active]:text-neutral-900 dark:data-[state=active]:text-white',
-    'data-[state=inactive]:text-neutral-500 dark:data-[state=inactive]:text-neutral-400',
+    'data-[state=active]:text-highlighted',
+    'data-[state=inactive]:text-muted',
   ],
   label: 'truncate',
 }
