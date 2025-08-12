@@ -23,7 +23,7 @@
     "@nuxt/image": "1.11.0",
     "@nuxt/scripts": "^0.11.10",
     "@nuxt/ui": "^3.3.0",
-    "@nuxtjs/i18n": "^10.0.3",
+    "@nuxtjs/i18n": "^10.0.4",
     "@nuxtjs/seo": "^3.1.0",
     "@vueuse/core": "13.6.0",
     "@vueuse/nuxt": "13.6.0",
@@ -35,9 +35,9 @@
     "vue-sonner": "2.0.2"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "1.7.1",
+    "@nuxt/eslint-config": "1.8.0",
     "automd": "0.4.0",
-    "eslint": "9.32.0"
+    "eslint": "9.33.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
