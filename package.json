@@ -25,17 +25,17 @@
     "@nuxt/ui": "^3.3.2",
     "@nuxtjs/i18n": "^10.0.5",
     "@nuxtjs/seo": "^3.1.0",
-    "@vueuse/core": "13.6.0",
-    "@vueuse/nuxt": "13.6.0",
+    "@vueuse/core": "13.7.0",
+    "@vueuse/nuxt": "13.7.0",
     "better-sqlite3": "^12.2.0",
     "nuxt": "4.0.3",
     "resend": "4.8.0",
     "sitemap": "8.0.0",
     "ufo": "^1.6.1",
-    "vue-sonner": "2.0.2"
+    "vue-sonner": "2.0.8"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "1.8.0",
+    "@nuxt/eslint-config": "1.9.0",
     "automd": "0.4.0",
     "eslint": "9.33.0"
   },
