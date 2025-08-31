@@ -42,8 +42,8 @@ importers:
         specifier: 4.0.3
         version: 4.0.3(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@24.0.4)(@vue/compiler-sfc@3.5.18)(better-sqlite3@12.2.0)(db0@0.3.2(better-sqlite3@12.2.0))(eslint@9.34.0(jiti@2.5.1))(ioredis@5.6.1)(lightningcss@1.30.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.46.2)(terser@5.43.1)(typescript@5.9.2)(vite@7.0.6(@types/node@24.0.4)(jiti@2.5.1)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0)
       resend:
-        specifier: 4.8.0
-        version: 4.8.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 6.0.2
+        version: 6.0.2(@react-email/render@1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       sitemap:
         specifier: 8.0.0
         version: 8.0.0
@@ -5585,9 +5585,14 @@ packages:
   require-package-name@2.0.1:
     resolution: {integrity: sha512-uuoJ1hU/k6M0779t3VMVIYpb2VMJk05cehCaABFhXaibcbvfgR8wKiozLjVFSzJPmQMRqIcO0HMyTFqfV09V6Q==}
 
-  resend@4.8.0:
-    resolution: {integrity: sha512-R8eBOFQDO6dzRTDmaMEdpqrkmgSjPpVXt4nGfWsZdYOet0kqra0xgbvTES6HmCriZEXbmGk3e0DiGIaLFTFSHA==}
+  resend@6.0.2:
+    resolution: {integrity: sha512-um08qWpSVvEVqAePEy/bsa7pqtnJK+qTCZ0Et7YE7xuqM46J0C9gnSbIJKR3LIcRVMgO9jUeot8rH0UI84eqMQ==}
     engines: {node: '>=18'}
+    peerDependencies:
+      '@react-email/render': ^1.1.0
+    peerDependenciesMeta:
+      '@react-email/render':
+        optional: true
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -8665,6 +8670,7 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       react-promise-suspense: 0.3.4
+    optional: true
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     optional: true
@@ -8858,6 +8864,7 @@ snapshots:
     dependencies:
       domhandler: 5.0.3
       selderee: 0.11.0
+    optional: true
 
   '@shikijs/core@3.7.0':
     dependencies:
@@ -10836,7 +10843,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  fast-deep-equal@2.0.1: {}
+  fast-deep-equal@2.0.1:
+    optional: true
 
   fast-deep-equal@3.1.3: {}
 
@@ -11289,6 +11297,7 @@ snapshots:
       dom-serializer: 2.0.0
       htmlparser2: 8.0.2
       selderee: 0.11.0
+    optional: true
 
   html-void-elements@3.0.0: {}
 
@@ -11300,6 +11309,7 @@ snapshots:
       domhandler: 5.0.3
       domutils: 3.2.2
       entities: 4.5.0
+    optional: true
 
   http-errors@2.0.0:
     dependencies:
@@ -11605,7 +11615,8 @@ snapshots:
     dependencies:
       readable-stream: 2.3.8
 
-  leac@0.6.0: {}
+  leac@0.6.0:
+    optional: true
 
   levn@0.4.1:
     dependencies:
@@ -12934,6 +12945,7 @@ snapshots:
     dependencies:
       leac: 0.6.0
       peberminta: 0.9.0
+    optional: true
 
   parseurl@1.3.3: {}
 
@@ -12960,7 +12972,8 @@ snapshots:
 
   pathe@2.0.3: {}
 
-  peberminta@0.9.0: {}
+  peberminta@0.9.0:
+    optional: true
 
   pend@1.2.0: {}
 
@@ -13279,12 +13292,15 @@ snapshots:
     dependencies:
       react: 19.1.0
       scheduler: 0.26.0
+    optional: true
 
   react-promise-suspense@0.3.4:
     dependencies:
       fast-deep-equal: 2.0.1
+    optional: true
 
-  react@19.1.0: {}
+  react@19.1.0:
+    optional: true
 
   read-package-up@11.0.0:
     dependencies:
@@ -13500,12 +13516,9 @@ snapshots:
 
   require-package-name@2.0.1: {}
 
-  resend@4.8.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
-    dependencies:
+  resend@6.0.2(@react-email/render@1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)):
+    optionalDependencies:
       '@react-email/render': 1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-    transitivePeerDependencies:
-      - react
-      - react-dom
 
   resolve-from@4.0.0: {}
 
@@ -13598,7 +13611,8 @@ snapshots:
 
   sax@1.4.1: {}
 
-  scheduler@0.26.0: {}
+  scheduler@0.26.0:
+    optional: true
 
   scslre@0.3.0:
     dependencies:
@@ -13611,6 +13625,7 @@ snapshots:
   selderee@0.11.0:
     dependencies:
       parseley: 0.12.1
+    optional: true
 
   semver@6.3.1: {}
 
