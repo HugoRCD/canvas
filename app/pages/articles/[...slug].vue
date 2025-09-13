@@ -57,7 +57,7 @@ defineOgImage({
       </span>
     </NuxtLinkLocale>
     <article class="writing mx-auto px-4 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
-      <h1>
+      <h1 class="text-2xl font-bold">
         {{ page?.title }}
       </h1>
       <div class="info-section mt-1 flex flex-col gap-2 sm:flex-row sm:gap-4">

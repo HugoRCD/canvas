@@ -37,9 +37,6 @@ export default defineNuxtConfig({
   },
 
   content: {
-    renderer: {
-      anchorLinks: false,
-    },
     preview: {
       api: 'https://api.nuxt.studio',
       dev: true,
