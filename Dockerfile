@@ -1,5 +1,5 @@
 # Stage 1: Build Stage
-FROM node:22.19.0-alpine AS build
+FROM node:22.20.0-alpine AS build
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ RUN pnpm install --frozen-lockfile --prod
 RUN pnpm run build
 
 # Stage 2: Final Stage
-FROM node:22.19.0-alpine AS final
+FROM node:22.20.0-alpine AS final
 
 WORKDIR /app
 
