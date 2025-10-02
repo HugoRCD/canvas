@@ -28,10 +28,10 @@
     "@vueuse/nuxt": "13.9.0",
     "better-sqlite3": "^12.4.1",
     "nuxt": "4.1.2",
-    "resend": "6.1.0",
+    "resend": "6.1.2",
     "sitemap": "8.0.0",
     "ufo": "^1.6.1",
-    "vue-sonner": "2.0.8"
+    "vue-sonner": "2.0.9"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "1.9.0",
