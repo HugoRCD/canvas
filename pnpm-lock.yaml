@@ -45,8 +45,8 @@ importers:
         specifier: 6.2.0
         version: 6.2.0(@react-email/render@1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       sitemap:
-        specifier: 8.0.0
-        version: 8.0.0
+        specifier: 8.0.1
+        version: 8.0.1
       ufo:
         specifier: ^1.6.1
         version: 1.6.1
@@ -5640,8 +5640,8 @@ packages:
     peerDependencies:
       vue: ^3
 
-  sitemap@8.0.0:
-    resolution: {integrity: sha512-+AbdxhM9kJsHtruUF39bwS/B0Fytw6Fr1o4ZAIAEqA6cke2xcoO2GleBw9Zw7nRzILVEgz7zBM5GiTJjie1G9A==}
+  sitemap@8.0.1:
+    resolution: {integrity: sha512-4Y8ynSMFAy/DadeAeio8Kx4zfC8/0VcKi7TH0I1SazvBcrU2fpJaGoeWsX1FMRaHoe3VGMA53DqVoLErZrtG9Q==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
     hasBin: true
 
@@ -9018,7 +9018,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 24.0.4
 
   '@types/supercluster@7.1.3':
     dependencies:
@@ -13532,7 +13532,7 @@ snapshots:
       ufo: 1.6.1
       vue: 3.5.22(typescript@5.9.2)
 
-  sitemap@8.0.0:
+  sitemap@8.0.1:
     dependencies:
       '@types/node': 17.0.45
       '@types/sax': 1.2.7
