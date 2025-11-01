@@ -28,7 +28,7 @@
     "@vueuse/nuxt": "13.9.0",
     "better-sqlite3": "^12.4.1",
     "nuxt": "4.2.0",
-    "resend": "6.3.0",
+    "resend": "6.4.0",
     "sitemap": "8.0.2",
     "ufo": "^1.6.1",
     "vue-sonner": "2.0.9"
@@ -36,7 +36,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "1.10.0",
     "automd": "0.4.2",
-    "eslint": "9.38.0"
+    "eslint": "9.39.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
