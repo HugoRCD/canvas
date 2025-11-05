@@ -23,6 +23,7 @@ You can see a live demo at [canvas.hrcd.fr](https://canvas.hrcd.fr/).
 
 - **Modern Components & Layouts** – Includes built-in components.
 - **Nuxt UI v3** – Utilize pre-built, customizable UI components.
+- **Nuxt Studio** – Built-in visual editor to edit content directly from the browser.
 - **NuxtHub ready** - Deploy on NuxtHub in seconds.
 - **Tailwind CSS** – A beautiful, responsive design system.
 - **Working Contact Form** – Integrated with Resend for easy email handling.
@@ -76,12 +77,12 @@ When using serverless platforms, it's important to note that Nuxt Content v3 rel
 -  **Turso**
 -  **D1**
 
-For further details on this process and the suitable solutions for serverless deployments, refer to the official Nuxt Content documentation:  
+For further details on this process and the suitable solutions for serverless deployments, refer to the official Nuxt Content documentation:
 [Nuxt Content and Serverless Deployment](https://content.nuxt.com/docs/deploy/serverless)
 
 #### Vercel deployment do not need any extra configuration.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHugoRCD%2Fcanvas&env=NUXT_PRIVATE_RESEND_API_KEY,NUXT_PUBLIC_SITE_URL&envDescription=You%20will%20require%20an%20API%20key%20for%20Resend%20and%20Nuxt%20Studio%2C%20but%20it%20is%20not%20essential%20for%20the%20portfolio%20to%20work.%20Simply%20add%20%22test%2C%22%20for%20example%2C%20and%20edit%20the%20variable%20later.&project-name=canvas-portfolio&repository-name=canvas-portfolio&demo-title=Canvas&demo-url=canvas.hrcd.fr&demo-image=https%3A%2F%2Fcanvas.hrcd.fr%2Fog.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHugoRCD%2Fcanvas&env=NUXT_PRIVATE_RESEND_API_KEY,NUXT_PUBLIC_SITE_URL,STUDIO_GITHUB_CLIENT_ID,STUDIO_GITHUB_CLIENT_SECRET&envDescription=You%20will%20require%20an%20API%20key%20for%20Resend%20and%20Nuxt%20Studio%2C%20but%20it%20is%20not%20essential%20for%20the%20portfolio%20to%20work.%20Simply%20add%20%22test%2C%22%20for%20example%2C%20and%20edit%20the%20variable%20later.&project-name=canvas-portfolio&repository-name=canvas-portfolio&demo-title=Canvas&demo-url=canvas.hrcd.fr&demo-image=https%3A%2F%2Fcanvas.hrcd.fr%2Fog.png)
 
 ---
 
@@ -103,7 +104,7 @@ NuxtHub deployment do not need any extra configuration.
 
 ### 3. Deployment via Docker
 
-Canvas Portfolio is also available as a Docker image, making it easy to deploy in containerized environments. An official Docker image is automatically created using a GitHub workflow whenever a new release is made, or it can be triggered manually. 
+Canvas Portfolio is also available as a Docker image, making it easy to deploy in containerized environments. An official Docker image is automatically created using a GitHub workflow whenever a new release is made, or it can be triggered manually.
 
 This workflow not only builds the official Canvas image but also provides a standard way for anyone who forks the project to create their own Docker image with a proper version tag (e.g., v2.0, v1.0.0, etc.).
 
@@ -140,6 +141,51 @@ To change the featured works on the homepage, simply add the `"featured": true` 
 ### Other Content
 
 Simply go to the `content/` directory and edit any of the Markdown or JSON files to modify the content.
+
+## Editing Content with Nuxt Studio
+
+Canvas Portfolio includes [Nuxt Studio](https://content.nuxt.com/docs/studio/setup), a built-in visual editor that allows you to edit your content directly from the browser without touching code.
+
+### Accessing Nuxt Studio
+
+1. Start your development server:
+```bash
+pnpm dev
+```
+
+2. Navigate to `/admin` in your browser (e.g., `http://localhost:3000/admin`)
+
+3. You'll be prompted to authenticate with GitHub to access the editor
+
+### Setting Up Nuxt Studio
+
+To enable Nuxt Studio in production, you need to configure GitHub OAuth:
+
+1. Create a GitHub OAuth App:
+   - Go to [GitHub Developer Settings](https://github.com/settings/developers)
+   - Click "New OAuth App"
+   - Set the Authorization callback URL to: `https://your-domain.com`
+   - Copy the Client ID and Client Secret
+
+2. Add the following environment variables to your `.env` file:
+```bash
+STUDIO_GITHUB_CLIENT_ID=your_github_client_id
+STUDIO_GITHUB_CLIENT_SECRET=your_github_client_secret
+```
+
+3. Update the repository configuration in `nuxt.config.ts` to match your GitHub repository:
+```ts
+studio: {
+  repository: {
+    provider: 'github',
+    owner: 'your-username',
+    repo: 'your-repo-name',
+    branch: 'main',
+  },
+}
+```
+
+Once configured, you can edit all your content (articles, projects, pages) directly from the `/admin` interface with a user-friendly visual editor.
 
 ## Setup the Contact Form
 

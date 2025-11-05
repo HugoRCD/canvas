@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
     '@nuxt/content',
+    'nuxt-studio',
     '@nuxt/image',
     '@nuxt/scripts',
     'vue-sonner/nuxt',
@@ -123,5 +124,16 @@ export default defineNuxtConfig({
 
   ogImage: {
     zeroRuntime: true,
+  },
+
+  studio: {
+    route: '/admin',
+
+    repository: {
+      provider: 'github',
+      owner: 'HugoRCD',
+      repo: 'canvas',
+      branch: 'main',
+    },
   },
 })

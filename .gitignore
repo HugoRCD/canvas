@@ -25,3 +25,4 @@ logs
 rt_base
 
 .history
+.env*.local
