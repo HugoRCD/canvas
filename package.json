@@ -26,7 +26,7 @@
     "@nuxtjs/seo": "^3.2.2",
     "@vueuse/core": "13.9.0",
     "@vueuse/nuxt": "13.9.0",
-    "better-sqlite3": "^12.4.6",
+    "better-sqlite3": "^12.5.0",
     "nuxt": "4.2.1",
     "resend": "6.5.2",
     "sitemap": "8.0.2",
