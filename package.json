@@ -17,7 +17,7 @@
   },
   "packageManager": "pnpm@10.24.0",
   "dependencies": {
-    "@nuxt/content": "^3.8.2",
+    "@nuxt/content": "^3.9.0",
     "@nuxt/devtools": "2.7.0",
     "@nuxt/image": "1.11.0",
     "@nuxt/scripts": "^0.13.0",
@@ -30,7 +30,7 @@
     "nuxt": "4.2.1",
     "resend": "6.5.2",
     "sitemap": "8.0.2",
-    "nuxt-studio": "1.0.0-alpha.2",
+    "nuxt-studio": "1.0.0-alpha.3",
     "ufo": "^1.6.1",
     "vue-sonner": "2.0.9"
   },
