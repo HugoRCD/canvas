@@ -15,9 +15,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "packageManager": "pnpm@10.26.1",
+  "packageManager": "pnpm@10.26.2",
   "dependencies": {
-    "@nuxt/content": "^3.9.0",
+    "@nuxt/content": "^3.10.0",
     "@nuxt/devtools": "2.7.0",
     "@nuxt/image": "2.0.0",
     "@nuxt/scripts": "^0.13.2",
@@ -30,7 +30,7 @@
     "nuxt": "4.2.2",
     "resend": "6.6.0",
     "sitemap": "8.0.2",
-    "nuxt-studio": "1.0.0-beta.1",
+    "nuxt-studio": "1.0.0-beta.3",
     "ufo": "^1.6.1",
     "vue-sonner": "2.0.9"
   },
