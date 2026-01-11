@@ -29,7 +29,7 @@
     "better-sqlite3": "^12.6.0",
     "nuxt": "4.2.2",
     "resend": "6.7.0",
-    "sitemap": "8.0.2",
+    "sitemap": "9.0.0",
     "nuxt-studio": "1.0.0",
     "ufo": "^1.6.2",
     "vue-sonner": "2.0.9"
