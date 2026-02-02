@@ -23,12 +23,12 @@
     "@nuxt/scripts": "^0.13.2",
     "@nuxt/ui": "^4.4.0",
     "@nuxtjs/i18n": "^10.2.1",
-    "@nuxtjs/seo": "^3.3.0",
-    "@vueuse/core": "14.1.0",
-    "@vueuse/nuxt": "14.1.0",
+    "@nuxtjs/seo": "^3.4.0",
+    "@vueuse/core": "14.2.0",
+    "@vueuse/nuxt": "14.2.0",
     "better-sqlite3": "^12.6.2",
     "nuxt": "4.3.0",
-    "resend": "6.8.0",
+    "resend": "6.9.1",
     "sitemap": "9.0.0",
     "nuxt-studio": "1.2.0",
     "ufo": "^1.6.3",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "1.13.0",
-    "automd": "0.4.2",
+    "automd": "0.4.3",
     "eslint": "9.39.2"
   },
   "pnpm": {
