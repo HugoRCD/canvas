@@ -1,0 +1,22 @@
+{
+  "app_description": "Canvas는 Nuxt와 Tailwind CSS로 제작된, 디자이너와 개발자를 위한 단순하지만 아름다운 포트폴리오 템플릿입니다. HugoRCD가 ❤️를 담아 만들었습니다",
+  "copied_to_clipboard": "클립보드에 복사되었습니다",
+  "article_link_copied": "글 링크가 클립보드에 복사되었습니다",
+  "email_copied": "이메일이 클립보드에 복사되었습니다",
+  "back_to_home": "홈으로 돌아가기",
+  "switch_french": "프랑스어로 전환",
+  "switch_english": "영어로 전환",
+  "search": "명령어 검색",
+  "command": "사용 가능한 명령어",
+  "not_found": "명령어를 찾을 수 없습니다",
+  "see_more": "더 보기",
+  "soon": "곧 공개",
+  "experiences": "경력",
+  "contact": "함께 일해요",
+  "email": "이메일 복사",
+  "cv": "이력서 다운로드",
+  "meeting": "미팅 예약",
+  "available": "새로운 기회를 찾고 있습니다",
+  "unavailable": "현재 다른 멋진 프로젝트를 진행 중입니다",
+  "all_rights_reserved": "모든 권리 보유"
+}
