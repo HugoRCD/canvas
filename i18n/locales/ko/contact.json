@@ -1,0 +1,20 @@
+{
+  "title": "연락하기",
+  "description": "여러분의 아이디어, 프로젝트 등 무엇이든 이야기해요",
+  "fullname": "이름",
+  "email": "이메일",
+  "phone": "전화번호",
+  "subject": "메시지 제목",
+  "message": "메시지",
+  "submit": "보내기",
+  "disabled": "resend API 키를 설정해야 합니다",
+  "success": "메시지가 성공적으로 전송되었습니다",
+  "error": "이런, 메시지를 전송하는 중 오류가 발생했습니다",
+  "budget": "예산",
+  "subject_types": {
+    "project": "프로젝트 논의",
+    "bug": "버그 신고",
+    "question": "질문하기",
+    "other": "기타"
+  }
+}
