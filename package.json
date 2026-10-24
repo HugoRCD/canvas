@@ -15,27 +15,27 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.28.7",
   "dependencies": {
-    "@nuxt/content": "^3.15.2",
-    "@nuxt/devtools": "3.4.1",
-    "@nuxt/image": "2.1.0",
+    "@nuxt/content": "^3.16.2",
+    "@nuxt/devtools": "3.4.4",
+    "@nuxt/image": "2.2.0",
     "@nuxt/scripts": "^0.13.4",
-    "@nuxt/ui": "^4.10.0",
+    "@nuxt/ui": "^4.12.0",
     "@nuxtjs/i18n": "^10.6.0",
     "@nuxtjs/seo": "^3.4.0",
     "@vueuse/core": "14.4.0",
     "@vueuse/nuxt": "14.4.0",
     "better-sqlite3": "^12.11.1",
-    "nuxt": "4.5.1",
-    "resend": "6.18.1",
+    "nuxt": "4.6.2",
+    "resend": "6.34.1",
     "sitemap": "9.0.1",
-    "nuxt-studio": "1.7.0",
+    "nuxt-studio": "1.8.0",
     "ufo": "^1.6.4",
     "vue-sonner": "2.0.9"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "1.16.0",
+    "@nuxt/eslint-config": "1.17.0",
     "automd": "0.4.3",
     "eslint": "9.39.5"
   }
