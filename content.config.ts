@@ -1,5 +1,6 @@
-import { defineCollection, z } from '@nuxt/content'
+import { defineCollection } from '@nuxt/content'
 import { asSeoCollection } from '@nuxtjs/seo/content'
+import { z } from 'zod'
 
 const commonContentSchema = z.object({
   title: z.string().nonempty(),
