@@ -2,7 +2,7 @@ shamefullyHoist: true
 ignoreWorkspaceRootCheck: true
 
 overrides:
-  '@nuxtjs/mdc': ^0.23.3
+  '@nuxtjs/mdc': ^0.23.4
 
 allowBuilds:
   '@parcel/watcher': false
